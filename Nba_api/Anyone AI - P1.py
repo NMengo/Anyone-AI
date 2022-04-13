@@ -92,10 +92,21 @@ def get_nba_players_salaries(csv_file_path):
     with open(csv_file_path, 'rb') as f:
         enc = chardet.detect(f.read())
 
-    salarios = pd.read_csv(csv_file_path, encoding= enc['encoding'])
-    salarios = salarios.drop_duplicates(subset=['Unnamed: 1'])
-    salarios = salarios.reset_index(drop=True)
-    salarios.to_excel('salarios.xlsx')
-    return salarios
+    salaries = pd.read_csv(csv_file_path, encoding= enc['encoding'])
+    salaries = salaries.drop_duplicates(subset=['Unnamed: 1'])
+    salaries = salaries.reset_index(drop=True)
+    salaries[['Player2', 'Discard']] = salaries['Unnamed: 1'].str.split('\\', expand=True)
+    salaries = salaries.drop(['Unnamed: 1', 'Discard'], axis=1)
+    salaries.columns = salaries.iloc[0]
+    salaries = salaries.drop([0], axis=0)
+    valores_player = list(salaries.loc[:, 'Player'])
+    salaries.insert(1, 'Player2', valores_player, allow_duplicates=True)
+    salaries = salaries.drop(['Player'], axis=1)
+    salaries = salaries.rename(columns={'Player2':'Player'})
+    for column in salaries.columns:
+        salaries[column] = salaries[column].str.replace('$','')
+        salaries[column] = salaries[column].str.replace('?','')
+    salaries.to_excel('nba_players_salary.csv')
+    return salaries
 
 salarios = get_nba_players_salaries('contracts.csv')
