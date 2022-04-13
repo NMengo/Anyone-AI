@@ -4,6 +4,13 @@ import chardet
 
 import pandas as pd
 
+# TODO:
+    # Calculate Age.
+    # Investigate players without salary.
+    # Cast DF.
+    # Uniform indexes.
+    # Merge
+
 def get_and_save_players_list():
     players = commonallplayers.CommonAllPlayers(is_only_current_season=1).get_data_frames()[0]
     players = players[(players['TEAM_NAME']!='') & (players['GAMES_PLAYED_FLAG']!='N') & (players['PERSON_ID']!= 1630597)]
@@ -30,7 +37,7 @@ def get_players_personal_information(players):
         print('TimeOut. Incomplete file will be saved anyways')
         pass
 
-    all_players.drop(['DISPLAY_FIRST_LAST','DISPLAY_LAST_COMMA_FIRST', 'DISPLAY_FI_LAST', 'PLAYER_SLUG',
+    all_players = all_players.drop(['DISPLAY_FIRST_LAST','DISPLAY_LAST_COMMA_FIRST', 'DISPLAY_FI_LAST', 'PLAYER_SLUG',
                         'SCHOOL', 'LAST_AFFILIATION', 'SEASON_EXP', 'JERSEY', 'ROSTERSTATUS', 'TEAM_ID',
                         'TEAM_ABBREVIATION', 'TEAM_CODE', 'TEAM_CITY', 'PLAYERCODE', 'DLEAGUE_FLAG',
                         'NBA_FLAG', 'GAMES_PLAYED_FLAG', 'DRAFT_YEAR', 'DRAFT_ROUND', 'GREATEST_75_FLAG',
@@ -101,12 +108,18 @@ def get_nba_players_salaries(csv_file_path):
     salaries = salaries.drop([0], axis=0)
     valores_player = list(salaries.loc[:, 'Player'])
     salaries.insert(1, 'Player2', valores_player, allow_duplicates=True)
-    salaries = salaries.drop(['Player'], axis=1)
+    salaries = salaries.drop(['Player', 'Rk', 'Tm', '2022-23', '2023-24', '2024-25', '2025-26', '2026-27',
+                              'Signed Using', 'Guaranteed'], axis=1)
     salaries = salaries.rename(columns={'Player2':'Player'})
-    for column in salaries.columns:
-        salaries[column] = salaries[column].str.replace('$','')
-        salaries[column] = salaries[column].str.replace('?','')
-    salaries.to_excel('nba_players_salary.csv')
+    salaries['2021-22'] = salaries['2021-22'].str.replace('$','')
+    salaries['2021-22'] = salaries['2021-22'].str.replace('?','')
+    salaries = salaries.fillna(0)
+    salaries['2021-22'] = salaries['2021-22'].astype('int64')
+    salaries['Player'] = salaries['Player'].astype('string')
+    # salaries = salaries.style.format(thousands='.')
+    salaries.to_csv('nba_players_salary.csv')
     return salaries
 
-salarios = get_nba_players_salaries('contracts.csv')
+salaries = get_nba_players_salaries('contracts.csv')
+
+print(salaries.info())

@@ -1,504 +1,504 @@
-,PERSON_ID,FIRST_NAME,LAST_NAME,DISPLAY_FIRST_LAST,DISPLAY_LAST_COMMA_FIRST,DISPLAY_FI_LAST,PLAYER_SLUG,BIRTHDATE,SCHOOL,COUNTRY,LAST_AFFILIATION,HEIGHT,WEIGHT,SEASON_EXP,JERSEY,POSITION,ROSTERSTATUS,GAMES_PLAYED_CURRENT_SEASON_FLAG,TEAM_ID,TEAM_NAME,TEAM_ABBREVIATION,TEAM_CODE,TEAM_CITY,PLAYERCODE,FROM_YEAR,TO_YEAR,DLEAGUE_FLAG,NBA_FLAG,GAMES_PLAYED_FLAG,DRAFT_YEAR,DRAFT_ROUND,DRAFT_NUMBER,GREATEST_75_FLAG
-0,1630173,Precious,Achiuwa,Precious Achiuwa,"Achiuwa, Precious",P. Achiuwa,precious-achiuwa,1999-09-19T00:00:00,Memphis,Nigeria,Memphis/Nigeria,6-8,225,1,5,Forward,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,precious_achiuwa,2020,2021,N,Y,Y,2020,1,20,N
-0,203500,Steven,Adams,Steven Adams,"Adams, Steven",S. Adams,steven-adams,1993-07-20T00:00:00,Pittsburgh,New Zealand,Pittsburgh/New Zealand,6-11,265,8,4,Center,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,steven_adams,2013,2021,N,Y,Y,2013,1,12,N
-0,1628389,Bam,Adebayo,Bam Adebayo,"Adebayo, Bam",B. Adebayo,bam-adebayo,1997-07-18T00:00:00,Kentucky,USA,Kentucky/USA,6-9,255,4,13,Center-Forward,Active,Y,1610612748,Heat,MIA,heat,Miami,bam_adebayo,2017,2021,N,Y,Y,2017,1,14,N
-0,1630583,Santi,Aldama,Santi Aldama,"Aldama, Santi",S. Aldama,santi-aldama,2001-01-10T00:00:00,Loyola-Maryland,Spain,Loyola-Maryland/Spain,6-11,215,0,7,Forward-Center,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,santi_aldama,2021,2021,Y,Y,Y,2021,1,30,N
-0,200746,LaMarcus,Aldridge,LaMarcus Aldridge,"Aldridge, LaMarcus",L. Aldridge,lamarcus-aldridge,1985-07-19T00:00:00,Texas-Austin,USA,Texas-Austin/USA,6-11,250,15,21,Center-Forward,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,lamarcus_aldridge,2006,2021,N,Y,Y,2006,1,2,N
-0,1629638,Nickeil,Alexander-Walker,Nickeil Alexander-Walker,"Alexander-Walker, Nickeil",N. Alexander-Walker,nickeil-alexander-walker,1998-09-02T00:00:00,Virginia Tech,Canada,Virginia Tech/Canada,6-5,205,2,6,Guard,Active,Y,1610612762,Jazz,UTA,jazz,Utah,nickeil_alexander-walker,2019,2021,Y,Y,Y,2019,1,17,N
-0,1628960,Grayson,Allen,Grayson Allen,"Allen, Grayson",G. Allen,grayson-allen,1995-10-08T00:00:00,Duke,USA,Duke/USA,6-4,198,3,7,Guard,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,grayson_allen,2018,2021,Y,Y,Y,2018,1,21,N
-0,1628386,Jarrett,Allen,Jarrett Allen,"Allen, Jarrett",J. Allen,jarrett-allen,1998-04-21T00:00:00,Texas-Austin,USA,Texas-Austin/USA,6-10,243,4,31,Center,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,jarrett_allen,2017,2021,N,Y,Y,2017,1,22,N
-0,1630631,Jose,Alvarado,Jose Alvarado,"Alvarado, Jose",J. Alvarado,jose-alvarado,1998-04-12T00:00:00,Georgia Tech,USA,Georgia Tech/USA,6-0,179,0,15,Guard,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,jose_alvarado,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203937,Kyle,Anderson,Kyle Anderson,"Anderson, Kyle",K. Anderson,kyle-anderson,1993-09-20T00:00:00,UCLA,USA,UCLA/USA,6-9,230,7,1,Forward-Guard,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,kyle_anderson,2014,2021,Y,Y,Y,2014,1,30,N
-0,203507,Giannis,Antetokounmpo,Giannis Antetokounmpo,"Antetokounmpo, Giannis",G. Antetokounmpo,giannis-antetokounmpo,1994-12-06T00:00:00,Filathlitikos,Greece,Filathlitikos/Greece,6-11,242,8,34,Forward,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,giannis_antetokounmpo,2013,2021,N,Y,Y,2013,1,15,Y
-0,203648,Thanasis,Antetokounmpo,Thanasis Antetokounmpo,"Antetokounmpo, Thanasis",T. Antetokounmpo,thanasis-antetokounmpo,1992-07-18T00:00:00,Panathinaikos,Greece,Panathinaikos/Greece,6-6,219,3,43,Forward,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,thanasis_antetokounmpo,2015,2021,Y,Y,Y,2014,2,51,N
-0,2546,Carmelo,Anthony,Carmelo Anthony,"Anthony, Carmelo",C. Anthony,carmelo-anthony,1984-05-29T00:00:00,Syracuse,USA,Syracuse/USA,6-7,238,18,7,Forward,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,carmelo_anthony,2003,2021,N,Y,Y,2003,1,3,Y
-0,1630175,Cole,Anthony,Cole Anthony,"Anthony, Cole",C. Anthony,cole-anthony,2000-05-15T00:00:00,North Carolina,USA,North Carolina/USA,6-3,185,1,50,Guard,Active,Y,1610612753,Magic,ORL,magic,Orlando,cole_anthony,2020,2021,N,Y,Y,2020,1,15,N
-0,1628384,OG,Anunoby,OG Anunoby,"Anunoby, OG",O. Anunoby,og-anunoby,1997-07-17T00:00:00,Indiana,United Kingdom,Indiana/United Kingdom,6-7,232,4,3,Forward,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,og_anunoby,2017,2021,N,Y,Y,2017,1,23,N
-0,1627853,Ryan,Arcidiacono,Ryan Arcidiacono,"Arcidiacono, Ryan",R. Arcidiacono,ryan-arcidiacono,1994-03-26T00:00:00,Villanova,USA,Villanova/USA,6-3,195,4,51,Guard,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,ryan_arcidiacono,2017,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,201571,D.J.,Augustin,D.J. Augustin,"Augustin, D.J.",D. Augustin,dj-augustin,1987-11-10T00:00:00,Texas-Austin,USA,Texas-Austin/USA,5-11,183,13,4,Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,d.j._augustin,2008,2021,N,Y,Y,2008,1,9,N
-0,1630166,Deni,Avdija,Deni Avdija,"Avdija, Deni",D. Avdija,deni-avdija,2001-01-03T00:00:00,Maccabi Tel Aviv,Israel,Maccabi Tel Aviv/Israel,6-9,210,1,9,Forward,Active,Y,1610612764,Wizards,WAS,wizards,Washington,deni_avdija,2020,2021,N,Y,Y,2020,1,9,N
-0,1629028,Deandre,Ayton,Deandre Ayton,"Ayton, Deandre",D. Ayton,deandre-ayton,1998-07-23T00:00:00,Arizona,Bahamas,Arizona/Bahamas,6-11,250,3,22,Center,Active,Y,1610612756,Suns,PHX,suns,Phoenix,deandre_ayton,2018,2021,N,Y,Y,2018,1,1,N
-0,1628962,Udoka,Azubuike,Udoka Azubuike,"Azubuike, Udoka",U. Azubuike,udoka-azubuike,1999-09-17T00:00:00,Kansas,Nigeria,Kansas/Nigeria,7-0,270,1,20,Center-Forward,Active,Y,1610612762,Jazz,UTA,jazz,Utah,udoka_azubuike,2020,2021,Y,Y,Y,2020,1,27,N
-0,1628963,Marvin,Bagley III,Marvin Bagley III,"Bagley III, Marvin",M. Bagley III,marvin-bagley-iii,1999-03-14T00:00:00,Duke,USA,Duke/USA,6-11,235,3,35,Forward,Active,Y,1610612765,Pistons,DET,pistons,Detroit,marvin_bagley_iii,2018,2021,N,Y,Y,2018,1,2,N
-0,1630163,LaMelo,Ball,LaMelo Ball,"Ball, LaMelo",L. Ball,lamelo-ball,2001-08-22T00:00:00,Illawarra,USA,Illawarra/USA,6-7,180,1,2,Guard,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,lamelo_ball,2020,2021,N,Y,Y,2020,1,3,N
-0,1628366,Lonzo,Ball,Lonzo Ball,"Ball, Lonzo",L. Ball,lonzo-ball,1997-10-27T00:00:00,UCLA,USA,UCLA/USA,6-6,190,4,2,Guard,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,lonzo_ball,2017,2021,N,Y,Y,2017,1,2,N
-0,1628964,Mo,Bamba,Mo Bamba,"Bamba, Mo",M. Bamba,mo-bamba,1998-05-12T00:00:00,Texas-Austin,USA,Texas-Austin/USA,7-0,231,3,5,Center,Active,Y,1610612753,Magic,ORL,magic,Orlando,mohamed_bamba,2018,2021,N,Y,Y,2018,1,6,N
-0,1630217,Desmond,Bane,Desmond Bane,"Bane, Desmond",D. Bane,desmond-bane,1998-06-25T00:00:00,TCU,USA,TCU/USA,6-5,215,1,22,Guard,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,desmond_bane,2020,2021,N,Y,Y,2020,1,30,N
-0,1630625,Dalano,Banton,Dalano Banton,"Banton, Dalano",D. Banton,dalano-banton,1999-11-07T00:00:00,Nebraska,Canada,Nebraska/Canada,6-7,204,0,45,Forward,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,dalano_banton,2021,2021,Y,Y,Y,2021,2,46,N
-0,203084,Harrison,Barnes,Harrison Barnes,"Barnes, Harrison",H. Barnes,harrison-barnes,1992-05-30T00:00:00,North Carolina,USA,North Carolina/USA,6-8,225,9,40,Forward,Active,Y,1610612758,Kings,SAC,kings,Sacramento,harrison_barnes,2012,2021,N,Y,Y,2012,1,7,N
-0,1630567,Scottie,Barnes,Scottie Barnes,"Barnes, Scottie",S. Barnes,scottie-barnes,2001-08-01T00:00:00,Florida State,USA,Florida State/USA,6-7,225,0,4,Forward,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,scottie_barnes,2021,2021,N,Y,Y,2021,1,4,N
-0,1629628,RJ,Barrett,RJ Barrett,"Barrett, RJ",R. Barrett,rj-barrett,2000-06-14T00:00:00,Duke,Canada,Duke/Canada,6-6,214,2,9,Forward-Guard,Active,Y,1610612752,Knicks,NYK,knicks,New York,rj_barrett,2019,2021,N,Y,Y,2019,1,3,N
-0,203115,Will,Barton,Will Barton,"Barton, Will",W. Barton,will-barton,1991-01-06T00:00:00,Memphis,USA,Memphis/USA,6-5,181,9,5,Guard,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,will_barton,2012,2021,Y,Y,Y,2012,2,40,N
-0,1629646,Charles,Bassey,Charles Bassey,"Bassey, Charles",C. Bassey,charles-bassey,2000-10-28T00:00:00,Western Kentucky,Nigeria,Western Kentucky/Nigeria,6-9,230,0,23,Center-Forward,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,charles_bassey,2021,2021,Y,Y,Y,2021,2,53,N
-0,1628966,Keita,Bates-Diop,Keita Bates-Diop,"Bates-Diop, Keita",K. Bates-Diop,keita-bates-diop,1996-01-23T00:00:00,Ohio State,USA,Ohio State/USA,6-8,229,3,31,Forward,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,keita_bates-diop,2018,2021,Y,Y,Y,2018,2,48,N
-0,201587,Nicolas,Batum,Nicolas Batum,"Batum, Nicolas",N. Batum,nicolas-batum,1988-12-14T00:00:00,Le Mans,France,Le Mans/France,6-8,230,13,33,Guard-Forward,Active,Y,1610612746,Clippers,LAC,clippers,LA,nicolas_batum,2008,2021,N,Y,Y,2008,1,25,N
-0,203145,Kent,Bazemore,Kent Bazemore,"Bazemore, Kent",K. Bazemore,kent-bazemore,1989-07-01T00:00:00,Old Dominion,USA,Old Dominion/USA,6-4,195,9,9,Guard-Forward,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,kent_bazemore,2012,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629647,Darius,Bazley,Darius Bazley,"Bazley, Darius",D. Bazley,darius-bazley,2000-06-12T00:00:00,Princeton HS (OH),USA,Princeton HS (OH)/USA,6-8,208,2,7,Forward,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,darius_bazley,2019,2021,N,Y,Y,2019,1,23,N
-0,203078,Bradley,Beal,Bradley Beal,"Beal, Bradley",B. Beal,bradley-beal,1993-06-28T00:00:00,Florida,USA,Florida/USA,6-4,207,9,3,Guard,Active,Y,1610612764,Wizards,WAS,wizards,Washington,bradley_beal,2012,2021,N,Y,Y,2012,1,3,N
-0,1627736,Malik,Beasley,Malik Beasley,"Beasley, Malik",M. Beasley,malik-beasley,1996-11-26T00:00:00,Florida State,USA,Florida State/USA,6-4,187,5,5,Guard,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,malik_beasley,2016,2021,Y,Y,Y,2016,1,19,N
-0,202722,Davis,Bertans,Davis Bertans,"Bertans, Davis",D. Bertans,davis-bertans,1992-11-12T00:00:00,Baskonia,Latvia,Baskonia/Latvia,6-10,225,5,44,Forward,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,davis_bertans,2016,2021,Y,Y,Y,2011,2,42,N
-0,201976,Patrick,Beverley,Patrick Beverley,"Beverley, Patrick",P. Beverley,patrick-beverley,1988-07-12T00:00:00,Arkansas,USA,Arkansas/USA,6-1,180,9,22,Guard,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,patrick_beverley,2012,2021,Y,Y,Y,2009,2,42,N
-0,1630180,Saddiq,Bey,Saddiq Bey,"Bey, Saddiq",S. Bey,saddiq-bey,1999-04-09T00:00:00,Villanova,USA,Villanova/USA,6-7,215,1,41,Forward,Active,Y,1610612765,Pistons,DET,pistons,Detroit,saddiq_bey,2020,2021,N,Y,Y,2020,1,19,N
-0,203920,Khem,Birch,Khem Birch,"Birch, Khem",K. Birch,khem-birch,1992-09-28T00:00:00,UNLV,Canada,UNLV/Canada,6-9,233,4,24,Center,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,khem_birch,2017,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629048,Goga,Bitadze,Goga Bitadze,"Bitadze, Goga",G. Bitadze,goga-bitadze,1999-07-20T00:00:00,Mega Basket,Georgia,Mega Basket/Georgia,7-0,250,2,88,Center-Forward,Active,Y,1610612754,Pacers,IND,pacers,Indiana,goga_bitadze,2019,2021,Y,Y,Y,2019,1,18,N
-0,202687,Bismack,Biyombo,Bismack Biyombo,"Biyombo, Bismack",B. Biyombo,bismack-biyombo,1992-08-28T00:00:00,Baloncesto Fuenlabrada,DRC,Baloncesto Fuenlabrada/DRC,6-8,255,10,18,Center,Active,Y,1610612756,Suns,PHX,suns,Phoenix,bismack_biyombo,2011,2021,N,Y,Y,2011,1,7,N
-0,202357,Nemanja,Bjelica,Nemanja Bjelica,"Bjelica, Nemanja",N. Bjelica,nemanja-bjelica,1988-05-09T00:00:00,Fenerbahce,Serbia,Fenerbahce/Serbia,6-9,234,6,8,Forward,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,nemanja_bjelica,2015,2021,N,Y,Y,2010,2,35,N
-0,202339,Eric,Bledsoe,Eric Bledsoe,"Bledsoe, Eric",E. Bledsoe,eric-bledsoe,1989-12-09T00:00:00,Kentucky,USA,Kentucky/USA,6-1,214,11,5,Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,eric_bledsoe,2010,2021,Y,Y,Y,2010,1,18,N
-0,1629833,Keljin,Blevins,Keljin Blevins,"Blevins, Keljin",K. Blevins,keljin-blevins,1995-11-24T00:00:00,Montana State,USA,Montana State/USA,6-4,200,1,21,Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,keljin_blevins,2020,2021,Y,Y,Y,2019,,,N
-0,203992,Bogdan,Bogdanovic,Bogdan Bogdanovic,"Bogdanovic, Bogdan",B. Bogdanovic,bogdan-bogdanovic,1992-08-18T00:00:00,Fenerbahce,Serbia,Fenerbahce/Serbia,6-6,225,4,13,Guard,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,bogdan_bogdanovic,2017,2021,N,Y,Y,2014,1,27,N
-0,202711,Bojan,Bogdanovic,Bojan Bogdanovic,"Bogdanovic, Bojan",B. Bogdanovic,bojan-bogdanovic,1989-04-18T00:00:00,Fenerbahce,Croatia,Fenerbahce/Croatia,6-7,226,7,44,Forward,Active,Y,1610612762,Jazz,UTA,jazz,Utah,bojan_bogdanovic,2014,2021,N,Y,Y,2011,2,31,N
-0,1629626,Bol,Bol,Bol Bol,"Bol, Bol",B. Bol,bol-bol,1999-11-16T00:00:00,Oregon,Sudan,Oregon/Sudan,7-2,220,2,10,Center-Forward,Active,Y,1610612753,Magic,ORL,magic,Orlando,bol_bol,2019,2021,Y,Y,Y,2019,2,44,N
-0,1630195,Leandro,Bolmaro,Leandro Bolmaro,"Bolmaro, Leandro",L. Bolmaro,leandro-bolmaro,2000-09-11T00:00:00,FC Barcelona,Argentina,FC Barcelona/Argentina,6-6,200,0,9,Forward,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,leandro_bolmaro,2021,2021,Y,Y,Y,2020,1,23,N
-0,1629067,Isaac,Bonga,Isaac Bonga,"Bonga, Isaac",I. Bonga,isaac-bonga,1999-11-08T00:00:00,Skyliners Frankfurt,Germany,Skyliners Frankfurt/Germany,6-8,180,3,17,Guard,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,isaac_bonga,2018,2021,Y,Y,Y,2018,2,39,N
-0,1626164,Devin,Booker,Devin Booker,"Booker, Devin",D. Booker,devin-booker,1996-10-30T00:00:00,Kentucky,USA,Kentucky/USA,6-5,206,6,1,Guard,Active,Y,1610612756,Suns,PHX,suns,Phoenix,devin_booker,2015,2021,N,Y,Y,2015,1,13,N
-0,1630527,Brandon,Boston Jr.,Brandon Boston Jr.,"Boston Jr., Brandon",B. Boston Jr.,brandon-boston-jr,2001-11-28T00:00:00,Kentucky,USA,Kentucky/USA,6-6,188,0,4,Guard,Active,Y,1610612746,Clippers,LAC,clippers,LA,brandon_boston_jr,2021,2021,Y,Y,Y,2021,2,51,N
-0,1628449,Chris,Boucher,Chris Boucher,"Boucher, Chris",C. Boucher,chris-boucher,1993-01-11T00:00:00,Oregon,Saint Lucia,Oregon/Saint Lucia,6-9,200,4,25,Forward-Center,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,chris_boucher,2017,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630547,James,Bouknight,James Bouknight,"Bouknight, James",J. Bouknight,james-bouknight,2000-09-18T00:00:00,Connecticut,USA,Connecticut/USA,6-4,190,0,5,Guard,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,james_bouknight,2021,2021,Y,Y,Y,2021,1,11,N
-0,202340,Avery,Bradley,Avery Bradley,"Bradley, Avery",A. Bradley,avery-bradley,1990-11-26T00:00:00,Texas-Austin,USA,Texas-Austin/USA,6-3,180,11,20,Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,avery_bradley,2010,2021,Y,Y,Y,2010,1,19,N
-0,1628396,Tony,Bradley,Tony Bradley,"Bradley, Tony",T. Bradley,tony-bradley,1998-01-08T00:00:00,North Carolina,USA,North Carolina/USA,6-10,248,4,13,Center-Forward,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,tony_bradley,2017,2021,Y,Y,Y,2017,1,28,N
-0,1629649,Ignas,Brazdeikis,Ignas Brazdeikis,"Brazdeikis, Ignas",I. Brazdeikis,ignas-brazdeikis,1999-01-08T00:00:00,Michigan,Canada,Michigan/Canada,6-6,221,2,17,Forward,Active,Y,1610612753,Magic,ORL,magic,Orlando,ignas_brazdeikis,2019,2021,Y,Y,Y,2019,2,47,N
-0,1628969,Mikal,Bridges,Mikal Bridges,"Bridges, Mikal",M. Bridges,mikal-bridges,1996-08-30T00:00:00,Villanova,USA,Villanova/USA,6-6,209,3,25,Forward,Active,Y,1610612756,Suns,PHX,suns,Phoenix,mikal_bridges,2018,2021,N,Y,Y,2018,1,10,N
-0,1628970,Miles,Bridges,Miles Bridges,"Bridges, Miles",M. Bridges,miles-bridges,1998-03-21T00:00:00,Michigan State,USA,Michigan State/USA,6-7,225,3,0,Forward,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,miles_bridges,2018,2021,N,Y,Y,2018,1,12,N
-0,1629052,Oshae,Brissett,Oshae Brissett,"Brissett, Oshae",O. Brissett,oshae-brissett,1998-06-20T00:00:00,Syracuse,Canada,Syracuse/Canada,6-7,210,2,12,Forward-Guard,Active,Y,1610612754,Pacers,IND,pacers,Indiana,oshae_brissett,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1627763,Malcolm,Brogdon,Malcolm Brogdon,"Brogdon, Malcolm",M. Brogdon,malcolm-brogdon,1992-12-11T00:00:00,Virginia,USA,Virginia/USA,6-5,229,5,7,Guard,Active,Y,1610612754,Pacers,IND,pacers,Indiana,malcolm_brogdon,2016,2021,N,Y,Y,2016,2,36,N
-0,1629717,Armoni,Brooks,Armoni Brooks,"Brooks, Armoni",A. Brooks,armoni-brooks,1998-06-05T00:00:00,Houston,USA,Houston/USA,6-3,195,1,1,Guard,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,sl_armoni_brooks,2020,2021,Y,Y,Y,2019,,,N
-0,1628415,Dillon,Brooks,Dillon Brooks,"Brooks, Dillon",D. Brooks,dillon-brooks,1996-01-22T00:00:00,Oregon,Canada,Oregon/Canada,6-7,225,4,24,Guard-Forward,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,dillon_brooks,2017,2021,N,Y,Y,2017,2,45,N
-0,1628971,Bruce,Brown,Bruce Brown,"Brown, Bruce",B. Brown,bruce-brown,1996-08-15T00:00:00,Miami,USA,Miami/USA,6-4,202,3,1,Guard-Forward,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,bruce_brown,2018,2021,Y,Y,Y,2018,2,42,N
-0,1627759,Jaylen,Brown,Jaylen Brown,"Brown, Jaylen",J. Brown,jaylen-brown,1996-10-24T00:00:00,California,USA,California/USA,6-6,223,5,7,Guard-Forward,Active,Y,1610612738,Celtics,BOS,celtics,Boston,jaylen_brown,2016,2021,N,Y,Y,2016,1,3,N
-0,1629650,Moses,Brown,Moses Brown,"Brown, Moses",M. Brown,moses-brown,1999-10-13T00:00:00,UCLA,USA,UCLA/USA,7-2,245,2,6,Center,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,moses_brown,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628425,Sterling,Brown,Sterling Brown,"Brown, Sterling",S. Brown,sterling-brown,1995-02-10T00:00:00,Southern Methodist,USA,Southern Methodist/USA,6-5,219,4,0,Guard-Forward,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,sterling_brown,2017,2021,Y,Y,Y,2017,2,46,N
-0,1630535,Greg,Brown III,Greg Brown III,"Brown III, Greg",G. Brown III,greg-brown-iii,2001-09-01T00:00:00,Texas-Austin,USA,Texas-Austin/USA,6-7,206,0,4,Forward,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,greg_brown_iii,2021,2021,N,Y,Y,2021,2,43,N
-0,1629718,Charlie,Brown Jr.,Charlie Brown Jr.,"Brown Jr., Charlie",C. Brown Jr.,charlie-brown-jr,1997-02-02T00:00:00,St. Joseph's (PA),USA,St. Joseph's (PA)/USA,6-6,199,2,16,Guard,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,charles_brown,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630602,Chaundee,Brown Jr.,Chaundee Brown Jr.,"Brown Jr., Chaundee",C. Brown Jr.,chaundee-brown-jr,1998-12-04T00:00:00,Michigan,USA,Michigan/USA,6-5,215,0,38,Forward,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,chaundee_brown,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628972,Troy,Brown Jr.,Troy Brown Jr.,"Brown Jr., Troy",T. Brown Jr.,troy-brown-jr,1999-07-28T00:00:00,Oregon,USA,Oregon/USA,6-6,215,3,7,Guard-Forward,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,troy_brown_jr,2018,2021,Y,Y,Y,2018,1,15,N
-0,1628973,Jalen,Brunson,Jalen Brunson,"Brunson, Jalen",J. Brunson,jalen-brunson,1996-08-31T00:00:00,Villanova,USA,Villanova/USA,6-1,190,3,13,Guard,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,jalen_brunson,2018,2021,N,Y,Y,2018,2,33,N
-0,1628418,Thomas,Bryant,Thomas Bryant,"Bryant, Thomas",T. Bryant,thomas-bryant,1997-07-31T00:00:00,Indiana,USA,Indiana/USA,6-10,248,4,13,Center-Forward,Active,Y,1610612764,Wizards,WAS,wizards,Washington,thomas_bryant,2017,2021,Y,Y,Y,2017,2,42,N
-0,203493,Reggie,Bullock,Reggie Bullock,"Bullock, Reggie",R. Bullock,reggie-bullock,1991-03-16T00:00:00,North Carolina,USA,North Carolina/USA,6-6,205,8,25,Guard-Forward,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,reggie_bullock,2013,2021,Y,Y,Y,2013,1,25,N
-0,203504,Trey,Burke,Trey Burke,"Burke, Trey",T. Burke,trey-burke,1992-11-12T00:00:00,Michigan,USA,Michigan/USA,6-0,185,8,3,Guard,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,trey_burke,2013,2021,Y,Y,Y,2013,1,9,N
-0,202692,Alec,Burks,Alec Burks,"Burks, Alec",A. Burks,alec-burks,1991-07-20T00:00:00,Colorado,USA,Colorado/USA,6-6,214,10,18,Guard,Active,Y,1610612752,Knicks,NYK,knicks,New York,alec_burks,2011,2021,Y,Y,Y,2011,1,12,N
-0,1630215,Jared,Butler,Jared Butler,"Butler, Jared",J. Butler,jared-butler,2000-08-25T00:00:00,Baylor,USA,Baylor/USA,6-3,193,0,13,Guard,Active,Y,1610612762,Jazz,UTA,jazz,Utah,jared_butler,2021,2021,Y,Y,Y,2021,2,40,N
-0,202710,Jimmy,Butler,Jimmy Butler,"Butler, Jimmy",J. Butler,jimmy-butler,1989-09-14T00:00:00,Marquette,USA,Marquette/USA,6-7,230,10,22,Forward,Active,Y,1610612748,Heat,MIA,heat,Miami,jimmy_butler,2011,2021,N,Y,Y,2011,1,30,N
-0,1629719,Devontae,Cacok,Devontae Cacok,"Cacok, Devontae",D. Cacok,devontae-cacok,1996-10-08T00:00:00,North Carolina-Wilmington,USA,North Carolina-Wilmington/USA,6-7,240,2,18,Forward,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,davontae_cacok,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203484,Kentavious,Caldwell-Pope,Kentavious Caldwell-Pope,"Caldwell-Pope, Kentavious",K. Caldwell-Pope,kentavious-caldwell-pope,1993-02-18T00:00:00,Georgia,USA,Georgia/USA,6-5,204,8,1,Guard,Active,Y,1610612764,Wizards,WAS,wizards,Washington,kentavious_caldwell-pope,2013,2021,N,Y,Y,2013,1,8,N
-0,1630267,Facundo,Campazzo,Facundo Campazzo,"Campazzo, Facundo",F. Campazzo,facundo-campazzo,1991-03-23T00:00:00,Murcia,Argentina,Murcia/Argentina,5-10,195,1,7,Guard,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,facundo_campazzo,2020,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628427,Vlatko,Cancar,Vlatko Cancar,"Cancar, Vlatko",V. Cancar,vlatko-cancar,1997-04-10T00:00:00,San Pablo Burgos,Slovenia,San Pablo Burgos/Slovenia,6-8,236,2,31,Forward,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,vlatko_cancar,2019,2021,Y,Y,Y,2017,2,49,N
-0,1629962,Devin,Cannady,Devin Cannady,"Cannady, Devin",D. Cannady,devin-cannady,1996-05-21T00:00:00,Princeton,USA,Princeton/USA,6-2,183,1,,Guard,Active,Y,1610612753,Magic,ORL,magic,Orlando,devin_cannady,2020,2021,Y,Y,Y,2019,,,N
-0,203991,Clint,Capela,Clint Capela,"Capela, Clint",C. Capela,clint-capela,1994-05-18T00:00:00,Elan Chalon,Switzerland,Elan Chalon/Switzerland,6-10,256,7,15,Center,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,clint_capela,2014,2021,Y,Y,Y,2014,1,25,N
-0,1630176,Vernon,Carey Jr.,Vernon Carey Jr.,"Carey Jr., Vernon",V. Carey Jr.,vernon-carey-jr,2001-02-25T00:00:00,Duke,USA,Duke/USA,6-9,270,1,22,Forward-Center,Active,Y,1610612764,Wizards,WAS,wizards,Washington,vernon_carey_jr,2020,2021,Y,Y,Y,2020,2,32,N
-0,1628975,Jevon,Carter,Jevon Carter,"Carter, Jevon",J. Carter,jevon-carter,1995-09-14T00:00:00,West Virginia,USA,West Virginia/USA,6-1,200,3,5,Guard,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,jevon_carter,2018,2021,Y,Y,Y,2018,2,32,N
-0,1628976,Wendell,Carter Jr.,Wendell Carter Jr.,"Carter Jr., Wendell",W. Carter Jr.,wendell-carter-jr,1999-04-16T00:00:00,Duke,USA,Duke/USA,6-10,270,3,34,Center-Forward,Active,Y,1610612753,Magic,ORL,magic,Orlando,wendell_carter_jr,2018,2021,N,Y,Y,2018,1,7,N
-0,1627936,Alex,Caruso,Alex Caruso,"Caruso, Alex",A. Caruso,alex-caruso,1994-02-28T00:00:00,Texas A&M,USA,Texas A&M/USA,6-5,186,4,6,Guard,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,alex_caruso,2017,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630551,Justin,Champagnie,Justin Champagnie,"Champagnie, Justin",J. Champagnie,justin-champagnie,2001-06-29T00:00:00,Pittsburgh,USA,Pittsburgh/USA,6-6,206,0,11,Guard-Forward,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,justin_champagnie,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629185,Chris,Chiozza,Chris Chiozza,"Chiozza, Chris",C. Chiozza,chris-chiozza,1995-11-21T00:00:00,Florida,USA,Florida/USA,5-11,175,3,2,Guard,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,chris_chiozza,2018,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1627737,Marquese,Chriss,Marquese Chriss,"Chriss, Marquese",M. Chriss,marquese-chriss,1997-07-02T00:00:00,Washington,USA,Washington/USA,6-9,240,5,35,Forward,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,marquese_chriss,2016,2021,N,Y,Y,2016,1,8,N
-0,1630528,Josh,Christopher,Josh Christopher,"Christopher, Josh",J. Christopher,josh-christopher,2001-12-08T00:00:00,Arizona State,USA,Arizona State/USA,6-3,215,0,9,Guard,Active,Y,1610612745,Rockets,HOU,rockets,Houston,josh_christopher,2021,2021,Y,Y,Y,2021,1,24,N
-0,1629109,Gary,Clark,Gary Clark,"Clark, Gary",G. Clark,gary-clark,1994-11-16T00:00:00,Cincinnati,USA,Cincinnati/USA,6-6,225,3,12,Forward,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,gary_clark,2018,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629634,Brandon,Clarke,Brandon Clarke,"Clarke, Brandon",B. Clarke,brandon-clarke,1996-09-19T00:00:00,Gonzaga,Canada,Gonzaga/Canada,6-8,215,2,15,Forward,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,brandon_clarke,2019,2021,N,Y,Y,2019,1,21,N
-0,203903,Jordan,Clarkson,Jordan Clarkson,"Clarkson, Jordan",J. Clarkson,jordan-clarkson,1992-06-07T00:00:00,Missouri,USA,Missouri/USA,6-4,194,7,00,Guard,Active,Y,1610612762,Jazz,UTA,jazz,Utah,jordan_clarkson,2014,2021,Y,Y,Y,2014,2,46,N
-0,1629651,Nic,Claxton,Nic Claxton,"Claxton, Nic",N. Claxton,nic-claxton,1999-04-17T00:00:00,Georgia,USA,Georgia/USA,6-11,215,2,33,Forward-Center,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,nicolas_claxton,2019,2021,Y,Y,Y,2019,2,31,N
-0,1629599,Amir,Coffey,Amir Coffey,"Coffey, Amir",A. Coffey,amir-coffey,1997-06-17T00:00:00,Minnesota,USA,Minnesota/USA,6-7,210,2,7,Guard-Forward,Active,Y,1610612746,Clippers,LAC,clippers,LA,amir_coffey,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628381,John,Collins,John Collins,"Collins, John",J. Collins,john-collins,1997-09-23T00:00:00,Wake Forest,USA,Wake Forest/USA,6-9,226,4,20,Forward-Center,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,john_collins,2017,2021,N,Y,Y,2017,1,19,N
-0,1628380,Zach,Collins,Zach Collins,"Collins, Zach",Z. Collins,zach-collins,1997-11-19T00:00:00,Gonzaga,USA,Gonzaga/USA,6-11,250,3,23,Forward-Center,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,zach_collins,2017,2021,Y,Y,Y,2017,1,10,N
-0,201144,Mike,Conley,Mike Conley,"Conley, Mike",M. Conley,mike-conley,1987-10-11T00:00:00,Ohio State,USA,Ohio State/USA,6-1,175,14,11,Guard,Active,Y,1610612762,Jazz,UTA,jazz,Utah,mike_conley,2007,2021,N,Y,Y,2007,1,4,N
-0,1626192,Pat,Connaughton,Pat Connaughton,"Connaughton, Pat",P. Connaughton,pat-connaughton,1993-01-06T00:00:00,Notre Dame,USA,Notre Dame/USA,6-5,209,6,24,Guard,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,pat_connaughton,2015,2021,N,Y,Y,2015,2,41,N
-0,1629076,Tyler,Cook,Tyler Cook,"Cook, Tyler",T. Cook,tyler-cook,1997-09-23T00:00:00,Iowa,USA,Iowa/USA,6-8,255,2,25,Forward,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,tyler_cook,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630536,Sharife,Cooper,Sharife Cooper,"Cooper, Sharife",S. Cooper,sharife-cooper,2001-06-11T00:00:00,Auburn,USA,Auburn/USA,6-1,176,0,2,Guard,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,sharife_cooper,2021,2021,Y,Y,Y,2021,2,48,N
-0,202326,DeMarcus,Cousins,DeMarcus Cousins,"Cousins, DeMarcus",D. Cousins,demarcus-cousins,1990-08-13T00:00:00,Kentucky,USA,Kentucky/USA,6-10,270,10,4,Center,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,demarcus_cousins,2010,2021,N,Y,Y,2010,1,5,N
-0,203496,Robert,Covington,Robert Covington,"Covington, Robert",R. Covington,robert-covington,1990-12-14T00:00:00,Tennessee State,USA,Tennessee State/USA,6-7,209,8,23,Forward,Active,Y,1610612746,Clippers,LAC,clippers,LA,robert_covington,2013,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628470,Torrey,Craig,Torrey Craig,"Craig, Torrey",T. Craig,torrey-craig,1990-12-19T00:00:00,South Carolina Upstate,USA,South Carolina Upstate/USA,6-7,221,4,0,Forward,Active,Y,1610612756,Suns,PHX,suns,Phoenix,torrey_craig,2017,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203109,Jae,Crowder,Jae Crowder,"Crowder, Jae",J. Crowder,jae-crowder,1990-07-06T00:00:00,Marquette,USA,Marquette/USA,6-6,235,9,99,Forward,Active,Y,1610612756,Suns,PHX,suns,Phoenix,jae_crowder,2012,2021,Y,Y,Y,2012,2,34,N
-0,1629633,Jarrett,Culver,Jarrett Culver,"Culver, Jarrett",J. Culver,jarrett-culver,1999-02-20T00:00:00,Texas Tech,USA,Texas Tech/USA,6-6,195,2,23,Guard-Forward,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,jarrett_culver,2019,2021,Y,Y,Y,2019,1,6,N
-0,1630595,Cade,Cunningham,Cade Cunningham,"Cunningham, Cade",C. Cunningham,cade-cunningham,2001-09-25T00:00:00,Oklahoma State,USA,Oklahoma State/USA,6-6,220,0,2,Guard,Active,Y,1610612765,Pistons,DET,pistons,Detroit,cade_cunningham,2021,2021,N,Y,Y,2021,1,1,N
-0,203552,Seth,Curry,Seth Curry,"Curry, Seth",S. Curry,seth-curry,1990-08-23T00:00:00,Duke,USA,Duke/USA,6-2,185,7,30,Guard,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,seth_curry,2013,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,201939,Stephen,Curry,Stephen Curry,"Curry, Stephen",S. Curry,stephen-curry,1988-03-14T00:00:00,Davidson,USA,Davidson/USA,6-2,185,12,30,Guard,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,stephen_curry,2009,2021,N,Y,Y,2009,1,7,Y
-0,203076,Anthony,Davis,Anthony Davis,"Davis, Anthony",A. Davis,anthony-davis,1993-03-11T00:00:00,Kentucky,USA,Kentucky/USA,6-10,253,9,3,Forward-Center,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,anthony_davis,2012,2021,N,Y,Y,2012,1,1,Y
-0,202334,Ed,Davis,Ed Davis,"Davis, Ed",E. Davis,ed-davis,1989-06-05T00:00:00,North Carolina,USA,North Carolina/USA,6-9,218,11,21,Center-Forward,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,ed_davis,2010,2021,Y,Y,Y,2010,1,13,N
-0,1629056,Terence,Davis,Terence Davis,"Davis, Terence",T. Davis,terence-davis,1997-05-16T00:00:00,Mississippi,USA,Mississippi/USA,6-4,201,2,3,Guard,Active,Y,1610612758,Kings,SAC,kings,Sacramento,terence_davis,2019,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,201942,DeMar,DeRozan,DeMar DeRozan,"DeRozan, DeMar",D. DeRozan,demar-derozan,1989-08-07T00:00:00,Southern California,USA,Southern California/USA,6-6,220,12,11,Guard-Forward,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,demar_derozan,2009,2021,N,Y,Y,2009,1,9,N
-0,203473,Dewayne,Dedmon,Dewayne Dedmon,"Dedmon, Dewayne",D. Dedmon,dewayne-dedmon,1989-08-12T00:00:00,Southern California,USA,Southern California/USA,7-0,245,8,21,Center,Active,Y,1610612748,Heat,MIA,heat,Miami,dewayne_dedmon,2013,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628978,Donte,DiVincenzo,Donte DiVincenzo,"DiVincenzo, Donte",D. DiVincenzo,donte-divincenzo,1997-01-31T00:00:00,Villanova,USA,Villanova/USA,6-4,203,3,0,Guard,Active,Y,1610612758,Kings,SAC,kings,Sacramento,donte_divincenzo,2018,2021,Y,Y,Y,2018,1,17,N
-0,1628977,Hamidou,Diallo,Hamidou Diallo,"Diallo, Hamidou",H. Diallo,hamidou-diallo,1998-07-31T00:00:00,Kentucky,USA,Kentucky/USA,6-5,202,3,6,Guard,Active,Y,1610612765,Pistons,DET,pistons,Detroit,hamidou_diallo,2018,2021,Y,Y,Y,2018,2,45,N
-0,203476,Gorgui,Dieng,Gorgui Dieng,"Dieng, Gorgui",G. Dieng,gorgui-dieng,1990-01-18T00:00:00,Louisville,Senegal,Louisville/Senegal,6-10,248,8,10,Center,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,gorgui_dieng,2013,2021,N,Y,Y,2013,1,21,N
-0,203915,Spencer,Dinwiddie,Spencer Dinwiddie,"Dinwiddie, Spencer",S. Dinwiddie,spencer-dinwiddie,1993-04-06T00:00:00,Colorado,USA,Colorado/USA,6-6,215,7,26,Guard,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,spencer_dinwiddie,2014,2021,Y,Y,Y,2014,2,38,N
-0,1629029,Luka,Doncic,Luka Doncic,"Doncic, Luka",L. Doncic,luka-doncic,1999-02-28T00:00:00,Real Madrid,Slovenia,Real Madrid/Slovenia,6-7,230,3,77,Forward-Guard,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,luka_don,2018,2021,N,Y,Y,2018,1,3,N
-0,1629652,Luguentz,Dort,Luguentz Dort,"Dort, Luguentz",L. Dort,luguentz-dort,1999-04-19T00:00:00,Arizona State,Canada,Arizona State/Canada,6-3,215,2,5,Guard,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,luguentz_dort,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630245,Ayo,Dosunmu,Ayo Dosunmu,"Dosunmu, Ayo",A. Dosunmu,ayo-dosunmu,2000-01-17T00:00:00,Illinois,USA,Illinois/USA,6-4,200,0,12,Guard,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,ayo_dosunmu,2021,2021,N,Y,Y,2021,2,38,N
-0,201609,Goran,Dragic,Goran Dragic,"Dragic, Goran",G. Dragic,goran-dragic,1986-05-06T00:00:00,Union Olimpija,Slovenia,Union Olimpija/Slovenia,6-3,190,13,9,Guard,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,goran_dragic,2008,2021,N,Y,Y,2008,2,45,N
-0,203083,Andre,Drummond,Andre Drummond,"Drummond, Andre",A. Drummond,andre-drummond,1993-08-10T00:00:00,Connecticut,USA,Connecticut/USA,6-10,279,9,0,Center,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,andre_drummond,2012,2021,N,Y,Y,2012,1,9,N
-0,1630537,Chris,Duarte,Chris Duarte,"Duarte, Chris",C. Duarte,chris-duarte,1997-06-13T00:00:00,Oregon,Dominican Republic,Oregon/Dominican Republic,6-5,190,0,3,Guard,Active,Y,1610612754,Pacers,IND,pacers,Indiana,chris_duarte,2021,2021,N,Y,Y,2021,1,13,N
-0,1630561,David,Duke Jr.,David Duke Jr.,"Duke Jr., David",D. Duke Jr.,david-duke-jr,1999-10-13T00:00:00,Providence,USA,Providence/USA,6-4,204,0,6,Guard,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,david_duke_jr,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,201142,Kevin,Durant,Kevin Durant,"Durant, Kevin",K. Durant,kevin-durant,1988-09-29T00:00:00,Texas-Austin,USA,Texas-Austin/USA,6-10,240,13,7,Forward,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,kevin_durant,2007,2021,N,Y,Y,2007,1,2,Y
-0,1630162,Anthony,Edwards,Anthony Edwards,"Edwards, Anthony",A. Edwards,anthony-edwards,2001-08-05T00:00:00,Georgia,USA,Georgia/USA,6-4,225,1,1,Guard,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,anthony_edwards,2020,2021,N,Y,Y,2020,1,1,N
-0,1629035,Carsen,Edwards,Carsen Edwards,"Edwards, Carsen",C. Edwards,carsen-edwards,1998-03-12T00:00:00,Purdue,USA,Purdue/USA,5-11,200,2,4,Guard,Active,Y,1610612738,Celtics,BOS,celtics,Boston,carsen_edwards,2019,2021,Y,Y,Y,2019,2,33,N
-0,1630556,Kessler,Edwards,Kessler Edwards,"Edwards, Kessler",K. Edwards,kessler-edwards,2000-08-09T00:00:00,Pepperdine,USA,Pepperdine/USA,6-7,203,0,14,Forward,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,kessler_edwards,2021,2021,Y,Y,Y,2021,2,44,N
-0,1629604,CJ,Elleby,CJ Elleby,"Elleby, CJ",C. Elleby,cj-elleby,2000-06-16T00:00:00,Washington State,USA,Washington State/USA,6-6,200,1,16,Forward-Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,cj_elleby,2020,2021,N,Y,Y,2020,2,46,N
-0,201961,Wayne,Ellington,Wayne Ellington,"Ellington, Wayne",W. Ellington,wayne-ellington,1987-11-29T00:00:00,North Carolina,USA,North Carolina/USA,6-4,207,12,2,Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,wayne_ellington,2009,2021,N,Y,Y,2009,1,28,N
-0,203954,Joel,Embiid,Joel Embiid,"Embiid, Joel",J. Embiid,joel-embiid,1994-03-16T00:00:00,Kansas,Cameroon,Kansas/Cameroon,7-0,280,5,21,Center-Forward,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,joel_embiid,2014,2021,N,Y,Y,2014,1,3,N
-0,202324,Derrick,Favors,Derrick Favors,"Favors, Derrick",D. Favors,derrick-favors,1991-07-15T00:00:00,Georgia Tech,USA,Georgia Tech/USA,6-9,265,11,15,Forward,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,derrick_favors,2010,2021,N,Y,Y,2010,1,3,N
-0,1628981,Bruno,Fernando,Bruno Fernando,"Fernando, Bruno",B. Fernando,bruno-fernando,1998-08-15T00:00:00,Maryland,Angola,Maryland/Angola,6-9,240,2,20,Forward-Center,Active,Y,1610612745,Rockets,HOU,rockets,Houston,bruno_fernando,2019,2021,Y,Y,Y,2019,2,34,N
-0,1627827,Dorian,Finney-Smith,Dorian Finney-Smith,"Finney-Smith, Dorian",D. Finney-Smith,dorian-finney-smith,1993-05-04T00:00:00,Florida,USA,Florida/USA,6-7,220,5,10,Forward,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,dorian_finney-smith,2016,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630238,Malik,Fitts,Malik Fitts,"Fitts, Malik",M. Fitts,malik-fitts,1997-07-04T00:00:00,St. Mary's College,USA,St. Mary's College/USA,6-5,230,1,8,Forward,Active,Y,1610612738,Celtics,BOS,celtics,Boston,malik_fitts,2020,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630201,Malachi,Flynn,Malachi Flynn,"Flynn, Malachi",M. Flynn,malachi-flynn,1998-05-09T00:00:00,San Diego State,USA,San Diego State/USA,6-1,175,1,22,Guard,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,malachi_flynn,2020,2021,Y,Y,Y,2020,1,29,N
-0,1627854,Bryn,Forbes,Bryn Forbes,"Forbes, Bryn",B. Forbes,bryn-forbes,1993-07-23T00:00:00,Michigan State,USA,Michigan State/USA,6-2,205,5,6,Guard,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,bryn_forbes,2016,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630235,Trent,Forrest,Trent Forrest,"Forrest, Trent",T. Forrest,trent-forrest,1998-06-12T00:00:00,Florida State,USA,Florida State/USA,6-4,210,1,3,Guard,Active,Y,1610612762,Jazz,UTA,jazz,Utah,trent_forrest,2020,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203095,Evan,Fournier,Evan Fournier,"Fournier, Evan",E. Fournier,evan-fournier,1992-10-29T00:00:00,Poitiers Basket 86,France,Poitiers Basket 86/France,6-6,205,9,13,Guard-Forward,Active,Y,1610612752,Knicks,NYK,knicks,New York,evan_fournier,2012,2021,N,Y,Y,2012,1,20,N
-0,1628368,De'Aaron,Fox,De'Aaron Fox,"Fox, De'Aaron",D. Fox,deaaron-fox,1997-12-20T00:00:00,Kentucky,USA,Kentucky/USA,6-3,185,4,5,Guard,Active,Y,1610612758,Kings,SAC,kings,Sacramento,de'aaron_fox,2017,2021,N,Y,Y,2017,1,5,N
-0,1628982,Melvin,Frazier Jr.,Melvin Frazier Jr.,"Frazier Jr., Melvin",M. Frazier Jr.,melvin-frazier-jr,1996-08-30T00:00:00,Tulane,USA,Tulane/USA,6-5,215,2,6,Guard-Forward,Active,Y,1610612753,Magic,ORL,magic,Orlando,melvin_frazier_jr,2018,2021,Y,Y,Y,2018,2,35,N
-0,1628365,Markelle,Fultz,Markelle Fultz,"Fultz, Markelle",M. Fultz,markelle-fultz,1998-05-29T00:00:00,Washington,USA,Washington/USA,6-4,209,4,20,Guard,Active,Y,1610612753,Magic,ORL,magic,Orlando,markelle_fultz,2017,2021,N,Y,Y,2017,1,1,N
-0,1629117,Wenyen,Gabriel,Wenyen Gabriel,"Gabriel, Wenyen",W. Gabriel,wenyen-gabriel,1997-03-26T00:00:00,Kentucky,South Sudan,Kentucky/South Sudan,6-9,205,2,35,Forward,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,wenyen_gabriel,2018,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629655,Daniel,Gafford,Daniel Gafford,"Gafford, Daniel",D. Gafford,daniel-gafford,1998-10-01T00:00:00,Arkansas,USA,Arkansas/USA,6-9,234,2,21,Forward-Center,Active,Y,1610612764,Wizards,WAS,wizards,Washington,daniel_gafford,2019,2021,Y,Y,Y,2019,2,38,N
-0,201568,Danilo,Gallinari,Danilo Gallinari,"Gallinari, Danilo",D. Gallinari,danilo-gallinari,1988-08-08T00:00:00,Olimpia Milano,Italy,Olimpia Milano/Italy,6-10,236,12,8,Forward,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,danilo_gallinari,2008,2021,N,Y,Y,2008,1,6,N
-0,1629636,Darius,Garland,Darius Garland,"Garland, Darius",D. Garland,darius-garland,2000-01-26T00:00:00,Vanderbilt,USA,Vanderbilt/USA,6-1,192,2,10,Guard,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,darius_garland,2019,2021,N,Y,Y,2019,1,5,N
-0,1630586,Usman,Garuba,Usman Garuba,"Garuba, Usman",U. Garuba,usman-garuba,2002-03-09T00:00:00,Real Madrid,Spain,Real Madrid/Spain,6-8,229,0,16,Forward,Active,Y,1610612745,Rockets,HOU,rockets,Houston,usman_garuba,2021,2021,Y,Y,Y,2021,1,23,N
-0,1630568,Luka,Garza,Luka Garza,"Garza, Luka",L. Garza,luka-garza,1998-12-27T00:00:00,Iowa,USA,Iowa/USA,6-10,243,0,55,Center,Active,Y,1610612765,Pistons,DET,pistons,Detroit,luka_garza,2021,2021,Y,Y,Y,2021,2,52,N
-0,200752,Rudy,Gay,Rudy Gay,"Gay, Rudy",R. Gay,rudy-gay,1986-08-17T00:00:00,Connecticut,USA,Connecticut/USA,6-8,250,15,8,Forward-Guard,Active,Y,1610612762,Jazz,UTA,jazz,Utah,rudy_gay,2006,2021,N,Y,Y,2006,1,8,N
-0,202331,Paul,George,Paul George,"George, Paul",P. George,paul-george,1990-05-02T00:00:00,Fresno State,USA,Fresno State/USA,6-8,220,11,13,Forward,Active,Y,1610612746,Clippers,LAC,clippers,LA,paul_george,2010,2021,N,Y,Y,2010,1,10,N
-0,201959,Taj,Gibson,Taj Gibson,"Gibson, Taj",T. Gibson,taj-gibson,1985-06-24T00:00:00,Southern California,USA,Southern California/USA,6-9,232,12,67,Forward,Active,Y,1610612752,Knicks,NYK,knicks,New York,taj_gibson,2009,2021,N,Y,Y,2009,1,26,N
-0,1630581,Josh,Giddey,Josh Giddey,"Giddey, Josh",J. Giddey,josh-giddey,2002-10-10T00:00:00,NBA Global Academy,Australia,NBA Global Academy/Australia,6-8,205,0,3,Guard,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,josh_giddey,2021,2021,N,Y,Y,2021,1,6,N
-0,1628983,Shai,Gilgeous-Alexander,Shai Gilgeous-Alexander,"Gilgeous-Alexander, Shai",S. Gilgeous-Alexander,shai-gilgeous-alexander,1998-07-12T00:00:00,Kentucky,Canada,Kentucky/Canada,6-6,180,3,2,Guard,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,shai_gilgeous-alexander,2018,2021,N,Y,Y,2018,1,11,N
-0,1630264,Anthony,Gill,Anthony Gill,"Gill, Anthony",A. Gill,anthony-gill,1992-10-17T00:00:00,Virginia,USA,Virginia/USA,6-7,230,1,16,Forward,Active,Y,1610612764,Wizards,WAS,wizards,Washington,anthony_gill,2020,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203497,Rudy,Gobert,Rudy Gobert,"Gobert, Rudy",R. Gobert,rudy-gobert,1992-06-26T00:00:00,Cholet,France,Cholet/France,7-1,258,8,27,Center,Active,Y,1610612762,Jazz,UTA,jazz,Utah,rudy_gobert,2013,2021,Y,Y,Y,2013,1,27,N
-0,1629164,Brandon,Goodwin,Brandon Goodwin,"Goodwin, Brandon",B. Goodwin,brandon-goodwin,1995-10-02T00:00:00,Florida Gulf Coast,USA,Florida Gulf Coast/USA,6-0,180,3,00,Guard,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,brandon_goodwin,2018,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203932,Aaron,Gordon,Aaron Gordon,"Gordon, Aaron",A. Gordon,aaron-gordon,1995-09-16T00:00:00,Arizona,USA,Arizona/USA,6-8,235,7,50,Forward,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,aaron_gordon,2014,2021,N,Y,Y,2014,1,4,N
-0,201569,Eric,Gordon,Eric Gordon,"Gordon, Eric",E. Gordon,eric-gordon,1988-12-25T00:00:00,Indiana,USA,Indiana/USA,6-3,215,13,10,Guard,Active,Y,1610612745,Rockets,HOU,rockets,Houston,eric_gordon,2008,2021,N,Y,Y,2008,1,7,N
-0,1628984,Devonte',Graham,Devonte' Graham,"Graham, Devonte'",D. Graham,devonte-graham,1995-02-22T00:00:00,Kansas,USA,Kansas/USA,6-1,195,3,4,Guard,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,devonte_graham,2018,2021,Y,Y,Y,2018,2,34,N
-0,203924,Jerami,Grant,Jerami Grant,"Grant, Jerami",J. Grant,jerami-grant,1994-03-12T00:00:00,Syracuse,USA,Syracuse/USA,6-8,210,7,9,Forward,Active,Y,1610612765,Pistons,DET,pistons,Detroit,jerami_grant,2014,2021,N,Y,Y,2014,2,39,N
-0,201980,Danny,Green,Danny Green,"Green, Danny",D. Green,danny-green,1987-06-22T00:00:00,North Carolina,USA,North Carolina/USA,6-6,215,12,14,Guard,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,danny_green,2009,2021,Y,Y,Y,2009,2,46,N
-0,203110,Draymond,Green,Draymond Green,"Green, Draymond",D. Green,draymond-green,1990-03-04T00:00:00,Michigan State,USA,Michigan State/USA,6-6,230,9,23,Forward,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,draymond_green,2012,2021,N,Y,Y,2012,2,35,N
-0,203210,JaMychal,Green,JaMychal Green,"Green, JaMychal",J. Green,jamychal-green,1990-06-21T00:00:00,Alabama,USA,Alabama/USA,6-8,227,7,0,Forward-Center,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,jamychal_green,2014,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630224,Jalen,Green,Jalen Green,"Green, Jalen",J. Green,jalen-green,2002-02-09T00:00:00,NBA G League Ignite,USA,NBA G League Ignite/USA,6-4,186,0,0,Guard,Active,Y,1610612745,Rockets,HOU,rockets,Houston,jalen_green,2021,2021,Y,Y,Y,2021,1,2,N
-0,1629750,Javonte,Green,Javonte Green,"Green, Javonte",J. Green,javonte-green,1993-07-23T00:00:00,Radford,USA,Radford/USA,6-5,205,2,24,Guard-Forward,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,javonte_green,2019,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,201145,Jeff,Green,Jeff Green,"Green, Jeff",J. Green,jeff-green,1986-08-28T00:00:00,Georgetown,USA,Georgetown/USA,6-8,235,13,32,Forward,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,jeff_green,2007,2021,N,Y,Y,2007,1,5,N
-0,1630182,Josh,Green,Josh Green,"Green, Josh",J. Green,josh-green,2000-11-16T00:00:00,Arizona,Australia,Arizona/Australia,6-5,200,1,8,Guard,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,josh_green,2020,2021,Y,Y,Y,2020,1,18,N
-0,201933,Blake,Griffin,Blake Griffin,"Griffin, Blake",B. Griffin,blake-griffin,1989-03-16T00:00:00,Oklahoma,USA,Oklahoma/USA,6-9,250,11,2,Forward,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,blake_griffin,2009,2021,N,Y,Y,2009,1,1,N
-0,1629656,Quentin,Grimes,Quentin Grimes,"Grimes, Quentin",Q. Grimes,quentin-grimes,2000-05-08T00:00:00,Houston,USA,Houston/USA,6-4,210,0,6,Guard,Active,Y,1610612752,Knicks,NYK,knicks,New York,quentin_grimes,2021,2021,N,Y,Y,2021,1,25,N
-0,1629060,Rui,Hachimura,Rui Hachimura,"Hachimura, Rui",R. Hachimura,rui-hachimura,1998-02-08T00:00:00,Gonzaga,Japan,Gonzaga/Japan,6-8,230,2,8,Forward,Active,Y,1610612764,Wizards,WAS,wizards,Washington,rui_hachimura,2019,2021,N,Y,Y,2019,1,9,N
-0,1630169,Tyrese,Haliburton,Tyrese Haliburton,"Haliburton, Tyrese",T. Haliburton,tyrese-haliburton,2000-02-29T00:00:00,Iowa State,USA,Iowa State/USA,6-5,185,1,0,Guard,Active,Y,1610612754,Pacers,IND,pacers,Indiana,tyrese_haliburton,2020,2021,N,Y,Y,2020,1,12,N
-0,1630181,R.J.,Hampton,R.J. Hampton,"Hampton, R.J.",R. Hampton,rj-hampton,2001-02-07T00:00:00,New Zealand Breakers,USA,New Zealand Breakers/USA,6-4,175,1,13,Guard,Active,Y,1610612753,Magic,ORL,magic,Orlando,rj_hampton,2020,2021,N,Y,Y,2020,1,24,N
-0,203501,Tim,Hardaway Jr.,Tim Hardaway Jr.,"Hardaway Jr., Tim",T. Hardaway Jr.,tim-hardaway-jr,1992-03-16T00:00:00,Michigan,USA,Michigan/USA,6-5,205,8,11,Guard-Forward,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,tim_hardaway_jr,2013,2021,Y,Y,Y,2013,1,24,N
-0,201935,James,Harden,James Harden,"Harden, James",J. Harden,james-harden,1989-08-26T00:00:00,Arizona State,USA,Arizona State/USA,6-5,220,12,1,Guard,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,james_harden,2009,2021,N,Y,Y,2009,1,3,Y
-0,203090,Maurice,Harkless,Maurice Harkless,"Harkless, Maurice",M. Harkless,maurice-harkless,1993-05-11T00:00:00,St. John's,USA,St. John's/USA,6-7,220,9,8,Forward-Guard,Active,Y,1610612758,Kings,SAC,kings,Sacramento,maurice_harkless,2012,2021,N,Y,Y,2012,1,15,N
-0,1629607,Jared,Harper,Jared Harper,"Harper, Jared",J. Harper,jared-harper,1997-09-14T00:00:00,Auburn,USA,Auburn/USA,5-10,175,2,2,Guard,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,jared_harper,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1626149,Montrezl,Harrell,Montrezl Harrell,"Harrell, Montrezl",M. Harrell,montrezl-harrell,1994-01-26T00:00:00,Louisville,USA,Louisville/USA,6-7,240,6,8,Forward-Center,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,montrezl_harrell,2015,2021,Y,Y,Y,2015,2,32,N
-0,203914,Gary,Harris,Gary Harris,"Harris, Gary",G. Harris,gary-harris,1994-09-14T00:00:00,Michigan State,USA,Michigan State/USA,6-4,210,7,14,Guard,Active,Y,1610612753,Magic,ORL,magic,Orlando,gary_harris,2014,2021,N,Y,Y,2014,1,19,N
-0,203925,Joe,Harris,Joe Harris,"Harris, Joe",J. Harris,joe-harris,1991-09-06T00:00:00,Virginia,USA,Virginia/USA,6-6,220,7,12,Guard-Forward,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,joe_harris,2014,2021,Y,Y,Y,2014,2,33,N
-0,202699,Tobias,Harris,Tobias Harris,"Harris, Tobias",T. Harris,tobias-harris,1992-07-15T00:00:00,Tennessee,USA,Tennessee/USA,6-7,226,10,12,Forward,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,tobias_harris,2011,2021,N,Y,Y,2011,1,19,N
-0,1628404,Josh,Hart,Josh Hart,"Hart, Josh",J. Hart,josh-hart,1995-03-06T00:00:00,Villanova,USA,Villanova/USA,6-5,215,4,11,Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,josh_hart,2017,2021,Y,Y,Y,2017,1,30,N
-0,1628392,Isaiah,Hartenstein,Isaiah Hartenstein,"Hartenstein, Isaiah",I. Hartenstein,isaiah-hartenstein,1998-05-05T00:00:00,Zalgiris,Germany,Zalgiris/Germany,7-0,250,3,55,Center-Forward,Active,Y,1610612746,Clippers,LAC,clippers,LA,isaiah_hartenstein,2018,2021,Y,Y,Y,2017,2,43,N
-0,2617,Udonis,Haslem,Udonis Haslem,"Haslem, Udonis",U. Haslem,udonis-haslem,1980-06-09T00:00:00,Florida,USA,Florida/USA,6-8,235,18,40,Forward,Active,Y,1610612748,Heat,MIA,heat,Miami,udonis_haslem,2003,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630573,Sam,Hauser,Sam Hauser,"Hauser, Sam",S. Hauser,sam-hauser,1997-12-08T00:00:00,Virginia,USA,Virginia/USA,6-7,217,0,30,Forward,Active,Y,1610612738,Celtics,BOS,celtics,Boston,sam_hauser,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629637,Jaxson,Hayes,Jaxson Hayes,"Hayes, Jaxson",J. Hayes,jaxson-hayes,2000-05-23T00:00:00,Texas-Austin,USA,Texas-Austin/USA,6-11,220,2,10,Center-Forward,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,jaxson_hayes,2019,2021,Y,Y,Y,2019,1,8,N
-0,1630165,Killian,Hayes,Killian Hayes,"Hayes, Killian",K. Hayes,killian-hayes,2001-07-27T00:00:00,Ratiopharm Ulm,France,Ratiopharm Ulm/France,6-5,195,1,7,Guard,Active,Y,1610612765,Pistons,DET,pistons,Detroit,killian_hayes,2020,2021,N,Y,Y,2020,1,7,N
-0,202330,Gordon,Hayward,Gordon Hayward,"Hayward, Gordon",G. Hayward,gordon-hayward,1990-03-23T00:00:00,Butler,USA,Butler/USA,6-7,225,11,20,Forward,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,gordon_hayward,2010,2021,N,Y,Y,2010,1,9,N
-0,1627823,Juancho,Hernangomez,Juancho Hernangomez,"Hernangomez, Juancho",J. Hernangomez,juancho-hernangomez,1995-09-28T00:00:00,Estudiantes,Spain,Estudiantes/Spain,6-9,214,5,41,Forward,Active,Y,1610612762,Jazz,UTA,jazz,Utah,juan_hernangomez,2016,2021,Y,Y,Y,2016,1,15,N
-0,1626195,Willy,Hernangomez,Willy Hernangomez,"Hernangomez, Willy",W. Hernangomez,willy-hernangomez,1994-05-27T00:00:00,Cajasol Sevilla,Spain,Cajasol Sevilla/Spain,6-11,250,5,9,Center-Forward,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,willy_hernangomez,2016,2021,N,Y,Y,2015,2,35,N
-0,1629639,Tyler,Herro,Tyler Herro,"Herro, Tyler",T. Herro,tyler-herro,2000-01-20T00:00:00,Kentucky,USA,Kentucky/USA,6-5,195,2,14,Guard,Active,Y,1610612748,Heat,MIA,heat,Miami,tyler_herro,2019,2021,N,Y,Y,2019,1,13,N
-0,1627741,Buddy,Hield,Buddy Hield,"Hield, Buddy",B. Hield,buddy-hield,1992-12-17T00:00:00,Oklahoma,Bahamas,Oklahoma/Bahamas,6-4,220,5,24,Guard,Active,Y,1610612754,Pacers,IND,pacers,Indiana,buddy_hield,2016,2021,N,Y,Y,2016,1,6,N
-0,1629312,Haywood,Highsmith,Haywood Highsmith,"Highsmith, Haywood",H. Highsmith,haywood-highsmith,1996-12-09T00:00:00,Wheeling Jesuit,USA,Wheeling Jesuit/USA,6-4,220,1,24,Forward,Active,Y,1610612748,Heat,MIA,heat,Miami,haywood_highsmith,2018,2021,Y,Y,Y,2018,,,N
-0,201588,George,Hill,George Hill,"Hill, George",G. Hill,george-hill,1986-05-04T00:00:00,Indiana-Purdue Indianapolis,USA,Indiana-Purdue Indianapolis/USA,6-4,188,13,3,Guard,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,george_hill,2008,2021,N,Y,Y,2008,1,26,N
-0,1630792,Malcolm,Hill,Malcolm Hill,"Hill, Malcolm",M. Hill,malcolm-hill,1995-10-26T00:00:00,Illinois,USA,Illinois/USA,6-6,220,0,14,Forward,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,malcolm_hill,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630207,Nate,Hinton,Nate Hinton,"Hinton, Nate",N. Hinton,nate-hinton,1999-06-08T00:00:00,Houston,USA,Houston/USA,6-5,210,1,14,Guard-Forward,Active,Y,1610612754,Pacers,IND,pacers,Indiana,nate_hinton,2020,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628988,Aaron,Holiday,Aaron Holiday,"Holiday, Aaron",A. Holiday,aaron-holiday,1996-09-30T00:00:00,UCLA,USA,UCLA/USA,6-0,185,3,4,Guard,Active,Y,1610612756,Suns,PHX,suns,Phoenix,aaron_holiday,2018,2021,N,Y,Y,2018,1,23,N
-0,201950,Jrue,Holiday,Jrue Holiday,"Holiday, Jrue",J. Holiday,jrue-holiday,1990-06-12T00:00:00,UCLA,USA,UCLA/USA,6-3,205,12,21,Guard,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,jrue_holiday,2009,2021,N,Y,Y,2009,1,17,N
-0,203200,Justin,Holiday,Justin Holiday,"Holiday, Justin",J. Holiday,justin-holiday,1989-04-05T00:00:00,Washington,USA,Washington/USA,6-6,180,8,9,Forward-Guard,Active,Y,1610612758,Kings,SAC,kings,Sacramento,justin_holiday,2012,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1626158,Richaun,Holmes,Richaun Holmes,"Holmes, Richaun",R. Holmes,richaun-holmes,1993-10-15T00:00:00,Bowling Green,USA,Bowling Green/USA,6-10,235,6,22,Forward,Active,Y,1610612758,Kings,SAC,kings,Sacramento,richaun_holmes,2015,2021,Y,Y,Y,2015,2,37,N
-0,203918,Rodney,Hood,Rodney Hood,"Hood, Rodney",R. Hood,rodney-hood,1992-10-20T00:00:00,Duke,USA,Duke/USA,6-8,208,7,22,Guard-Forward,Active,Y,1610612746,Clippers,LAC,clippers,LA,rodney_hood,2014,2021,N,Y,Y,2014,1,23,N
-0,201143,Al,Horford,Al Horford,"Horford, Al",A. Horford,al-horford,1986-06-03T00:00:00,Florida,Dominican Republic,Florida/Dominican Republic,6-9,240,14,42,Center-Forward,Active,Y,1610612738,Celtics,BOS,celtics,Boston,al_horford,2007,2021,N,Y,Y,2007,1,3,N
-0,1629659,Talen,Horton-Tucker,Talen Horton-Tucker,"Horton-Tucker, Talen",T. Horton-Tucker,talen-horton-tucker,2000-11-25T00:00:00,Iowa State,USA,Iowa State/USA,6-4,234,2,5,Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,talen_horton-tucker,2019,2021,Y,Y,Y,2019,2,46,N
-0,1627863,Danuel,House Jr.,Danuel House Jr.,"House Jr., Danuel",D. House Jr.,danuel-house-jr,1993-06-07T00:00:00,Texas A&M,USA,Texas A&M/USA,6-6,220,5,25,Forward-Guard,Active,Y,1610612762,Jazz,UTA,jazz,Utah,danuel_house,2016,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,2730,Dwight,Howard,Dwight Howard,"Howard, Dwight",D. Howard,dwight-howard,1985-12-08T00:00:00,SW Atlanta Christian Academy (GA),USA,SW Atlanta Christian Academy (GA)/USA,6-10,265,17,39,Center-Forward,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,dwight_howard,2004,2021,N,Y,Y,2004,1,1,N
-0,1630210,Markus,Howard,Markus Howard,"Howard, Markus",M. Howard,markus-howard,1999-03-03T00:00:00,Marquette,USA,Marquette/USA,5-10,175,1,00,Guard,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,markus_howard,2020,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628989,Kevin,Huerter,Kevin Huerter,"Huerter, Kevin",K. Huerter,kevin-huerter,1998-08-27T00:00:00,Maryland,USA,Maryland/USA,6-7,198,3,3,Guard-Forward,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,kevin_huerter,2018,2021,N,Y,Y,2018,1,19,N
-0,1630190,Elijah,Hughes,Elijah Hughes,"Hughes, Elijah",E. Hughes,elijah-hughes,1998-03-10T00:00:00,Syracuse,USA,Syracuse/USA,6-5,215,1,19,Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,elijah_hughes,2020,2021,Y,Y,Y,2020,2,39,N
-0,1630624,Feron,Hunt,Feron Hunt,"Hunt, Feron",F. Hunt,feron-hunt,1999-07-05T00:00:00,Southern Methodist,USA,Southern Methodist/USA,6-8,195,0,11,Forward,Active,Y,1610612752,Knicks,NYK,knicks,New York,feron_hunt,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629631,De'Andre,Hunter,De'Andre Hunter,"Hunter, De'Andre",D. Hunter,deandre-hunter,1997-12-02T00:00:00,Virginia,USA,Virginia/USA,6-8,221,2,12,Forward-Guard,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,deandre_hunter,2019,2021,N,Y,Y,2019,1,4,N
-0,1630538,Bones,Hyland,Bones Hyland,"Hyland, Bones",B. Hyland,bones-hyland,2000-09-14T00:00:00,Virginia Commonwealth,USA,Virginia Commonwealth/USA,6-2,169,0,3,Guard,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,nahshon_hyland,2021,2021,N,Y,Y,2021,1,26,N
-0,201586,Serge,Ibaka,Serge Ibaka,"Ibaka, Serge",S. Ibaka,serge-ibaka,1989-09-18T00:00:00,Ricoh Manresa,Republic of the Congo,Ricoh Manresa/Republic of the Congo,6-10,235,12,25,Forward,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,serge_ibaka,2009,2021,Y,Y,Y,2008,1,24,N
-0,2738,Andre,Iguodala,Andre Iguodala,"Iguodala, Andre",A. Iguodala,andre-iguodala,1984-01-28T00:00:00,Arizona,USA,Arizona/USA,6-6,215,17,9,Guard-Forward,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,andre_iguodala,2004,2021,N,Y,Y,2004,1,9,N
-0,204060,Joe,Ingles,Joe Ingles,"Ingles, Joe",J. Ingles,joe-ingles,1987-10-02T00:00:00,Maccabi Tel Aviv,Australia,Maccabi Tel Aviv/Australia,6-8,220,7,00,Forward-Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,joe_ingles,2014,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1627742,Brandon,Ingram,Brandon Ingram,"Ingram, Brandon",B. Ingram,brandon-ingram,1997-09-02T00:00:00,Duke,USA,Duke/USA,6-8,190,5,14,Forward,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,brandon_ingram,2016,2021,N,Y,Y,2016,1,2,N
-0,202681,Kyrie,Irving,Kyrie Irving,"Irving, Kyrie",K. Irving,kyrie-irving,1992-03-23T00:00:00,Duke,Australia,Duke/Australia,6-2,195,10,11,Guard,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,kyrie_irving,2011,2021,N,Y,Y,2011,1,1,N
-0,1628371,Jonathan,Isaac,Jonathan Isaac,"Isaac, Jonathan",J. Isaac,jonathan-isaac,1997-10-03T00:00:00,Florida State,USA,Florida State/USA,6-10,230,3,1,Forward,Active,N,1610612753,Magic,ORL,magic,Orlando,jonathan_isaac,2017,2021,Y,Y,Y,2017,1,6,N
-0,1628402,Frank,Jackson,Frank Jackson,"Jackson, Frank",F. Jackson,frank-jackson,1998-05-04T00:00:00,Duke,USA,Duke/USA,6-3,205,3,5,Guard,Active,Y,1610612765,Pistons,DET,pistons,Detroit,frank_jackson,2017,2021,Y,Y,Y,2017,2,31,N
-0,1630543,Isaiah,Jackson,Isaiah Jackson,"Jackson, Isaiah",I. Jackson,isaiah-jackson,2002-01-10T00:00:00,Kentucky,USA,Kentucky/USA,6-10,205,0,23,Forward,Active,Y,1610612754,Pacers,IND,pacers,Indiana,tmp_isaiah_jackson,2021,2021,Y,Y,Y,2021,1,22,N
-0,1628367,Josh,Jackson,Josh Jackson,"Jackson, Josh",J. Jackson,josh-jackson,1997-02-10T00:00:00,Kansas,USA,Kansas/USA,6-8,207,4,55,Guard-Forward,Active,Y,1610612758,Kings,SAC,kings,Sacramento,josh_jackson,2017,2021,Y,Y,Y,2017,1,4,N
-0,202704,Reggie,Jackson,Reggie Jackson,"Jackson, Reggie",R. Jackson,reggie-jackson,1990-04-16T00:00:00,Boston College,USA,Boston College/USA,6-2,208,10,1,Guard,Active,Y,1610612746,Clippers,LAC,clippers,LA,reggie_jackson,2011,2021,Y,Y,Y,2011,1,24,N
-0,1628991,Jaren,Jackson Jr.,Jaren Jackson Jr.,"Jackson Jr., Jaren",J. Jackson Jr.,jaren-jackson-jr,1999-09-15T00:00:00,Michigan State,USA,Michigan State/USA,6-11,242,3,13,Forward-Center,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,jaren_jackson_jr,2018,2021,N,Y,Y,2018,1,4,N
-0,2544,LeBron,James,LeBron James,"James, LeBron",L. James,lebron-james,1984-12-30T00:00:00,St. Vincent-St. Mary HS (OH),USA,St. Vincent-St. Mary HS (OH)/USA,6-9,250,18,6,Forward,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,lebron_james,2003,2021,N,Y,Y,2003,1,1,Y
-0,1629660,Ty,Jerome,Ty Jerome,"Jerome, Ty",T. Jerome,ty-jerome,1997-07-08T00:00:00,Virginia,USA,Virginia/USA,6-5,195,2,16,Guard-Forward,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,ty_jerome,2019,2021,Y,Y,Y,2019,1,24,N
-0,1630198,Isaiah,Joe,Isaiah Joe,"Joe, Isaiah",I. Joe,isaiah-joe,1999-07-02T00:00:00,Arkansas,USA,Arkansas/USA,6-4,165,1,7,Guard,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,isaiah_joe,2020,2021,Y,Y,Y,2020,2,49,N
-0,1629661,Cameron,Johnson,Cameron Johnson,"Johnson, Cameron",C. Johnson,cameron-johnson,1996-03-03T00:00:00,North Carolina,USA,North Carolina/USA,6-8,210,2,23,Forward,Active,Y,1610612756,Suns,PHX,suns,Phoenix,cameron_johnson,2019,2021,N,Y,Y,2019,1,11,N
-0,1630525,David,Johnson,David Johnson,"Johnson, David",D. Johnson,david-johnson,2001-02-26T00:00:00,Louisville,USA,Louisville/USA,6-4,203,0,13,Guard,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,david_johnson,2021,2021,Y,Y,Y,2021,2,47,N
-0,1630552,Jalen,Johnson,Jalen Johnson,"Johnson, Jalen",J. Johnson,jalen-johnson,2001-12-18T00:00:00,Duke,USA,Duke/USA,6-8,219,0,1,Forward,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,jalen_johnson,2021,2021,Y,Y,Y,2021,1,20,N
-0,1629640,Keldon,Johnson,Keldon Johnson,"Johnson, Keldon",K. Johnson,keldon-johnson,1999-10-11T00:00:00,Kentucky,USA,Kentucky/USA,6-6,220,2,3,Forward-Guard,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,keldon_johnson,2019,2021,Y,Y,Y,2019,1,29,N
-0,1630553,Keon,Johnson,Keon Johnson,"Johnson, Keon",K. Johnson,keon-johnson,2002-03-10T00:00:00,Tennessee,USA,Tennessee/USA,6-4,185,0,6,Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,keon_johnson,2021,2021,Y,Y,Y,2021,1,21,N
-0,1626169,Stanley,Johnson,Stanley Johnson,"Johnson, Stanley",S. Johnson,stanley-johnson,1996-05-29T00:00:00,Arizona,USA,Arizona/USA,6-6,242,6,14,Forward-Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,stanley_johnson,2015,2021,Y,Y,Y,2015,1,8,N
-0,203999,Nikola,Jokic,Nikola Jokic,"Jokic, Nikola",N. Jokic,nikola-jokic,1995-02-19T00:00:00,Mega Basket,Serbia,Mega Basket/Serbia,6-11,284,6,15,Center,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,nikola_jokic,2015,2021,N,Y,Y,2014,2,41,N
-0,1627745,Damian,Jones,Damian Jones,"Jones, Damian",D. Jones,damian-jones,1995-06-30T00:00:00,Vanderbilt,USA,Vanderbilt/USA,6-11,245,5,30,Center,Active,Y,1610612758,Kings,SAC,kings,Sacramento,damian_jones,2016,2021,Y,Y,Y,2016,1,30,N
-0,1630529,Herbert,Jones,Herbert Jones,"Jones, Herbert",H. Jones,herbert-jones,1998-10-06T00:00:00,Alabama,USA,Alabama/USA,6-7,206,0,5,Forward,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,herbert_jones,2021,2021,N,Y,Y,2021,2,35,N
-0,1630539,Kai,Jones,Kai Jones,"Jones, Kai",K. Jones,kai-jones,2001-01-19T00:00:00,Texas-Austin,Bahamas,Texas-Austin/Bahamas,6-10,221,0,23,Center-Forward,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,kai_jones,2021,2021,Y,Y,Y,2021,1,19,N
-0,1630222,Mason,Jones,Mason Jones,"Jones, Mason",M. Jones,mason-jones,1998-07-21T00:00:00,Arkansas,USA,Arkansas/USA,6-4,200,1,40,Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,mason_jones,2020,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630200,Tre,Jones,Tre Jones,"Jones, Tre",T. Jones,tre-jones,2000-01-08T00:00:00,Duke,USA,Duke/USA,6-1,185,1,33,Guard,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,tre_jones,2020,2021,Y,Y,Y,2020,2,41,N
-0,1626145,Tyus,Jones,Tyus Jones,"Jones, Tyus",T. Jones,tyus-jones,1996-05-10T00:00:00,Duke,USA,Duke/USA,6-0,196,6,21,Guard,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,tyus_jones,2015,2021,Y,Y,Y,2015,1,24,N
-0,1627884,Derrick,Jones Jr.,Derrick Jones Jr.,"Jones Jr., Derrick",D. Jones Jr.,derrick-jones-jr,1997-02-15T00:00:00,UNLV,USA,UNLV/USA,6-6,210,5,5,Forward,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,derrick_jones_jr,2016,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,201599,DeAndre,Jordan,DeAndre Jordan,"Jordan, DeAndre",D. Jordan,deandre-jordan,1988-07-21T00:00:00,Texas A&M,USA,Texas A&M/USA,6-11,265,13,9,Center,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,deandre_jordan,2008,2021,N,Y,Y,2008,2,35,N
-0,202709,Cory,Joseph,Cory Joseph,"Joseph, Cory",C. Joseph,cory-joseph,1991-08-20T00:00:00,Texas-Austin,Canada,Texas-Austin/Canada,6-3,200,10,18,Guard,Active,Y,1610612765,Pistons,DET,pistons,Detroit,cory_joseph,2011,2021,Y,Y,Y,2011,1,29,N
-0,1628379,Luke,Kennard,Luke Kennard,"Kennard, Luke",L. Kennard,luke-kennard,1996-06-24T00:00:00,Duke,USA,Duke/USA,6-5,206,4,5,Guard,Active,Y,1610612746,Clippers,LAC,clippers,LA,luke_kennard,2017,2021,Y,Y,Y,2017,1,12,N
-0,1630296,Braxton,Key,Braxton Key,"Key, Braxton",B. Key,braxton-key,1997-02-14T00:00:00,Virginia,USA,Virginia/USA,6-8,225,0,17,Forward,Active,Y,1610612765,Pistons,DET,pistons,Detroit,braxton_key,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630557,Corey,Kispert,Corey Kispert,"Kispert, Corey",C. Kispert,corey-kispert,1999-03-03T00:00:00,Gonzaga,USA,Gonzaga/USA,6-6,224,0,24,Forward,Active,Y,1610612764,Wizards,WAS,wizards,Washington,corey_kispert,2021,2021,N,Y,Y,2021,1,15,N
-0,1628467,Maxi,Kleber,Maxi Kleber,"Kleber, Maxi",M. Kleber,maxi-kleber,1992-01-29T00:00:00,Bayern Munich,Germany,Bayern Munich/Germany,6-10,240,4,42,Forward,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,maxi_kleber,2017,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630233,Nathan,Knight,Nathan Knight,"Knight, Nathan",N. Knight,nathan-knight,1997-09-20T00:00:00,William & Mary,USA,William & Mary/USA,6-10,253,1,13,Forward-Center,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,nathan_knight,2020,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628995,Kevin,Knox II,Kevin Knox II,"Knox II, Kevin",K. Knox II,kevin-knox-ii,1999-08-11T00:00:00,Kentucky,USA,Kentucky/USA,6-7,215,3,5,Forward,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,kevin_knox,2018,2021,N,Y,Y,2018,1,9,N
-0,1629723,John,Konchar,John Konchar,"Konchar, John",J. Konchar,john-konchar,1996-03-22T00:00:00,Indiana-Purdue Fort Wayne,USA,Indiana-Purdue Fort Wayne/USA,6-5,210,2,46,Guard,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,john_konchar,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1627788,Furkan,Korkmaz,Furkan Korkmaz,"Korkmaz, Furkan",F. Korkmaz,furkan-korkmaz,1997-07-24T00:00:00,Anadolu Efes,Turkey,Anadolu Efes/Turkey,6-7,202,4,30,Guard-Forward,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,furkan_korkmaz,2017,2021,Y,Y,Y,2016,1,26,N
-0,1628436,Luke,Kornet,Luke Kornet,"Kornet, Luke",L. Kornet,luke-kornet,1995-07-15T00:00:00,Vanderbilt,USA,Vanderbilt/USA,7-2,250,4,40,Center-Forward,Active,Y,1610612738,Celtics,BOS,celtics,Boston,luke_kornet,2017,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630249,Vit,Krejci,Vit Krejci,"Krejci, Vit",V. Krejci,vit-krejci,2000-06-19T00:00:00,Zaragoza,Czech Republic,Zaragoza/Czech Republic,6-8,195,0,27,Guard,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,vit_krejci,2021,2021,Y,Y,Y,2020,2,37,N
-0,1629083,Arnoldas,Kulboka,Arnoldas Kulboka,"Kulboka, Arnoldas",A. Kulboka,arnoldas-kulboka,1998-01-04T00:00:00,Bilbao,Lithuania,Bilbao/Lithuania,6-10,209,0,98,Forward,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,arnoldas_kulboka,2021,2021,Y,Y,Y,2018,2,55,N
-0,1630228,Jonathan,Kuminga,Jonathan Kuminga,"Kuminga, Jonathan",J. Kuminga,jonathan-kuminga,2002-10-06T00:00:00,NBA G League Ignite,DRC,NBA G League Ignite/DRC,6-7,225,0,00,Forward,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,jonathan_kuminga,2021,2021,Y,Y,Y,2021,1,7,N
-0,1628398,Kyle,Kuzma,Kyle Kuzma,"Kuzma, Kyle",K. Kuzma,kyle-kuzma,1995-07-24T00:00:00,Utah,USA,Utah/USA,6-9,221,4,33,Forward,Active,Y,1610612764,Wizards,WAS,wizards,Washington,kyle_kuzma,2017,2021,N,Y,Y,2017,1,27,N
-0,203897,Zach,LaVine,Zach LaVine,"LaVine, Zach",Z. LaVine,zach-lavine,1995-03-10T00:00:00,UCLA,USA,UCLA/USA,6-5,200,7,8,Guard-Forward,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,zach_lavine,2014,2021,N,Y,Y,2014,1,13,N
-0,1630237,Anthony,Lamb,Anthony Lamb,"Lamb, Anthony",A. Lamb,anthony-lamb,1998-01-20T00:00:00,Vermont,USA,Vermont/USA,6-6,227,1,33,Forward,Active,Y,1610612745,Rockets,HOU,rockets,Houston,anthony_lamb,2020,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203087,Jeremy,Lamb,Jeremy Lamb,"Lamb, Jeremy",J. Lamb,jeremy-lamb,1992-05-30T00:00:00,Connecticut,USA,Connecticut/USA,6-5,180,9,26,Guard-Forward,Active,Y,1610612758,Kings,SAC,kings,Sacramento,jeremy_lamb,2012,2021,Y,Y,Y,2012,1,12,N
-0,1629111,Jock,Landale,Jock Landale,"Landale, Jock",J. Landale,jock-landale,1995-10-25T00:00:00,                                   ,Australia,Australia/Australia,6-11,255,0,34,Center,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,jock_landale,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629641,Romeo,Langford,Romeo Langford,"Langford, Romeo",R. Langford,romeo-langford,1999-10-25T00:00:00,Indiana,USA,Indiana/USA,6-5,216,2,35,Guard-Forward,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,romeo_langford,2019,2021,Y,Y,Y,2019,1,14,N
-0,1627774,Jake,Layman,Jake Layman,"Layman, Jake",J. Layman,jake-layman,1994-03-07T00:00:00,Maryland,USA,Maryland/USA,6-8,209,5,10,Forward,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,jake_layman,2016,2021,Y,Y,Y,2016,2,47,N
-0,1627747,Caris,LeVert,Caris LeVert,"LeVert, Caris",C. LeVert,caris-levert,1994-08-25T00:00:00,Michigan,USA,Michigan/USA,6-6,205,5,3,Guard,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,caris_levert,2016,2021,N,Y,Y,2016,1,20,N
-0,1627814,Damion,Lee,Damion Lee,"Lee, Damion",D. Lee,damion-lee,1992-10-21T00:00:00,Drexel,USA,Drexel/USA,6-5,210,4,1,Guard-Forward,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,damion_lee,2017,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630240,Saben,Lee,Saben Lee,"Lee, Saben",S. Lee,saben-lee,1999-06-23T00:00:00,Vanderbilt,USA,Vanderbilt/USA,6-2,183,1,38,Guard,Active,Y,1610612765,Pistons,DET,pistons,Detroit,saban_lee,2020,2021,Y,Y,Y,2020,2,38,N
-0,203458,Alex,Len,Alex Len,"Len, Alex",A. Len,alex-len,1993-06-16T00:00:00,Maryland,Ukraine,Maryland/Ukraine,7-0,250,8,25,Center,Active,Y,1610612758,Kings,SAC,kings,Sacramento,alex_len,2013,2021,N,Y,Y,2013,1,5,N
-0,202695,Kawhi,Leonard,Kawhi Leonard,"Leonard, Kawhi",K. Leonard,kawhi-leonard,1991-06-29T00:00:00,San Diego State,USA,San Diego State/USA,6-7,225,10,2,Forward,Active,N,1610612746,Clippers,LAC,clippers,LA,kawhi_leonard,2011,2021,N,Y,Y,2011,1,15,Y
-0,1630575,Scottie,Lewis,Scottie Lewis,"Lewis, Scottie",S. Lewis,scottie-lewis,2000-03-12T00:00:00,Florida,USA,Florida/USA,6-5,185,0,16,Guard,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,tmp_scottie_lewis,2021,2021,Y,Y,Y,2021,2,56,N
-0,1630184,Kira,Lewis Jr.,Kira Lewis Jr.,"Lewis Jr., Kira",K. Lewis Jr.,kira-lewis-jr,2001-04-06T00:00:00,Alabama,USA,Alabama/USA,6-1,170,1,13,Guard,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,kira_lewis_jr,2020,2021,N,Y,Y,2020,1,13,N
-0,203081,Damian,Lillard,Damian Lillard,"Lillard, Damian",D. Lillard,damian-lillard,1990-07-15T00:00:00,Weber State,USA,Weber State/USA,6-2,195,9,0,Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,damian_lillard,2012,2021,N,Y,Y,2012,1,6,Y
-0,1629642,Nassir,Little,Nassir Little,"Little, Nassir",N. Little,nassir-little,2000-02-11T00:00:00,North Carolina,USA,North Carolina/USA,6-5,220,2,9,Forward-Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,nassir_little,2019,2021,N,Y,Y,2019,1,25,N
-0,1630587,Isaiah,Livers,Isaiah Livers,"Livers, Isaiah",I. Livers,isaiah-livers,1998-07-28T00:00:00,Michigan,USA,Michigan/USA,6-6,232,0,12,Forward,Active,Y,1610612765,Pistons,DET,pistons,Detroit,isaiah_livers,2021,2021,Y,Y,Y,2021,2,42,N
-0,1626172,Kevon,Looney,Kevon Looney,"Looney, Kevon",K. Looney,kevon-looney,1996-02-06T00:00:00,UCLA,USA,UCLA/USA,6-9,222,6,5,Forward,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,kevon_looney,2015,2021,Y,Y,Y,2015,1,30,N
-0,201572,Brook,Lopez,Brook Lopez,"Lopez, Brook",B. Lopez,brook-lopez,1988-04-01T00:00:00,Stanford,USA,Stanford/USA,7-0,282,13,11,Center,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,brook_lopez,2008,2021,N,Y,Y,2008,1,10,N
-0,201577,Robin,Lopez,Robin Lopez,"Lopez, Robin",R. Lopez,robin-lopez,1988-04-01T00:00:00,Stanford,USA,Stanford/USA,7-0,281,13,33,Center,Active,Y,1610612753,Magic,ORL,magic,Orlando,robin_lopez,2008,2021,N,Y,Y,2008,1,15,N
-0,1629712,Didi,Louzada,Didi Louzada,"Louzada, Didi",D. Louzada,didi-louzada,1999-07-02T00:00:00,Sydney Kings,Brazil,Sydney Kings/Brazil,6-5,188,1,35,Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,marcos_louzada_silva,2020,2021,Y,Y,Y,2019,2,35,N
-0,201567,Kevin,Love,Kevin Love,"Love, Kevin",K. Love,kevin-love,1988-09-07T00:00:00,UCLA,USA,UCLA/USA,6-8,251,13,0,Forward-Center,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,kevin_love,2008,2021,N,Y,Y,2008,1,5,N
-0,200768,Kyle,Lowry,Kyle Lowry,"Lowry, Kyle",K. Lowry,kyle-lowry,1986-03-25T00:00:00,Villanova,USA,Villanova/USA,6-0,196,15,7,Guard,Active,Y,1610612748,Heat,MIA,heat,Miami,kyle_lowry,2006,2021,N,Y,Y,2006,1,24,N
-0,1630994,Gabriel,Lundberg,Gabriel Lundberg,"Lundberg, Gabriel",G. Lundberg,gabriel-lundberg,1994-12-04T00:00:00,                                   ,Denmark,,6-4,203,0,19,Guard,Active,Y,1610612756,Suns,PHX,suns,Phoenix,gabriel_lundberg,2021,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1627789,Timothe,Luwawu-Cabarrot,Timothe Luwawu-Cabarrot,"Luwawu-Cabarrot, Timothe",T. Luwawu-Cabarrot,timothe-luwawu-cabarrot,1995-05-09T00:00:00,Mega Basket,France,Mega Basket/France,6-7,215,5,7,Guard-Forward,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,timothe_luwawu-cabarrot,2016,2021,Y,Y,Y,2016,1,24,N
-0,1626168,Trey,Lyles,Trey Lyles,"Lyles, Trey",T. Lyles,trey-lyles,1995-11-05T00:00:00,Kentucky,Canada,Kentucky/Canada,6-9,234,6,41,Forward,Active,Y,1610612758,Kings,SAC,kings,Sacramento,trey_lyles,2015,2021,N,Y,Y,2015,1,12,N
-0,1630177,Theo,Maledon,Theo Maledon,"Maledon, Theo",T. Maledon,theo-maledon,2001-06-12T00:00:00,Asvel,France,Asvel/France,6-4,175,1,11,Guard,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,theo_maledon,2020,2021,Y,Y,Y,2020,2,34,N
-0,1630572,Sandro,Mamukelashvili,Sandro Mamukelashvili,"Mamukelashvili, Sandro",S. Mamukelashvili,sandro-mamukelashvili,1999-05-23T00:00:00,Seton Hall,Georgia,Seton Hall/Georgia,6-9,240,0,54,Forward-Center,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,sandro_mamukelashvili,2021,2021,Y,Y,Y,2021,2,54,N
-0,1629611,Terance,Mann,Terance Mann,"Mann, Terance",T. Mann,terance-mann,1996-10-18T00:00:00,Florida State,USA,Florida State/USA,6-5,215,2,14,Guard-Forward,Active,Y,1610612746,Clippers,LAC,clippers,LA,terance_mann,2019,2021,Y,Y,Y,2019,2,48,N
-0,1630544,Tre,Mann,Tre Mann,"Mann, Tre",T. Mann,tre-mann,2001-02-03T00:00:00,Florida,USA,Florida/USA,6-3,178,0,23,Guard,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,tre_mann,2021,2021,Y,Y,Y,2021,1,18,N
-0,1626246,Boban,Marjanovic,Boban Marjanovic,"Marjanovic, Boban",B. Marjanovic,boban-marjanovic,1988-08-15T00:00:00,Crvena zvezda,Serbia,Crvena zvezda/Serbia,7-3,290,6,51,Center,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,boban_marjanovic,2015,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628374,Lauri,Markkanen,Lauri Markkanen,"Markkanen, Lauri",L. Markkanen,lauri-markkanen,1997-05-22T00:00:00,Arizona,Finland,Arizona/Finland,6-11,240,4,24,Forward-Center,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,lauri_markkanen,2017,2021,N,Y,Y,2017,1,7,N
-0,1630230,Naji,Marshall,Naji Marshall,"Marshall, Naji",N. Marshall,naji-marshall,1998-01-24T00:00:00,Xavier,USA,Xavier/USA,6-7,220,1,8,Forward,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,naji_marshall,2020,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628997,Caleb,Martin,Caleb Martin,"Martin, Caleb",C. Martin,caleb-martin,1995-09-28T00:00:00,Nevada-Reno,USA,Nevada-Reno/USA,6-5,205,2,16,Forward,Active,Y,1610612748,Heat,MIA,heat,Miami,caleb_martin,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628998,Cody,Martin,Cody Martin,"Martin, Cody",C. Martin,cody-martin,1995-09-28T00:00:00,Nevada-Reno,USA,Nevada-Reno/USA,6-6,205,2,11,Forward,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,cody_martin,2019,2021,Y,Y,Y,2019,2,36,N
-0,1630231,Kenyon,Martin Jr.,Kenyon Martin Jr.,"Martin Jr., Kenyon",K. Martin Jr.,kenyon-martin-jr,2001-01-06T00:00:00,IMG Academy (FL),USA,IMG Academy (FL)/USA,6-5,215,1,6,Forward,Active,Y,1610612745,Rockets,HOU,rockets,Houston,kenyon_martin_jr,2020,2021,Y,Y,Y,2020,2,52,N
-0,1629726,Garrison,Mathews,Garrison Mathews,"Mathews, Garrison",G. Mathews,garrison-mathews,1996-10-24T00:00:00,Lipscomb,USA,Lipscomb/USA,6-5,215,2,25,Guard,Active,Y,1610612745,Rockets,HOU,rockets,Houston,garrison_mathews,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,202083,Wesley,Matthews,Wesley Matthews,"Matthews, Wesley",W. Matthews,wesley-matthews,1986-10-14T00:00:00,Marquette,USA,Marquette/USA,6-4,220,12,23,Guard,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,wesley_matthews,2009,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630178,Tyrese,Maxey,Tyrese Maxey,"Maxey, Tyrese",T. Maxey,tyrese-maxey,2000-11-04T00:00:00,Kentucky,USA,Kentucky/USA,6-2,200,1,0,Guard,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,tyrese_maxey,2020,2021,N,Y,Y,2020,1,21,N
-0,1630219,Skylar,Mays,Skylar Mays,"Mays, Skylar",S. Mays,skylar-mays,1997-09-05T00:00:00,Louisiana State,USA,Louisiana State/USA,6-4,205,1,4,Guard,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,skylar_mays,2020,2021,Y,Y,Y,2020,2,50,N
-0,1630540,Miles,McBride,Miles McBride,"McBride, Miles",M. McBride,miles-mcbride,2000-09-08T00:00:00,West Virginia,USA,West Virginia/USA,6-1,195,0,2,Guard,Active,Y,1610612752,Knicks,NYK,knicks,New York,miles_mcbride,2021,2021,Y,Y,Y,2021,2,36,N
-0,1630644,Mac,McClung,Mac McClung,"McClung, Mac",M. McClung,mac-mcclung,1999-01-06T00:00:00,Texas Tech,USA,Texas Tech/USA,6-2,185,0,00,Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,mac_mcclung,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203468,CJ,McCollum,CJ McCollum,"McCollum, CJ",C. McCollum,cj-mccollum,1991-09-19T00:00:00,Lehigh,USA,Lehigh/USA,6-3,190,8,3,Guard,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,cj_mccollum,2013,2021,Y,Y,Y,2013,1,10,N
-0,204456,T.J.,McConnell,T.J. McConnell,"McConnell, T.J.",T. McConnell,tj-mcconnell,1992-03-25T00:00:00,Arizona,USA,Arizona/USA,6-1,190,6,9,Guard,Active,Y,1610612754,Pacers,IND,pacers,Indiana,t.j._mcconnell,2015,2021,N,Y,Y,2015,0,,N
-0,1630183,Jaden,McDaniels,Jaden McDaniels,"McDaniels, Jaden",J. McDaniels,jaden-mcdaniels,2000-09-29T00:00:00,Washington,USA,Washington/USA,6-9,185,1,3,Forward,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,jaden_mcdaniels,2020,2021,N,Y,Y,2020,1,28,N
-0,1629667,Jalen,McDaniels,Jalen McDaniels,"McDaniels, Jalen",J. McDaniels,jalen-mcdaniels,1998-01-31T00:00:00,San Diego State,USA,San Diego State/USA,6-9,205,2,6,Forward-Center,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,jalen_mcdaniels,2019,2021,Y,Y,Y,2019,2,52,N
-0,203926,Doug,McDermott,Doug McDermott,"McDermott, Doug",D. McDermott,doug-mcdermott,1992-01-03T00:00:00,Creighton,USA,Creighton/USA,6-7,225,7,17,Forward,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,doug_mcdermott,2014,2021,N,Y,Y,2014,1,11,N
-0,201580,JaVale,McGee,JaVale McGee,"McGee, JaVale",J. McGee,javale-mcgee,1988-01-19T00:00:00,Nevada-Reno,USA,Nevada-Reno/USA,7-0,270,13,00,Center-Forward,Active,Y,1610612756,Suns,PHX,suns,Phoenix,javale_mcgee,2008,2021,N,Y,Y,2008,1,18,N
-0,203585,Rodney,McGruder,Rodney McGruder,"McGruder, Rodney",R. McGruder,rodney-mcgruder,1991-07-29T00:00:00,Kansas State,USA,Kansas State/USA,6-4,205,5,17,Guard,Active,Y,1610612765,Pistons,DET,pistons,Detroit,rodney_mcgruder,2016,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629162,Jordan,McLaughlin,Jordan McLaughlin,"McLaughlin, Jordan",J. McLaughlin,jordan-mclaughlin,1996-04-09T00:00:00,Southern California,USA,Southern California/USA,5-11,185,2,6,Guard,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,jordan_mclaughlin,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203463,Ben,McLemore,Ben McLemore,"McLemore, Ben",B. McLemore,ben-mclemore,1993-02-11T00:00:00,Kansas,USA,Kansas/USA,6-3,195,8,23,Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,ben_mclemore,2013,2021,Y,Y,Y,2013,1,7,N
-0,1629001,De'Anthony,Melton,De'Anthony Melton,"Melton, De'Anthony",D. Melton,deanthony-melton,1998-05-28T00:00:00,Southern California,USA,Southern California/USA,6-2,200,3,0,Guard,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,deanthony_melton,2018,2021,Y,Y,Y,2018,2,46,N
-0,1629002,Chimezie,Metu,Chimezie Metu,"Metu, Chimezie",C. Metu,chimezie-metu,1997-03-22T00:00:00,Southern California,USA,Southern California/USA,6-9,225,3,7,Forward-Center,Active,Y,1610612758,Kings,SAC,kings,Sacramento,chimezie_metu,2018,2021,Y,Y,Y,2018,2,49,N
-0,203114,Khris,Middleton,Khris Middleton,"Middleton, Khris",K. Middleton,khris-middleton,1991-08-12T00:00:00,Texas A&M,USA,Texas A&M/USA,6-7,222,9,22,Forward,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,khris_middleton,2012,2021,Y,Y,Y,2012,2,39,N
-0,201988,Patty,Mills,Patty Mills,"Mills, Patty",P. Mills,patty-mills,1988-08-11T00:00:00,St.Mary's College of California,Australia,St.Mary's College of California/Australia,6-0,180,12,8,Guard,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,patty_mills,2009,2021,Y,Y,Y,2009,2,55,N
-0,200794,Paul,Millsap,Paul Millsap,"Millsap, Paul",P. Millsap,paul-millsap,1985-02-10T00:00:00,Louisiana Tech,USA,Louisiana Tech/USA,6-7,257,15,8,Forward,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,paul_millsap,2006,2021,N,Y,Y,2006,2,47,N
-0,1629003,Shake,Milton,Shake Milton,"Milton, Shake",S. Milton,shake-milton,1996-09-26T00:00:00,Southern Methodist,USA,Southern Methodist/USA,6-5,205,3,18,Guard-Forward,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,shake_milton,2018,2021,Y,Y,Y,2018,2,54,N
-0,1630558,Davion,Mitchell,Davion Mitchell,"Mitchell, Davion",D. Mitchell,davion-mitchell,1998-09-05T00:00:00,Baylor,USA,Baylor/USA,6-0,202,0,15,Guard,Active,Y,1610612758,Kings,SAC,kings,Sacramento,davion_mitchell,2021,2021,N,Y,Y,2021,1,9,N
-0,1628378,Donovan,Mitchell,Donovan Mitchell,"Mitchell, Donovan",D. Mitchell,donovan-mitchell,1996-09-07T00:00:00,Louisville,USA,Louisville/USA,6-1,215,4,45,Guard,Active,Y,1610612762,Jazz,UTA,jazz,Utah,donovan_mitchell,2017,2021,N,Y,Y,2017,1,13,N
-0,1630596,Evan,Mobley,Evan Mobley,"Mobley, Evan",E. Mobley,evan-mobley,2001-06-18T00:00:00,Southern California,USA,Southern California/USA,6-11,215,0,4,Center,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,evan_mobley,2021,2021,N,Y,Y,2021,1,3,N
-0,1628370,Malik,Monk,Malik Monk,"Monk, Malik",M. Monk,malik-monk,1998-02-04T00:00:00,Kentucky,USA,Kentucky/USA,6-3,200,4,11,Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,malik_monk,2017,2021,Y,Y,Y,2017,1,11,N
-0,202328,Greg,Monroe,Greg Monroe,"Monroe, Greg",G. Monroe,greg-monroe,1990-06-04T00:00:00,Georgetown,USA,Georgetown/USA,6-10,250,9,15,Forward-Center,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,greg_monroe,2010,2021,Y,Y,Y,2010,1,7,N
-0,1630541,Moses,Moody,Moses Moody,"Moody, Moses",M. Moody,moses-moody,2002-05-31T00:00:00,Arkansas,USA,Arkansas/USA,6-5,211,0,4,Guard,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,moses_moody,2021,2021,Y,Y,Y,2021,1,14,N
-0,1629875,Xavier,Moon,Xavier Moon,"Moon, Xavier",X. Moon,xavier-moon,1995-01-02T00:00:00,Morehead State,USA,Morehead State/USA,6-2,165,0,15,Guard,Active,Y,1610612746,Clippers,LAC,clippers,LA,xavier_moon,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629630,Ja,Morant,Ja Morant,"Morant, Ja",J. Morant,ja-morant,1999-08-10T00:00:00,Murray State,USA,Murray State/USA,6-3,174,2,12,Guard,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,ja_morant,2019,2021,N,Y,Y,2019,1,2,N
-0,1629752,Juwan,Morgan,Juwan Morgan,"Morgan, Juwan",J. Morgan,juwan-morgan,1997-04-17T00:00:00,Indiana,USA,Indiana/USA,6-7,232,2,16,Forward,Active,Y,1610612738,Celtics,BOS,celtics,Boston,juwan_morgan,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,202693,Markieff,Morris,Markieff Morris,"Morris, Markieff",M. Morris,markieff-morris,1989-09-02T00:00:00,Kansas,USA,Kansas/USA,6-9,245,10,8,Forward,Active,Y,1610612748,Heat,MIA,heat,Miami,markieff_morris,2011,2021,N,Y,Y,2011,1,13,N
-0,1628420,Monte,Morris,Monte Morris,"Morris, Monte",M. Morris,monte-morris,1995-06-27T00:00:00,Iowa State,USA,Iowa State/USA,6-2,183,4,11,Guard,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,monte_morris,2017,2021,Y,Y,Y,2017,2,51,N
-0,202694,Marcus,Morris Sr.,Marcus Morris Sr.,"Morris Sr., Marcus",M. Morris Sr.,marcus-morris-sr,1989-09-02T00:00:00,Kansas,USA,Kansas/USA,6-8,218,10,8,Forward,Active,Y,1610612746,Clippers,LAC,clippers,LA,marcus_morris,2011,2021,Y,Y,Y,2011,1,14,N
-0,1628539,Mychal,Mulder,Mychal Mulder,"Mulder, Mychal",M. Mulder,mychal-mulder,1994-06-12T00:00:00,Kentucky,Canada,Kentucky/Canada,6-3,195,2,12,Guard,Active,Y,1610612748,Heat,MIA,heat,Miami,mychal_mulder,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630530,Trey,Murphy III,Trey Murphy III,"Murphy III, Trey",T. Murphy III,trey-murphy-iii,2000-06-18T00:00:00,Virginia,USA,Virginia/USA,6-8,206,0,25,Forward,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,trey_murphy_iii,2021,2021,Y,Y,Y,2021,1,17,N
-0,1627749,Dejounte,Murray,Dejounte Murray,"Murray, Dejounte",D. Murray,dejounte-murray,1996-09-19T00:00:00,Washington,USA,Washington/USA,6-4,180,4,5,Guard,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,dejounte_murray,2016,2021,Y,Y,Y,2016,1,29,N
-0,1627750,Jamal,Murray,Jamal Murray,"Murray, Jamal",J. Murray,jamal-murray,1997-02-23T00:00:00,Kentucky,Canada,Kentucky/Canada,6-3,215,5,27,Guard,Active,N,1610612743,Nuggets,DEN,nuggets,Denver,jamal_murray,2016,2021,N,Y,Y,2016,1,7,N
-0,203488,Mike,Muscala,Mike Muscala,"Muscala, Mike",M. Muscala,mike-muscala,1991-07-01T00:00:00,Bucknell,USA,Bucknell/USA,6-10,240,8,33,Forward-Center,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,mike_muscala,2013,2021,Y,Y,Y,2013,2,44,N
-0,1629004,Svi,Mykhailiuk,Svi Mykhailiuk,"Mykhailiuk, Svi",S. Mykhailiuk,svi-mykhailiuk,1997-06-10T00:00:00,Kansas,Ukraine,Kansas/Ukraine,6-7,205,3,14,Guard-Forward,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,sviatoslav_mykhailiuk,2018,2021,Y,Y,Y,2018,2,47,N
-0,1626204,Larry,Nance Jr.,Larry Nance Jr.,"Nance Jr., Larry",L. Nance Jr.,larry-nance-jr,1993-01-01T00:00:00,Wyoming,USA,Wyoming/USA,6-7,245,6,22,Forward-Center,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,larry_nance_jr,2015,2021,N,Y,Y,2015,1,27,N
-0,1630612,RJ,Nembhard Jr.,RJ Nembhard Jr.,"Nembhard Jr., RJ",R. Nembhard Jr.,rj-nembhard-jr,1999-03-22T00:00:00,TCU,USA,TCU/USA,6-4,200,0,5,Guard,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,rj_nembhard_jr,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630174,Aaron,Nesmith,Aaron Nesmith,"Nesmith, Aaron",A. Nesmith,aaron-nesmith,1999-10-16T00:00:00,Vanderbilt,USA,Vanderbilt/USA,6-5,215,1,26,Guard-Forward,Active,Y,1610612738,Celtics,BOS,celtics,Boston,aaron_nesmith,2020,2021,Y,Y,Y,2020,1,14,N
-0,203526,Raul,Neto,Raul Neto,"Neto, Raul",R. Neto,raul-neto,1992-05-19T00:00:00,Murcia,Brazil,Murcia/Brazil,6-2,180,6,19,Guard,Active,Y,1610612764,Wizards,WAS,wizards,Washington,raul_neto,2015,2021,Y,Y,Y,2013,2,47,N
-0,1627777,Georges,Niang,Georges Niang,"Niang, Georges",G. Niang,georges-niang,1993-06-17T00:00:00,Iowa State,USA,Iowa State/USA,6-7,230,5,20,Forward,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,georges_niang,2016,2021,Y,Y,Y,2016,2,50,N
-0,1630227,Daishen,Nix,Daishen Nix,"Nix, Daishen",D. Nix,daishen-nix,2002-02-13T00:00:00,NBA G League Ignite,USA,NBA G League Ignite/USA,6-4,226,0,15,Guard,Active,Y,1610612745,Rockets,HOU,rockets,Houston,daishen_nix,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630192,Zeke,Nnaji,Zeke Nnaji,"Nnaji, Zeke",Z. Nnaji,zeke-nnaji,2001-01-09T00:00:00,Arizona,USA,Arizona/USA,6-9,240,1,22,Forward-Center,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,zeke_nnaji,2020,2021,N,Y,Y,2020,1,22,N
-0,203457,Nerlens,Noel,Nerlens Noel,"Noel, Nerlens",N. Noel,nerlens-noel,1994-04-10T00:00:00,Kentucky,USA,Kentucky/USA,6-11,220,7,3,Center-Forward,Active,Y,1610612752,Knicks,NYK,knicks,New York,nerlens_noel,2013,2021,N,Y,Y,2013,1,6,N
-0,1629669,Jaylen,Nowell,Jaylen Nowell,"Nowell, Jaylen",J. Nowell,jaylen-nowell,1999-07-09T00:00:00,Washington,USA,Washington/USA,6-4,201,2,4,Guard,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,jaylen_nowell,2019,2021,Y,Y,Y,2019,2,43,N
-0,1628373,Frank,Ntilikina,Frank Ntilikina,"Ntilikina, Frank",F. Ntilikina,frank-ntilikina,1998-07-28T00:00:00,Strasbourg IG,France,Strasbourg IG/France,6-4,200,4,21,Guard,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,frank_ntilikina,2017,2021,N,Y,Y,2017,1,8,N
-0,1629134,Kendrick,Nunn,Kendrick Nunn,"Nunn, Kendrick",K. Nunn,kendrick-nunn,1995-08-03T00:00:00,Oakland,USA,Oakland/USA,6-2,190,2,12,Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,kendrick_nunn,2018,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203994,Jusuf,Nurkic,Jusuf Nurkic,"Nurkic, Jusuf",J. Nurkic,jusuf-nurkic,1994-08-23T00:00:00,Cedevita,Bosnia and Herzegovina,Cedevita/Bosnia and Herzegovina,6-11,290,7,27,Center,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,jusuf_nurkic,2014,2021,N,Y,Y,2014,1,16,N
-0,1628021,David,Nwaba,David Nwaba,"Nwaba, David",D. Nwaba,david-nwaba,1993-01-14T00:00:00,Cal Poly,USA,Cal Poly/USA,6-5,219,5,2,Guard-Forward,Active,Y,1610612745,Rockets,HOU,rockets,Houston,david_nwaba,2016,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629670,Jordan,Nwora,Jordan Nwora,"Nwora, Jordan",J. Nwora,jordan-nwora,1998-09-09T00:00:00,Louisville,USA,Louisville/USA,6-8,225,1,13,Forward,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,jordan_nwora,2020,2021,Y,Y,Y,2020,2,45,N
-0,1626220,Royce,O'Neale,Royce O'Neale,"O'Neale, Royce",R. O'Neale,royce-oneale,1993-06-05T00:00:00,Baylor,USA,Baylor/USA,6-5,226,4,23,Forward,Active,Y,1610612762,Jazz,UTA,jazz,Utah,royce_o'neale,2017,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629643,Chuma,Okeke,Chuma Okeke,"Okeke, Chuma",C. Okeke,chuma-okeke,1998-08-18T00:00:00,Auburn,USA,Auburn/USA,6-6,229,1,3,Forward,Active,Y,1610612753,Magic,ORL,magic,Orlando,chuma_okeke,2020,2021,N,Y,Y,2019,1,16,N
-0,1629006,Josh,Okogie,Josh Okogie,"Okogie, Josh",J. Okogie,josh-okogie,1998-09-01T00:00:00,Georgia Tech,Nigeria,Georgia Tech/Nigeria,6-4,213,3,20,Guard,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,josh_okogie,2018,2021,N,Y,Y,2018,1,20,N
-0,1630168,Onyeka,Okongwu,Onyeka Okongwu,"Okongwu, Onyeka",O. Okongwu,onyeka-okongwu,2000-12-11T00:00:00,Southern California,USA,Southern California/USA,6-8,240,1,17,Forward-Center,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,onyeka_okongwi,2020,2021,Y,Y,Y,2020,1,6,N
-0,1630171,Isaac,Okoro,Isaac Okoro,"Okoro, Isaac",I. Okoro,isaac-okoro,2001-01-26T00:00:00,Auburn,USA,Auburn/USA,6-5,225,1,35,Forward-Guard,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,isaac_okoro,2020,2021,N,Y,Y,2020,1,5,N
-0,203506,Victor,Oladipo,Victor Oladipo,"Oladipo, Victor",V. Oladipo,victor-oladipo,1992-05-04T00:00:00,Indiana,USA,Indiana/USA,6-4,213,8,4,Guard,Active,Y,1610612748,Heat,MIA,heat,Miami,victor_oladipo,2013,2021,N,Y,Y,2013,1,2,N
-0,203482,Kelly,Olynyk,Kelly Olynyk,"Olynyk, Kelly",K. Olynyk,kelly-olynyk,1991-04-19T00:00:00,Gonzaga,Canada,Gonzaga/Canada,6-11,240,8,13,Forward-Center,Active,Y,1610612765,Pistons,DET,pistons,Detroit,kelly_olynyk,2013,2021,N,Y,Y,2013,1,13,N
-0,1626224,Cedi,Osman,Cedi Osman,"Osman, Cedi",C. Osman,cedi-osman,1995-04-08T00:00:00,Anadolu Efes,Turkey,Anadolu Efes/Turkey,6-7,230,4,16,Forward,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,cedi_osman,2017,2021,Y,Y,Y,2015,2,31,N
-0,1626162,Kelly,Oubre Jr.,Kelly Oubre Jr.,"Oubre Jr., Kelly",K. Oubre Jr.,kelly-oubre-jr,1995-12-09T00:00:00,Kansas,USA,Kansas/USA,6-6,203,6,12,Forward-Guard,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,kelly_oubre_jr,2015,2021,N,Y,Y,2015,1,15,N
-0,1629672,Eric,Paschall,Eric Paschall,"Paschall, Eric",E. Paschall,eric-paschall,1996-11-04T00:00:00,Villanova,USA,Villanova/USA,6-6,255,2,0,Forward,Active,Y,1610612762,Jazz,UTA,jazz,Utah,eric_paschall,2019,2021,N,Y,Y,2019,2,41,N
-0,101108,Chris,Paul,Chris Paul,"Paul, Chris",C. Paul,chris-paul,1985-05-06T00:00:00,Wake Forest,USA,Wake Forest/USA,6-0,175,16,3,Guard,Active,Y,1610612756,Suns,PHX,suns,Phoenix,chris_paul,2005,2021,N,Y,Y,2005,1,4,Y
-0,1626166,Cameron,Payne,Cameron Payne,"Payne, Cameron",C. Payne,cameron-payne,1994-08-08T00:00:00,Murray State,USA,Murray State/USA,6-1,183,6,15,Guard,Active,Y,1610612756,Suns,PHX,suns,Phoenix,cameron_payne,2015,2021,Y,Y,Y,2015,1,14,N
-0,203901,Elfrid,Payton,Elfrid Payton,"Payton, Elfrid",E. Payton,elfrid-payton,1994-02-22T00:00:00,Louisana-Lafayette,USA,Louisana-Lafayette/USA,6-3,195,7,2,Guard,Active,Y,1610612756,Suns,PHX,suns,Phoenix,elfrid_payton,2014,2021,N,Y,Y,2014,1,10,N
-0,1627780,Gary,Payton II,Gary Payton II,"Payton II, Gary",G. Payton II,gary-payton-ii,1992-12-01T00:00:00,Oregon State,USA,Oregon State/USA,6-3,195,5,0,Guard,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,gary_payton_ii,2016,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630691,Jamorko,Pickett,Jamorko Pickett,"Pickett, Jamorko",J. Pickett,jamorko-pickett,1997-12-24T00:00:00,Georgetown,USA,Georgetown/USA,6-9,206,0,24,Forward,Active,Y,1610612765,Pistons,DET,pistons,Detroit,jamorko_pickett,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629033,Theo,Pinson,Theo Pinson,"Pinson, Theo",T. Pinson,theo-pinson,1995-11-05T00:00:00,North Carolina,USA,North Carolina/USA,6-5,212,3,1,Guard-Forward,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,theo_pinson,2018,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203486,Mason,Plumlee,Mason Plumlee,"Plumlee, Mason",M. Plumlee,mason-plumlee,1990-03-05T00:00:00,Duke,USA,Duke/USA,6-11,254,8,24,Forward-Center,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,mason_plumlee,2013,2021,N,Y,Y,2013,1,22,N
-0,1627751,Jakob,Poeltl,Jakob Poeltl,"Poeltl, Jakob",J. Poeltl,jakob-poeltl,1995-10-15T00:00:00,Utah,Austria,Utah/Austria,7-1,245,5,25,Center,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,jakob_poeltl,2016,2021,Y,Y,Y,2016,1,9,N
-0,1630197,Aleksej,Pokusevski,Aleksej Pokusevski,"Pokusevski, Aleksej",A. Pokusevski,aleksej-pokusevski,2001-12-26T00:00:00,Olympiacos,Serbia,Olympiacos/Serbia,7-0,190,1,17,Forward,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,aleksej_pokusevski,2020,2021,Y,Y,Y,2020,1,17,N
-0,1630582,Yves,Pons,Yves Pons,"Pons, Yves",Y. Pons,yves-pons,1999-05-07T00:00:00,Tennessee,France,Tennessee/France,6-5,206,0,5,Forward,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,yves_pons,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629673,Jordan,Poole,Jordan Poole,"Poole, Jordan",J. Poole,jordan-poole,1999-06-19T00:00:00,Michigan,USA,Michigan/USA,6-4,194,2,3,Guard,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,jordan_poole,2019,2021,Y,Y,Y,2019,1,28,N
-0,1629645,Kevin,Porter Jr.,Kevin Porter Jr.,"Porter Jr., Kevin",K. Porter Jr.,kevin-porter-jr,2000-05-04T00:00:00,Southern California,USA,Southern California/USA,6-4,203,2,3,Guard-Forward,Active,Y,1610612745,Rockets,HOU,rockets,Houston,kevin_porter_jr,2019,2021,Y,Y,Y,2019,1,30,N
-0,1629008,Michael,Porter Jr.,Michael Porter Jr.,"Porter Jr., Michael",M. Porter Jr.,michael-porter-jr,1998-06-29T00:00:00,Missouri,USA,Missouri/USA,6-10,218,2,1,Forward,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,michael_porter_jr,2018,2021,N,Y,Y,2018,1,14,N
-0,203490,Otto,Porter Jr.,Otto Porter Jr.,"Porter Jr., Otto",O. Porter Jr.,otto-porter-jr,1993-06-03T00:00:00,Georgetown,USA,Georgetown/USA,6-8,198,8,32,Forward,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,otto_porter_jr,2013,2021,N,Y,Y,2013,1,3,N
-0,1626171,Bobby,Portis,Bobby Portis,"Portis, Bobby",B. Portis,bobby-portis,1995-02-10T00:00:00,Arkansas,USA,Arkansas/USA,6-10,250,6,9,Forward,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,bobby_portis,2015,2021,Y,Y,Y,2015,1,22,N
-0,204001,Kristaps,Porzingis,Kristaps Porzingis,"Porzingis, Kristaps",K. Porzingis,kristaps-porzingis,1995-08-02T00:00:00,Cajasol Sevilla,Latvia,Cajasol Sevilla/Latvia,7-3,240,5,6,Forward-Center,Active,Y,1610612764,Wizards,WAS,wizards,Washington,kristaps_porzingis,2015,2021,N,Y,Y,2015,1,4,N
-0,203939,Dwight,Powell,Dwight Powell,"Powell, Dwight",D. Powell,dwight-powell,1991-07-20T00:00:00,Stanford,Canada,Stanford/Canada,6-10,240,7,7,Forward-Center,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,dwight_powell,2014,2021,Y,Y,Y,2014,2,45,N
-0,1629619,Myles,Powell,Myles Powell,"Powell, Myles",M. Powell,myles-powell,1997-07-07T00:00:00,Seton Hall,USA,Seton Hall/USA,6-2,195,0,5,Guard,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,myles_powell,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1626181,Norman,Powell,Norman Powell,"Powell, Norman",N. Powell,norman-powell,1993-05-25T00:00:00,UCLA,USA,UCLA/USA,6-3,215,6,24,Guard,Active,Y,1610612746,Clippers,LAC,clippers,LA,norman_powell,2015,2021,Y,Y,Y,2015,2,46,N
-0,1630563,Joshua,Primo,Joshua Primo,"Primo, Joshua",J. Primo,joshua-primo,2002-12-24T00:00:00,Alabama,Canada,Alabama/Canada,6-4,189,0,11,Guard,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,joshua_primo,2021,2021,Y,Y,Y,2021,1,12,N
-0,1627752,Taurean,Prince,Taurean Prince,"Prince, Taurean",T. Prince,taurean-prince,1994-03-22T00:00:00,Baylor,USA,Baylor/USA,6-6,218,5,12,Forward,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,taurean_prince,2016,2021,Y,Y,Y,2016,1,12,N
-0,1630202,Payton,Pritchard,Payton Pritchard,"Pritchard, Payton",P. Pritchard,payton-pritchard,1998-01-28T00:00:00,Oregon,USA,Oregon/USA,6-1,195,1,11,Guard,Active,Y,1610612738,Celtics,BOS,celtics,Boston,payton_pritchard,2020,2021,N,Y,Y,2020,1,26,N
-0,1630243,Trevelin,Queen,Trevelin Queen,"Queen, Trevelin",T. Queen,trevelin-queen,1997-02-25T00:00:00,New Mexico State,USA,New Mexico State/USA,6-6,190,0,21,Guard,Active,Y,1610612745,Rockets,HOU,rockets,Houston,trevelin_queen,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629674,Neemias,Queta,Neemias Queta,"Queta, Neemias",N. Queta,neemias-queta,1999-07-13T00:00:00,Utah State,Portugal,Utah State/Portugal,7-0,248,0,88,Center,Active,Y,1610612758,Kings,SAC,kings,Sacramento,neemias_queta,2021,2021,Y,Y,Y,2021,2,39,N
-0,1630193,Immanuel,Quickley,Immanuel Quickley,"Quickley, Immanuel",I. Quickley,immanuel-quickley,1999-06-17T00:00:00,Kentucky,USA,Kentucky/USA,6-3,190,1,5,Guard,Active,Y,1610612752,Knicks,NYK,knicks,New York,immanuel_quickley,2020,2021,N,Y,Y,2020,1,25,N
-0,203944,Julius,Randle,Julius Randle,"Randle, Julius",J. Randle,julius-randle,1994-11-29T00:00:00,Kentucky,USA,Kentucky/USA,6-8,250,7,30,Forward-Center,Active,Y,1610612752,Knicks,NYK,knicks,New York,julius_randle,2014,2021,N,Y,Y,2014,1,7,N
-0,1630559,Austin,Reaves,Austin Reaves,"Reaves, Austin",A. Reaves,austin-reaves,1998-05-29T00:00:00,Oklahoma,USA,Oklahoma/USA,6-5,197,0,15,Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,austin_reaves,2021,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629629,Cam,Reddish,Cam Reddish,"Reddish, Cam",C. Reddish,cam-reddish,1999-09-01T00:00:00,Duke,USA,Duke/USA,6-8,217,2,21,Forward-Guard,Active,Y,1610612752,Knicks,NYK,knicks,New York,cameron_reddish,2019,2021,N,Y,Y,2019,1,10,N
-0,1628432,Davon,Reed,Davon Reed,"Reed, Davon",D. Reed,davon-reed,1995-06-11T00:00:00,Miami,USA,Miami/USA,6-5,206,2,9,Guard,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,davon_reed,2017,2021,Y,Y,Y,2017,2,32,N
-0,1630194,Paul,Reed,Paul Reed,"Reed, Paul",P. Reed,paul-reed,1999-06-14T00:00:00,DePaul,USA,DePaul/USA,6-9,210,1,44,Forward,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,paul_reed,2020,2021,Y,Y,Y,2020,2,58,N
-0,1629675,Naz,Reid,Naz Reid,"Reid, Naz",N. Reid,naz-reid,1999-08-26T00:00:00,Louisiana State,USA,Louisiana State/USA,6-9,264,2,11,Center-Forward,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,naz_reid,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630208,Nick,Richards,Nick Richards,"Richards, Nick",N. Richards,nick-richards,1997-11-29T00:00:00,Kentucky,Jamaica,Kentucky/Jamaica,7-0,245,1,14,Center,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,nick_richards,2020,2021,Y,Y,Y,2020,2,42,N
-0,1626196,Josh,Richardson,Josh Richardson,"Richardson, Josh",J. Richardson,josh-richardson,1993-09-15T00:00:00,Tennessee,USA,Tennessee/USA,6-5,200,6,7,Guard,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,josh_richardson,2015,2021,Y,Y,Y,2015,2,40,N
-0,203085,Austin,Rivers,Austin Rivers,"Rivers, Austin",A. Rivers,austin-rivers,1992-08-01T00:00:00,Duke,USA,Duke/USA,6-4,200,9,25,Guard,Active,Y,1610612743,Nuggets,DEN,nuggets,Denver,austin_rivers,2012,2021,N,Y,Y,2012,1,10,N
-0,1629130,Duncan,Robinson,Duncan Robinson,"Robinson, Duncan",D. Robinson,duncan-robinson,1994-04-22T00:00:00,Michigan,USA,Michigan/USA,6-7,215,3,55,Forward,Active,Y,1610612748,Heat,MIA,heat,Miami,duncan_robinson,2018,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629011,Mitchell,Robinson,Mitchell Robinson,"Robinson, Mitchell",M. Robinson,mitchell-robinson,1998-04-01T00:00:00,Western Kentucky,USA,Western Kentucky/USA,7-0,240,3,23,Center-Forward,Active,Y,1610612752,Knicks,NYK,knicks,New York,mitchell_robinson,2018,2021,N,Y,Y,2018,2,36,N
-0,1630526,Jeremiah,Robinson-Earl,Jeremiah Robinson-Earl,"Robinson-Earl, Jeremiah",J. Robinson-Earl,jeremiah-robinson-earl,2000-11-03T00:00:00,Villanova,USA,Villanova/USA,6-8,242,0,50,Forward,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,tmp_jeremiah_robinson-earl,2021,2021,Y,Y,Y,2021,2,32,N
-0,1629676,Isaiah,Roby,Isaiah Roby,"Roby, Isaiah",I. Roby,isaiah-roby,1998-02-03T00:00:00,Nebraska-Lincoln,USA,Nebraska-Lincoln/USA,6-8,230,2,22,Forward,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,roby_isaiah,2019,2021,Y,Y,Y,2019,2,45,N
-0,200765,Rajon,Rondo,Rajon Rondo,"Rondo, Rajon",R. Rondo,rajon-rondo,1986-02-22T00:00:00,Kentucky,USA,Kentucky/USA,6-1,180,15,1,Guard,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,rajon_rondo,2006,2021,N,Y,Y,2006,1,21,N
-0,201565,Derrick,Rose,Derrick Rose,"Rose, Derrick",D. Rose,derrick-rose,1988-10-04T00:00:00,Memphis,USA,Memphis/USA,6-2,200,12,4,Guard,Active,Y,1610612752,Knicks,NYK,knicks,New York,derrick_rose,2008,2021,N,Y,Y,2008,1,1,N
-0,203082,Terrence,Ross,Terrence Ross,"Ross, Terrence",T. Ross,terrence-ross,1991-02-05T00:00:00,Washington,USA,Washington/USA,6-6,206,9,31,Guard-Forward,Active,Y,1610612753,Magic,ORL,magic,Orlando,terrence_ross,2012,2021,N,Y,Y,2012,1,8,N
-0,1626179,Terry,Rozier,Terry Rozier,"Rozier, Terry",T. Rozier,terry-rozier,1994-03-17T00:00:00,Louisville,USA,Louisville/USA,6-1,190,6,3,Guard,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,terry_rozier,2015,2021,Y,Y,Y,2015,1,16,N
-0,201937,Ricky,Rubio,Ricky Rubio,"Rubio, Ricky",R. Rubio,ricky-rubio,1990-10-21T00:00:00,FC Barcelona,Spain,FC Barcelona/Spain,6-2,190,10,99,Guard,Active,Y,1610612754,Pacers,IND,pacers,Indiana,ricky_rubio,2011,2021,N,Y,Y,2009,1,5,N
-0,1626156,D'Angelo,Russell,D'Angelo Russell,"Russell, D'Angelo",D. Russell,dangelo-russell,1996-02-23T00:00:00,Ohio State,USA,Ohio State/USA,6-4,193,6,0,Guard,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,d'angelo_russell,2015,2021,N,Y,Y,2015,1,2,N
-0,1630346,Matt,Ryan,Matt Ryan,"Ryan, Matt",M. Ryan,matt-ryan,1997-04-17T00:00:00,Tennessee-Chattanooga,USA,Tennessee-Chattanooga/USA,6-7,215,0,,Forward,Active,Y,1610612738,Celtics,BOS,celtics,Boston,matt_ryan,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1627734,Domantas,Sabonis,Domantas Sabonis,"Sabonis, Domantas",D. Sabonis,domantas-sabonis,1996-05-03T00:00:00,Gonzaga,Lithuania,Gonzaga/Lithuania,6-11,240,5,10,Forward-Center,Active,Y,1610612758,Kings,SAC,kings,Sacramento,domantas_sabonis,2016,2021,N,Y,Y,2016,1,11,N
-0,203967,Dario,Saric,Dario Saric,"Saric, Dario",D. Saric,dario-saric,1994-04-08T00:00:00,Anadolu Efes,Croatia,Anadolu Efes/Croatia,6-10,225,5,20,Forward-Center,Active,N,1610612756,Suns,PHX,suns,Phoenix,dario_saric,2016,2021,N,Y,Y,2014,1,12,N
-0,203107,Tomas,Satoransky,Tomas Satoransky,"Satoransky, Tomas",T. Satoransky,tomas-satoransky,1991-10-30T00:00:00,FC Barcelona,Czech Republic,FC Barcelona/Czech Republic,6-7,210,5,31,Guard,Active,Y,1610612764,Wizards,WAS,wizards,Washington,tomas_satoransky,2016,2021,N,Y,Y,2012,2,32,N
-0,1630648,Jordan,Schakel,Jordan Schakel,"Schakel, Jordan",J. Schakel,jordan-schakel,1998-06-13T00:00:00,San Diego State,USA,San Diego State/USA,6-6,200,0,20,Guard,Active,Y,1610612764,Wizards,WAS,wizards,Washington,jordan_schakel,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629678,Admiral,Schofield,Admiral Schofield,"Schofield, Admiral",A. Schofield,admiral-schofield,1997-03-30T00:00:00,Tennessee,United Kingdom,Tennessee/United Kingdom,6-5,241,1,25,Forward,Active,Y,1610612753,Magic,ORL,magic,Orlando,admiral_schofield,2019,2021,Y,Y,Y,2019,2,42,N
-0,203471,Dennis,Schroder,Dennis Schroder,"Schroder, Dennis",D. Schroder,dennis-schroder,1993-09-15T00:00:00,Braunschweig,Germany,Braunschweig/Germany,6-1,172,8,17,Guard,Active,Y,1610612745,Rockets,HOU,rockets,Houston,dennis_schroder,2013,2021,Y,Y,Y,2013,1,17,N
-0,1630206,Jay,Scrubb,Jay Scrubb,"Scrubb, Jay",J. Scrubb,jay-scrubb,2000-09-01T00:00:00,John A. Logan,USA,John A. Logan/USA,6-5,220,1,0,Guard,Active,Y,1610612746,Clippers,LAC,clippers,LA,jay_scrubb,2020,2021,Y,Y,Y,2020,2,55,N
-0,1630578,Alperen,Sengun,Alperen Sengun,"Sengun, Alperen",A. Sengun,alperen-sengun,2002-07-25T00:00:00,Besiktas,Turkey,Besiktas/Turkey,6-10,243,0,28,Center,Active,Y,1610612745,Rockets,HOU,rockets,Houston,alperen_sengun,2021,2021,N,Y,Y,2021,1,16,N
-0,1629012,Collin,Sexton,Collin Sexton,"Sexton, Collin",C. Sexton,collin-sexton,1999-01-04T00:00:00,Alabama,USA,Alabama/USA,6-1,190,3,2,Guard,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,collin_sexton,2018,2021,N,Y,Y,2018,1,8,N
-0,1629013,Landry,Shamet,Landry Shamet,"Shamet, Landry",L. Shamet,landry-shamet,1997-03-13T00:00:00,Wichita State,USA,Wichita State/USA,6-4,190,3,14,Guard,Active,Y,1610612756,Suns,PHX,suns,Phoenix,landry_shamet,2018,2021,N,Y,Y,2018,1,26,N
-0,1630549,Day'Ron,Sharpe,Day'Ron Sharpe,"Sharpe, Day'Ron",D. Sharpe,dayron-sharpe,2001-11-06T00:00:00,North Carolina,USA,North Carolina/USA,6-9,265,0,20,Forward,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,dayron_sharpe,2021,2021,Y,Y,Y,2021,1,29,N
-0,1627783,Pascal,Siakam,Pascal Siakam,"Siakam, Pascal",P. Siakam,pascal-siakam,1994-04-02T00:00:00,New Mexico State,Cameroon,New Mexico State/Cameroon,6-8,230,5,43,Forward,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,pascal_siakam,2016,2021,Y,Y,Y,2016,1,27,N
-0,1627732,Ben,Simmons,Ben Simmons,"Simmons, Ben",B. Simmons,ben-simmons,1996-07-20T00:00:00,Louisiana State,Australia,Louisiana State/Australia,6-11,240,4,10,Guard-Forward,Active,N,1610612751,Nets,BKN,nets,Brooklyn,ben_simmons,2016,2021,N,Y,Y,2016,1,1,N
-0,1630250,Marko,Simonovic,Marko Simonovic,"Simonovic, Marko",M. Simonovic,marko-simonovic,1999-10-15T00:00:00,Mega Basket,Montenegro,Mega Basket/Montenegro,6-11,220,0,19,Center,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,marko_simonovic,2021,2021,Y,Y,Y,2020,2,44,N
-0,1629014,Anfernee,Simons,Anfernee Simons,"Simons, Anfernee",A. Simons,anfernee-simons,1999-06-08T00:00:00,Edgewater HS (FL),USA,Edgewater HS (FL)/USA,6-3,181,3,1,Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,anfernee_simons,2018,2021,Y,Y,Y,2018,1,24,N
-0,1630579,Jericho,Sims,Jericho Sims,"Sims, Jericho",J. Sims,jericho-sims,1998-10-20T00:00:00,Texas-Austin,USA,Texas-Austin/USA,6-9,250,0,45,Center,Active,Y,1610612752,Knicks,NYK,knicks,New York,jericho_sims,2021,2021,Y,Y,Y,2021,2,58,N
-0,1630606,Javonte,Smart,Javonte Smart,"Smart, Javonte",J. Smart,javonte-smart,1999-06-03T00:00:00,Louisiana State,USA,Louisiana State/USA,6-4,205,0,15,Guard,Active,Y,1610612748,Heat,MIA,heat,Miami,javonte_smart,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203935,Marcus,Smart,Marcus Smart,"Smart, Marcus",M. Smart,marcus-smart,1994-03-06T00:00:00,Oklahoma State,USA,Oklahoma State/USA,6-4,220,7,36,Guard,Active,Y,1610612738,Celtics,BOS,celtics,Boston,marcus_smart,2014,2021,Y,Y,Y,2014,1,6,N
-0,202397,Ish,Smith,Ish Smith,"Smith, Ish",I. Smith,ish-smith,1988-07-05T00:00:00,Wake Forest,USA,Wake Forest/USA,6-0,175,11,4,Guard,Active,Y,1610612764,Wizards,WAS,wizards,Washington,ish_smith,2010,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630188,Jalen,Smith,Jalen Smith,"Smith, Jalen",J. Smith,jalen-smith,2000-03-16T00:00:00,Maryland,USA,Maryland/USA,6-10,215,1,25,Forward-Center,Active,Y,1610612754,Pacers,IND,pacers,Indiana,jalen_smith,2020,2021,Y,Y,Y,2020,1,10,N
-0,1630270,Xavier,Sneed,Xavier Sneed,"Sneed, Xavier",X. Sneed,xavier-sneed,1997-12-21T00:00:00,Kansas State,USA,Kansas State/USA,6-5,215,0,19,Forward,Active,Y,1610612762,Jazz,UTA,jazz,Utah,xavier_sneed,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,203503,Tony,Snell,Tony Snell,"Snell, Tony",T. Snell,tony-snell,1991-11-10T00:00:00,New Mexico,USA,New Mexico/USA,6-6,213,8,21,Guard,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,tony_snell,2013,2021,N,Y,Y,2013,1,20,N
-0,1630531,Jaden,Springer,Jaden Springer,"Springer, Jaden",J. Springer,jaden-springer,2002-09-25T00:00:00,Tennessee,USA,Tennessee/USA,6-4,202,0,11,Guard,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,jaden_springer,2021,2021,Y,Y,Y,2021,1,28,N
-0,203917,Nik,Stauskas,Nik Stauskas,"Stauskas, Nik",N. Stauskas,nik-stauskas,1993-10-07T00:00:00,Michigan,Canada,Michigan/Canada,6-6,207,5,13,Guard,Active,Y,1610612738,Celtics,BOS,celtics,Boston,nik_stauskas,2014,2021,Y,Y,Y,2014,1,8,N
-0,202362,Lance,Stephenson,Lance Stephenson,"Stephenson, Lance",L. Stephenson,lance-stephenson,1990-09-05T00:00:00,Cincinnati,USA,Cincinnati/USA,6-5,210,9,6,Forward,Active,Y,1610612754,Pacers,IND,pacers,Indiana,lance_stephenson,2010,2021,Y,Y,Y,2010,2,40,N
-0,1630205,Lamar,Stevens,Lamar Stevens,"Stevens, Lamar",L. Stevens,lamar-stevens,1997-07-09T00:00:00,Penn State,USA,Penn State/USA,6-6,230,1,8,Forward,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,lamar_stevens,2020,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630191,Isaiah,Stewart,Isaiah Stewart,"Stewart, Isaiah",I. Stewart,isaiah-stewart,2001-05-22T00:00:00,Washington,USA,Washington/USA,6-8,250,1,28,Forward-Center,Active,Y,1610612765,Pistons,DET,pistons,Detroit,isaiah_stewart,2020,2021,N,Y,Y,2020,1,16,N
-0,1629622,Max,Strus,Max Strus,"Strus, Max",M. Strus,max-strus,1996-03-28T00:00:00,DePaul,USA,DePaul/USA,6-5,215,2,31,Guard-Forward,Active,Y,1610612748,Heat,MIA,heat,Miami,max_strus,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630591,Jalen,Suggs,Jalen Suggs,"Suggs, Jalen",J. Suggs,jalen-suggs,2001-06-03T00:00:00,Gonzaga,USA,Gonzaga/USA,6-5,205,0,4,Guard,Active,Y,1610612753,Magic,ORL,magic,Orlando,jalen_suggs,2021,2021,N,Y,Y,2021,1,5,N
-0,1630256,Jae'Sean,Tate,Jae'Sean Tate,"Tate, Jae'Sean",J. Tate,jaesean-tate,1995-10-28T00:00:00,Ohio State,USA,Ohio State/USA,6-4,230,1,8,Forward,Active,Y,1610612745,Rockets,HOU,rockets,Houston,jaesean_tate,2020,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628369,Jayson,Tatum,Jayson Tatum,"Tatum, Jayson",J. Tatum,jayson-tatum,1998-03-03T00:00:00,Duke,USA,Duke/USA,6-8,210,4,0,Forward-Guard,Active,Y,1610612738,Celtics,BOS,celtics,Boston,jayson_tatum,2017,2021,N,Y,Y,2017,1,3,N
-0,1630678,Terry,Taylor,Terry Taylor,"Taylor, Terry",T. Taylor,terry-taylor,1999-09-23T00:00:00,Austin Peay,USA,Austin Peay/USA,6-5,230,0,32,Forward,Active,Y,1610612754,Pacers,IND,pacers,Indiana,terry_taylor,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,202066,Garrett,Temple,Garrett Temple,"Temple, Garrett",G. Temple,garrett-temple,1986-05-08T00:00:00,Louisiana State,USA,Louisiana State/USA,6-5,195,11,41,Guard-Forward,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,garrett_temple,2009,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630179,Tyrell,Terry,Tyrell Terry,"Terry, Tyrell",T. Terry,tyrell-terry,2000-09-28T00:00:00,Stanford,USA,Stanford/USA,6-2,160,1,3,Guard,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,tyrell_terry,2020,2021,Y,Y,Y,2020,2,31,N
-0,1628464,Daniel,Theis,Daniel Theis,"Theis, Daniel",D. Theis,daniel-theis,1992-04-04T00:00:00,Brose Bamberg,Germany,Brose Bamberg/Germany,6-9,245,4,27,Forward-Center,Active,Y,1610612738,Celtics,BOS,celtics,Boston,daniel_theis,2017,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630271,Brodric,Thomas,Brodric Thomas,"Thomas, Brodric",B. Thomas,brodric-thomas,1997-01-28T00:00:00,Truman State,USA,Truman State/USA,6-5,185,1,97,Guard,Active,Y,1610612738,Celtics,BOS,celtics,Boston,brodric_thomas,2020,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630560,Cam,Thomas,Cam Thomas,"Thomas, Cam",C. Thomas,cam-thomas,2001-10-13T00:00:00,Louisiana State,Japan,Louisiana State/Japan,6-3,210,0,24,Guard,Active,Y,1610612751,Nets,BKN,nets,Brooklyn,cam_thomas,2021,2021,Y,Y,Y,2021,1,27,N
-0,202738,Isaiah,Thomas,Isaiah Thomas,"Thomas, Isaiah",I. Thomas,isaiah-thomas,1989-02-07T00:00:00,Washington,USA,Washington/USA,5-9,185,10,4,Guard,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,isaiah_thomas,2011,2021,Y,Y,Y,2011,2,60,N
-0,1629744,Matt,Thomas,Matt Thomas,"Thomas, Matt",M. Thomas,matt-thomas,1994-08-04T00:00:00,Iowa State,USA,Iowa State/USA,6-3,190,2,21,Guard,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,matt_thomas,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,202691,Klay,Thompson,Klay Thompson,"Thompson, Klay",K. Thompson,klay-thompson,1990-02-08T00:00:00,Washington State,USA,Washington State/USA,6-6,220,8,11,Guard,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,klay_thompson,2011,2021,N,Y,Y,2011,1,11,N
-0,202684,Tristan,Thompson,Tristan Thompson,"Thompson, Tristan",T. Thompson,tristan-thompson,1991-03-13T00:00:00,Texas-Austin,Canada,Texas-Austin/Canada,6-9,254,10,3,Center-Forward,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,tristan_thompson,2011,2021,N,Y,Y,2011,1,4,N
-0,1630550,JT,Thor,JT Thor,"Thor, JT",J. Thor,jt-thor,2002-08-26T00:00:00,Auburn,USA,Auburn/USA,6-9,203,0,21,Forward,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,jt_thor,2021,2021,Y,Y,Y,2021,2,37,N
-0,1629680,Matisse,Thybulle,Matisse Thybulle,"Thybulle, Matisse",M. Thybulle,matisse-thybulle,1997-03-04T00:00:00,Washington,USA,Washington/USA,6-5,201,2,22,Guard-Forward,Active,Y,1610612755,76ers,PHI,sixers,Philadelphia,matisse_thybulle,2019,2021,N,Y,Y,2019,1,20,N
-0,1629681,Killian,Tillie,Killian Tillie,"Tillie, Killian",K. Tillie,killian-tillie,1998-03-05T00:00:00,Gonzaga,France,Gonzaga/France,6-9,220,1,35,Forward-Center,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,killian_tillie,2020,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630214,Xavier,Tillman,Xavier Tillman,"Tillman, Xavier",X. Tillman,xavier-tillman,1999-01-12T00:00:00,Michigan State,USA,Michigan State/USA,6-8,245,1,2,Forward,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,xavier_tillman,2020,2021,N,Y,Y,2020,2,35,N
-0,1630225,Isaiah,Todd,Isaiah Todd,"Todd, Isaiah",I. Todd,isaiah-todd,2001-10-17T00:00:00,NBA G League Ignite,USA,NBA G League Ignite/USA,6-9,219,0,14,Forward,Active,Y,1610612764,Wizards,WAS,wizards,Washington,isaiah_todd,2021,2021,Y,Y,Y,2021,2,31,N
-0,1630167,Obi,Toppin,Obi Toppin,"Toppin, Obi",O. Toppin,obi-toppin,1998-03-04T00:00:00,Dayton,USA,Dayton/USA,6-9,220,1,1,Forward,Active,Y,1610612752,Knicks,NYK,knicks,New York,obi_toppin,2020,2021,N,Y,Y,2020,1,8,N
-0,1629308,Juan,Toscano-Anderson,Juan Toscano-Anderson,"Toscano-Anderson, Juan",J. Toscano-Anderson,juan-toscano-anderson,1993-04-10T00:00:00,Marquette,USA,Marquette/USA,6-6,209,2,95,Forward,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,juan_toscano-anderson,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1626157,Karl-Anthony,Towns,Karl-Anthony Towns,"Towns, Karl-Anthony",K. Towns,karl-anthony-towns,1995-11-15T00:00:00,Kentucky,USA,Kentucky/USA,6-11,248,6,32,Center-Forward,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,karl-anthony_towns,2015,2021,N,Y,Y,2015,1,1,N
-0,1629018,Gary,Trent Jr.,Gary Trent Jr.,"Trent Jr., Gary",G. Trent Jr.,gary-trent-jr,1999-01-18T00:00:00,Duke,USA,Duke/USA,6-5,209,3,33,Guard-Forward,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,gary_trent_jr,2018,2021,Y,Y,Y,2018,2,37,N
-0,200782,P.J.,Tucker,P.J. Tucker,"Tucker, P.J.",P. Tucker,pj-tucker,1985-05-05T00:00:00,Texas-Austin,USA,Texas-Austin/USA,6-5,245,10,17,Forward,Active,Y,1610612748,Heat,MIA,heat,Miami,pj_tucker,2006,2021,Y,Y,Y,2006,2,35,N
-0,1629730,Rayjon,Tucker,Rayjon Tucker,"Tucker, Rayjon",R. Tucker,rayjon-tucker,1997-09-24T00:00:00,Arkansas-Little Rock,USA,Arkansas-Little Rock/USA,6-3,209,2,59,Guard,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,rayjon_tucker,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1626167,Myles,Turner,Myles Turner,"Turner, Myles",M. Turner,myles-turner,1996-03-24T00:00:00,Texas-Austin,USA,Texas-Austin/USA,6-11,250,6,33,Center-Forward,Active,Y,1610612754,Pacers,IND,pacers,Indiana,myles_turner,2015,2021,N,Y,Y,2015,1,11,N
-0,202685,Jonas,Valanciunas,Jonas Valanciunas,"Valanciunas, Jonas",J. Valanciunas,jonas-valanciunas,1992-05-06T00:00:00,Lietuvos rytas Vilnius,Lithuania,Lietuvos rytas Vilnius/Lithuania,6-11,265,9,17,Center,Active,Y,1610612740,Pelicans,NOP,pelicans,New Orleans,jonas_valanciunas,2012,2021,N,Y,Y,2011,1,5,N
-0,1627832,Fred,VanVleet,Fred VanVleet,"VanVleet, Fred",F. VanVleet,fred-vanvleet,1994-02-25T00:00:00,Wichita State,USA,Wichita State/USA,6-1,197,5,23,Guard,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,fred_vanvleet,2016,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629020,Jarred,Vanderbilt,Jarred Vanderbilt,"Vanderbilt, Jarred",J. Vanderbilt,jarred-vanderbilt,1999-04-03T00:00:00,Kentucky,USA,Kentucky/USA,6-9,214,3,8,Forward,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,jarred_vanderbilt,2018,2021,Y,Y,Y,2018,2,41,N
-0,1630170,Devin,Vassell,Devin Vassell,"Vassell, Devin",D. Vassell,devin-vassell,2000-08-23T00:00:00,Florida State,USA,Florida State/USA,6-5,200,1,24,Guard-Forward,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,devin_vassell,2020,2021,N,Y,Y,2020,1,11,N
-0,1629216,Gabe,Vincent,Gabe Vincent,"Vincent, Gabe",G. Vincent,gabe-vincent,1996-06-14T00:00:00,California-Santa Barbara,USA,California-Santa Barbara/USA,6-3,200,2,2,Guard,Active,Y,1610612748,Heat,MIA,heat,Miami,gabe_vincent,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,202696,Nikola,Vucevic,Nikola Vucevic,"Vucevic, Nikola",N. Vucevic,nikola-vucevic,1990-10-24T00:00:00,Southern California,Montenegro,Southern California/Montenegro,6-10,260,10,9,Center,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,nikola_vucevic,2011,2021,N,Y,Y,2011,1,16,N
-0,1629731,Dean,Wade,Dean Wade,"Wade, Dean",D. Wade,dean-wade,1996-11-20T00:00:00,Kansas State,USA,Kansas State/USA,6-9,228,2,32,Forward-Center,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,dean_wade,2019,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630532,Franz,Wagner,Franz Wagner,"Wagner, Franz",F. Wagner,franz-wagner,2001-08-27T00:00:00,Michigan,Germany,Michigan/Germany,6-10,220,0,22,Forward,Active,Y,1610612753,Magic,ORL,magic,Orlando,franz_wagner,2021,2021,N,Y,Y,2021,1,8,N
-0,1629021,Moritz,Wagner,Moritz Wagner,"Wagner, Moritz",M. Wagner,moritz-wagner,1997-04-26T00:00:00,Michigan,Germany,Michigan/Germany,6-11,245,3,21,Forward-Center,Active,Y,1610612753,Magic,ORL,magic,Orlando,moritz_wagner,2018,2021,Y,Y,Y,2018,1,25,N
-0,1630688,Ish,Wainright,Ish Wainright,"Wainright, Ish",I. Wainright,ish-wainright,1994-09-12T00:00:00,Baylor,USA,Baylor/USA,6-5,250,0,12,Forward,Active,Y,1610612756,Suns,PHX,suns,Phoenix,ish_wainwright,2021,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,202689,Kemba,Walker,Kemba Walker,"Walker, Kemba",K. Walker,kemba-walker,1990-05-08T00:00:00,Connecticut,USA,Connecticut/USA,6-0,184,10,8,Guard,Active,Y,1610612752,Knicks,NYK,knicks,New York,kemba_walker,2011,2021,N,Y,Y,2011,1,9,N
-0,1629022,Lonnie,Walker IV,Lonnie Walker IV,"Walker IV, Lonnie",L. Walker IV,lonnie-walker-iv,1998-12-14T00:00:00,Miami,USA,Miami/USA,6-4,204,3,1,Guard-Forward,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,lonnie_walker,2018,2021,Y,Y,Y,2018,1,18,N
-0,202322,John,Wall,John Wall,"Wall, John",J. Wall,john-wall,1990-09-06T00:00:00,Kentucky,USA,Kentucky/USA,6-3,210,10,1,Guard,Active,N,1610612745,Rockets,HOU,rockets,Houston,john_wall,2010,2021,N,Y,Y,2010,1,1,N
-0,203933,T.J.,Warren,T.J. Warren,"Warren, T.J.",T. Warren,tj-warren,1993-09-05T00:00:00,North Carolina State,USA,North Carolina State/USA,6-8,220,7,1,Forward,Active,N,1610612754,Pacers,IND,pacers,Indiana,tj_warren,2014,2021,Y,Y,Y,2014,1,14,N
-0,1629023,P.J.,Washington,P.J. Washington,"Washington, P.J.",P. Washington,pj-washington,1998-08-23T00:00:00,Kentucky,USA,Kentucky/USA,6-7,230,2,25,Forward,Active,Y,1610612766,Hornets,CHA,hornets,Charlotte,pj_washington,2019,2021,N,Y,Y,2019,1,12,N
-0,1630613,Duane,Washington Jr.,Duane Washington Jr.,"Washington Jr., Duane",D. Washington Jr.,duane-washington-jr,2000-03-24T00:00:00,Ohio State,Germany,Ohio State/Germany,6-3,197,0,4,Guard,Active,Y,1610612754,Pacers,IND,pacers,Indiana,duane_washington_jr,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629139,Yuta,Watanabe,Yuta Watanabe,"Watanabe, Yuta",Y. Watanabe,yuta-watanabe,1994-10-13T00:00:00,George Washington,Japan,George Washington/Japan,6-9,215,3,18,Guard-Forward,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,yuta_watanabe,2018,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630322,Lindy,Waters III,Lindy Waters III,"Waters III, Lindy",L. Waters III,lindy-waters-iii,1997-07-28T00:00:00,Oklahoma State,USA,Oklahoma State/USA,6-6,215,0,12,Forward,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,lindy_waters_iii,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630570,Trendon,Watford,Trendon Watford,"Watford, Trendon",T. Watford,trendon-watford,2000-11-09T00:00:00,Louisiana State,USA,Louisiana State/USA,6-8,237,0,2,Forward,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,trendon_watford,2021,2021,N,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629683,Quinndary,Weatherspoon,Quinndary Weatherspoon,"Weatherspoon, Quinndary",Q. Weatherspoon,quinndary-weatherspoon,1996-09-10T00:00:00,Mississippi State,USA,Mississippi State/USA,6-3,205,2,15,Guard,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,quinndary_weatherspoon,2019,2021,Y,Y,Y,2019,2,49,N
-0,201566,Russell,Westbrook,Russell Westbrook,"Westbrook, Russell",R. Westbrook,russell-westbrook,1988-11-12T00:00:00,UCLA,USA,UCLA/USA,6-3,200,13,0,Guard,Active,Y,1610612747,Lakers,LAL,lakers,Los Angeles,russell_westbrook,2008,2021,N,Y,Y,2008,1,4,Y
-0,1629632,Coby,White,Coby White,"White, Coby",C. White,coby-white,2000-02-16T00:00:00,North Carolina,USA,North Carolina/USA,6-4,195,2,0,Guard,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,coby_white,2019,2021,N,Y,Y,2019,1,7,N
-0,1628401,Derrick,White,Derrick White,"White, Derrick",D. White,derrick-white,1994-07-02T00:00:00,Colorado,USA,Colorado/USA,6-4,190,4,9,Guard,Active,Y,1610612738,Celtics,BOS,celtics,Boston,derrick_white,2017,2021,Y,Y,Y,2017,1,29,N
-0,202355,Hassan,Whiteside,Hassan Whiteside,"Whiteside, Hassan",H. Whiteside,hassan-whiteside,1989-06-13T00:00:00,Marshall,USA,Marshall/USA,7-0,265,9,21,Center,Active,Y,1610612762,Jazz,UTA,jazz,Utah,hassan_whiteside,2010,2021,Y,Y,Y,2010,2,33,N
-0,1630580,Joe,Wieskamp,Joe Wieskamp,"Wieskamp, Joe",J. Wieskamp,joe-wieskamp,1999-08-23T00:00:00,Iowa,USA,Iowa/USA,6-6,205,0,15,Guard-Forward,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,joe_wieskamp,2021,2021,Y,Y,Y,2021,2,41,N
-0,1630598,Aaron,Wiggins,Aaron Wiggins,"Wiggins, Aaron",A. Wiggins,aaron-wiggins,1999-01-02T00:00:00,Maryland,USA,Maryland/USA,6-4,190,0,21,Guard,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,aaron_wiggins,2021,2021,Y,Y,Y,2021,2,55,N
-0,203952,Andrew,Wiggins,Andrew Wiggins,"Wiggins, Andrew",A. Wiggins,andrew-wiggins,1995-02-23T00:00:00,Kansas,Canada,Kansas/Canada,6-7,197,7,22,Forward,Active,Y,1610612744,Warriors,GSW,warriors,Golden State,andrew_wiggins,2014,2021,N,Y,Y,2014,1,1,N
-0,1629623,Lindell,Wigginton,Lindell Wigginton,"Wigginton, Lindell",L. Wigginton,lindell-wigginton,1998-03-28T00:00:00,Iowa State,Canada,Iowa State/Canada,6-1,189,0,28,Guard,Active,Y,1610612749,Bucks,MIL,bucks,Milwaukee,lindell_wigginton,2021,2021,Y,Y,Y,2019,,,N
-0,1630314,Brandon,Williams,Brandon Williams,"Williams, Brandon",B. Williams,brandon-williams,1999-11-22T00:00:00,Arizona,USA,Arizona/USA,6-2,190,0,8,Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,tmp_brandon_williams,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1629684,Grant,Williams,Grant Williams,"Williams, Grant",G. Williams,grant-williams,1998-11-30T00:00:00,Tennessee,USA,Tennessee/USA,6-6,236,2,12,Forward,Active,Y,1610612738,Celtics,BOS,celtics,Boston,grant_williams,2019,2021,N,Y,Y,2019,1,22,N
-0,1629026,Kenrich,Williams,Kenrich Williams,"Williams, Kenrich",K. Williams,kenrich-williams,1994-12-02T00:00:00,TCU,USA,TCU/USA,6-6,210,3,34,Guard-Forward,Active,Y,1610612760,Thunder,OKC,thunder,Oklahoma City,kenrich_williams,2018,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,101150,Lou,Williams,Lou Williams,"Williams, Lou",L. Williams,lou-williams,1986-10-27T00:00:00,South Gwinnett HS (GA),USA,South Gwinnett HS (GA)/USA,6-2,175,16,6,Guard,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,lou_williams,2005,2021,Y,Y,Y,2005,2,45,N
-0,1630172,Patrick,Williams,Patrick Williams,"Williams, Patrick",P. Williams,patrick-williams,2001-08-26T00:00:00,Florida State,USA,Florida State/USA,6-7,215,1,44,Forward,Active,Y,1610612741,Bulls,CHI,bulls,Chicago,patrick_williams,2020,2021,N,Y,Y,2020,1,4,N
-0,1630533,Ziaire,Williams,Ziaire Williams,"Williams, Ziaire",Z. Williams,ziaire-williams,2001-09-12T00:00:00,Stanford,USA,Stanford/USA,6-9,185,0,8,Forward,Active,Y,1610612763,Grizzlies,MEM,grizzlies,Memphis,ziaire_williams,2021,2021,N,Y,Y,2021,1,10,N
-0,1629057,Robert,Williams III,Robert Williams III,"Williams III, Robert",R. Williams III,robert-williams-iii,1997-10-17T00:00:00,Texas A&M,USA,Texas A&M/USA,6-9,237,3,44,Center-Forward,Active,Y,1610612738,Celtics,BOS,celtics,Boston,robert_williams,2018,2021,Y,Y,Y,2018,1,27,N
-0,1629627,Zion,Williamson,Zion Williamson,"Williamson, Zion",Z. Williamson,zion-williamson,2000-07-06T00:00:00,Duke,USA,Duke/USA,6-6,284,2,1,Forward,Active,N,1610612740,Pelicans,NOP,pelicans,New Orleans,zion_williamson,2019,2021,N,Y,Y,2019,1,1,N
-0,1629685,Dylan,Windler,Dylan Windler,"Windler, Dylan",D. Windler,dylan-windler,1996-09-22T00:00:00,Belmont,USA,Belmont/USA,6-6,196,1,9,Guard-Forward,Active,Y,1610612739,Cavaliers,CLE,cavaliers,Cleveland,dylan_windler,2019,2021,Y,Y,Y,2019,1,26,N
-0,1626159,Justise,Winslow,Justise Winslow,"Winslow, Justise",J. Winslow,justise-winslow,1996-03-26T00:00:00,Duke,USA,Duke/USA,6-6,222,6,26,Forward-Guard,Active,Y,1610612757,Trail Blazers,POR,blazers,Portland,justise_winslow,2015,2021,N,Y,Y,2015,1,10,N
-0,1630216,Cassius,Winston,Cassius Winston,"Winston, Cassius",C. Winston,cassius-winston,1998-02-28T00:00:00,Michigan State,USA,Michigan State/USA,6-1,185,1,5,Guard,Active,Y,1610612764,Wizards,WAS,wizards,Washington,cassius_winston,2020,2021,Y,Y,Y,2020,2,53,N
-0,1630164,James,Wiseman,James Wiseman,"Wiseman, James",J. Wiseman,james-wiseman,2001-03-31T00:00:00,Memphis,USA,Memphis/USA,7-0,240,1,33,Center,Active,N,1610612744,Warriors,GSW,warriors,Golden State,james_wiseman,2020,2021,Y,Y,Y,2020,1,2,N
-0,1626174,Christian,Wood,Christian Wood,"Wood, Christian",C. Wood,christian-wood,1995-09-27T00:00:00,UNLV,USA,UNLV/USA,6-9,214,5,35,Forward,Active,Y,1610612745,Rockets,HOU,rockets,Houston,christian_wood,2015,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630218,Robert,Woodard II,Robert Woodard II,"Woodard II, Robert",R. Woodard II,robert-woodard-ii,1999-09-22T00:00:00,Mississippi State,USA,Mississippi State/USA,6-6,235,1,28,Forward,Active,Y,1610612759,Spurs,SAS,spurs,San Antonio,robert_woodard_ii,2020,2021,Y,Y,Y,2020,2,40,N
-0,1626153,Delon,Wright,Delon Wright,"Wright, Delon",D. Wright,delon-wright,1992-04-26T00:00:00,Utah,USA,Utah/USA,6-5,185,6,0,Guard,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,delon_wright,2015,2021,Y,Y,Y,2015,1,20,N
-0,1630589,Moses,Wright,Moses Wright,"Wright, Moses",M. Wright,moses-wright,1998-12-23T00:00:00,Georgia Tech,USA,Georgia Tech/USA,6-8,226,0,5,Forward,Active,Y,1610612742,Mavericks,DAL,mavericks,Dallas,moses_wright,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1630593,McKinley,Wright IV,McKinley Wright IV,"Wright IV, McKinley",M. Wright IV,mckinley-wright-iv,1998-10-25T00:00:00,Colorado,USA,Colorado/USA,5-11,192,0,25,Guard,Active,Y,1610612750,Timberwolves,MIN,timberwolves,Minnesota,mckinley_wright_iv,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1628221,Gabe,York,Gabe York,"York, Gabe",G. York,gabe-york,1993-08-02T00:00:00,Arizona,USA,Arizona/USA,6-3,190,0,,Guard,Active,Y,1610612754,Pacers,IND,pacers,Indiana,gabe_york,2021,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,201152,Thaddeus,Young,Thaddeus Young,"Young, Thaddeus",T. Young,thaddeus-young,1988-06-21T00:00:00,Georgia Tech,USA,Georgia Tech/USA,6-8,235,14,21,Forward,Active,Y,1610612761,Raptors,TOR,raptors,Toronto,thaddeus_young,2007,2021,N,Y,Y,2007,1,12,N
-0,1629027,Trae,Young,Trae Young,"Young, Trae",T. Young,trae-young,1998-09-19T00:00:00,Oklahoma,USA,Oklahoma/USA,6-1,164,3,11,Guard,Active,Y,1610612737,Hawks,ATL,hawks,Atlanta,trae_young,2018,2021,N,Y,Y,2018,1,5,N
-0,1630209,Omer,Yurtseven,Omer Yurtseven,"Yurtseven, Omer",O. Yurtseven,omer-yurtseven,1998-06-19T00:00:00,Georgetown,Turkey,Georgetown/Turkey,6-11,275,0,77,Center,Active,Y,1610612748,Heat,MIA,heat,Miami,tmp_omer_yurtseven,2020,2021,Y,Y,Y,Undrafted,Undrafted,Undrafted,N
-0,1627826,Ivica,Zubac,Ivica Zubac,"Zubac, Ivica",I. Zubac,ivica-zubac,1997-03-18T00:00:00,Mega Basket,Croatia,Mega Basket/Croatia,7-0,240,5,40,Center,Active,Y,1610612746,Clippers,LAC,clippers,LA,ivica_zubac,2016,2021,Y,Y,Y,2016,2,32,N
+,PERSON_ID,FIRST_NAME,LAST_NAME,BIRTHDATE,COUNTRY,HEIGHT,WEIGHT,POSITION,TEAM_NAME,FROM_YEAR,TO_YEAR,DRAFT_NUMBER
+0,1630173,Precious,Achiuwa,1999-09-19T00:00:00,Nigeria,6-8,225,Forward,Raptors,2020,2021,20
+0,203500,Steven,Adams,1993-07-20T00:00:00,New Zealand,6-11,265,Center,Grizzlies,2013,2021,12
+0,1628389,Bam,Adebayo,1997-07-18T00:00:00,USA,6-9,255,Center-Forward,Heat,2017,2021,14
+0,1630583,Santi,Aldama,2001-01-10T00:00:00,Spain,6-11,215,Forward-Center,Grizzlies,2021,2021,30
+0,200746,LaMarcus,Aldridge,1985-07-19T00:00:00,USA,6-11,250,Center-Forward,Nets,2006,2021,2
+0,1629638,Nickeil,Alexander-Walker,1998-09-02T00:00:00,Canada,6-5,205,Guard,Jazz,2019,2021,17
+0,1628960,Grayson,Allen,1995-10-08T00:00:00,USA,6-4,198,Guard,Bucks,2018,2021,21
+0,1628386,Jarrett,Allen,1998-04-21T00:00:00,USA,6-10,243,Center,Cavaliers,2017,2021,22
+0,1630631,Jose,Alvarado,1998-04-12T00:00:00,USA,6-0,179,Guard,Pelicans,2021,2021,Undrafted
+0,203937,Kyle,Anderson,1993-09-20T00:00:00,USA,6-9,230,Forward-Guard,Grizzlies,2014,2021,30
+0,203507,Giannis,Antetokounmpo,1994-12-06T00:00:00,Greece,6-11,242,Forward,Bucks,2013,2021,15
+0,203648,Thanasis,Antetokounmpo,1992-07-18T00:00:00,Greece,6-6,219,Forward,Bucks,2015,2021,51
+0,2546,Carmelo,Anthony,1984-05-29T00:00:00,USA,6-7,238,Forward,Lakers,2003,2021,3
+0,1630175,Cole,Anthony,2000-05-15T00:00:00,USA,6-3,185,Guard,Magic,2020,2021,15
+0,1628384,OG,Anunoby,1997-07-17T00:00:00,United Kingdom,6-7,232,Forward,Raptors,2017,2021,23
+0,1627853,Ryan,Arcidiacono,1994-03-26T00:00:00,USA,6-3,195,Guard,Bulls,2017,2021,Undrafted
+0,201571,D.J.,Augustin,1987-11-10T00:00:00,USA,5-11,183,Guard,Lakers,2008,2021,9
+0,1630166,Deni,Avdija,2001-01-03T00:00:00,Israel,6-9,210,Forward,Wizards,2020,2021,9
+0,1629028,Deandre,Ayton,1998-07-23T00:00:00,Bahamas,6-11,250,Center,Suns,2018,2021,1
+0,1628962,Udoka,Azubuike,1999-09-17T00:00:00,Nigeria,7-0,270,Center-Forward,Jazz,2020,2021,27
+0,1628963,Marvin,Bagley III,1999-03-14T00:00:00,USA,6-11,235,Forward,Pistons,2018,2021,2
+0,1630163,LaMelo,Ball,2001-08-22T00:00:00,USA,6-7,180,Guard,Hornets,2020,2021,3
+0,1628366,Lonzo,Ball,1997-10-27T00:00:00,USA,6-6,190,Guard,Bulls,2017,2021,2
+0,1628964,Mo,Bamba,1998-05-12T00:00:00,USA,7-0,231,Center,Magic,2018,2021,6
+0,1630217,Desmond,Bane,1998-06-25T00:00:00,USA,6-5,215,Guard,Grizzlies,2020,2021,30
+0,1630625,Dalano,Banton,1999-11-07T00:00:00,Canada,6-7,204,Forward,Raptors,2021,2021,46
+0,203084,Harrison,Barnes,1992-05-30T00:00:00,USA,6-8,225,Forward,Kings,2012,2021,7
+0,1630567,Scottie,Barnes,2001-08-01T00:00:00,USA,6-7,225,Forward,Raptors,2021,2021,4
+0,1629628,RJ,Barrett,2000-06-14T00:00:00,Canada,6-6,214,Forward-Guard,Knicks,2019,2021,3
+0,203115,Will,Barton,1991-01-06T00:00:00,USA,6-5,181,Guard,Nuggets,2012,2021,40
+0,1629646,Charles,Bassey,2000-10-28T00:00:00,Nigeria,6-9,230,Center-Forward,76ers,2021,2021,53
+0,1628966,Keita,Bates-Diop,1996-01-23T00:00:00,USA,6-8,229,Forward,Spurs,2018,2021,48
+0,201587,Nicolas,Batum,1988-12-14T00:00:00,France,6-8,230,Guard-Forward,Clippers,2008,2021,25
+0,203145,Kent,Bazemore,1989-07-01T00:00:00,USA,6-4,195,Guard-Forward,Lakers,2012,2021,Undrafted
+0,1629647,Darius,Bazley,2000-06-12T00:00:00,USA,6-8,208,Forward,Thunder,2019,2021,23
+0,203078,Bradley,Beal,1993-06-28T00:00:00,USA,6-4,207,Guard,Wizards,2012,2021,3
+0,1627736,Malik,Beasley,1996-11-26T00:00:00,USA,6-4,187,Guard,Timberwolves,2016,2021,19
+0,202722,Davis,Bertans,1992-11-12T00:00:00,Latvia,6-10,225,Forward,Mavericks,2016,2021,42
+0,201976,Patrick,Beverley,1988-07-12T00:00:00,USA,6-1,180,Guard,Timberwolves,2012,2021,42
+0,1630180,Saddiq,Bey,1999-04-09T00:00:00,USA,6-7,215,Forward,Pistons,2020,2021,19
+0,203920,Khem,Birch,1992-09-28T00:00:00,Canada,6-9,233,Center,Raptors,2017,2021,Undrafted
+0,1629048,Goga,Bitadze,1999-07-20T00:00:00,Georgia,7-0,250,Center-Forward,Pacers,2019,2021,18
+0,202687,Bismack,Biyombo,1992-08-28T00:00:00,DRC,6-8,255,Center,Suns,2011,2021,7
+0,202357,Nemanja,Bjelica,1988-05-09T00:00:00,Serbia,6-9,234,Forward,Warriors,2015,2021,35
+0,202339,Eric,Bledsoe,1989-12-09T00:00:00,USA,6-1,214,Guard,Trail Blazers,2010,2021,18
+0,1629833,Keljin,Blevins,1995-11-24T00:00:00,USA,6-4,200,Guard,Trail Blazers,2020,2021,
+0,203992,Bogdan,Bogdanovic,1992-08-18T00:00:00,Serbia,6-6,225,Guard,Hawks,2017,2021,27
+0,202711,Bojan,Bogdanovic,1989-04-18T00:00:00,Croatia,6-7,226,Forward,Jazz,2014,2021,31
+0,1629626,Bol,Bol,1999-11-16T00:00:00,Sudan,7-2,220,Center-Forward,Magic,2019,2021,44
+0,1630195,Leandro,Bolmaro,2000-09-11T00:00:00,Argentina,6-6,200,Forward,Timberwolves,2021,2021,23
+0,1629067,Isaac,Bonga,1999-11-08T00:00:00,Germany,6-8,180,Guard,Raptors,2018,2021,39
+0,1626164,Devin,Booker,1996-10-30T00:00:00,USA,6-5,206,Guard,Suns,2015,2021,13
+0,1630527,Brandon,Boston Jr.,2001-11-28T00:00:00,USA,6-6,188,Guard,Clippers,2021,2021,51
+0,1628449,Chris,Boucher,1993-01-11T00:00:00,Saint Lucia,6-9,200,Forward-Center,Raptors,2017,2021,Undrafted
+0,1630547,James,Bouknight,2000-09-18T00:00:00,USA,6-4,190,Guard,Hornets,2021,2021,11
+0,202340,Avery,Bradley,1990-11-26T00:00:00,USA,6-3,180,Guard,Lakers,2010,2021,19
+0,1628396,Tony,Bradley,1998-01-08T00:00:00,USA,6-10,248,Center-Forward,Bulls,2017,2021,28
+0,1629649,Ignas,Brazdeikis,1999-01-08T00:00:00,Canada,6-6,221,Forward,Magic,2019,2021,47
+0,1628969,Mikal,Bridges,1996-08-30T00:00:00,USA,6-6,209,Forward,Suns,2018,2021,10
+0,1628970,Miles,Bridges,1998-03-21T00:00:00,USA,6-7,225,Forward,Hornets,2018,2021,12
+0,1629052,Oshae,Brissett,1998-06-20T00:00:00,Canada,6-7,210,Forward-Guard,Pacers,2019,2021,Undrafted
+0,1627763,Malcolm,Brogdon,1992-12-11T00:00:00,USA,6-5,229,Guard,Pacers,2016,2021,36
+0,1629717,Armoni,Brooks,1998-06-05T00:00:00,USA,6-3,195,Guard,Raptors,2020,2021,
+0,1628415,Dillon,Brooks,1996-01-22T00:00:00,Canada,6-7,225,Guard-Forward,Grizzlies,2017,2021,45
+0,1628971,Bruce,Brown,1996-08-15T00:00:00,USA,6-4,202,Guard-Forward,Nets,2018,2021,42
+0,1627759,Jaylen,Brown,1996-10-24T00:00:00,USA,6-6,223,Guard-Forward,Celtics,2016,2021,3
+0,1629650,Moses,Brown,1999-10-13T00:00:00,USA,7-2,245,Center,Cavaliers,2019,2021,Undrafted
+0,1628425,Sterling,Brown,1995-02-10T00:00:00,USA,6-5,219,Guard-Forward,Mavericks,2017,2021,46
+0,1630535,Greg,Brown III,2001-09-01T00:00:00,USA,6-7,206,Forward,Trail Blazers,2021,2021,43
+0,1629718,Charlie,Brown Jr.,1997-02-02T00:00:00,USA,6-6,199,Guard,76ers,2019,2021,Undrafted
+0,1630602,Chaundee,Brown Jr.,1998-12-04T00:00:00,USA,6-5,215,Forward,Hawks,2021,2021,Undrafted
+0,1628972,Troy,Brown Jr.,1999-07-28T00:00:00,USA,6-6,215,Guard-Forward,Bulls,2018,2021,15
+0,1628973,Jalen,Brunson,1996-08-31T00:00:00,USA,6-1,190,Guard,Mavericks,2018,2021,33
+0,1628418,Thomas,Bryant,1997-07-31T00:00:00,USA,6-10,248,Center-Forward,Wizards,2017,2021,42
+0,203493,Reggie,Bullock,1991-03-16T00:00:00,USA,6-6,205,Guard-Forward,Mavericks,2013,2021,25
+0,203504,Trey,Burke,1992-11-12T00:00:00,USA,6-0,185,Guard,Mavericks,2013,2021,9
+0,202692,Alec,Burks,1991-07-20T00:00:00,USA,6-6,214,Guard,Knicks,2011,2021,12
+0,1630215,Jared,Butler,2000-08-25T00:00:00,USA,6-3,193,Guard,Jazz,2021,2021,40
+0,202710,Jimmy,Butler,1989-09-14T00:00:00,USA,6-7,230,Forward,Heat,2011,2021,30
+0,1629719,Devontae,Cacok,1996-10-08T00:00:00,USA,6-7,240,Forward,Spurs,2019,2021,Undrafted
+0,203484,Kentavious,Caldwell-Pope,1993-02-18T00:00:00,USA,6-5,204,Guard,Wizards,2013,2021,8
+0,1630267,Facundo,Campazzo,1991-03-23T00:00:00,Argentina,5-10,195,Guard,Nuggets,2020,2021,Undrafted
+0,1628427,Vlatko,Cancar,1997-04-10T00:00:00,Slovenia,6-8,236,Forward,Nuggets,2019,2021,49
+0,1629962,Devin,Cannady,1996-05-21T00:00:00,USA,6-2,183,Guard,Magic,2020,2021,
+0,203991,Clint,Capela,1994-05-18T00:00:00,Switzerland,6-10,256,Center,Hawks,2014,2021,25
+0,1630176,Vernon,Carey Jr.,2001-02-25T00:00:00,USA,6-9,270,Forward-Center,Wizards,2020,2021,32
+0,1628975,Jevon,Carter,1995-09-14T00:00:00,USA,6-1,200,Guard,Bucks,2018,2021,32
+0,1628976,Wendell,Carter Jr.,1999-04-16T00:00:00,USA,6-10,270,Center-Forward,Magic,2018,2021,7
+0,1627936,Alex,Caruso,1994-02-28T00:00:00,USA,6-5,186,Guard,Bulls,2017,2021,Undrafted
+0,1630551,Justin,Champagnie,2001-06-29T00:00:00,USA,6-6,206,Guard-Forward,Raptors,2021,2021,Undrafted
+0,1629185,Chris,Chiozza,1995-11-21T00:00:00,USA,5-11,175,Guard,Warriors,2018,2021,Undrafted
+0,1627737,Marquese,Chriss,1997-07-02T00:00:00,USA,6-9,240,Forward,Mavericks,2016,2021,8
+0,1630528,Josh,Christopher,2001-12-08T00:00:00,USA,6-3,215,Guard,Rockets,2021,2021,24
+0,1629109,Gary,Clark,1994-11-16T00:00:00,USA,6-6,225,Forward,Pelicans,2018,2021,Undrafted
+0,1629634,Brandon,Clarke,1996-09-19T00:00:00,Canada,6-8,215,Forward,Grizzlies,2019,2021,21
+0,203903,Jordan,Clarkson,1992-06-07T00:00:00,USA,6-4,194,Guard,Jazz,2014,2021,46
+0,1629651,Nic,Claxton,1999-04-17T00:00:00,USA,6-11,215,Forward-Center,Nets,2019,2021,31
+0,1629599,Amir,Coffey,1997-06-17T00:00:00,USA,6-7,210,Guard-Forward,Clippers,2019,2021,Undrafted
+0,1628381,John,Collins,1997-09-23T00:00:00,USA,6-9,226,Forward-Center,Hawks,2017,2021,19
+0,1628380,Zach,Collins,1997-11-19T00:00:00,USA,6-11,250,Forward-Center,Spurs,2017,2021,10
+0,201144,Mike,Conley,1987-10-11T00:00:00,USA,6-1,175,Guard,Jazz,2007,2021,4
+0,1626192,Pat,Connaughton,1993-01-06T00:00:00,USA,6-5,209,Guard,Bucks,2015,2021,41
+0,1629076,Tyler,Cook,1997-09-23T00:00:00,USA,6-8,255,Forward,Bulls,2019,2021,Undrafted
+0,1630536,Sharife,Cooper,2001-06-11T00:00:00,USA,6-1,176,Guard,Hawks,2021,2021,48
+0,202326,DeMarcus,Cousins,1990-08-13T00:00:00,USA,6-10,270,Center,Nuggets,2010,2021,5
+0,203496,Robert,Covington,1990-12-14T00:00:00,USA,6-7,209,Forward,Clippers,2013,2021,Undrafted
+0,1628470,Torrey,Craig,1990-12-19T00:00:00,USA,6-7,221,Forward,Suns,2017,2021,Undrafted
+0,203109,Jae,Crowder,1990-07-06T00:00:00,USA,6-6,235,Forward,Suns,2012,2021,34
+0,1629633,Jarrett,Culver,1999-02-20T00:00:00,USA,6-6,195,Guard-Forward,Grizzlies,2019,2021,6
+0,1630595,Cade,Cunningham,2001-09-25T00:00:00,USA,6-6,220,Guard,Pistons,2021,2021,1
+0,203552,Seth,Curry,1990-08-23T00:00:00,USA,6-2,185,Guard,Nets,2013,2021,Undrafted
+0,201939,Stephen,Curry,1988-03-14T00:00:00,USA,6-2,185,Guard,Warriors,2009,2021,7
+0,203076,Anthony,Davis,1993-03-11T00:00:00,USA,6-10,253,Forward-Center,Lakers,2012,2021,1
+0,202334,Ed,Davis,1989-06-05T00:00:00,USA,6-9,218,Center-Forward,Cavaliers,2010,2021,13
+0,1629056,Terence,Davis,1997-05-16T00:00:00,USA,6-4,201,Guard,Kings,2019,2021,Undrafted
+0,201942,DeMar,DeRozan,1989-08-07T00:00:00,USA,6-6,220,Guard-Forward,Bulls,2009,2021,9
+0,203473,Dewayne,Dedmon,1989-08-12T00:00:00,USA,7-0,245,Center,Heat,2013,2021,Undrafted
+0,1628978,Donte,DiVincenzo,1997-01-31T00:00:00,USA,6-4,203,Guard,Kings,2018,2021,17
+0,1628977,Hamidou,Diallo,1998-07-31T00:00:00,USA,6-5,202,Guard,Pistons,2018,2021,45
+0,203476,Gorgui,Dieng,1990-01-18T00:00:00,Senegal,6-10,248,Center,Hawks,2013,2021,21
+0,203915,Spencer,Dinwiddie,1993-04-06T00:00:00,USA,6-6,215,Guard,Mavericks,2014,2021,38
+0,1629029,Luka,Doncic,1999-02-28T00:00:00,Slovenia,6-7,230,Forward-Guard,Mavericks,2018,2021,3
+0,1629652,Luguentz,Dort,1999-04-19T00:00:00,Canada,6-3,215,Guard,Thunder,2019,2021,Undrafted
+0,1630245,Ayo,Dosunmu,2000-01-17T00:00:00,USA,6-4,200,Guard,Bulls,2021,2021,38
+0,201609,Goran,Dragic,1986-05-06T00:00:00,Slovenia,6-3,190,Guard,Nets,2008,2021,45
+0,203083,Andre,Drummond,1993-08-10T00:00:00,USA,6-10,279,Center,Nets,2012,2021,9
+0,1630537,Chris,Duarte,1997-06-13T00:00:00,Dominican Republic,6-5,190,Guard,Pacers,2021,2021,13
+0,1630561,David,Duke Jr.,1999-10-13T00:00:00,USA,6-4,204,Guard,Nets,2021,2021,Undrafted
+0,201142,Kevin,Durant,1988-09-29T00:00:00,USA,6-10,240,Forward,Nets,2007,2021,2
+0,1630162,Anthony,Edwards,2001-08-05T00:00:00,USA,6-4,225,Guard,Timberwolves,2020,2021,1
+0,1629035,Carsen,Edwards,1998-03-12T00:00:00,USA,5-11,200,Guard,Celtics,2019,2021,33
+0,1630556,Kessler,Edwards,2000-08-09T00:00:00,USA,6-7,203,Forward,Nets,2021,2021,44
+0,1629604,CJ,Elleby,2000-06-16T00:00:00,USA,6-6,200,Forward-Guard,Trail Blazers,2020,2021,46
+0,201961,Wayne,Ellington,1987-11-29T00:00:00,USA,6-4,207,Guard,Lakers,2009,2021,28
+0,203954,Joel,Embiid,1994-03-16T00:00:00,Cameroon,7-0,280,Center-Forward,76ers,2014,2021,3
+0,202324,Derrick,Favors,1991-07-15T00:00:00,USA,6-9,265,Forward,Thunder,2010,2021,3
+0,1628981,Bruno,Fernando,1998-08-15T00:00:00,Angola,6-9,240,Forward-Center,Rockets,2019,2021,34
+0,1627827,Dorian,Finney-Smith,1993-05-04T00:00:00,USA,6-7,220,Forward,Mavericks,2016,2021,Undrafted
+0,1630238,Malik,Fitts,1997-07-04T00:00:00,USA,6-5,230,Forward,Celtics,2020,2021,Undrafted
+0,1630201,Malachi,Flynn,1998-05-09T00:00:00,USA,6-1,175,Guard,Raptors,2020,2021,29
+0,1627854,Bryn,Forbes,1993-07-23T00:00:00,USA,6-2,205,Guard,Nuggets,2016,2021,Undrafted
+0,1630235,Trent,Forrest,1998-06-12T00:00:00,USA,6-4,210,Guard,Jazz,2020,2021,Undrafted
+0,203095,Evan,Fournier,1992-10-29T00:00:00,France,6-6,205,Guard-Forward,Knicks,2012,2021,20
+0,1628368,De'Aaron,Fox,1997-12-20T00:00:00,USA,6-3,185,Guard,Kings,2017,2021,5
+0,1628982,Melvin,Frazier Jr.,1996-08-30T00:00:00,USA,6-5,215,Guard-Forward,Magic,2018,2021,35
+0,1628365,Markelle,Fultz,1998-05-29T00:00:00,USA,6-4,209,Guard,Magic,2017,2021,1
+0,1629117,Wenyen,Gabriel,1997-03-26T00:00:00,South Sudan,6-9,205,Forward,Lakers,2018,2021,Undrafted
+0,1629655,Daniel,Gafford,1998-10-01T00:00:00,USA,6-9,234,Forward-Center,Wizards,2019,2021,38
+0,201568,Danilo,Gallinari,1988-08-08T00:00:00,Italy,6-10,236,Forward,Hawks,2008,2021,6
+0,1629636,Darius,Garland,2000-01-26T00:00:00,USA,6-1,192,Guard,Cavaliers,2019,2021,5
+0,1630586,Usman,Garuba,2002-03-09T00:00:00,Spain,6-8,229,Forward,Rockets,2021,2021,23
+0,1630568,Luka,Garza,1998-12-27T00:00:00,USA,6-10,243,Center,Pistons,2021,2021,52
+0,200752,Rudy,Gay,1986-08-17T00:00:00,USA,6-8,250,Forward-Guard,Jazz,2006,2021,8
+0,202331,Paul,George,1990-05-02T00:00:00,USA,6-8,220,Forward,Clippers,2010,2021,10
+0,201959,Taj,Gibson,1985-06-24T00:00:00,USA,6-9,232,Forward,Knicks,2009,2021,26
+0,1630581,Josh,Giddey,2002-10-10T00:00:00,Australia,6-8,205,Guard,Thunder,2021,2021,6
+0,1628983,Shai,Gilgeous-Alexander,1998-07-12T00:00:00,Canada,6-6,180,Guard,Thunder,2018,2021,11
+0,1630264,Anthony,Gill,1992-10-17T00:00:00,USA,6-7,230,Forward,Wizards,2020,2021,Undrafted
+0,203497,Rudy,Gobert,1992-06-26T00:00:00,France,7-1,258,Center,Jazz,2013,2021,27
+0,1629164,Brandon,Goodwin,1995-10-02T00:00:00,USA,6-0,180,Guard,Cavaliers,2018,2021,Undrafted
+0,203932,Aaron,Gordon,1995-09-16T00:00:00,USA,6-8,235,Forward,Nuggets,2014,2021,4
+0,201569,Eric,Gordon,1988-12-25T00:00:00,USA,6-3,215,Guard,Rockets,2008,2021,7
+0,1628984,Devonte',Graham,1995-02-22T00:00:00,USA,6-1,195,Guard,Pelicans,2018,2021,34
+0,203924,Jerami,Grant,1994-03-12T00:00:00,USA,6-8,210,Forward,Pistons,2014,2021,39
+0,201980,Danny,Green,1987-06-22T00:00:00,USA,6-6,215,Guard,76ers,2009,2021,46
+0,203110,Draymond,Green,1990-03-04T00:00:00,USA,6-6,230,Forward,Warriors,2012,2021,35
+0,203210,JaMychal,Green,1990-06-21T00:00:00,USA,6-8,227,Forward-Center,Nuggets,2014,2021,Undrafted
+0,1630224,Jalen,Green,2002-02-09T00:00:00,USA,6-4,186,Guard,Rockets,2021,2021,2
+0,1629750,Javonte,Green,1993-07-23T00:00:00,USA,6-5,205,Guard-Forward,Bulls,2019,2021,Undrafted
+0,201145,Jeff,Green,1986-08-28T00:00:00,USA,6-8,235,Forward,Nuggets,2007,2021,5
+0,1630182,Josh,Green,2000-11-16T00:00:00,Australia,6-5,200,Guard,Mavericks,2020,2021,18
+0,201933,Blake,Griffin,1989-03-16T00:00:00,USA,6-9,250,Forward,Nets,2009,2021,1
+0,1629656,Quentin,Grimes,2000-05-08T00:00:00,USA,6-4,210,Guard,Knicks,2021,2021,25
+0,1629060,Rui,Hachimura,1998-02-08T00:00:00,Japan,6-8,230,Forward,Wizards,2019,2021,9
+0,1630169,Tyrese,Haliburton,2000-02-29T00:00:00,USA,6-5,185,Guard,Pacers,2020,2021,12
+0,1630181,R.J.,Hampton,2001-02-07T00:00:00,USA,6-4,175,Guard,Magic,2020,2021,24
+0,203501,Tim,Hardaway Jr.,1992-03-16T00:00:00,USA,6-5,205,Guard-Forward,Mavericks,2013,2021,24
+0,201935,James,Harden,1989-08-26T00:00:00,USA,6-5,220,Guard,76ers,2009,2021,3
+0,203090,Maurice,Harkless,1993-05-11T00:00:00,USA,6-7,220,Forward-Guard,Kings,2012,2021,15
+0,1629607,Jared,Harper,1997-09-14T00:00:00,USA,5-10,175,Guard,Pelicans,2019,2021,Undrafted
+0,1626149,Montrezl,Harrell,1994-01-26T00:00:00,USA,6-7,240,Forward-Center,Hornets,2015,2021,32
+0,203914,Gary,Harris,1994-09-14T00:00:00,USA,6-4,210,Guard,Magic,2014,2021,19
+0,203925,Joe,Harris,1991-09-06T00:00:00,USA,6-6,220,Guard-Forward,Nets,2014,2021,33
+0,202699,Tobias,Harris,1992-07-15T00:00:00,USA,6-7,226,Forward,76ers,2011,2021,19
+0,1628404,Josh,Hart,1995-03-06T00:00:00,USA,6-5,215,Guard,Trail Blazers,2017,2021,30
+0,1628392,Isaiah,Hartenstein,1998-05-05T00:00:00,Germany,7-0,250,Center-Forward,Clippers,2018,2021,43
+0,2617,Udonis,Haslem,1980-06-09T00:00:00,USA,6-8,235,Forward,Heat,2003,2021,Undrafted
+0,1630573,Sam,Hauser,1997-12-08T00:00:00,USA,6-7,217,Forward,Celtics,2021,2021,Undrafted
+0,1629637,Jaxson,Hayes,2000-05-23T00:00:00,USA,6-11,220,Center-Forward,Pelicans,2019,2021,8
+0,1630165,Killian,Hayes,2001-07-27T00:00:00,France,6-5,195,Guard,Pistons,2020,2021,7
+0,202330,Gordon,Hayward,1990-03-23T00:00:00,USA,6-7,225,Forward,Hornets,2010,2021,9
+0,1627823,Juancho,Hernangomez,1995-09-28T00:00:00,Spain,6-9,214,Forward,Jazz,2016,2021,15
+0,1626195,Willy,Hernangomez,1994-05-27T00:00:00,Spain,6-11,250,Center-Forward,Pelicans,2016,2021,35
+0,1629639,Tyler,Herro,2000-01-20T00:00:00,USA,6-5,195,Guard,Heat,2019,2021,13
+0,1627741,Buddy,Hield,1992-12-17T00:00:00,Bahamas,6-4,220,Guard,Pacers,2016,2021,6
+0,1629312,Haywood,Highsmith,1996-12-09T00:00:00,USA,6-4,220,Forward,Heat,2018,2021,
+0,201588,George,Hill,1986-05-04T00:00:00,USA,6-4,188,Guard,Bucks,2008,2021,26
+0,1630792,Malcolm,Hill,1995-10-26T00:00:00,USA,6-6,220,Forward,Bulls,2021,2021,Undrafted
+0,1630207,Nate,Hinton,1999-06-08T00:00:00,USA,6-5,210,Guard-Forward,Pacers,2020,2021,Undrafted
+0,1628988,Aaron,Holiday,1996-09-30T00:00:00,USA,6-0,185,Guard,Suns,2018,2021,23
+0,201950,Jrue,Holiday,1990-06-12T00:00:00,USA,6-3,205,Guard,Bucks,2009,2021,17
+0,203200,Justin,Holiday,1989-04-05T00:00:00,USA,6-6,180,Forward-Guard,Kings,2012,2021,Undrafted
+0,1626158,Richaun,Holmes,1993-10-15T00:00:00,USA,6-10,235,Forward,Kings,2015,2021,37
+0,203918,Rodney,Hood,1992-10-20T00:00:00,USA,6-8,208,Guard-Forward,Clippers,2014,2021,23
+0,201143,Al,Horford,1986-06-03T00:00:00,Dominican Republic,6-9,240,Center-Forward,Celtics,2007,2021,3
+0,1629659,Talen,Horton-Tucker,2000-11-25T00:00:00,USA,6-4,234,Guard,Lakers,2019,2021,46
+0,1627863,Danuel,House Jr.,1993-06-07T00:00:00,USA,6-6,220,Forward-Guard,Jazz,2016,2021,Undrafted
+0,2730,Dwight,Howard,1985-12-08T00:00:00,USA,6-10,265,Center-Forward,Lakers,2004,2021,1
+0,1630210,Markus,Howard,1999-03-03T00:00:00,USA,5-10,175,Guard,Nuggets,2020,2021,Undrafted
+0,1628989,Kevin,Huerter,1998-08-27T00:00:00,USA,6-7,198,Guard-Forward,Hawks,2018,2021,19
+0,1630190,Elijah,Hughes,1998-03-10T00:00:00,USA,6-5,215,Guard,Trail Blazers,2020,2021,39
+0,1630624,Feron,Hunt,1999-07-05T00:00:00,USA,6-8,195,Forward,Knicks,2021,2021,Undrafted
+0,1629631,De'Andre,Hunter,1997-12-02T00:00:00,USA,6-8,221,Forward-Guard,Hawks,2019,2021,4
+0,1630538,Bones,Hyland,2000-09-14T00:00:00,USA,6-2,169,Guard,Nuggets,2021,2021,26
+0,201586,Serge,Ibaka,1989-09-18T00:00:00,Republic of the Congo,6-10,235,Forward,Bucks,2009,2021,24
+0,2738,Andre,Iguodala,1984-01-28T00:00:00,USA,6-6,215,Guard-Forward,Warriors,2004,2021,9
+0,204060,Joe,Ingles,1987-10-02T00:00:00,Australia,6-8,220,Forward-Guard,Trail Blazers,2014,2021,Undrafted
+0,1627742,Brandon,Ingram,1997-09-02T00:00:00,USA,6-8,190,Forward,Pelicans,2016,2021,2
+0,202681,Kyrie,Irving,1992-03-23T00:00:00,Australia,6-2,195,Guard,Nets,2011,2021,1
+0,1628371,Jonathan,Isaac,1997-10-03T00:00:00,USA,6-10,230,Forward,Magic,2017,2021,6
+0,1628402,Frank,Jackson,1998-05-04T00:00:00,USA,6-3,205,Guard,Pistons,2017,2021,31
+0,1630543,Isaiah,Jackson,2002-01-10T00:00:00,USA,6-10,205,Forward,Pacers,2021,2021,22
+0,1628367,Josh,Jackson,1997-02-10T00:00:00,USA,6-8,207,Guard-Forward,Kings,2017,2021,4
+0,202704,Reggie,Jackson,1990-04-16T00:00:00,USA,6-2,208,Guard,Clippers,2011,2021,24
+0,1628991,Jaren,Jackson Jr.,1999-09-15T00:00:00,USA,6-11,242,Forward-Center,Grizzlies,2018,2021,4
+0,2544,LeBron,James,1984-12-30T00:00:00,USA,6-9,250,Forward,Lakers,2003,2021,1
+0,1629660,Ty,Jerome,1997-07-08T00:00:00,USA,6-5,195,Guard-Forward,Thunder,2019,2021,24
+0,1630198,Isaiah,Joe,1999-07-02T00:00:00,USA,6-4,165,Guard,76ers,2020,2021,49
+0,1629661,Cameron,Johnson,1996-03-03T00:00:00,USA,6-8,210,Forward,Suns,2019,2021,11
+0,1630525,David,Johnson,2001-02-26T00:00:00,USA,6-4,203,Guard,Raptors,2021,2021,47
+0,1630552,Jalen,Johnson,2001-12-18T00:00:00,USA,6-8,219,Forward,Hawks,2021,2021,20
+0,1629640,Keldon,Johnson,1999-10-11T00:00:00,USA,6-6,220,Forward-Guard,Spurs,2019,2021,29
+0,1630553,Keon,Johnson,2002-03-10T00:00:00,USA,6-4,185,Guard,Trail Blazers,2021,2021,21
+0,1626169,Stanley,Johnson,1996-05-29T00:00:00,USA,6-6,242,Forward-Guard,Lakers,2015,2021,8
+0,203999,Nikola,Jokic,1995-02-19T00:00:00,Serbia,6-11,284,Center,Nuggets,2015,2021,41
+0,1627745,Damian,Jones,1995-06-30T00:00:00,USA,6-11,245,Center,Kings,2016,2021,30
+0,1630529,Herbert,Jones,1998-10-06T00:00:00,USA,6-7,206,Forward,Pelicans,2021,2021,35
+0,1630539,Kai,Jones,2001-01-19T00:00:00,Bahamas,6-10,221,Center-Forward,Hornets,2021,2021,19
+0,1630222,Mason,Jones,1998-07-21T00:00:00,USA,6-4,200,Guard,Lakers,2020,2021,Undrafted
+0,1630200,Tre,Jones,2000-01-08T00:00:00,USA,6-1,185,Guard,Spurs,2020,2021,41
+0,1626145,Tyus,Jones,1996-05-10T00:00:00,USA,6-0,196,Guard,Grizzlies,2015,2021,24
+0,1627884,Derrick,Jones Jr.,1997-02-15T00:00:00,USA,6-6,210,Forward,Bulls,2016,2021,Undrafted
+0,201599,DeAndre,Jordan,1988-07-21T00:00:00,USA,6-11,265,Center,76ers,2008,2021,35
+0,202709,Cory,Joseph,1991-08-20T00:00:00,Canada,6-3,200,Guard,Pistons,2011,2021,29
+0,1628379,Luke,Kennard,1996-06-24T00:00:00,USA,6-5,206,Guard,Clippers,2017,2021,12
+0,1630296,Braxton,Key,1997-02-14T00:00:00,USA,6-8,225,Forward,Pistons,2021,2021,Undrafted
+0,1630557,Corey,Kispert,1999-03-03T00:00:00,USA,6-6,224,Forward,Wizards,2021,2021,15
+0,1628467,Maxi,Kleber,1992-01-29T00:00:00,Germany,6-10,240,Forward,Mavericks,2017,2021,Undrafted
+0,1630233,Nathan,Knight,1997-09-20T00:00:00,USA,6-10,253,Forward-Center,Timberwolves,2020,2021,Undrafted
+0,1628995,Kevin,Knox II,1999-08-11T00:00:00,USA,6-7,215,Forward,Hawks,2018,2021,9
+0,1629723,John,Konchar,1996-03-22T00:00:00,USA,6-5,210,Guard,Grizzlies,2019,2021,Undrafted
+0,1627788,Furkan,Korkmaz,1997-07-24T00:00:00,Turkey,6-7,202,Guard-Forward,76ers,2017,2021,26
+0,1628436,Luke,Kornet,1995-07-15T00:00:00,USA,7-2,250,Center-Forward,Celtics,2017,2021,Undrafted
+0,1630249,Vit,Krejci,2000-06-19T00:00:00,Czech Republic,6-8,195,Guard,Thunder,2021,2021,37
+0,1629083,Arnoldas,Kulboka,1998-01-04T00:00:00,Lithuania,6-10,209,Forward,Hornets,2021,2021,55
+0,1630228,Jonathan,Kuminga,2002-10-06T00:00:00,DRC,6-7,225,Forward,Warriors,2021,2021,7
+0,1628398,Kyle,Kuzma,1995-07-24T00:00:00,USA,6-9,221,Forward,Wizards,2017,2021,27
+0,203897,Zach,LaVine,1995-03-10T00:00:00,USA,6-5,200,Guard-Forward,Bulls,2014,2021,13
+0,1630237,Anthony,Lamb,1998-01-20T00:00:00,USA,6-6,227,Forward,Rockets,2020,2021,Undrafted
+0,203087,Jeremy,Lamb,1992-05-30T00:00:00,USA,6-5,180,Guard-Forward,Kings,2012,2021,12
+0,1629111,Jock,Landale,1995-10-25T00:00:00,Australia,6-11,255,Center,Spurs,2021,2021,Undrafted
+0,1629641,Romeo,Langford,1999-10-25T00:00:00,USA,6-5,216,Guard-Forward,Spurs,2019,2021,14
+0,1627774,Jake,Layman,1994-03-07T00:00:00,USA,6-8,209,Forward,Timberwolves,2016,2021,47
+0,1627747,Caris,LeVert,1994-08-25T00:00:00,USA,6-6,205,Guard,Cavaliers,2016,2021,20
+0,1627814,Damion,Lee,1992-10-21T00:00:00,USA,6-5,210,Guard-Forward,Warriors,2017,2021,Undrafted
+0,1630240,Saben,Lee,1999-06-23T00:00:00,USA,6-2,183,Guard,Pistons,2020,2021,38
+0,203458,Alex,Len,1993-06-16T00:00:00,Ukraine,7-0,250,Center,Kings,2013,2021,5
+0,202695,Kawhi,Leonard,1991-06-29T00:00:00,USA,6-7,225,Forward,Clippers,2011,2021,15
+0,1630575,Scottie,Lewis,2000-03-12T00:00:00,USA,6-5,185,Guard,Hornets,2021,2021,56
+0,1630184,Kira,Lewis Jr.,2001-04-06T00:00:00,USA,6-1,170,Guard,Pelicans,2020,2021,13
+0,203081,Damian,Lillard,1990-07-15T00:00:00,USA,6-2,195,Guard,Trail Blazers,2012,2021,6
+0,1629642,Nassir,Little,2000-02-11T00:00:00,USA,6-5,220,Forward-Guard,Trail Blazers,2019,2021,25
+0,1630587,Isaiah,Livers,1998-07-28T00:00:00,USA,6-6,232,Forward,Pistons,2021,2021,42
+0,1626172,Kevon,Looney,1996-02-06T00:00:00,USA,6-9,222,Forward,Warriors,2015,2021,30
+0,201572,Brook,Lopez,1988-04-01T00:00:00,USA,7-0,282,Center,Bucks,2008,2021,10
+0,201577,Robin,Lopez,1988-04-01T00:00:00,USA,7-0,281,Center,Magic,2008,2021,15
+0,1629712,Didi,Louzada,1999-07-02T00:00:00,Brazil,6-5,188,Guard,Trail Blazers,2020,2021,35
+0,201567,Kevin,Love,1988-09-07T00:00:00,USA,6-8,251,Forward-Center,Cavaliers,2008,2021,5
+0,200768,Kyle,Lowry,1986-03-25T00:00:00,USA,6-0,196,Guard,Heat,2006,2021,24
+0,1630994,Gabriel,Lundberg,1994-12-04T00:00:00,Denmark,6-4,203,Guard,Suns,2021,2021,Undrafted
+0,1627789,Timothe,Luwawu-Cabarrot,1995-05-09T00:00:00,France,6-7,215,Guard-Forward,Hawks,2016,2021,24
+0,1626168,Trey,Lyles,1995-11-05T00:00:00,Canada,6-9,234,Forward,Kings,2015,2021,12
+0,1630177,Theo,Maledon,2001-06-12T00:00:00,France,6-4,175,Guard,Thunder,2020,2021,34
+0,1630572,Sandro,Mamukelashvili,1999-05-23T00:00:00,Georgia,6-9,240,Forward-Center,Bucks,2021,2021,54
+0,1629611,Terance,Mann,1996-10-18T00:00:00,USA,6-5,215,Guard-Forward,Clippers,2019,2021,48
+0,1630544,Tre,Mann,2001-02-03T00:00:00,USA,6-3,178,Guard,Thunder,2021,2021,18
+0,1626246,Boban,Marjanovic,1988-08-15T00:00:00,Serbia,7-3,290,Center,Mavericks,2015,2021,Undrafted
+0,1628374,Lauri,Markkanen,1997-05-22T00:00:00,Finland,6-11,240,Forward-Center,Cavaliers,2017,2021,7
+0,1630230,Naji,Marshall,1998-01-24T00:00:00,USA,6-7,220,Forward,Pelicans,2020,2021,Undrafted
+0,1628997,Caleb,Martin,1995-09-28T00:00:00,USA,6-5,205,Forward,Heat,2019,2021,Undrafted
+0,1628998,Cody,Martin,1995-09-28T00:00:00,USA,6-6,205,Forward,Hornets,2019,2021,36
+0,1630231,Kenyon,Martin Jr.,2001-01-06T00:00:00,USA,6-5,215,Forward,Rockets,2020,2021,52
+0,1629726,Garrison,Mathews,1996-10-24T00:00:00,USA,6-5,215,Guard,Rockets,2019,2021,Undrafted
+0,202083,Wesley,Matthews,1986-10-14T00:00:00,USA,6-4,220,Guard,Bucks,2009,2021,Undrafted
+0,1630178,Tyrese,Maxey,2000-11-04T00:00:00,USA,6-2,200,Guard,76ers,2020,2021,21
+0,1630219,Skylar,Mays,1997-09-05T00:00:00,USA,6-4,205,Guard,Hawks,2020,2021,50
+0,1630540,Miles,McBride,2000-09-08T00:00:00,USA,6-1,195,Guard,Knicks,2021,2021,36
+0,1630644,Mac,McClung,1999-01-06T00:00:00,USA,6-2,185,Guard,Lakers,2021,2021,Undrafted
+0,203468,CJ,McCollum,1991-09-19T00:00:00,USA,6-3,190,Guard,Pelicans,2013,2021,10
+0,204456,T.J.,McConnell,1992-03-25T00:00:00,USA,6-1,190,Guard,Pacers,2015,2021,
+0,1630183,Jaden,McDaniels,2000-09-29T00:00:00,USA,6-9,185,Forward,Timberwolves,2020,2021,28
+0,1629667,Jalen,McDaniels,1998-01-31T00:00:00,USA,6-9,205,Forward-Center,Hornets,2019,2021,52
+0,203926,Doug,McDermott,1992-01-03T00:00:00,USA,6-7,225,Forward,Spurs,2014,2021,11
+0,201580,JaVale,McGee,1988-01-19T00:00:00,USA,7-0,270,Center-Forward,Suns,2008,2021,18
+0,203585,Rodney,McGruder,1991-07-29T00:00:00,USA,6-4,205,Guard,Pistons,2016,2021,Undrafted
+0,1629162,Jordan,McLaughlin,1996-04-09T00:00:00,USA,5-11,185,Guard,Timberwolves,2019,2021,Undrafted
+0,203463,Ben,McLemore,1993-02-11T00:00:00,USA,6-3,195,Guard,Trail Blazers,2013,2021,7
+0,1629001,De'Anthony,Melton,1998-05-28T00:00:00,USA,6-2,200,Guard,Grizzlies,2018,2021,46
+0,1629002,Chimezie,Metu,1997-03-22T00:00:00,USA,6-9,225,Forward-Center,Kings,2018,2021,49
+0,203114,Khris,Middleton,1991-08-12T00:00:00,USA,6-7,222,Forward,Bucks,2012,2021,39
+0,201988,Patty,Mills,1988-08-11T00:00:00,Australia,6-0,180,Guard,Nets,2009,2021,55
+0,200794,Paul,Millsap,1985-02-10T00:00:00,USA,6-7,257,Forward,76ers,2006,2021,47
+0,1629003,Shake,Milton,1996-09-26T00:00:00,USA,6-5,205,Guard-Forward,76ers,2018,2021,54
+0,1630558,Davion,Mitchell,1998-09-05T00:00:00,USA,6-0,202,Guard,Kings,2021,2021,9
+0,1628378,Donovan,Mitchell,1996-09-07T00:00:00,USA,6-1,215,Guard,Jazz,2017,2021,13
+0,1630596,Evan,Mobley,2001-06-18T00:00:00,USA,6-11,215,Center,Cavaliers,2021,2021,3
+0,1628370,Malik,Monk,1998-02-04T00:00:00,USA,6-3,200,Guard,Lakers,2017,2021,11
+0,202328,Greg,Monroe,1990-06-04T00:00:00,USA,6-10,250,Forward-Center,Timberwolves,2010,2021,7
+0,1630541,Moses,Moody,2002-05-31T00:00:00,USA,6-5,211,Guard,Warriors,2021,2021,14
+0,1629875,Xavier,Moon,1995-01-02T00:00:00,USA,6-2,165,Guard,Clippers,2021,2021,Undrafted
+0,1629630,Ja,Morant,1999-08-10T00:00:00,USA,6-3,174,Guard,Grizzlies,2019,2021,2
+0,1629752,Juwan,Morgan,1997-04-17T00:00:00,USA,6-7,232,Forward,Celtics,2019,2021,Undrafted
+0,202693,Markieff,Morris,1989-09-02T00:00:00,USA,6-9,245,Forward,Heat,2011,2021,13
+0,1628420,Monte,Morris,1995-06-27T00:00:00,USA,6-2,183,Guard,Nuggets,2017,2021,51
+0,202694,Marcus,Morris Sr.,1989-09-02T00:00:00,USA,6-8,218,Forward,Clippers,2011,2021,14
+0,1628539,Mychal,Mulder,1994-06-12T00:00:00,Canada,6-3,195,Guard,Heat,2019,2021,Undrafted
+0,1630530,Trey,Murphy III,2000-06-18T00:00:00,USA,6-8,206,Forward,Pelicans,2021,2021,17
+0,1627749,Dejounte,Murray,1996-09-19T00:00:00,USA,6-4,180,Guard,Spurs,2016,2021,29
+0,1627750,Jamal,Murray,1997-02-23T00:00:00,Canada,6-3,215,Guard,Nuggets,2016,2021,7
+0,203488,Mike,Muscala,1991-07-01T00:00:00,USA,6-10,240,Forward-Center,Thunder,2013,2021,44
+0,1629004,Svi,Mykhailiuk,1997-06-10T00:00:00,Ukraine,6-7,205,Guard-Forward,Raptors,2018,2021,47
+0,1626204,Larry,Nance Jr.,1993-01-01T00:00:00,USA,6-7,245,Forward-Center,Pelicans,2015,2021,27
+0,1630612,RJ,Nembhard Jr.,1999-03-22T00:00:00,USA,6-4,200,Guard,Cavaliers,2021,2021,Undrafted
+0,1630174,Aaron,Nesmith,1999-10-16T00:00:00,USA,6-5,215,Guard-Forward,Celtics,2020,2021,14
+0,203526,Raul,Neto,1992-05-19T00:00:00,Brazil,6-2,180,Guard,Wizards,2015,2021,47
+0,1627777,Georges,Niang,1993-06-17T00:00:00,USA,6-7,230,Forward,76ers,2016,2021,50
+0,1630227,Daishen,Nix,2002-02-13T00:00:00,USA,6-4,226,Guard,Rockets,2021,2021,Undrafted
+0,1630192,Zeke,Nnaji,2001-01-09T00:00:00,USA,6-9,240,Forward-Center,Nuggets,2020,2021,22
+0,203457,Nerlens,Noel,1994-04-10T00:00:00,USA,6-11,220,Center-Forward,Knicks,2013,2021,6
+0,1629669,Jaylen,Nowell,1999-07-09T00:00:00,USA,6-4,201,Guard,Timberwolves,2019,2021,43
+0,1628373,Frank,Ntilikina,1998-07-28T00:00:00,France,6-4,200,Guard,Mavericks,2017,2021,8
+0,1629134,Kendrick,Nunn,1995-08-03T00:00:00,USA,6-2,190,Guard,Lakers,2018,2021,Undrafted
+0,203994,Jusuf,Nurkic,1994-08-23T00:00:00,Bosnia and Herzegovina,6-11,290,Center,Trail Blazers,2014,2021,16
+0,1628021,David,Nwaba,1993-01-14T00:00:00,USA,6-5,219,Guard-Forward,Rockets,2016,2021,Undrafted
+0,1629670,Jordan,Nwora,1998-09-09T00:00:00,USA,6-8,225,Forward,Bucks,2020,2021,45
+0,1626220,Royce,O'Neale,1993-06-05T00:00:00,USA,6-5,226,Forward,Jazz,2017,2021,Undrafted
+0,1629643,Chuma,Okeke,1998-08-18T00:00:00,USA,6-6,229,Forward,Magic,2020,2021,16
+0,1629006,Josh,Okogie,1998-09-01T00:00:00,Nigeria,6-4,213,Guard,Timberwolves,2018,2021,20
+0,1630168,Onyeka,Okongwu,2000-12-11T00:00:00,USA,6-8,240,Forward-Center,Hawks,2020,2021,6
+0,1630171,Isaac,Okoro,2001-01-26T00:00:00,USA,6-5,225,Forward-Guard,Cavaliers,2020,2021,5
+0,203506,Victor,Oladipo,1992-05-04T00:00:00,USA,6-4,213,Guard,Heat,2013,2021,2
+0,203482,Kelly,Olynyk,1991-04-19T00:00:00,Canada,6-11,240,Forward-Center,Pistons,2013,2021,13
+0,1626224,Cedi,Osman,1995-04-08T00:00:00,Turkey,6-7,230,Forward,Cavaliers,2017,2021,31
+0,1626162,Kelly,Oubre Jr.,1995-12-09T00:00:00,USA,6-6,203,Forward-Guard,Hornets,2015,2021,15
+0,1629672,Eric,Paschall,1996-11-04T00:00:00,USA,6-6,255,Forward,Jazz,2019,2021,41
+0,101108,Chris,Paul,1985-05-06T00:00:00,USA,6-0,175,Guard,Suns,2005,2021,4
+0,1626166,Cameron,Payne,1994-08-08T00:00:00,USA,6-1,183,Guard,Suns,2015,2021,14
+0,203901,Elfrid,Payton,1994-02-22T00:00:00,USA,6-3,195,Guard,Suns,2014,2021,10
+0,1627780,Gary,Payton II,1992-12-01T00:00:00,USA,6-3,195,Guard,Warriors,2016,2021,Undrafted
+0,1630691,Jamorko,Pickett,1997-12-24T00:00:00,USA,6-9,206,Forward,Pistons,2021,2021,Undrafted
+0,1629033,Theo,Pinson,1995-11-05T00:00:00,USA,6-5,212,Guard-Forward,Mavericks,2018,2021,Undrafted
+0,203486,Mason,Plumlee,1990-03-05T00:00:00,USA,6-11,254,Forward-Center,Hornets,2013,2021,22
+0,1627751,Jakob,Poeltl,1995-10-15T00:00:00,Austria,7-1,245,Center,Spurs,2016,2021,9
+0,1630197,Aleksej,Pokusevski,2001-12-26T00:00:00,Serbia,7-0,190,Forward,Thunder,2020,2021,17
+0,1630582,Yves,Pons,1999-05-07T00:00:00,France,6-5,206,Forward,Grizzlies,2021,2021,Undrafted
+0,1629673,Jordan,Poole,1999-06-19T00:00:00,USA,6-4,194,Guard,Warriors,2019,2021,28
+0,1629645,Kevin,Porter Jr.,2000-05-04T00:00:00,USA,6-4,203,Guard-Forward,Rockets,2019,2021,30
+0,1629008,Michael,Porter Jr.,1998-06-29T00:00:00,USA,6-10,218,Forward,Nuggets,2018,2021,14
+0,203490,Otto,Porter Jr.,1993-06-03T00:00:00,USA,6-8,198,Forward,Warriors,2013,2021,3
+0,1626171,Bobby,Portis,1995-02-10T00:00:00,USA,6-10,250,Forward,Bucks,2015,2021,22
+0,204001,Kristaps,Porzingis,1995-08-02T00:00:00,Latvia,7-3,240,Forward-Center,Wizards,2015,2021,4
+0,203939,Dwight,Powell,1991-07-20T00:00:00,Canada,6-10,240,Forward-Center,Mavericks,2014,2021,45
+0,1629619,Myles,Powell,1997-07-07T00:00:00,USA,6-2,195,Guard,76ers,2021,2021,Undrafted
+0,1626181,Norman,Powell,1993-05-25T00:00:00,USA,6-3,215,Guard,Clippers,2015,2021,46
+0,1630563,Joshua,Primo,2002-12-24T00:00:00,Canada,6-4,189,Guard,Spurs,2021,2021,12
+0,1627752,Taurean,Prince,1994-03-22T00:00:00,USA,6-6,218,Forward,Timberwolves,2016,2021,12
+0,1630202,Payton,Pritchard,1998-01-28T00:00:00,USA,6-1,195,Guard,Celtics,2020,2021,26
+0,1630243,Trevelin,Queen,1997-02-25T00:00:00,USA,6-6,190,Guard,Rockets,2021,2021,Undrafted
+0,1629674,Neemias,Queta,1999-07-13T00:00:00,Portugal,7-0,248,Center,Kings,2021,2021,39
+0,1630193,Immanuel,Quickley,1999-06-17T00:00:00,USA,6-3,190,Guard,Knicks,2020,2021,25
+0,203944,Julius,Randle,1994-11-29T00:00:00,USA,6-8,250,Forward-Center,Knicks,2014,2021,7
+0,1630559,Austin,Reaves,1998-05-29T00:00:00,USA,6-5,197,Guard,Lakers,2021,2021,Undrafted
+0,1629629,Cam,Reddish,1999-09-01T00:00:00,USA,6-8,217,Forward-Guard,Knicks,2019,2021,10
+0,1628432,Davon,Reed,1995-06-11T00:00:00,USA,6-5,206,Guard,Nuggets,2017,2021,32
+0,1630194,Paul,Reed,1999-06-14T00:00:00,USA,6-9,210,Forward,76ers,2020,2021,58
+0,1629675,Naz,Reid,1999-08-26T00:00:00,USA,6-9,264,Center-Forward,Timberwolves,2019,2021,Undrafted
+0,1630208,Nick,Richards,1997-11-29T00:00:00,Jamaica,7-0,245,Center,Hornets,2020,2021,42
+0,1626196,Josh,Richardson,1993-09-15T00:00:00,USA,6-5,200,Guard,Spurs,2015,2021,40
+0,203085,Austin,Rivers,1992-08-01T00:00:00,USA,6-4,200,Guard,Nuggets,2012,2021,10
+0,1629130,Duncan,Robinson,1994-04-22T00:00:00,USA,6-7,215,Forward,Heat,2018,2021,Undrafted
+0,1629011,Mitchell,Robinson,1998-04-01T00:00:00,USA,7-0,240,Center-Forward,Knicks,2018,2021,36
+0,1630526,Jeremiah,Robinson-Earl,2000-11-03T00:00:00,USA,6-8,242,Forward,Thunder,2021,2021,32
+0,1629676,Isaiah,Roby,1998-02-03T00:00:00,USA,6-8,230,Forward,Thunder,2019,2021,45
+0,200765,Rajon,Rondo,1986-02-22T00:00:00,USA,6-1,180,Guard,Cavaliers,2006,2021,21
+0,201565,Derrick,Rose,1988-10-04T00:00:00,USA,6-2,200,Guard,Knicks,2008,2021,1
+0,203082,Terrence,Ross,1991-02-05T00:00:00,USA,6-6,206,Guard-Forward,Magic,2012,2021,8
+0,1626179,Terry,Rozier,1994-03-17T00:00:00,USA,6-1,190,Guard,Hornets,2015,2021,16
+0,201937,Ricky,Rubio,1990-10-21T00:00:00,Spain,6-2,190,Guard,Pacers,2011,2021,5
+0,1626156,D'Angelo,Russell,1996-02-23T00:00:00,USA,6-4,193,Guard,Timberwolves,2015,2021,2
+0,1630346,Matt,Ryan,1997-04-17T00:00:00,USA,6-7,215,Forward,Celtics,2021,2021,Undrafted
+0,1627734,Domantas,Sabonis,1996-05-03T00:00:00,Lithuania,6-11,240,Forward-Center,Kings,2016,2021,11
+0,203967,Dario,Saric,1994-04-08T00:00:00,Croatia,6-10,225,Forward-Center,Suns,2016,2021,12
+0,203107,Tomas,Satoransky,1991-10-30T00:00:00,Czech Republic,6-7,210,Guard,Wizards,2016,2021,32
+0,1630648,Jordan,Schakel,1998-06-13T00:00:00,USA,6-6,200,Guard,Wizards,2021,2021,Undrafted
+0,1629678,Admiral,Schofield,1997-03-30T00:00:00,United Kingdom,6-5,241,Forward,Magic,2019,2021,42
+0,203471,Dennis,Schroder,1993-09-15T00:00:00,Germany,6-1,172,Guard,Rockets,2013,2021,17
+0,1630206,Jay,Scrubb,2000-09-01T00:00:00,USA,6-5,220,Guard,Clippers,2020,2021,55
+0,1630578,Alperen,Sengun,2002-07-25T00:00:00,Turkey,6-10,243,Center,Rockets,2021,2021,16
+0,1629012,Collin,Sexton,1999-01-04T00:00:00,USA,6-1,190,Guard,Cavaliers,2018,2021,8
+0,1629013,Landry,Shamet,1997-03-13T00:00:00,USA,6-4,190,Guard,Suns,2018,2021,26
+0,1630549,Day'Ron,Sharpe,2001-11-06T00:00:00,USA,6-9,265,Forward,Nets,2021,2021,29
+0,1627783,Pascal,Siakam,1994-04-02T00:00:00,Cameroon,6-8,230,Forward,Raptors,2016,2021,27
+0,1627732,Ben,Simmons,1996-07-20T00:00:00,Australia,6-11,240,Guard-Forward,Nets,2016,2021,1
+0,1630250,Marko,Simonovic,1999-10-15T00:00:00,Montenegro,6-11,220,Center,Bulls,2021,2021,44
+0,1629014,Anfernee,Simons,1999-06-08T00:00:00,USA,6-3,181,Guard,Trail Blazers,2018,2021,24
+0,1630579,Jericho,Sims,1998-10-20T00:00:00,USA,6-9,250,Center,Knicks,2021,2021,58
+0,1630606,Javonte,Smart,1999-06-03T00:00:00,USA,6-4,205,Guard,Heat,2021,2021,Undrafted
+0,203935,Marcus,Smart,1994-03-06T00:00:00,USA,6-4,220,Guard,Celtics,2014,2021,6
+0,202397,Ish,Smith,1988-07-05T00:00:00,USA,6-0,175,Guard,Wizards,2010,2021,Undrafted
+0,1630188,Jalen,Smith,2000-03-16T00:00:00,USA,6-10,215,Forward-Center,Pacers,2020,2021,10
+0,1630270,Xavier,Sneed,1997-12-21T00:00:00,USA,6-5,215,Forward,Jazz,2021,2021,Undrafted
+0,203503,Tony,Snell,1991-11-10T00:00:00,USA,6-6,213,Guard,Pelicans,2013,2021,20
+0,1630531,Jaden,Springer,2002-09-25T00:00:00,USA,6-4,202,Guard,76ers,2021,2021,28
+0,203917,Nik,Stauskas,1993-10-07T00:00:00,Canada,6-6,207,Guard,Celtics,2014,2021,8
+0,202362,Lance,Stephenson,1990-09-05T00:00:00,USA,6-5,210,Forward,Pacers,2010,2021,40
+0,1630205,Lamar,Stevens,1997-07-09T00:00:00,USA,6-6,230,Forward,Cavaliers,2020,2021,Undrafted
+0,1630191,Isaiah,Stewart,2001-05-22T00:00:00,USA,6-8,250,Forward-Center,Pistons,2020,2021,16
+0,1629622,Max,Strus,1996-03-28T00:00:00,USA,6-5,215,Guard-Forward,Heat,2019,2021,Undrafted
+0,1630591,Jalen,Suggs,2001-06-03T00:00:00,USA,6-5,205,Guard,Magic,2021,2021,5
+0,1630256,Jae'Sean,Tate,1995-10-28T00:00:00,USA,6-4,230,Forward,Rockets,2020,2021,Undrafted
+0,1628369,Jayson,Tatum,1998-03-03T00:00:00,USA,6-8,210,Forward-Guard,Celtics,2017,2021,3
+0,1630678,Terry,Taylor,1999-09-23T00:00:00,USA,6-5,230,Forward,Pacers,2021,2021,Undrafted
+0,202066,Garrett,Temple,1986-05-08T00:00:00,USA,6-5,195,Guard-Forward,Pelicans,2009,2021,Undrafted
+0,1630179,Tyrell,Terry,2000-09-28T00:00:00,USA,6-2,160,Guard,Grizzlies,2020,2021,31
+0,1628464,Daniel,Theis,1992-04-04T00:00:00,Germany,6-9,245,Forward-Center,Celtics,2017,2021,Undrafted
+0,1630271,Brodric,Thomas,1997-01-28T00:00:00,USA,6-5,185,Guard,Celtics,2020,2021,Undrafted
+0,1630560,Cam,Thomas,2001-10-13T00:00:00,Japan,6-3,210,Guard,Nets,2021,2021,27
+0,202738,Isaiah,Thomas,1989-02-07T00:00:00,USA,5-9,185,Guard,Hornets,2011,2021,60
+0,1629744,Matt,Thomas,1994-08-04T00:00:00,USA,6-3,190,Guard,Bulls,2019,2021,Undrafted
+0,202691,Klay,Thompson,1990-02-08T00:00:00,USA,6-6,220,Guard,Warriors,2011,2021,11
+0,202684,Tristan,Thompson,1991-03-13T00:00:00,Canada,6-9,254,Center-Forward,Bulls,2011,2021,4
+0,1630550,JT,Thor,2002-08-26T00:00:00,USA,6-9,203,Forward,Hornets,2021,2021,37
+0,1629680,Matisse,Thybulle,1997-03-04T00:00:00,USA,6-5,201,Guard-Forward,76ers,2019,2021,20
+0,1629681,Killian,Tillie,1998-03-05T00:00:00,France,6-9,220,Forward-Center,Grizzlies,2020,2021,Undrafted
+0,1630214,Xavier,Tillman,1999-01-12T00:00:00,USA,6-8,245,Forward,Grizzlies,2020,2021,35
+0,1630225,Isaiah,Todd,2001-10-17T00:00:00,USA,6-9,219,Forward,Wizards,2021,2021,31
+0,1630167,Obi,Toppin,1998-03-04T00:00:00,USA,6-9,220,Forward,Knicks,2020,2021,8
+0,1629308,Juan,Toscano-Anderson,1993-04-10T00:00:00,USA,6-6,209,Forward,Warriors,2019,2021,Undrafted
+0,1626157,Karl-Anthony,Towns,1995-11-15T00:00:00,USA,6-11,248,Center-Forward,Timberwolves,2015,2021,1
+0,1629018,Gary,Trent Jr.,1999-01-18T00:00:00,USA,6-5,209,Guard-Forward,Raptors,2018,2021,37
+0,200782,P.J.,Tucker,1985-05-05T00:00:00,USA,6-5,245,Forward,Heat,2006,2021,35
+0,1629730,Rayjon,Tucker,1997-09-24T00:00:00,USA,6-3,209,Guard,Bucks,2019,2021,Undrafted
+0,1626167,Myles,Turner,1996-03-24T00:00:00,USA,6-11,250,Center-Forward,Pacers,2015,2021,11
+0,202685,Jonas,Valanciunas,1992-05-06T00:00:00,Lithuania,6-11,265,Center,Pelicans,2012,2021,5
+0,1627832,Fred,VanVleet,1994-02-25T00:00:00,USA,6-1,197,Guard,Raptors,2016,2021,Undrafted
+0,1629020,Jarred,Vanderbilt,1999-04-03T00:00:00,USA,6-9,214,Forward,Timberwolves,2018,2021,41
+0,1630170,Devin,Vassell,2000-08-23T00:00:00,USA,6-5,200,Guard-Forward,Spurs,2020,2021,11
+0,1629216,Gabe,Vincent,1996-06-14T00:00:00,USA,6-3,200,Guard,Heat,2019,2021,Undrafted
+0,202696,Nikola,Vucevic,1990-10-24T00:00:00,Montenegro,6-10,260,Center,Bulls,2011,2021,16
+0,1629731,Dean,Wade,1996-11-20T00:00:00,USA,6-9,228,Forward-Center,Cavaliers,2019,2021,Undrafted
+0,1630532,Franz,Wagner,2001-08-27T00:00:00,Germany,6-10,220,Forward,Magic,2021,2021,8
+0,1629021,Moritz,Wagner,1997-04-26T00:00:00,Germany,6-11,245,Forward-Center,Magic,2018,2021,25
+0,1630688,Ish,Wainright,1994-09-12T00:00:00,USA,6-5,250,Forward,Suns,2021,2021,Undrafted
+0,202689,Kemba,Walker,1990-05-08T00:00:00,USA,6-0,184,Guard,Knicks,2011,2021,9
+0,1629022,Lonnie,Walker IV,1998-12-14T00:00:00,USA,6-4,204,Guard-Forward,Spurs,2018,2021,18
+0,202322,John,Wall,1990-09-06T00:00:00,USA,6-3,210,Guard,Rockets,2010,2021,1
+0,203933,T.J.,Warren,1993-09-05T00:00:00,USA,6-8,220,Forward,Pacers,2014,2021,14
+0,1629023,P.J.,Washington,1998-08-23T00:00:00,USA,6-7,230,Forward,Hornets,2019,2021,12
+0,1630613,Duane,Washington Jr.,2000-03-24T00:00:00,Germany,6-3,197,Guard,Pacers,2021,2021,Undrafted
+0,1629139,Yuta,Watanabe,1994-10-13T00:00:00,Japan,6-9,215,Guard-Forward,Raptors,2018,2021,Undrafted
+0,1630322,Lindy,Waters III,1997-07-28T00:00:00,USA,6-6,215,Forward,Thunder,2021,2021,Undrafted
+0,1630570,Trendon,Watford,2000-11-09T00:00:00,USA,6-8,237,Forward,Trail Blazers,2021,2021,Undrafted
+0,1629683,Quinndary,Weatherspoon,1996-09-10T00:00:00,USA,6-3,205,Guard,Warriors,2019,2021,49
+0,201566,Russell,Westbrook,1988-11-12T00:00:00,USA,6-3,200,Guard,Lakers,2008,2021,4
+0,1629632,Coby,White,2000-02-16T00:00:00,USA,6-4,195,Guard,Bulls,2019,2021,7
+0,1628401,Derrick,White,1994-07-02T00:00:00,USA,6-4,190,Guard,Celtics,2017,2021,29
+0,202355,Hassan,Whiteside,1989-06-13T00:00:00,USA,7-0,265,Center,Jazz,2010,2021,33
+0,1630580,Joe,Wieskamp,1999-08-23T00:00:00,USA,6-6,205,Guard-Forward,Spurs,2021,2021,41
+0,1630598,Aaron,Wiggins,1999-01-02T00:00:00,USA,6-4,190,Guard,Thunder,2021,2021,55
+0,203952,Andrew,Wiggins,1995-02-23T00:00:00,Canada,6-7,197,Forward,Warriors,2014,2021,1
+0,1629623,Lindell,Wigginton,1998-03-28T00:00:00,Canada,6-1,189,Guard,Bucks,2021,2021,
+0,1630314,Brandon,Williams,1999-11-22T00:00:00,USA,6-2,190,Guard,Trail Blazers,2021,2021,Undrafted
+0,1629684,Grant,Williams,1998-11-30T00:00:00,USA,6-6,236,Forward,Celtics,2019,2021,22
+0,1629026,Kenrich,Williams,1994-12-02T00:00:00,USA,6-6,210,Guard-Forward,Thunder,2018,2021,Undrafted
+0,101150,Lou,Williams,1986-10-27T00:00:00,USA,6-2,175,Guard,Hawks,2005,2021,45
+0,1630172,Patrick,Williams,2001-08-26T00:00:00,USA,6-7,215,Forward,Bulls,2020,2021,4
+0,1630533,Ziaire,Williams,2001-09-12T00:00:00,USA,6-9,185,Forward,Grizzlies,2021,2021,10
+0,1629057,Robert,Williams III,1997-10-17T00:00:00,USA,6-9,237,Center-Forward,Celtics,2018,2021,27
+0,1629627,Zion,Williamson,2000-07-06T00:00:00,USA,6-6,284,Forward,Pelicans,2019,2021,1
+0,1629685,Dylan,Windler,1996-09-22T00:00:00,USA,6-6,196,Guard-Forward,Cavaliers,2019,2021,26
+0,1626159,Justise,Winslow,1996-03-26T00:00:00,USA,6-6,222,Forward-Guard,Trail Blazers,2015,2021,10
+0,1630216,Cassius,Winston,1998-02-28T00:00:00,USA,6-1,185,Guard,Wizards,2020,2021,53
+0,1630164,James,Wiseman,2001-03-31T00:00:00,USA,7-0,240,Center,Warriors,2020,2021,2
+0,1626174,Christian,Wood,1995-09-27T00:00:00,USA,6-9,214,Forward,Rockets,2015,2021,Undrafted
+0,1630218,Robert,Woodard II,1999-09-22T00:00:00,USA,6-6,235,Forward,Spurs,2020,2021,40
+0,1626153,Delon,Wright,1992-04-26T00:00:00,USA,6-5,185,Guard,Hawks,2015,2021,20
+0,1630589,Moses,Wright,1998-12-23T00:00:00,USA,6-8,226,Forward,Mavericks,2021,2021,Undrafted
+0,1630593,McKinley,Wright IV,1998-10-25T00:00:00,USA,5-11,192,Guard,Timberwolves,2021,2021,Undrafted
+0,1628221,Gabe,York,1993-08-02T00:00:00,USA,6-3,190,Guard,Pacers,2021,2021,Undrafted
+0,201152,Thaddeus,Young,1988-06-21T00:00:00,USA,6-8,235,Forward,Raptors,2007,2021,12
+0,1629027,Trae,Young,1998-09-19T00:00:00,USA,6-1,164,Guard,Hawks,2018,2021,5
+0,1630209,Omer,Yurtseven,1998-06-19T00:00:00,Turkey,6-11,275,Center,Heat,2020,2021,Undrafted
+0,1627826,Ivica,Zubac,1997-03-18T00:00:00,Croatia,7-0,240,Center,Clippers,2016,2021,32
