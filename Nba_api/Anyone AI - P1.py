@@ -31,7 +31,7 @@ def get_players_personal_information():
             all_players = pd.concat([all_players,player_info])
             time.sleep(0.5)
             a += 1
-            print(f'F1 - Iteración N°:{a}')
+            print(f'Personal Info - Iteration N°:{a}')
 
     except:
         print('TimeOut. Incomplete file will be saved anyways')
@@ -57,7 +57,7 @@ def get_players_career_stats():
             all_players = pd.concat([all_players,player_info])
             time.sleep(0.7)
             a += 1
-            print(f'F2 - Iteración N°:{a}')
+            print(f'Career stats - Iteration N°:{a}')
     except:
         print('TimeOut. Incomplete file will be saved anyways')
         pass
@@ -79,7 +79,7 @@ def get_players_next_game():
                 all_next_games = pd.concat([all_next_games,next_games])
                 time.sleep(0.5)
                 a += 1
-                print(f'F3 - Iteración N°:{a}')
+                print(f'Next games - Iteration N°:{a}')
             except:
                 print(f'Player n°: {player} not found')
                 continue
