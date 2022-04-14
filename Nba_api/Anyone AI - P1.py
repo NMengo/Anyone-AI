@@ -12,16 +12,16 @@ import pandas as pd
     # Merge
 
 def get_and_save_players_list():
-    players = commonallplayers.CommonAllPlayers(is_only_current_season=1).get_data_frames()[0]
-    players = players[(players['TEAM_NAME']!='') & (players['GAMES_PLAYED_FLAG']!='N') & (players['PERSON_ID']!= 1630597)]
-    players = players[['PERSON_ID','DISPLAY_FIRST_LAST','TEAM_NAME']]
-    players.to_csv("nba_current_players_list.csv")
-    return players
+    players_f = commonallplayers.CommonAllPlayers(is_only_current_season=1).get_data_frames()[0]
+    players_f = players_f[(players_f['TEAM_NAME'] != '') & (players_f['GAMES_PLAYED_FLAG'] != 'N') & (players_f['PERSON_ID'] != 1630597)]
+    players_f = players_f[['PERSON_ID', 'DISPLAY_FIRST_LAST', 'TEAM_NAME']]
+    players_f.to_csv("nba_current_players_list.csv")
+    return players_f
 
 players = get_and_save_players_list()
 players_list = list(players['PERSON_ID'])
 
-def get_players_personal_information(players):
+def get_players_personal_information():
     all_players = pd.DataFrame()
     a = 0
     try:
@@ -45,9 +45,9 @@ def get_players_personal_information(players):
     all_players.to_csv("nba_players_personal_info.csv")
     return all_players
 
-players_personal_info = get_players_personal_information(players)
+players_personal_info = get_players_personal_information()
 
-def get_players_career_stats(players):
+def get_players_career_stats():
     all_players = pd.DataFrame()
     a = 0
     try:
@@ -66,9 +66,9 @@ def get_players_career_stats(players):
     all_players.to_csv("nba_players_career_stats.csv")
     return all_players
 
-players_career_stats = get_players_career_stats(players)
+players_career_stats = get_players_career_stats()
 
-def get_players_next_game(players):
+def get_players_next_game():
     all_next_games = pd.DataFrame()
     a = 0
     try:
@@ -93,33 +93,31 @@ def get_players_next_game(players):
         all_next_games.to_csv("nba_players_next_game.csv")
     return all_next_games
 
-players_next_game = get_players_next_game(players)
+players_next_game = get_players_next_game()
 
 def get_nba_players_salaries(csv_file_path):
     with open(csv_file_path, 'rb') as f:
         enc = chardet.detect(f.read())
 
-    salaries = pd.read_csv(csv_file_path, encoding= enc['encoding'])
-    salaries = salaries.drop_duplicates(subset=['Unnamed: 1'])
-    salaries = salaries.reset_index(drop=True)
-    salaries[['Player2', 'Discard']] = salaries['Unnamed: 1'].str.split('\\', expand=True)
-    salaries = salaries.drop(['Unnamed: 1', 'Discard'], axis=1)
-    salaries.columns = salaries.iloc[0]
-    salaries = salaries.drop([0], axis=0)
-    valores_player = list(salaries.loc[:, 'Player'])
-    salaries.insert(1, 'Player2', valores_player, allow_duplicates=True)
-    salaries = salaries.drop(['Player', 'Rk', 'Tm', '2022-23', '2023-24', '2024-25', '2025-26', '2026-27',
+    salaries_f = pd.read_csv(csv_file_path, encoding= enc['encoding'])
+    salaries_f = salaries_f.drop_duplicates(subset=['Unnamed: 1'])
+    salaries_f = salaries_f.reset_index(drop=True)
+    salaries_f[['Player2', 'Discard']] = salaries_f['Unnamed: 1'].str.split('\\', expand=True)
+    salaries_f = salaries_f.drop(['Unnamed: 1', 'Discard'], axis=1)
+    salaries_f.columns = salaries_f.iloc[0]
+    salaries_f = salaries_f.drop([0], axis=0)
+    valores_player = list(salaries_f.loc[:, 'Player'])
+    salaries_f.insert(1, 'Player2', valores_player, allow_duplicates=True)
+    salaries_f = salaries_f.drop(['Player', 'Rk', 'Tm', '2022-23', '2023-24', '2024-25', '2025-26', '2026-27',
                               'Signed Using', 'Guaranteed'], axis=1)
-    salaries = salaries.rename(columns={'Player2':'Player'})
-    salaries['2021-22'] = salaries['2021-22'].str.replace('$','')
-    salaries['2021-22'] = salaries['2021-22'].str.replace('?','')
-    salaries = salaries.fillna(0)
-    salaries['2021-22'] = salaries['2021-22'].astype('int64')
-    salaries['Player'] = salaries['Player'].astype('string')
+    salaries_f = salaries_f.rename(columns={'Player2': 'Player'})
+    salaries_f['2021-22'] = salaries_f['2021-22'].str.replace('$', '')
+    salaries_f['2021-22'] = salaries_f['2021-22'].str.replace('?', '')
+    salaries_f = salaries_f.fillna(0)
+    salaries_f['2021-22'] = salaries_f['2021-22'].astype('int64')
+    salaries_f['Player'] = salaries_f['Player'].astype('string')
     # salaries = salaries.style.format(thousands='.')
-    salaries.to_csv('nba_players_salary.csv')
-    return salaries
+    salaries_f.to_csv('nba_players_salary.csv')
+    return salaries_f
 
 salaries = get_nba_players_salaries('contracts.csv')
-
-print(salaries.info())
