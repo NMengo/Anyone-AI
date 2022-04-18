@@ -5,12 +5,12 @@ import chardet
 import pandas as pd
 
 # TODO:
-    # Calculate Age.
+    # Calculate Age. # NO NEED
     # Investigate players without salary.
-    # Cast DF.
-    # Correct unit measures.
-    # Correct columns.
-    # Uniform indexes.
+    # Cast DF. # DONE
+    # Correct unit measures. # DONE
+    # Correct columns. # DONE
+    # Uniform indexes. # DONE
     # Merge.
 
 def get_and_save_players_list():
@@ -39,31 +39,32 @@ def get_players_personal_information():
         print('TimeOut. Incomplete file will be saved anyways')
         pass
 
-# =======================================================================
-# TABLE CLEANING AND PREP.
-    all_players = all_players.drop(['DISPLAY_FIRST_LAST','DISPLAY_LAST_COMMA_FIRST', 'DISPLAY_FI_LAST', 'PLAYER_SLUG',
-                        'SCHOOL', 'LAST_AFFILIATION', 'SEASON_EXP', 'JERSEY', 'ROSTERSTATUS', 'TEAM_ID',
-                        'TEAM_ABBREVIATION', 'TEAM_CODE', 'TEAM_CITY', 'PLAYERCODE', 'DLEAGUE_FLAG',
-                        'NBA_FLAG', 'GAMES_PLAYED_FLAG', 'DRAFT_YEAR', 'DRAFT_ROUND', 'GREATEST_75_FLAG',
-                        'GAMES_PLAYED_CURRENT_SEASON_FLAG'], axis=1)
-    all_players['PLAYER_NAME'] = all_players['FIRST_NAME'] + ' ' + all_players[
-        'LAST_NAME']
-    all_players = all_players.drop(['Unnamed: 0', 'FIRST_NAME', 'LAST_NAME'], axis=1)
-    all_players.set_index('PERSON_ID', inplace=True)
-    aux_player_names = list(all_players.loc[:, 'PLAYER_NAME'])
-    all_players.insert(0, 'PLAYER_NAME', aux_player_names, allow_duplicates=True)
-    all_players = all_players.iloc[:, 0:-1]
-    all_players['SEASON_EXP'] = all_players['TO_YEAR'] - all_players['FROM_YEAR']
-    all_players = all_players[
-        ["PLAYER_NAME", "TEAM_NAME", "POSITION", "HEIGHT", "WEIGHT", "COUNTRY",
-         "BIRTHDATE", "SEASON_EXP", "DRAFT_NUMBER"]]
-    all_players['WEIGHT'] = round(all_players['WEIGHT'] / 2.20462, 2)
-    all_players['HEIGHT'] = all_players['HEIGHT'].str.replace('-', '.')
-    all_players['HEIGHT'] = round(all_players['HEIGHT'] * 30.48, 2)
-    all_players = all_players.astype({'PLAYER_NAME':'string', 'TEAM_NAME':'string', 'POSITION':'string', 'HEIGHT':'float64',
-                                      'WEIGHT':'float64', 'COUNTRY':'string', 'BIRTHDATE':'datetime64', 'SEASON_EXP':'int64'})
-# TABLE CLEANING AND PREP.
-# =======================================================================
+    def personal_info_cleanse(all_players_c):
+        all_players_c = all_players_c.drop(['DISPLAY_FIRST_LAST', 'DISPLAY_LAST_COMMA_FIRST', 'DISPLAY_FI_LAST', 'PLAYER_SLUG',
+                            'SCHOOL', 'LAST_AFFILIATION', 'SEASON_EXP', 'JERSEY', 'ROSTERSTATUS', 'TEAM_ID',
+                            'TEAM_ABBREVIATION', 'TEAM_CODE', 'TEAM_CITY', 'PLAYERCODE', 'DLEAGUE_FLAG',
+                            'NBA_FLAG', 'GAMES_PLAYED_FLAG', 'DRAFT_YEAR', 'DRAFT_ROUND', 'GREATEST_75_FLAG',
+                            'GAMES_PLAYED_CURRENT_SEASON_FLAG'], axis=1)
+        all_players_c['PLAYER_NAME'] = all_players_c['FIRST_NAME'] + ' ' + all_players_c[
+            'LAST_NAME']
+        all_players_c = all_players_c.drop(['FIRST_NAME', 'LAST_NAME'], axis=1)
+        all_players_c.set_index('PERSON_ID', inplace=True)
+        aux_player_names = list(all_players_c.loc[:, 'PLAYER_NAME'])
+        all_players_c.insert(0, 'PLAYER_NAME', aux_player_names, allow_duplicates=True)
+        all_players_c = all_players_c.iloc[:, 0:-1]
+        all_players_c['SEASON_EXP'] = all_players_c['TO_YEAR'] - all_players_c['FROM_YEAR']
+        all_players_c = all_players_c[
+            ["PLAYER_NAME", "TEAM_NAME", "POSITION", "HEIGHT", "WEIGHT", "COUNTRY",
+             "BIRTHDATE", "SEASON_EXP", "DRAFT_NUMBER"]]
+        all_players_c['WEIGHT'] = round(all_players_c['WEIGHT'].astype('float64') / 2.20462, 2)
+        all_players_c['HEIGHT'] = (all_players_c['HEIGHT'].str.replace('-', '.')).astype('float64')
+        all_players_c['HEIGHT'] = round(all_players_c['HEIGHT'] * 30.48, 2)
+        all_players_c = all_players_c.astype({'PLAYER_NAME': 'string', 'TEAM_NAME': 'string', 'POSITION': 'string',
+                                              'COUNTRY':'string', 'BIRTHDATE':'datetime64', 'SEASON_EXP':'int64',
+                                              'HEIGHT': 'int64'  })
+        return all_players_c
+
+    all_players = personal_info_cleanse(all_players)
     all_players.to_csv("nba_players_personal_info.csv")
     return all_players
 
@@ -84,6 +85,17 @@ def get_players_career_stats():
         print('TimeOut. Incomplete file will be saved anyways')
         pass
 
+    def career_stats_cleanse(players_career_stats_d):
+        players_career_stats_d = players_career_stats_d.set_index('PLAYER_ID')
+        players_career_stats_d = players_career_stats_d.drop(['LEAGUE_ID', 'Team_ID', 'GS', 'FGM',
+                                                          'FGA', 'FG_PCT', 'FG3M', 'FG3A', 'FG3_PCT', 'FTM',
+                                                          'FTA', 'FT_PCT', 'OREB', 'DREB', 'TOV',
+                                                          'PF'], axis=1)
+        players_career_stats_d = players_career_stats_d[["GP", "MIN", "PTS", "REB", "AST", "STL", "BLK"]]
+        print(players_career_stats_d.info())
+        return players_career_stats_d
+
+    all_players = career_stats_cleanse(all_players)
 
     all_players.to_csv("nba_players_career_stats.csv")
     return all_players
