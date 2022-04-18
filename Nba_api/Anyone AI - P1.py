@@ -20,9 +20,6 @@ def get_and_save_players_list():
     players_f.to_csv("nba_current_players_list.csv")
     return players_f
 
-players = get_and_save_players_list()
-players_list = list(players['PERSON_ID'])
-
 def get_players_personal_information():
     all_players = pd.DataFrame()
     a = 0
@@ -68,7 +65,6 @@ def get_players_personal_information():
     all_players.to_csv("nba_players_personal_info.csv")
     return all_players
 
-players_personal_info = get_players_personal_information()
 
 def get_players_career_stats():
     all_players = pd.DataFrame()
@@ -100,7 +96,6 @@ def get_players_career_stats():
     all_players.to_csv("nba_players_career_stats.csv")
     return all_players
 
-players_career_stats = get_players_career_stats()
 
 def get_players_next_game():
     all_next_games = pd.DataFrame()
@@ -127,7 +122,6 @@ def get_players_next_game():
         all_next_games.to_csv("nba_players_next_game.csv")
     return all_next_games
 
-players_next_game = get_players_next_game()
 
 def get_nba_players_salaries(csv_file_path):
     with open(csv_file_path, 'rb') as f:
@@ -147,10 +141,20 @@ def get_nba_players_salaries(csv_file_path):
     salaries_f = salaries_f.rename(columns={'Player2': 'Player'})
     salaries_f['2021-22'] = salaries_f['2021-22'].str.replace('$', '')
     salaries_f['2021-22'] = salaries_f['2021-22'].str.replace('?', '')
-    salaries_f = salaries_f.fillna(0)
+    salaries_f = salaries_f.dropna()
     salaries_f['2021-22'] = salaries_f['2021-22'].astype('int64')
     salaries_f['Player'] = salaries_f['Player'].astype('string')
+
+    for i, row in salaries_f.iterrows():
+        salaries_f.loc[i, 'PLAYER_ID'] = int(players_personal_info.index[players_personal_info['PLAYER_NAME'] == row['Player']][0])
+
     salaries_f.to_csv('nba_players_salary.csv')
     return salaries_f
 
+
+players = get_and_save_players_list()
+players_list = list(players['PERSON_ID'])
+players_personal_info = get_players_personal_information()
+players_career_stats = get_players_career_stats()
+players_next_game = get_players_next_game()
 salaries = get_nba_players_salaries('contracts.csv')
