@@ -1,5 +1,6 @@
 import pandas as pd
-import chardet
+from unidecode import unidecode
+import re
 
 players_personal_info = pd.read_csv('nba_players_personal_info.csv')
 players_career_stats_d = pd.read_csv('nba_players_career_stats.csv')
@@ -7,6 +8,7 @@ salaries_d = pd.read_csv('nba_players_salary.csv')
 
 players_personal_info = players_personal_info.set_index('PERSON_ID')
 players_career_stats_d = players_career_stats_d.set_index('PLAYER_ID')
+
 
 # def personal_info_cleanse(players_personal_info):
 #     players_personal_info['PLAYER_NAME'] = players_personal_info['FIRST_NAME'] + ' ' + players_personal_info['LAST_NAME']
@@ -40,12 +42,39 @@ players_career_stats_d = players_career_stats_d.set_index('PLAYER_ID')
 # career_stats = career_stats_cleanse(players_career_stats_d)
 # personal_info = personal_info_cleanse(players_personal_info_d)
 
+def remove_jr_sr(dataframe, players_column_name):
+    regex = r"Sr.$"
+    regex2 = r"Jr.$"
+    subst = ""
+    try:
+        for i in dataframe.index:
+            try:
+                test_str = dataframe.loc[i, str(players_column_name)]
+                result = re.sub(regex, subst, test_str, 1)
+                dataframe.loc[i,str(players_column_name)] = result
+                if result == test_str:
+                    result = re.sub(regex2, subst, test_str, 1)
+                    dataframe.loc[i,str(players_column_name)] = result
+            except:
+                pass
+    except:
+        for i in range(len(dataframe)):
+            try:
+                test_str = dataframe.loc[i, str(players_column_name)]
+                result = re.sub(regex, subst, test_str, 1)
+                dataframe.loc[i,str(players_column_name)] = result
+                if result == test_str:
+                    result = re.sub(regex2, subst, test_str, 1)
+                    dataframe.loc[i,str(players_column_name)] = result
+            except:
+                pass
+    return dataframe
+
+
+players_personal_info = remove_jr_sr(players_personal_info, 'PLAYER_NAME')
 
 def get_nba_players_salaries(csv_file_path):
-    with open(csv_file_path, 'rb') as f:
-        enc = chardet.detect(f.read())
-
-    salaries_f = pd.read_csv(csv_file_path, encoding= enc['encoding'])
+    salaries_f = pd.read_csv(csv_file_path, encoding= 'utf-8')
     salaries_f = salaries_f.drop_duplicates(subset=['Unnamed: 1'])
     salaries_f = salaries_f.reset_index(drop=True)
     salaries_f[['Player2', 'Discard']] = salaries_f['Unnamed: 1'].str.split('\\', expand=True)
@@ -60,17 +89,24 @@ def get_nba_players_salaries(csv_file_path):
     salaries_f['2021-22'] = salaries_f['2021-22'].str.replace('$', '')
     salaries_f['2021-22'] = salaries_f['2021-22'].str.replace('?', '')
     salaries_f = salaries_f.dropna()
+    salaries_f = remove_jr_sr(salaries_f, 'Player')
     salaries_f['2021-22'] = salaries_f['2021-22'].astype('int64')
     salaries_f['Player'] = salaries_f['Player'].astype('string')
-
+    salaries_f['Player'] = salaries_f['Player'].apply(unidecode)
     for i, row in salaries_f.iterrows():
         try:
             salaries_f.loc[i, 'PLAYER_ID'] = int(players_personal_info.index[players_personal_info['PLAYER_NAME'] == row['Player']][0])
         except:
-            print(i)
+            deleted_player = salaries_f.loc[i,'Player']
+            salaries_f = salaries_f.drop(index= i)
+            print(f'{deleted_player} is not active. Player deleted')
             pass
 
+    salaries_f = salaries_f.set_index('PLAYER_ID')
     salaries_f.to_csv('nba_players_salary.csv')
     return salaries_f
 
 salarios = get_nba_players_salaries('contracts.csv')
+
+
+
