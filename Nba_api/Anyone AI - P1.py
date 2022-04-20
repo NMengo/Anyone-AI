@@ -23,8 +23,12 @@ def get_and_save_players_list():
 
 
 def remove_jr_sr(dataframe, players_column_name):
-    regex = r"Sr.$"
-    regex2 = r"Jr.$"
+    regex = r" Sr.$"
+    regex2 = r" Jr.$"
+    regex3 = r" II$"
+    regex4 = r" III$"
+    regex5 = r" IV$"
+    regex6 = r" V$"
     subst = ""
     try:
         for i in dataframe.index:
@@ -34,7 +38,19 @@ def remove_jr_sr(dataframe, players_column_name):
                 dataframe.loc[i, str(players_column_name)] = result
                 if result == test_str:
                     result = re.sub(regex2, subst, test_str, 1)
-                    dataframe.loc[i, str(players_column_name)] = result
+                    dataframe.loc[i,str(players_column_name)] = result
+                    if result == test_str:
+                        result = re.sub(regex3, subst, test_str, 1)
+                        dataframe.loc[i, str(players_column_name)] = result
+                        if result == test_str:
+                            result = re.sub(regex4, subst, test_str, 1)
+                            dataframe.loc[i, str(players_column_name)] = result
+                            if result == test_str:
+                                result = re.sub(regex5, subst, test_str, 1)
+                                dataframe.loc[i, str(players_column_name)] = result
+                                if result == test_str:
+                                    result = re.sub(regex6, subst, test_str, 1)
+                                    dataframe.loc[i, str(players_column_name)] = result
             except:
                 pass
     except:
@@ -45,7 +61,19 @@ def remove_jr_sr(dataframe, players_column_name):
                 dataframe.loc[i, str(players_column_name)] = result
                 if result == test_str:
                     result = re.sub(regex2, subst, test_str, 1)
-                    dataframe.loc[i, str(players_column_name)] = result
+                    dataframe.loc[i,str(players_column_name)] = result
+                    if result == test_str:
+                        result = re.sub(regex3, subst, test_str, 1)
+                        dataframe.loc[i, str(players_column_name)] = result
+                        if result == test_str:
+                            result = re.sub(regex4, subst, test_str, 1)
+                            dataframe.loc[i, str(players_column_name)] = result
+                            if result == test_str:
+                                result = re.sub(regex5, subst, test_str, 1)
+                                dataframe.loc[i, str(players_column_name)] = result
+                                if result == test_str:
+                                    result = re.sub(regex6, subst, test_str, 1)
+                                    dataframe.loc[i, str(players_column_name)] = result
             except:
                 pass
     return dataframe
@@ -96,14 +124,14 @@ def get_players_personal_information():
     all_players.to_csv("nba_players_personal_info.csv")
     return all_players
 
-# LEN 339
+# LEN 503
 def get_players_career_stats():
     all_players = pd.DataFrame()
     a = 0
     try:
         for player in players_list:
             player_info = playercareerstats.PlayerCareerStats(player_id=player, per_mode36= 'PerGame' ).get_data_frames()
-            player_info = player_info[3]
+            player_info = player_info[1]
             all_players = pd.concat([all_players,player_info])
             time.sleep(0.7)
             a += 1
@@ -119,7 +147,6 @@ def get_players_career_stats():
                                                           'FTA', 'FT_PCT', 'OREB', 'DREB', 'TOV',
                                                           'PF'], axis=1)
         players_career_stats_d = players_career_stats_d[["GP", "MIN", "PTS", "REB", "AST", "STL", "BLK"]]
-        print(players_career_stats_d.info())
         return players_career_stats_d
 
     all_players = career_stats_cleanse(all_players)
@@ -153,7 +180,7 @@ def get_players_next_game():
         all_next_games.to_csv("nba_players_next_game.csv")
     return all_next_games
 
-# LEN 446
+# LEN 470
 def get_nba_players_salaries(csv_file_path):
     salaries_f = pd.read_csv(csv_file_path, encoding= 'utf-8')
     salaries_f = salaries_f.drop_duplicates(subset=['Unnamed: 1'])
@@ -169,7 +196,7 @@ def get_nba_players_salaries(csv_file_path):
     salaries_f = salaries_f.rename(columns={'Player2': 'Player'})
     salaries_f['2021-22'] = salaries_f['2021-22'].str.replace('$', '')
     salaries_f['2021-22'] = salaries_f['2021-22'].str.replace('?', '')
-    salaries_f = salaries_f.dropna()
+    salaries_f = salaries_f.fillna(0)
     salaries_f = remove_jr_sr(salaries_f, 'Player')
     salaries_f['2021-22'] = salaries_f['2021-22'].astype('int64')
     salaries_f['Player'] = salaries_f['Player'].astype('string')
@@ -189,10 +216,19 @@ def get_nba_players_salaries(csv_file_path):
     return salaries_f
 
 
-
 players = get_and_save_players_list()
 players_list = list(players['PERSON_ID'])
 players_personal_info = get_players_personal_information()
 players_career_stats = get_players_career_stats()
 players_next_game = get_players_next_game()
-salaries = get_nba_players_salaries('contracts.csv')
+players_salaries = get_nba_players_salaries('contracts.csv')
+
+
+def merge_dataframes(personal_info, career_stats, next_game, salaries):
+    raw_players_dataset1 = pd.merge(personal_info, career_stats, left_index=True, right_index=True)
+    raw_players_dataset2 = pd.merge(raw_players_dataset1, salaries, left_index=True, right_index=True)
+    raw_players_dataset3 = pd.merge(raw_players_dataset2, next_game, left_index=True, right_index=True) if not next_game.empty else raw_players_dataset2
+    return raw_players_dataset3
+
+
+raw_players_dataset = merge_dataframes(players_personal_info, players_career_stats, players_next_game, players_salaries)

@@ -19,7 +19,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1630166,Deni Avdija,Wizards,Forward,210,95.25,Israel,2001-01-03,1,9
 1629028,Deandre Ayton,Suns,Center,186,113.4,Bahamas,1998-07-23,3,1
 1628962,Udoka Azubuike,Jazz,Center-Forward,213,122.47,Nigeria,1999-09-17,1,27
-1628963,Marvin Bagley III,Pistons,Forward,186,106.59,USA,1999-03-14,3,2
+1628963,Marvin Bagley,Pistons,Forward,186,106.59,USA,1999-03-14,3,2
 1630163,LaMelo Ball,Hornets,Guard,204,81.65,USA,2001-08-22,1,3
 1628366,Lonzo Ball,Bulls,Guard,201,86.18,USA,1997-10-27,4,2
 1628964,Mo Bamba,Magic,Center,213,104.78,USA,1998-05-12,3,6
@@ -51,7 +51,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1630195,Leandro Bolmaro,Timberwolves,Forward,201,90.72,Argentina,2000-09-11,0,23
 1629067,Isaac Bonga,Raptors,Guard,207,81.65,Germany,1999-11-08,3,39
 1626164,Devin Booker,Suns,Guard,198,93.44,USA,1996-10-30,6,13
-1630527,Brandon Boston ,Clippers,Guard,201,85.28,USA,2001-11-28,0,51
+1630527,Brandon Boston,Clippers,Guard,201,85.28,USA,2001-11-28,0,51
 1628449,Chris Boucher,Raptors,Forward-Center,210,90.72,Saint Lucia,1993-01-11,4,Undrafted
 1630547,James Bouknight,Hornets,Guard,195,86.18,USA,2000-09-18,0,11
 202340,Avery Bradley,Lakers,Guard,192,81.65,USA,1990-11-26,11,19
@@ -67,10 +67,10 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1627759,Jaylen Brown,Celtics,Guard-Forward,201,101.15,USA,1996-10-24,5,3
 1629650,Moses Brown,Cavaliers,Center,219,111.13,USA,1999-10-13,2,Undrafted
 1628425,Sterling Brown,Mavericks,Guard-Forward,198,99.34,USA,1995-02-10,4,46
-1630535,Greg Brown III,Trail Blazers,Forward,204,93.44,USA,2001-09-01,0,43
-1629718,Charlie Brown ,76ers,Guard,201,90.26,USA,1997-02-02,2,Undrafted
-1630602,Chaundee Brown ,Hawks,Forward,198,97.52,USA,1998-12-04,0,Undrafted
-1628972,Troy Brown ,Bulls,Guard-Forward,201,97.52,USA,1999-07-28,3,15
+1630535,Greg Brown,Trail Blazers,Forward,204,93.44,USA,2001-09-01,0,43
+1629718,Charlie Brown,76ers,Guard,201,90.26,USA,1997-02-02,2,Undrafted
+1630602,Chaundee Brown,Hawks,Forward,198,97.52,USA,1998-12-04,0,Undrafted
+1628972,Troy Brown,Bulls,Guard-Forward,201,97.52,USA,1999-07-28,3,15
 1628973,Jalen Brunson,Mavericks,Guard,185,86.18,USA,1996-08-31,3,33
 1628418,Thomas Bryant,Wizards,Center-Forward,185,112.49,USA,1997-07-31,4,42
 203493,Reggie Bullock,Mavericks,Guard-Forward,201,92.99,USA,1991-03-16,8,25
@@ -84,9 +84,9 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1628427,Vlatko Cancar,Nuggets,Forward,207,107.05,Slovenia,1997-04-10,2,49
 1629962,Devin Cannady,Magic,Guard,188,83.01,USA,1996-05-21,1,
 203991,Clint Capela,Hawks,Center,185,116.12,Switzerland,1994-05-18,7,25
-1630176,Vernon Carey ,Wizards,Forward-Center,210,122.47,USA,2001-02-25,1,32
+1630176,Vernon Carey,Wizards,Forward-Center,210,122.47,USA,2001-02-25,1,32
 1628975,Jevon Carter,Bucks,Guard,185,90.72,USA,1995-09-14,3,32
-1628976,Wendell Carter ,Magic,Center-Forward,185,122.47,USA,1999-04-16,3,7
+1628976,Wendell Carter,Magic,Center-Forward,185,122.47,USA,1999-04-16,3,7
 1627936,Alex Caruso,Bulls,Guard,198,84.37,USA,1994-02-28,4,Undrafted
 1630551,Justin Champagnie,Raptors,Guard-Forward,201,93.44,USA,2001-06-29,0,Undrafted
 1629185,Chris Chiozza,Warriors,Guard,155,79.38,USA,1995-11-21,3,Undrafted
@@ -126,7 +126,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 201609,Goran Dragic,Nets,Guard,192,86.18,Slovenia,1986-05-06,13,45
 203083,Andre Drummond,Nets,Center,185,126.55,USA,1993-08-10,9,9
 1630537,Chris Duarte,Pacers,Guard,198,86.18,Dominican Republic,1997-06-13,0,13
-1630561,David Duke ,Nets,Guard,195,92.53,USA,1999-10-13,0,Undrafted
+1630561,David Duke,Nets,Guard,195,92.53,USA,1999-10-13,0,Undrafted
 201142,Kevin Durant,Nets,Forward,185,108.86,USA,1988-09-29,14,2
 1630162,Anthony Edwards,Timberwolves,Guard,195,102.06,USA,2001-08-05,1,1
 1629035,Carsen Edwards,Celtics,Guard,155,90.72,USA,1998-03-12,2,33
@@ -143,7 +143,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1630235,Trent Forrest,Jazz,Guard,195,95.25,USA,1998-06-12,1,Undrafted
 203095,Evan Fournier,Knicks,Guard-Forward,201,92.99,France,1992-10-29,9,20
 1628368,De'Aaron Fox,Kings,Guard,192,83.91,USA,1997-12-20,4,5
-1628982,Melvin Frazier ,Magic,Guard-Forward,198,97.52,USA,1996-08-30,3,35
+1628982,Melvin Frazier,Magic,Guard-Forward,198,97.52,USA,1996-08-30,3,35
 1628365,Markelle Fultz,Magic,Guard,195,94.8,USA,1998-05-29,4,1
 1629117,Wenyen Gabriel,Lakers,Forward,210,92.99,South Sudan,1997-03-26,3,Undrafted
 1629655,Daniel Gafford,Wizards,Forward-Center,210,106.14,USA,1998-10-01,2,38
@@ -175,7 +175,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1629060,Rui Hachimura,Wizards,Forward,207,104.33,Japan,1998-02-08,2,9
 1630169,Tyrese Haliburton,Pacers,Guard,198,83.91,USA,2000-02-29,1,12
 1630181,R.J. Hampton,Magic,Guard,195,79.38,USA,2001-02-07,1,24
-203501,Tim Hardaway ,Mavericks,Guard-Forward,198,92.99,USA,1992-03-16,8,24
+203501,Tim Hardaway,Mavericks,Guard-Forward,198,92.99,USA,1992-03-16,8,24
 201935,James Harden,76ers,Guard,198,99.79,USA,1989-08-26,12,3
 203090,Maurice Harkless,Kings,Forward-Guard,204,99.79,USA,1993-05-11,9,15
 1629607,Jared Harper,Pelicans,Guard,155,79.38,USA,1997-09-14,2,Undrafted
@@ -205,7 +205,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 203918,Rodney Hood,Clippers,Guard-Forward,207,94.35,USA,1992-10-20,7,23
 201143,Al Horford,Celtics,Center-Forward,210,108.86,Dominican Republic,1986-06-03,14,3
 1629659,Talen Horton-Tucker,Lakers,Guard,195,106.14,USA,2000-11-25,2,46
-1627863,Danuel House ,Jazz,Forward-Guard,201,99.79,USA,1993-06-07,5,Undrafted
+1627863,Danuel House,Jazz,Forward-Guard,201,99.79,USA,1993-06-07,5,Undrafted
 2730,Dwight Howard,Lakers,Center-Forward,185,120.2,USA,1985-12-08,17,1
 1630210,Markus Howard,Nuggets,Guard,155,79.38,USA,1999-03-03,1,Undrafted
 1628989,Kevin Huerter,Hawks,Guard-Forward,204,89.81,USA,1998-08-27,3,19
@@ -223,7 +223,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1630543,Isaiah Jackson,Pacers,Forward,185,92.99,USA,2002-01-10,0,22
 1628367,Josh Jackson,Kings,Guard-Forward,207,93.89,USA,1997-02-10,4,4
 202704,Reggie Jackson,Clippers,Guard,188,94.35,USA,1990-04-16,10,24
-1628991,Jaren Jackson ,Grizzlies,Forward-Center,186,109.77,USA,1999-09-15,3,4
+1628991,Jaren Jackson,Grizzlies,Forward-Center,186,109.77,USA,1999-09-15,3,4
 2544,LeBron James,Lakers,Forward,210,113.4,USA,1984-12-30,18,1
 1629660,Ty Jerome,Thunder,Guard-Forward,198,88.45,USA,1997-07-08,2,24
 1630198,Isaiah Joe,76ers,Guard,195,74.84,USA,1999-07-02,1,49
@@ -240,7 +240,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1630222,Mason Jones,Lakers,Guard,195,90.72,USA,1998-07-21,1,Undrafted
 1630200,Tre Jones,Spurs,Guard,185,83.91,USA,2000-01-08,1,41
 1626145,Tyus Jones,Grizzlies,Guard,182,88.9,USA,1996-05-10,6,24
-1627884,Derrick Jones ,Bulls,Forward,201,95.25,USA,1997-02-15,5,Undrafted
+1627884,Derrick Jones,Bulls,Forward,201,95.25,USA,1997-02-15,5,Undrafted
 201599,DeAndre Jordan,76ers,Center,186,120.2,USA,1988-07-21,13,35
 202709,Cory Joseph,Pistons,Guard,192,90.72,Canada,1991-08-20,10,29
 1628379,Luke Kennard,Clippers,Guard,198,93.44,USA,1996-06-24,4,12
@@ -248,7 +248,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1630557,Corey Kispert,Wizards,Forward,201,101.6,USA,1999-03-03,0,15
 1628467,Maxi Kleber,Mavericks,Forward,185,108.86,Germany,1992-01-29,4,Undrafted
 1630233,Nathan Knight,Timberwolves,Forward-Center,185,114.76,USA,1997-09-20,1,Undrafted
-1628995,Kevin Knox II,Hawks,Forward,204,97.52,USA,1999-08-11,3,9
+1628995,Kevin Knox,Hawks,Forward,204,97.52,USA,1999-08-11,3,9
 1629723,John Konchar,Grizzlies,Guard,198,95.25,USA,1996-03-22,2,Undrafted
 1627788,Furkan Korkmaz,76ers,Guard-Forward,204,91.63,Turkey,1997-07-24,4,26
 1628436,Luke Kornet,Celtics,Center-Forward,219,113.4,USA,1995-07-15,4,Undrafted
@@ -268,7 +268,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 203458,Alex Len,Kings,Center,213,113.4,Ukraine,1993-06-16,8,5
 202695,Kawhi Leonard,Clippers,Forward,204,102.06,USA,1991-06-29,10,15
 1630575,Scottie Lewis,Hornets,Guard,198,83.91,USA,2000-03-12,0,56
-1630184,Kira Lewis ,Pelicans,Guard,185,77.11,USA,2001-04-06,1,13
+1630184,Kira Lewis,Pelicans,Guard,185,77.11,USA,2001-04-06,1,13
 203081,Damian Lillard,Trail Blazers,Guard,188,88.45,USA,1990-07-15,9,6
 1629642,Nassir Little,Trail Blazers,Forward-Guard,198,99.79,USA,2000-02-11,2,25
 1630587,Isaiah Livers,Pistons,Forward,201,105.23,USA,1998-07-28,0,42
@@ -290,7 +290,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1630230,Naji Marshall,Pelicans,Forward,204,99.79,USA,1998-01-24,1,Undrafted
 1628997,Caleb Martin,Heat,Forward,198,92.99,USA,1995-09-28,2,Undrafted
 1628998,Cody Martin,Hornets,Forward,201,92.99,USA,1995-09-28,2,36
-1630231,Kenyon Martin ,Rockets,Forward,198,97.52,USA,2001-01-06,1,52
+1630231,Kenyon Martin,Rockets,Forward,198,97.52,USA,2001-01-06,1,52
 1629726,Garrison Mathews,Rockets,Guard,198,97.52,USA,1996-10-24,2,Undrafted
 202083,Wesley Matthews,Bucks,Guard,195,99.79,USA,1986-10-14,12,Undrafted
 1630178,Tyrese Maxey,76ers,Guard,188,90.72,USA,2000-11-04,1,21
@@ -323,15 +323,15 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1629752,Juwan Morgan,Celtics,Forward,204,105.23,USA,1997-04-17,2,Undrafted
 202693,Markieff Morris,Heat,Forward,210,111.13,USA,1989-09-02,10,13
 1628420,Monte Morris,Nuggets,Guard,188,83.01,USA,1995-06-27,4,51
-202694,Marcus Morris ,Clippers,Forward,207,98.88,USA,1989-09-02,10,14
+202694,Marcus Morris,Clippers,Forward,207,98.88,USA,1989-09-02,10,14
 1628539,Mychal Mulder,Heat,Guard,192,88.45,Canada,1994-06-12,2,Undrafted
-1630530,Trey Murphy III,Pelicans,Forward,207,93.44,USA,2000-06-18,0,17
+1630530,Trey Murphy,Pelicans,Forward,207,93.44,USA,2000-06-18,0,17
 1627749,Dejounte Murray,Spurs,Guard,195,81.65,USA,1996-09-19,5,29
 1627750,Jamal Murray,Nuggets,Guard,192,97.52,Canada,1997-02-23,5,7
 203488,Mike Muscala,Thunder,Forward-Center,185,108.86,USA,1991-07-01,8,44
 1629004,Svi Mykhailiuk,Raptors,Guard-Forward,204,92.99,Ukraine,1997-06-10,3,47
-1626204,Larry Nance ,Pelicans,Forward-Center,204,111.13,USA,1993-01-01,6,27
-1630612,RJ Nembhard ,Cavaliers,Guard,195,90.72,USA,1999-03-22,0,Undrafted
+1626204,Larry Nance,Pelicans,Forward-Center,204,111.13,USA,1993-01-01,6,27
+1630612,RJ Nembhard,Cavaliers,Guard,195,90.72,USA,1999-03-22,0,Undrafted
 1630174,Aaron Nesmith,Celtics,Guard-Forward,198,97.52,USA,1999-10-16,1,14
 203526,Raul Neto,Wizards,Guard,188,81.65,Brazil,1992-05-19,6,47
 1627777,Georges Niang,76ers,Forward,204,104.33,USA,1993-06-17,5,50
@@ -352,12 +352,12 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 203506,Victor Oladipo,Heat,Guard,195,96.62,USA,1992-05-04,8,2
 203482,Kelly Olynyk,Pistons,Forward-Center,186,108.86,Canada,1991-04-19,8,13
 1626224,Cedi Osman,Cavaliers,Forward,204,104.33,Turkey,1995-04-08,4,31
-1626162,Kelly Oubre ,Hornets,Forward-Guard,201,92.08,USA,1995-12-09,6,15
+1626162,Kelly Oubre,Hornets,Forward-Guard,201,92.08,USA,1995-12-09,6,15
 1629672,Eric Paschall,Jazz,Forward,201,115.67,USA,1996-11-04,2,41
 101108,Chris Paul,Suns,Guard,182,79.38,USA,1985-05-06,16,4
 1626166,Cameron Payne,Suns,Guard,185,83.01,USA,1994-08-08,6,14
 203901,Elfrid Payton,Suns,Guard,192,88.45,USA,1994-02-22,7,10
-1627780,Gary Payton II,Warriors,Guard,192,88.45,USA,1992-12-01,5,Undrafted
+1627780,Gary Payton,Warriors,Guard,192,88.45,USA,1992-12-01,5,Undrafted
 1630691,Jamorko Pickett,Pistons,Forward,210,93.44,USA,1997-12-24,0,Undrafted
 1629033,Theo Pinson,Mavericks,Guard-Forward,198,96.16,USA,1995-11-05,3,Undrafted
 203486,Mason Plumlee,Hornets,Forward-Center,186,115.21,USA,1990-03-05,8,22
@@ -365,9 +365,9 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1630197,Aleksej Pokusevski,Thunder,Forward,213,86.18,Serbia,2001-12-26,1,17
 1630582,Yves Pons,Grizzlies,Forward,198,93.44,France,1999-05-07,0,Undrafted
 1629673,Jordan Poole,Warriors,Guard,195,88.0,USA,1999-06-19,2,28
-1629645,Kevin Porter ,Rockets,Guard-Forward,195,92.08,USA,2000-05-04,2,30
-1629008,Michael Porter ,Nuggets,Forward,185,98.88,USA,1998-06-29,3,14
-203490,Otto Porter ,Warriors,Forward,207,89.81,USA,1993-06-03,8,3
+1629645,Kevin Porter,Rockets,Guard-Forward,195,92.08,USA,2000-05-04,2,30
+1629008,Michael Porter,Nuggets,Forward,185,98.88,USA,1998-06-29,3,14
+203490,Otto Porter,Warriors,Forward,207,89.81,USA,1993-06-03,8,3
 1626171,Bobby Portis,Bucks,Forward,185,113.4,USA,1995-02-10,6,22
 204001,Kristaps Porzingis,Wizards,Forward-Center,222,108.86,Latvia,1995-08-02,6,4
 203939,Dwight Powell,Mavericks,Forward-Center,185,108.86,Canada,1991-07-20,7,45
@@ -448,7 +448,7 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1630167,Obi Toppin,Knicks,Forward,210,99.79,USA,1998-03-04,1,8
 1629308,Juan Toscano-Anderson,Warriors,Forward,201,94.8,USA,1993-04-10,2,Undrafted
 1626157,Karl-Anthony Towns,Timberwolves,Center-Forward,186,112.49,USA,1995-11-15,6,1
-1629018,Gary Trent ,Raptors,Guard-Forward,198,94.8,USA,1999-01-18,3,37
+1629018,Gary Trent,Raptors,Guard-Forward,198,94.8,USA,1999-01-18,3,37
 200782,P.J. Tucker,Heat,Forward,198,111.13,USA,1985-05-05,15,35
 1629730,Rayjon Tucker,Bucks,Guard,192,94.8,USA,1997-09-24,2,Undrafted
 1626167,Myles Turner,Pacers,Center-Forward,186,113.4,USA,1996-03-24,6,11
@@ -463,13 +463,13 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 1629021,Moritz Wagner,Magic,Forward-Center,186,111.13,Germany,1997-04-26,3,25
 1630688,Ish Wainright,Suns,Forward,198,113.4,USA,1994-09-12,0,Undrafted
 202689,Kemba Walker,Knicks,Guard,182,83.46,USA,1990-05-08,10,9
-1629022,Lonnie Walker IV,Spurs,Guard-Forward,195,92.53,USA,1998-12-14,3,18
+1629022,Lonnie Walker,Spurs,Guard-Forward,195,92.53,USA,1998-12-14,3,18
 202322,John Wall,Rockets,Guard,192,95.25,USA,1990-09-06,11,1
 203933,T.J. Warren,Pacers,Forward,207,99.79,USA,1993-09-05,7,14
 1629023,P.J. Washington,Hornets,Forward,204,104.33,USA,1998-08-23,2,12
-1630613,Duane Washington ,Pacers,Guard,192,89.36,Germany,2000-03-24,0,Undrafted
+1630613,Duane Washington,Pacers,Guard,192,89.36,Germany,2000-03-24,0,Undrafted
 1629139,Yuta Watanabe,Raptors,Guard-Forward,210,97.52,Japan,1994-10-13,3,Undrafted
-1630322,Lindy Waters III,Thunder,Forward,201,97.52,USA,1997-07-28,0,Undrafted
+1630322,Lindy Waters,Thunder,Forward,201,97.52,USA,1997-07-28,0,Undrafted
 1630570,Trendon Watford,Trail Blazers,Forward,207,107.5,USA,2000-11-09,0,Undrafted
 1629683,Quinndary Weatherspoon,Warriors,Guard,192,92.99,USA,1996-09-10,2,49
 201566,Russell Westbrook,Lakers,Guard,192,90.72,USA,1988-11-12,13,4
@@ -486,17 +486,17 @@ PERSON_ID,PLAYER_NAME,TEAM_NAME,POSITION,HEIGHT,WEIGHT,COUNTRY,BIRTHDATE,SEASON_
 101150,Lou Williams,Hawks,Guard,188,79.38,USA,1986-10-27,16,45
 1630172,Patrick Williams,Bulls,Forward,204,97.52,USA,2001-08-26,1,4
 1630533,Ziaire Williams,Grizzlies,Forward,210,83.91,USA,2001-09-12,0,10
-1629057,Robert Williams III,Celtics,Center-Forward,210,107.5,USA,1997-10-17,3,27
+1629057,Robert Williams,Celtics,Center-Forward,210,107.5,USA,1997-10-17,3,27
 1629627,Zion Williamson,Pelicans,Forward,201,128.82,USA,2000-07-06,2,1
 1629685,Dylan Windler,Cavaliers,Guard-Forward,201,88.9,USA,1996-09-22,2,26
 1626159,Justise Winslow,Trail Blazers,Forward-Guard,201,100.7,USA,1996-03-26,6,10
 1630216,Cassius Winston,Wizards,Guard,185,83.91,USA,1998-02-28,1,53
 1630164,James Wiseman,Warriors,Center,213,108.86,USA,2001-03-31,1,2
 1626174,Christian Wood,Rockets,Forward,210,97.07,USA,1995-09-27,6,Undrafted
-1630218,Robert Woodard II,Spurs,Forward,201,106.59,USA,1999-09-22,1,40
+1630218,Robert Woodard,Spurs,Forward,201,106.59,USA,1999-09-22,1,40
 1626153,Delon Wright,Hawks,Guard,198,83.91,USA,1992-04-26,6,20
 1630589,Moses Wright,Mavericks,Forward,207,102.51,USA,1998-12-23,0,Undrafted
-1630593,McKinley Wright IV,Timberwolves,Guard,155,87.09,USA,1998-10-25,0,Undrafted
+1630593,McKinley Wright,Timberwolves,Guard,155,87.09,USA,1998-10-25,0,Undrafted
 1628221,Gabe York,Pacers,Guard,192,86.18,USA,1993-08-02,0,Undrafted
 201152,Thaddeus Young,Raptors,Forward,207,106.59,USA,1988-06-21,14,12
 1629027,Trae Young,Hawks,Guard,185,74.39,USA,1998-09-19,3,5
