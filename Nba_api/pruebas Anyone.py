@@ -144,6 +144,8 @@ def merge_dataframes(personal_info, career_stats, salaries, next_game):
     raw_players_dataset1 = pd.merge(personal_info, career_stats, left_index=True, right_index=True)
     raw_players_dataset2 = pd.merge(raw_players_dataset1, salaries, left_index=True, right_index=True)
     raw_players_dataset3 = pd.merge(raw_players_dataset2, next_game, left_index=True, right_index=True) if not next_game.empty else raw_players_dataset2
+    raw_players_dataset3 = raw_players_dataset3.drop(['Player', 'PLAYER_ID_x', 'PLAYER_ID_y'], axis=1)
+    raw_players_dataset3 = raw_players_dataset3.rename(columns={'2021-22':'SALARY'})
     return raw_players_dataset3
 
 

@@ -4,14 +4,6 @@ from unidecode import unidecode
 import re
 import pandas as pd
 
-# TODO:
-    # Calculate Age. # NO NEED
-    # Fix players without salary. # DONE
-    # Cast DF. # DONE
-    # Correct unit measures. # DONE
-    # Correct columns. # DONE
-    # Uniform indexes. # DONE
-    # Merge.
 
 # LEN 503
 def get_and_save_players_list():
@@ -78,6 +70,7 @@ def remove_jr_sr(dataframe, players_column_name):
                 pass
     return dataframe
 
+
 # LEN 503
 def get_players_personal_information():
     all_players = pd.DataFrame()
@@ -123,6 +116,7 @@ def get_players_personal_information():
     all_players = remove_jr_sr(personal_info_cleanse(all_players), 'PLAYER_NAME')
     all_players.to_csv("nba_players_personal_info.csv")
     return all_players
+
 
 # LEN 503
 def get_players_career_stats():
@@ -180,6 +174,7 @@ def get_players_next_game():
         all_next_games.to_csv("nba_players_next_game.csv")
     return all_next_games
 
+
 # LEN 470
 def get_nba_players_salaries(csv_file_path):
     salaries_f = pd.read_csv(csv_file_path, encoding= 'utf-8')
@@ -228,6 +223,8 @@ def merge_dataframes(personal_info, career_stats, next_game, salaries):
     raw_players_dataset1 = pd.merge(personal_info, career_stats, left_index=True, right_index=True)
     raw_players_dataset2 = pd.merge(raw_players_dataset1, salaries, left_index=True, right_index=True)
     raw_players_dataset3 = pd.merge(raw_players_dataset2, next_game, left_index=True, right_index=True) if not next_game.empty else raw_players_dataset2
+    raw_players_dataset3 = raw_players_dataset3.drop(['Player', 'PLAYER_ID_x', 'PLAYER_ID_y'], axis=1)
+    raw_players_dataset3 = raw_players_dataset3.rename(columns={'2021-22':'SALARY'})
     return raw_players_dataset3
 
 
