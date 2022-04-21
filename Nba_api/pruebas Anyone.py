@@ -1,6 +1,8 @@
 import pandas as pd
+import numpy as np
 from unidecode import unidecode
 import re
+from datetime import datetime as dt
 
 players_personal_info = pd.read_csv('nba_players_personal_info.csv')
 players_career_stats = pd.read_csv('nba_players_career_stats.csv')
@@ -149,4 +151,36 @@ def merge_dataframes(personal_info, career_stats, salaries, next_game):
     return raw_players_dataset3
 
 
+def copy_and_delete_nan(players_dataset):
+    players_dataset_c = players_dataset.copy()
+    players_dataset_c = players_dataset_c[(~players_dataset_c['TEAM_NAME'].isnull()) | (~players_dataset_c['SALARY'].isnull())]
+    return players_dataset_c
+
 raw_players_dataset = merge_dataframes(players_personal_info, players_career_stats, players_salaries, players_next_game)
+working_df = copy_and_delete_nan(raw_players_dataset)
+
+working_df['BIRTHDATE'] = working_df['BIRTHDATE'].astype('datetime64')
+
+
+def add_age_column(working_df):
+    working_df['AGE'] = (dt.now() - working_df['BIRTHDATE'])
+    days_4_years = working_df['AGE'].astype('string')
+    days_4_years = days_4_years.str.split('days', expand=True)[0]
+    years = (days_4_years.astype('int64') / 365).apply(np.floor).astype('int64')
+    months = (((days_4_years.astype('int64') / 365) - years) * 12).apply(np.floor).astype('int64')
+    days = (((((days_4_years.astype('int64') / 365) - years) * 12) - months) * 30).apply(np.floor).astype('int64')
+    years_months_days = pd.concat([years,months,days], axis=1).astype('string')
+    working_df['AGE'] = (years_months_days.iloc[:,0] + ' years, ' + years_months_days.iloc[:,1] + ' months, '
+                         + years_months_days.iloc[:,2] + ' days')
+    return working_df
+
+working_df = add_age_column(working_df)
+
+
+def update_position(working_df):
+    split_aux = working_df['POSITION'].str.split('-', expand=True)
+    split_aux = split_aux.iloc[:,0]
+    working_df['POSITION'] = split_aux
+    return working_df
+
+working_df = update_position(working_df)

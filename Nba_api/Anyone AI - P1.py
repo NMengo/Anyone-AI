@@ -3,7 +3,8 @@ import time
 from unidecode import unidecode
 import re
 import pandas as pd
-
+from datetime import datetime as dt
+import numpy as np
 
 # LEN 503
 def get_and_save_players_list():
@@ -105,12 +106,11 @@ def get_players_personal_information():
         all_players_c = all_players_c[
             ["PLAYER_NAME", "TEAM_NAME", "POSITION", "HEIGHT", "WEIGHT", "COUNTRY",
              "BIRTHDATE", "SEASON_EXP", "DRAFT_NUMBER"]]
-        all_players_c['WEIGHT'] = round(all_players_c['WEIGHT'].astype('float64') / 2.20462, 2)
-        all_players_c['HEIGHT'] = (all_players_c['HEIGHT'].str.replace('-', '.')).astype('float64')
-        all_players_c['HEIGHT'] = round(all_players_c['HEIGHT'] * 30.48, 2)
+        # all_players_c['WEIGHT'] = round(all_players_c['WEIGHT'].astype('float64') / 2.20462, 2)
+        # all_players_c['HEIGHT'] = (all_players_c['HEIGHT'].str.replace('-', '.')).astype('float64')
+        # all_players_c['HEIGHT'] = round(all_players_c['HEIGHT'] * 30.48, 2)
         all_players_c = all_players_c.astype({'PLAYER_NAME': 'string', 'TEAM_NAME': 'string', 'POSITION': 'string',
-                                              'COUNTRY':'string', 'BIRTHDATE':'datetime64', 'SEASON_EXP':'int64',
-                                              'HEIGHT': 'int64'  })
+                                              'COUNTRY':'string', 'BIRTHDATE':'datetime64', 'SEASON_EXP':'int64'})
         return all_players_c
 
     all_players = remove_jr_sr(personal_info_cleanse(all_players), 'PLAYER_NAME')
@@ -127,7 +127,7 @@ def get_players_career_stats():
             player_info = playercareerstats.PlayerCareerStats(player_id=player, per_mode36= 'PerGame' ).get_data_frames()
             player_info = player_info[1]
             all_players = pd.concat([all_players,player_info])
-            time.sleep(0.7)
+            time.sleep(0.8)
             a += 1
             print(f'Career stats - Iteration N°:{a}')
     except:
@@ -158,7 +158,7 @@ def get_players_next_game():
                 next_games = playernextngames.PlayerNextNGames(player_id=player).get_data_frames()
                 next_games = next_games[0]
                 all_next_games = pd.concat([all_next_games,next_games])
-                time.sleep(0.5)
+                time.sleep(0.7)
                 a += 1
                 print(f'Next games - Iteration N°:{a}')
             except:
@@ -223,9 +223,60 @@ def merge_dataframes(personal_info, career_stats, next_game, salaries):
     raw_players_dataset1 = pd.merge(personal_info, career_stats, left_index=True, right_index=True)
     raw_players_dataset2 = pd.merge(raw_players_dataset1, salaries, left_index=True, right_index=True)
     raw_players_dataset3 = pd.merge(raw_players_dataset2, next_game, left_index=True, right_index=True) if not next_game.empty else raw_players_dataset2
-    raw_players_dataset3 = raw_players_dataset3.drop(['Player', 'PLAYER_ID_x', 'PLAYER_ID_y'], axis=1)
+    raw_players_dataset3 = raw_players_dataset3.drop(['Player'], axis=1)
     raw_players_dataset3 = raw_players_dataset3.rename(columns={'2021-22':'SALARY'})
     return raw_players_dataset3
 
 
+def copy_and_delete_nan(players_dataset):
+    players_dataset_c = players_dataset.copy()
+    players_dataset_c = players_dataset_c[(~players_dataset_c['TEAM_NAME'].isnull()) | (~players_dataset_c['SALARY'].isnull())]
+    return players_dataset_c
+
+
+def cast_columns(working_df):
+    working_df['SALARY'] = working_df['SALARY'].astype('int64')
+    working_df['BIRTHDATE'] = working_df['BIRTHDATE'].astype('datetime64')
+    return working_df
+
+
+def convert_height_column(working_df):
+    working_df['HEIGHT'] = (working_df['HEIGHT'].str.replace('-', '.')).astype('float64')
+    working_df['HEIGHT'] = round(working_df['HEIGHT'] * 30.48, 2)
+    return working_df
+
+
+def convert_weight_column(working_df):
+    working_df['WEIGHT'] = round(working_df['WEIGHT'].astype('float64') / 2.20462, 2)
+    return working_df
+
+
+def add_age_column(working_df):
+    working_df['AGE'] = (dt.now() - working_df['BIRTHDATE'])
+    days_4_years = working_df['AGE'].astype('string')
+    days_4_years = days_4_years.str.split('days', expand=True)[0]
+    years = (days_4_years.astype('int64') / 365).apply(np.floor).astype('int64')
+    months = (((days_4_years.astype('int64') / 365) - years) * 12).apply(np.floor).astype('int64')
+    days = (((((days_4_years.astype('int64') / 365) - years) * 12) - months) * 30).apply(np.floor).astype('int64')
+    years_months_days = pd.concat([years,months,days], axis=1).astype('string')
+    working_df['AGE'] = (years_months_days.iloc[:,0] + ' years, ' + years_months_days.iloc[:,1] + ' months, '
+                         + years_months_days.iloc[:,2] + ' days')
+    return working_df
+
+
+def update_position(working_df):
+    split_aux = working_df['POSITION'].str.split('-', expand=True)
+    split_aux = split_aux.iloc[:,0]
+    working_df['POSITION'] = split_aux
+    return working_df
+
+
 raw_players_dataset = merge_dataframes(players_personal_info, players_career_stats, players_next_game, players_salaries)
+working_df = copy_and_delete_nan(raw_players_dataset)
+working_df = cast_columns(working_df)
+working_df = convert_height_column(working_df)
+working_df = convert_weight_column(working_df)
+working_df = add_age_column(working_df)
+working_df = update_position(working_df)
+
+working_df.to_csv("nba_players_processed_dataset.csv")
