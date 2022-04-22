@@ -3,6 +3,8 @@ import numpy as np
 from unidecode import unidecode
 import re
 from datetime import datetime as dt
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 
 players_personal_info = pd.read_csv('nba_players_personal_info.csv')
@@ -14,6 +16,8 @@ players_next_game = pd.read_csv('nba_players_next_game.csv')
 
 # players_personal_info = players_personal_info.set_index('PERSON_ID')
 # players_career_stats = players_career_stats.set_index('PLAYER_ID')
+players_salaries['PLAYER_ID'] = players_salaries['PLAYER_ID'].astype('int64')
+players_salaries = players_salaries.set_index('PLAYER_ID')
 
 
 # def personal_info_cleanse(players_personal_info):
@@ -145,9 +149,9 @@ players_next_game = pd.read_csv('nba_players_next_game.csv')
 
 def merge_dataframes(personal_info, career_stats, salaries, next_game):
     raw_players_dataset1 = pd.merge(personal_info, career_stats, left_index=True, right_index=True)
-    raw_players_dataset2 = pd.merge(raw_players_dataset1, salaries, left_index=True, right_index=True)
-    raw_players_dataset3 = pd.merge(raw_players_dataset2, next_game, left_index=True, right_index=True) if not next_game.empty else raw_players_dataset2
-    raw_players_dataset3 = raw_players_dataset3.drop(['Player', 'PLAYER_ID_x', 'PLAYER_ID_y'], axis=1)
+    raw_players_dataset2 = pd.merge(raw_players_dataset1, salaries, left_on=['PERSON_ID'], right_index=True)
+    raw_players_dataset3 = pd.merge(raw_players_dataset2, next_game, left_on=['PERSON_ID'], right_index=True) if not next_game.empty else raw_players_dataset2
+    raw_players_dataset3 = raw_players_dataset3.drop('Player', axis=1)
     raw_players_dataset3 = raw_players_dataset3.rename(columns={'2021-22':'SALARY'})
     return raw_players_dataset3
 
@@ -266,3 +270,42 @@ def contracts(working_df):
 general_metrics(working_df)
 players_description(working_df, years_mod)
 contracts(working_df)
+def graphs(working_df):
+    new_df = working_df[working_df['SALARY'] != 0]
+    new_df = new_df.astype({'SALARY':'int64', 'PTS':'float64'})
+    # new_df['SALARY'] = new_df['SALARY'] / 1000000
+    # out = pd.cut(new_df['SALARY'], bins=[5000, 50000, 500000, 5000000, 500000000])
+
+    sns.relplot(x='PTS', y='SALARY', data=new_df, hue='POSITION').set(title='Score Vs Salary')
+    plt.show()
+
+    fig, axs = plt.subplots(ncols=2, figsize=(10,6))
+    sns.regplot(x='AST', y='SALARY', data=new_df, ax=axs[0]).set(title='Assists Vs Salary')
+    sns.regplot(x='REB', y='SALARY', data=new_df, ax=axs[1]).set(title='Rebounds Vs Salary')
+    plt.show()
+
+    new_df2 = new_df[new_df['SEASON_EXP'] > 4]
+    fig, axs = plt.subplots(ncols=3, figsize=(10,6))
+    sns.regplot(x='PTS', y='SALARY', data=new_df2, ax=axs[0]).set(title='Score Vs Salary')
+    sns.regplot(x='AST', y='SALARY', data=new_df2, ax=axs[1]).set(title='Assists Vs Salary')
+    sns.regplot(x='REB', y='SALARY', data=new_df2, ax=axs[2]).set(title='Rebounds Vs Salary')
+    plt.show()
+
+    g = sns.FacetGrid(data=new_df, col='POSITION').set(title='Scoring per position')
+    g.map(sns.boxplot, 'PTS')
+    plt.show()
+
+    sns.histplot(data=working_df, x='HEIGHT', bins=50, hue='POSITION', element='step').set(title='Height distribution')
+    plt.show()
+
+graphs(working_df)
+
+# center_df = new_df[new_df['POSITION'] == 'Center']
+# forward_df = new_df[new_df['POSITION'] == 'Forward']
+# guard_df = new_df[new_df['POSITION'] == 'Guard']
+# fig, axs = plt.subplots(ncols=3, figsize=(10,6))
+# sns.boxplot(data=center_df, y='PTS', ax=axs[0])
+# sns.boxplot(data=forward_df, y='PTS', ax=axs[1])
+# sns.boxplot(data=guard_df, y='PTS', ax=axs[2])
+# plt.show()
+

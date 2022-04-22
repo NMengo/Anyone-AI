@@ -5,6 +5,8 @@ import re
 import pandas as pd
 from datetime import datetime as dt
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # LEN 503
 def get_and_save_players_list():
@@ -218,7 +220,7 @@ players_career_stats = get_players_career_stats()
 players_next_game = get_players_next_game()
 players_salaries = get_nba_players_salaries('contracts.csv')
 
-
+# VER SI HAY QUE CORREGIR LEFT_ON=
 def merge_dataframes(personal_info, career_stats, next_game, salaries):
     raw_players_dataset1 = pd.merge(personal_info, career_stats, left_index=True, right_index=True)
     raw_players_dataset2 = pd.merge(raw_players_dataset1, salaries, left_index=True, right_index=True)
@@ -345,6 +347,34 @@ def contracts(working_df):
     print(f'Median Salary: {median_salary}')
     print('==========================================')
 
+def graphs(working_df):
+    new_df = working_df[working_df['SALARY'] != 0]
+    new_df = new_df.astype({'SALARY':'int64', 'PTS':'float64'})
+    new_df2 = new_df[new_df['SEASON_EXP'] > 4]
+
+    sns.relplot(x='PTS', y='SALARY', data=new_df, hue='POSITION').set(title='Score Vs Salary')
+    plt.show()
+
+    fig, axs = plt.subplots(ncols=2, figsize=(10,6))
+    sns.regplot(x='AST', y='SALARY', data=new_df, ax=axs[0]).set(title='Assists Vs Salary')
+    sns.regplot(x='REB', y='SALARY', data=new_df, ax=axs[1]).set(title='Rebounds Vs Salary')
+    plt.show()
+
+    fig, axs = plt.subplots(ncols=3, figsize=(10,6))
+    sns.regplot(x='PTS', y='SALARY', data=new_df2, ax=axs[0]).set(title='Score Vs Salary')
+    sns.regplot(x='AST', y='SALARY', data=new_df2, ax=axs[1]).set(title='Assists Vs Salary')
+    sns.regplot(x='REB', y='SALARY', data=new_df2, ax=axs[2]).set(title='Rebounds Vs Salary')
+    plt.show()
+
+    g = sns.FacetGrid(data=new_df, col='POSITION').set(title='Scoring per position')
+    g.map(sns.boxplot, 'PTS')
+    plt.show()
+
+    sns.histplot(data=working_df, x='HEIGHT', bins=50, hue='POSITION', element='step').set(title='Height distribution')
+    plt.show()
+
+
 general_metrics(working_df)
 players_description(working_df, years_mod)
 contracts(working_df)
+graphs(working_df)
