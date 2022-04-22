@@ -4,6 +4,7 @@ from unidecode import unidecode
 import re
 from datetime import datetime as dt
 
+
 players_personal_info = pd.read_csv('nba_players_personal_info.csv')
 players_career_stats = pd.read_csv('nba_players_career_stats.csv')
 players_salaries = pd.read_csv('nba_players_salary.csv')
@@ -166,15 +167,14 @@ def add_age_column(working_df):
     working_df['AGE'] = (dt.now() - working_df['BIRTHDATE'])
     days_4_years = working_df['AGE'].astype('string')
     days_4_years = days_4_years.str.split('days', expand=True)[0]
+    years_mod = days_4_years.astype('int64') / 365
     years = (days_4_years.astype('int64') / 365).apply(np.floor).astype('int64')
     months = (((days_4_years.astype('int64') / 365) - years) * 12).apply(np.floor).astype('int64')
     days = (((((days_4_years.astype('int64') / 365) - years) * 12) - months) * 30).apply(np.floor).astype('int64')
     years_months_days = pd.concat([years,months,days], axis=1).astype('string')
     working_df['AGE'] = (years_months_days.iloc[:,0] + ' years, ' + years_months_days.iloc[:,1] + ' months, '
                          + years_months_days.iloc[:,2] + ' days')
-    return working_df
-
-working_df = add_age_column(working_df)
+    return working_df, years_mod
 
 
 def update_position(working_df):
@@ -183,4 +183,86 @@ def update_position(working_df):
     working_df['POSITION'] = split_aux
     return working_df
 
+
+def convert_height_column(working_df):
+    working_df['HEIGHT'] = (working_df['HEIGHT'].str.replace('-', '.')).astype('float64')
+    working_df['HEIGHT'] = round(working_df['HEIGHT'] * 30.48, 2)
+    return working_df
+
+
+def convert_weight_column(working_df):
+    working_df['WEIGHT'] = round(working_df['WEIGHT'].astype('float64') / 2.20462, 2)
+    return working_df
+
+
+working_df = add_age_column(working_df)[0]
+years_mod = pd.DataFrame({'years':add_age_column(working_df)[1]})
 working_df = update_position(working_df)
+working_df = convert_height_column(working_df)
+working_df = convert_weight_column(working_df)
+
+def general_metrics(working_df):
+    usa_players = working_df[working_df['COUNTRY']=='USA']
+    per_position = working_df.groupby(by=['POSITION']).count()
+    center = per_position.loc['Center', 'PERSON_ID']
+    forward = per_position.loc['Forward', 'PERSON_ID']
+    guard = per_position.loc['Guard', 'PERSON_ID']
+    rookies = working_df[working_df['SEASON_EXP']==0]
+
+    per_team = (working_df.groupby(by=['TEAM_NAME']).count())
+    per_team = per_team['PERSON_ID'].copy()
+    per_team = per_team.reset_index()
+    per_team.columns = ['Team','N° Players']
+
+    print('==========================================')
+    print(f'Total amount of players: {len(working_df)}')
+    print(f'Number of USA born players: {len(usa_players)}')
+    print(f'Number of foreign players: {len(working_df)-len(usa_players)}')
+    print(f'Number of Center Players: {center}')
+    print(f'Number of Forward Players: {forward}')
+    print(f'Number of Guard Players: {guard}')
+    print(f'Number of Rookies: {len(rookies)}')
+    print('==========================================')
+    print(per_team)
+
+
+
+def players_description(working_df, years_mod):
+    avg_age = int(years_mod.mean())
+    youngest_index = years_mod.index[years_mod['years'] == years_mod['years'].min()][0]
+    youngest_player = working_df.iloc[youngest_index, -1]
+    oldest_index = years_mod.index[years_mod['years'] == years_mod['years'].max()][0]
+    oldest_player = working_df.iloc[oldest_index, -1]
+    min_height = working_df['HEIGHT'].min()
+    max_height = working_df['HEIGHT'].max()
+    avg_height_per_pos = pd.DataFrame({'avg_height':working_df.groupby(by='POSITION').mean()['HEIGHT']})
+    center = round(avg_height_per_pos.loc['Center','avg_height'], 2)
+    forward = round(avg_height_per_pos.loc['Forward','avg_height'], 2)
+    guard = round(avg_height_per_pos.loc['Guard','avg_height'], 2)
+
+    print('==========================================')
+    print(f'Average player age: {avg_age}')
+    print(f'Youngest player age: {youngest_player}')
+    print(f'Oldest player age: {oldest_player}')
+    print(f'Min Height: {min_height}')
+    print(f'Max Height: {max_height}')
+    print(f'Average Height Center: {center}')
+    print(f'Average Height Forward: {forward}')
+    print(f'Average Height Guard: {guard}')
+    print('==========================================')
+
+def contracts(working_df):
+    min_salary = int(working_df['SALARY'][working_df['SALARY'] != 0].min())
+    max_salary = int(working_df['SALARY'].max())
+    mean_salary = int(working_df['SALARY'].mean())
+    median_salary = int(working_df['SALARY'].median())
+
+    print(f'Min Salary: {min_salary}')
+    print(f'Max Salary: {max_salary}')
+    print(f'Mean Salary: {mean_salary}')
+    print(f'Median Salary: {median_salary}')
+    print('==========================================')
+
+general_metrics(working_df)
+players_description(working_df, years_mod)
+contracts(working_df)
