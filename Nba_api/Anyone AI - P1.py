@@ -83,7 +83,7 @@ def get_players_personal_information():
             player_info = commonplayerinfo.CommonPlayerInfo(player_id=player).get_data_frames()
             player_info = player_info[0]
             all_players = pd.concat([all_players,player_info])
-            time.sleep(0.5)
+            time.sleep(0.8)
             a += 1
             print(f'Personal Info - Iteration N°:{a}')
 
@@ -288,13 +288,13 @@ working_df.to_csv("nba_players_processed_dataset.csv")
 def general_metrics(working_df):
     usa_players = working_df[working_df['COUNTRY']=='USA']
     per_position = working_df.groupby(by=['POSITION']).count()
-    center = per_position.loc['Center', 'PERSON_ID']
-    forward = per_position.loc['Forward', 'PERSON_ID']
-    guard = per_position.loc['Guard', 'PERSON_ID']
+    center = per_position.loc['Center', 'PLAYER_NAME']
+    forward = per_position.loc['Forward', 'PLAYER_NAME']
+    guard = per_position.loc['Guard', 'PLAYER_NAME']
     rookies = working_df[working_df['SEASON_EXP']==0]
 
     per_team = (working_df.groupby(by=['TEAM_NAME']).count())
-    per_team = per_team['PERSON_ID'].copy()
+    per_team = per_team['PLAYER_NAME'].copy()
     per_team = per_team.reset_index()
     per_team.columns = ['Team','N° Players']
 

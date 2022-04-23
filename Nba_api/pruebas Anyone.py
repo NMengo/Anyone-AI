@@ -7,17 +7,17 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 
-players_personal_info = pd.read_csv('nba_players_personal_info.csv')
-players_career_stats = pd.read_csv('nba_players_career_stats.csv')
-players_salaries = pd.read_csv('nba_players_salary.csv')
-players_next_game = pd.read_csv('nba_players_next_game.csv')
+# players_personal_info = pd.read_csv('nba_players_personal_info.csv')
+# players_career_stats = pd.read_csv('nba_players_career_stats.csv')
+# players_salaries = pd.read_csv('nba_players_salary.csv')
+# players_next_game = pd.read_csv('nba_players_next_game.csv')
 
 # players_personal_info = players_personal_info['']
 
 # players_personal_info = players_personal_info.set_index('PERSON_ID')
-# players_career_stats = players_career_stats.set_index('PLAYER_ID')
-players_salaries['PLAYER_ID'] = players_salaries['PLAYER_ID'].astype('int64')
-players_salaries = players_salaries.set_index('PLAYER_ID')
+# # players_career_stats = players_career_stats.set_index('PLAYER_ID')
+# players_salaries['PLAYER_ID'] = players_salaries['PLAYER_ID'].astype('int64')
+# players_salaries = players_salaries.set_index('PLAYER_ID')
 
 
 # def personal_info_cleanse(players_personal_info):
@@ -147,25 +147,53 @@ players_salaries = players_salaries.set_index('PLAYER_ID')
 # salarios = get_nba_players_salaries('contracts.csv')
 
 
-def merge_dataframes(personal_info, career_stats, salaries, next_game):
-    raw_players_dataset1 = pd.merge(personal_info, career_stats, left_index=True, right_index=True)
-    raw_players_dataset2 = pd.merge(raw_players_dataset1, salaries, left_on=['PERSON_ID'], right_index=True)
-    raw_players_dataset3 = pd.merge(raw_players_dataset2, next_game, left_on=['PERSON_ID'], right_index=True) if not next_game.empty else raw_players_dataset2
-    raw_players_dataset3 = raw_players_dataset3.drop('Player', axis=1)
-    raw_players_dataset3 = raw_players_dataset3.rename(columns={'2021-22':'SALARY'})
-    return raw_players_dataset3
+# def merge_dataframes(personal_info, career_stats, salaries, next_game):
+#     raw_players_dataset1 = pd.merge(personal_info, career_stats, left_index=True, right_index=True)
+#     raw_players_dataset2 = pd.merge(raw_players_dataset1, salaries, left_on=['PERSON_ID'], right_index=True)
+#     raw_players_dataset3 = pd.merge(raw_players_dataset2, next_game, left_on=['PERSON_ID'], right_index=True) if not next_game.empty else raw_players_dataset2
+#     raw_players_dataset3 = raw_players_dataset3.drop('Player', axis=1)
+#     raw_players_dataset3 = raw_players_dataset3.rename(columns={'2021-22':'SALARY'})
+#     return raw_players_dataset3
+#
+#
+# def copy_and_delete_nan(players_dataset):
+#     players_dataset_c = players_dataset.copy()
+#     players_dataset_c = players_dataset_c[(~players_dataset_c['TEAM_NAME'].isnull()) | (~players_dataset_c['SALARY'].isnull())]
+#     return players_dataset_c
+#
+# raw_players_dataset = merge_dataframes(players_personal_info, players_career_stats, players_salaries, players_next_game)
+# working_df = copy_and_delete_nan(raw_players_dataset)
+#
+# working_df['BIRTHDATE'] = working_df['BIRTHDATE'].astype('datetime64')
+#
+#
+#
+#
+# def update_position(working_df):
+#     split_aux = working_df['POSITION'].str.split('-', expand=True)
+#     split_aux = split_aux.iloc[:,0]
+#     working_df['POSITION'] = split_aux
+#     return working_df
+#
+#
+# def convert_height_column(working_df):
+#     working_df['HEIGHT'] = (working_df['HEIGHT'].str.replace('-', '.')).astype('float64')
+#     working_df['HEIGHT'] = round(working_df['HEIGHT'] * 30.48, 2)
+#     return working_df
+#
+#
+# def convert_weight_column(working_df):
+#     working_df['WEIGHT'] = round(working_df['WEIGHT'].astype('float64') / 2.20462, 2)
+#     return working_df
+#
+#
+# working_df = add_age_column(working_df)[0]
+# working_df = update_position(working_df)
+# working_df = convert_height_column(working_df)
+# working_df = convert_weight_column(working_df)
 
-
-def copy_and_delete_nan(players_dataset):
-    players_dataset_c = players_dataset.copy()
-    players_dataset_c = players_dataset_c[(~players_dataset_c['TEAM_NAME'].isnull()) | (~players_dataset_c['SALARY'].isnull())]
-    return players_dataset_c
-
-raw_players_dataset = merge_dataframes(players_personal_info, players_career_stats, players_salaries, players_next_game)
-working_df = copy_and_delete_nan(raw_players_dataset)
-
+working_df = pd.read_csv('nba_players_processed_dataset.csv')
 working_df['BIRTHDATE'] = working_df['BIRTHDATE'].astype('datetime64')
-
 
 def add_age_column(working_df):
     working_df['AGE'] = (dt.now() - working_df['BIRTHDATE'])
@@ -180,41 +208,18 @@ def add_age_column(working_df):
                          + years_months_days.iloc[:,2] + ' days')
     return working_df, years_mod
 
-
-def update_position(working_df):
-    split_aux = working_df['POSITION'].str.split('-', expand=True)
-    split_aux = split_aux.iloc[:,0]
-    working_df['POSITION'] = split_aux
-    return working_df
-
-
-def convert_height_column(working_df):
-    working_df['HEIGHT'] = (working_df['HEIGHT'].str.replace('-', '.')).astype('float64')
-    working_df['HEIGHT'] = round(working_df['HEIGHT'] * 30.48, 2)
-    return working_df
-
-
-def convert_weight_column(working_df):
-    working_df['WEIGHT'] = round(working_df['WEIGHT'].astype('float64') / 2.20462, 2)
-    return working_df
-
-
-working_df = add_age_column(working_df)[0]
 years_mod = pd.DataFrame({'years':add_age_column(working_df)[1]})
-working_df = update_position(working_df)
-working_df = convert_height_column(working_df)
-working_df = convert_weight_column(working_df)
 
 def general_metrics(working_df):
     usa_players = working_df[working_df['COUNTRY']=='USA']
     per_position = working_df.groupby(by=['POSITION']).count()
-    center = per_position.loc['Center', 'PERSON_ID']
-    forward = per_position.loc['Forward', 'PERSON_ID']
-    guard = per_position.loc['Guard', 'PERSON_ID']
+    center = per_position.loc['Center', 'PLAYER_NAME']
+    forward = per_position.loc['Forward', 'PLAYER_NAME']
+    guard = per_position.loc['Guard', 'PLAYER_NAME']
     rookies = working_df[working_df['SEASON_EXP']==0]
 
     per_team = (working_df.groupby(by=['TEAM_NAME']).count())
-    per_team = per_team['PERSON_ID'].copy()
+    per_team = per_team['PLAYER_NAME'].copy()
     per_team = per_team.reset_index()
     per_team.columns = ['Team','N° Players']
 
@@ -270,6 +275,7 @@ def contracts(working_df):
 general_metrics(working_df)
 players_description(working_df, years_mod)
 contracts(working_df)
+
 def graphs(working_df):
     new_df = working_df[working_df['SALARY'] != 0]
     new_df = new_df.astype({'SALARY':'int64', 'PTS':'float64'})
