@@ -313,9 +313,9 @@ def general_metrics(working_df):
 def players_description(working_df, years_mod):
     avg_age = int(years_mod.mean())
     youngest_index = years_mod.index[years_mod['years'] == years_mod['years'].min()][0]
-    youngest_player = working_df.iloc[youngest_index, -1]
+    youngest_player = working_df.loc[youngest_index, 'AGE']
     oldest_index = years_mod.index[years_mod['years'] == years_mod['years'].max()][0]
-    oldest_player = working_df.iloc[oldest_index, -1]
+    oldest_player = working_df.loc[oldest_index, 'AGE']
     min_height = working_df['HEIGHT'].min()
     max_height = working_df['HEIGHT'].max()
     avg_height_per_pos = pd.DataFrame({'avg_height':working_df.groupby(by='POSITION').mean()['HEIGHT']})
