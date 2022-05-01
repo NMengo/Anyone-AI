@@ -18,61 +18,10 @@ def get_and_save_players_list():
 
 
 def remove_jr_sr(dataframe, players_column_name):
-    regex = r" Sr.$"
-    regex2 = r" Jr.$"
-    regex3 = r" II$"
-    regex4 = r" III$"
-    regex5 = r" IV$"
-    regex6 = r" V$"
-    subst = ""
-    try:
-        for i in dataframe.index:
-            try:
-                test_str = dataframe.loc[i, str(players_column_name)]
-                result = re.sub(regex, subst, test_str, 1)
-                dataframe.loc[i, str(players_column_name)] = result
-                if result == test_str:
-                    result = re.sub(regex2, subst, test_str, 1)
-                    dataframe.loc[i,str(players_column_name)] = result
-                    if result == test_str:
-                        result = re.sub(regex3, subst, test_str, 1)
-                        dataframe.loc[i, str(players_column_name)] = result
-                        if result == test_str:
-                            result = re.sub(regex4, subst, test_str, 1)
-                            dataframe.loc[i, str(players_column_name)] = result
-                            if result == test_str:
-                                result = re.sub(regex5, subst, test_str, 1)
-                                dataframe.loc[i, str(players_column_name)] = result
-                                if result == test_str:
-                                    result = re.sub(regex6, subst, test_str, 1)
-                                    dataframe.loc[i, str(players_column_name)] = result
-            except:
-                pass
-    except:
-        for i in range(len(dataframe)):
-            try:
-                test_str = dataframe.loc[i, str(players_column_name)]
-                result = re.sub(regex, subst, test_str, 1)
-                dataframe.loc[i, str(players_column_name)] = result
-                if result == test_str:
-                    result = re.sub(regex2, subst, test_str, 1)
-                    dataframe.loc[i,str(players_column_name)] = result
-                    if result == test_str:
-                        result = re.sub(regex3, subst, test_str, 1)
-                        dataframe.loc[i, str(players_column_name)] = result
-                        if result == test_str:
-                            result = re.sub(regex4, subst, test_str, 1)
-                            dataframe.loc[i, str(players_column_name)] = result
-                            if result == test_str:
-                                result = re.sub(regex5, subst, test_str, 1)
-                                dataframe.loc[i, str(players_column_name)] = result
-                                if result == test_str:
-                                    result = re.sub(regex6, subst, test_str, 1)
-                                    dataframe.loc[i, str(players_column_name)] = result
-            except:
-                pass
+    substrs = [" Sr.", " Jr.", " II", " III", " IV", " V"]
+    for sub in substrs:
+        dataframe[str(players_column_name)] = dataframe[str(players_column_name)].str.replace(sub, "")
     return dataframe
-
 
 # LEN 503
 def get_players_personal_information():
@@ -243,8 +192,14 @@ def cast_columns(working_df):
 
 
 def convert_height_column(working_df):
-    working_df['HEIGHT'] = (working_df['HEIGHT'].str.replace('-', '.')).astype('float64')
-    working_df['HEIGHT'] = round(working_df['HEIGHT'] * 30.48, 2)
+    working_df['HEIGHT'] = working_df['HEIGHT'].str.split('-')
+    foot = np.array((working_df['HEIGHT'].str[0]).astype('float'))
+    inch = np.array((working_df['HEIGHT'].str[1]).astype('float'))
+
+    foot_to_cm = np.multiply(foot, 30.48)
+    inch_to_cm = np.multiply(inch, 2.54)
+    cm_sum = np.add(foot_to_cm, inch_to_cm)
+    working_df['HEIGHT'] = cm_sum
     return working_df
 
 
