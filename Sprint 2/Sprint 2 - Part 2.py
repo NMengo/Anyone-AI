@@ -53,11 +53,11 @@ print(f"Baseline model Accuracy: {baseline_accuracy}")
 
 # 2.4
 """
-Accuracy is not the only metric we should look at, since it's insight may be not only be insufficient but also wrong.
-If model is overfitting badly we should expect error to tend to 0.
+In general, accuracy is not the only metric we should look at, since it may be misleading.
+In this particular case, we have a class imbalance. Accuracy is not a good metric to evaluate model performance.
 
-In which case, in order to check if it's the case and also leaving Test set untouched, we should create a validation set.
-Manually, by splitting train set into subsets or directly with sci-kit learn k-fold cross-validation.
+We could resample data in order to improve the imbalance.
+Also, using another metric such as F1 which is a better fit, since it measures also the type of error made.
 """
 
 players_x.hist(bins=50, figsize=(20, 15))
