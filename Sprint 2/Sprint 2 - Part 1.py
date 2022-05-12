@@ -21,9 +21,23 @@ data.reset_index(drop=True,inplace=True)
 # sns.regplot(x='BLK', y='Salary', data=data, ax=axs[4]).set(title='Blocks Vs Salary')
 # plt.show()
 
+"""
+Correlation seems not to be strong in any case.
+The more promising attribute is Score. Even though, there are some outliers that should be treated.
+In this particular case, they are explained by players with rookie contracts which may be having a great performance in PTS, but their salaries are capped.
+"""
+
+"""
+We don't want just to create a random Test Set right off the bat since the dataset is very short.
+Due to this, we could be incurring in sampling bias by not ensuring the test set is representative of the whole set.
+
+In this sense, it would be desirable that Test set includes the whole spectrum of PTS, by Stratified Sampling.
+As this is a continuous numerical attribute, it should be converted into clusters.
+"""
 players = data[['PTS', 'Salary']].copy()
 players['PTS_cat'] = pd.cut(players['PTS'], bins=[0, 5, 10, 15, 30], labels=[1, 2, 3, 4], include_lowest=True)
 players['PTS_cat'].hist()
+
 
 # Stratified approach
 players = players.reset_index(drop=True)
@@ -48,18 +62,20 @@ print(comp)
 # Removing Clustering to clean data again.
 strat_train_set = strat_train_set.drop('PTS_cat', axis=1)
 strat_test_set = strat_test_set.drop('PTS_cat', axis=1)
+train_set = train_set.drop('PTS_cat', axis=1)
+test_set = test_set.drop('PTS_cat', axis=1)
 
 # Random and Stratified Train Sets
 players = strat_train_set.drop('Salary', axis=1)
-X_train = strat_train_set.drop('Salary', axis=1)
 players_target = strat_train_set['Salary'].copy()
-y_train = strat_train_set['Salary'].copy()
+X_train = train_set.drop('Salary', axis=1)
+y_train = train_set['Salary'].copy()
 
 # Random and Stratified Test Sets
 players_test = strat_test_set.drop('Salary', axis=1)
-X_test = strat_test_set.drop('Salary', axis=1)
 players_target_test = strat_test_set['Salary'].copy()
-y_test = strat_test_set['Salary'].copy()
+X_test = test_set.drop('Salary', axis=1)
+y_test = test_set['Salary'].copy()
 
 # ======================================================================================================================
 class BaselineModel():
@@ -134,19 +150,21 @@ sgd_reg = SGDRegressor(random_state=42)
 result = search_best_hyperparameters(players, players_target, sgd_reg, max_iter = [1000, 10000, 1000000],
                                      eta0 = [0.0001, 0.001, 0.01, 0.1])
 best_params = result['hyperparameters']
-eta = best_params['eta0']
-max_ite = best_params['max_iter']
+best_params.update({'random_state':42})
 
-sgd_reg_tuned = SGDRegressor(random_state=42, eta0=eta, max_iter=max_ite)
-sgd_reg_tuned.fit(players, players_target)
-sgd_tuned_predictions = sgd_reg_tuned.predict(players_test)
-best_mae = mean_absolute_error(players_target_test, sgd_tuned_predictions)
+def tuned_model_evaluation(X_train, y_train, X_test, y_test, model, params:dict):
+    tuned_model = model(**{key:value for key, value in params.items()})
+    tuned_model.fit(X_train, y_train)
+    tuned_predictions = tuned_model.predict(X_test)
+    best_mae = mean_absolute_error(y_test, tuned_predictions)
+
+    return best_mae
+best_mae = tuned_model_evaluation(players, players_target, players_test, players_target_test, SGDRegressor, best_params)
 
 print("Mean Absolute Error for each model:")
 print(f"Baseline: {baseline_error}")
-print(f"Default Random SGDRegressor: {sgdN_mse}")
-print(f"Default Stratified SGDRegressor: {sgd_mse}")
-print(f"Best SGDRegressor: {best_mae}")
+print(f"SGDRegressor Error - Random: {sgdN_mse}")
+print(f"Tuned SGDRegressor: {best_mae}")
 
 
 # ======================================================================================================================
@@ -163,17 +181,17 @@ players_c[["PTS", "REB", "AST", "BLK", "SEASON_EXP"]] = columns
 players_c['DRAFT_NUMBER'] = players_c['DRAFT_NUMBER'].replace('Undrafted', 0)
 players_c['DRAFT_NUMBER'] = (players_c['DRAFT_NUMBER'].fillna(0)).astype('int64')
 players_c['draf_bin'] = pd.cut(players_c['DRAFT_NUMBER'],
-                               bins=[0, 0.1, 15, 30, 60], include_lowest=True, labels=['firstround_lottery',
+                               bins=[0, 15, 30, 60, 100], include_lowest=True, labels=['firstround_lottery',
                                                                        'firstround_non_lottery',
                                                                        'second_round',
                                                                        'undrafted'])
 
-players_c = pd.get_dummies(players_c, columns=['DRAFT_NUMBER', 'POSITION', 'TEAM_NAME'])
+players_c = pd.get_dummies(players_c, columns=['draf_bin', 'POSITION', 'TEAM_NAME'])
 
 
 # ======================================================================================================================
 # Train, Test split & Model evaluation
-players_x = players_c.drop(['Salary', 'draf_bin'], axis=1)
+players_x = players_c.drop(['Salary', 'DRAFT_NUMBER'], axis=1)
 players_y = players_c['Salary'].copy()
 X_train, X_test, y_train, y_test = train_test_split(players_x, players_y, test_size=0.2, random_state=42)
 

@@ -103,21 +103,20 @@ def numerical_scaler(features_df, scaling_method):
 
     return features_df
 
-X_train, X_test, y_train, y_test = train_test_split(players_x, players_y,
-                                                    random_state=42, stratify=all_nba_df['all_nba'])
 players_x = numerical_scaler(players_x, StandardScaler())
 
 # 2.6
-X_train2 = X_train.drop('team', axis=1)
-X_test2 = X_test.drop('team', axis=1)
-log_reg.fit(X_train2, y_train)
+players_x2 = players_x.drop('team', axis=1)
+X_train2, X_test2, y_train2, y_test2 = train_test_split(players_x2, players_y,
+                                                    random_state=42, stratify=all_nba_df['all_nba'])
+log_reg.fit(X_train2, y_train2)
 log_reg_baseline_pred = log_reg.predict(X_test2)
 
 # 2.7
-logreg_base_acc = accuracy_score(y_test, log_reg_baseline_pred)
-logreg_base_prec = precision_score(y_test, log_reg_baseline_pred)
-logreg_base_recall = recall_score(y_test, log_reg_baseline_pred)
-logreg_base_f1 = f1_score(y_test, log_reg_baseline_pred)
+logreg_base_acc = accuracy_score(y_test2, log_reg_baseline_pred)
+logreg_base_prec = precision_score(y_test2, log_reg_baseline_pred)
+logreg_base_recall = recall_score(y_test2, log_reg_baseline_pred)
+logreg_base_f1 = f1_score(y_test2, log_reg_baseline_pred)
 
 print('---------------------------------------------------------------------')
 print(f"Accuracy: {logreg_base_acc}")
