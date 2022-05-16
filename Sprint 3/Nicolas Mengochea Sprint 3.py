@@ -43,7 +43,7 @@ def get_categoricals(df_features):
     return df_categoricals
 
 
-def get_numerical_bounds(df_features):
+def get_numerical_bounds(df_features, categoricals):
     df_numerical = pd.DataFrame()
     df_numerical['column_name'] = df_features.columns
     df_numerical['dtype'] = np.array(df_features.dtypes)
@@ -128,9 +128,40 @@ def feature_encoding(df_features, categoricals):
     return df_features
 
 
-categoricals = get_categoricals(application_train)
-df_numerical = get_numerical_bounds(application_train)
-application_train = remove_outliers(df_numerical, application_train)
-application_train = imputing_values(application_train, object_treatment= 'Mode')
-application_train = feature_encoding(application_train, categoricals)
+# Function to Scale only numerical features from a given dataset, using a given Scaling method.
+def numerical_scaler(df_features, scaling_method):
+    columns_drop_list = []
+    df_features = df_features.reset_index(drop=True)
+    for column in df_features:
+        if df_features[str(column)].dtypes in ['float', 'float64', 'int64']:
+            pass
+        else:
+            columns_drop_list.append(column)
+
+    num_attr = df_features.drop(columns_drop_list, axis=1)
+    num_attr_columns = num_attr.columns
+    scaler = scaling_method
+    num_attr = pd.DataFrame(scaler.fit_transform(num_attr), columns=num_attr_columns)
+    num_attr = num_attr.reset_index(drop=True)
+    df_features = pd.concat([df_features[columns_drop_list], num_attr], axis=1)
+
+    return df_features
+
+def preprocessing(df_features: pd.DataFrame, index: str):
+    categoricals = get_categoricals(df_features)
+    df_numerical = get_numerical_bounds(df_features, categoricals)
+    df_features = remove_outliers(df_numerical, df_features)
+    df_features = imputing_values(df_features, object_treatment= 'Mode')
+    df_features = feature_encoding(df_features, categoricals)
+    df_features.set_index(index, inplace=True)
+    df_features = numerical_scaler(df_features, MinMaxScaler())
+    return df_features
+
+application_train = preprocessing(application_train, 'SK_ID_CURR')
 app_head = application_train.head(5)
+
+"""
+Some categorical variables are still in df.
+Look where to insert set_index(index) properly.
+Align train and test to have the same number of columns (categories missing)
+"""
