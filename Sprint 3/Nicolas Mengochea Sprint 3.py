@@ -17,9 +17,13 @@ import warnings
 warnings.filterwarnings('ignore')
 pd.options.display.max_rows = None
 
-
 application_test = pd.read_csv('DataSets/application_test.csv')
 application_train = pd.read_csv('DataSets/application_train.csv')
+application_test.insert(1, 'TARGET', np.zeros(len(application_test)))
+
+# print(application_train.dtypes)
+# print('------------------------------------------------------')
+# print(application_test.dtypes)
 
 
 def equalize_train_test(df_features):
@@ -67,8 +71,8 @@ def get_numerical_bounds(df_features, categoricals):
         '_merge=="left_only"')
     df_numerical = df_numerical[df_numerical['upper bound'] > 10]
     df_numerical.drop(['dtype_y', 'n_uniques', '_merge'], axis=1, inplace=True)
-    df_numerical.drop([0, 22], axis=0, inplace=True)
     df_numerical.set_index('column_name', inplace=True)
+    df_numerical.drop(['SK_ID_CURR', 'HOUR_APPR_PROCESS_START'], axis=0, inplace=True)
     return df_numerical
 
 
@@ -124,13 +128,15 @@ def feature_encoding(df_features, categoricals):
     for column_name in list(categoricals.index):
         if categoricals.loc[column_name, 'n_uniques'] == 2:
             df_features[column_name] = lb.fit_transform(df_features[column_name])
-        else:
+        elif categoricals.loc[column_name, 'n_uniques'] > 2:
             enc_df = pd.DataFrame(oh.fit_transform(df_features[[column_name]]).toarray())
             enc_df.columns = oh.get_feature_names_out([column_name])
             enc_df.columns = enc_df.columns.str.replace(column_name + '_', '')
             df_features = df_features.reset_index(drop=True)
             df_features = df_features.drop(column_name, axis=1)
             df_features = pd.concat([df_features, enc_df], axis=1)
+        else:
+            pass
     return df_features
 
 
@@ -138,8 +144,10 @@ def feature_encoding(df_features, categoricals):
 def numerical_scaler(df_features, scaling_method):
     columns_drop_list = []
     # df_features = df_features.reset_index(drop=True)
+    # print(df_features['0.0'])
     for column in df_features:
-        if df_features[str(column)].dtypes in ['float', 'float64', 'int64']:
+        print(column)
+        if df_features[column].dtypes in ['float', 'float64', 'int64']:
             pass
         else:
             columns_drop_list.append(column)
@@ -152,6 +160,7 @@ def numerical_scaler(df_features, scaling_method):
     df_features = pd.concat([df_features[columns_drop_list], num_attr], axis=1)
 
     return df_features
+
 
 def preprocessing(df_features: pd.DataFrame, index: str):
     df_features = equalize_train_test(df_features)
@@ -166,6 +175,32 @@ def preprocessing(df_features: pd.DataFrame, index: str):
     df_features = df_features.select_dtypes(exclude=['object'])
     return df_features
 
+
+def train_test_column_dif(train:pd.DataFrame, test:pd.DataFrame):
+    columns_train = list(train.columns)
+    columns_test = list(test.columns)
+
+    for column in columns_train:
+        if column not in columns_test:
+            test[column] = np.zeros(len(test))
+
+    for column in columns_test:
+        if column not in columns_train:
+            train[column] = np.zeros(len(train))
+    return train, test
+
+
 application_train = preprocessing(application_train, 'SK_ID_CURR')
-app_head = application_train.head(5)
+application_test = preprocessing(application_test, 'SK_ID_CURR')
+application_train, application_test = train_test_column_dif(application_train, application_test)
+
 application_train.to_csv('application_train_mod.csv')
+application_test.to_csv('application_test_mod.csv')
+
+# application_train = pd.read_csv('application_train_mod.csv')
+# application_train.set_index('Unnamed: 0', inplace=True)
+# X_train = application_train.drop('TARGET', axis=1)
+# y_train = application_train['TARGET'].copy()
+#
+# lr = LogisticRegression(random_state=42)
+# lr.fit(X_train, y_train)
