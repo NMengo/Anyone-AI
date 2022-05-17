@@ -21,10 +21,6 @@ application_test = pd.read_csv('DataSets/application_test.csv')
 application_train = pd.read_csv('DataSets/application_train.csv')
 application_test.insert(1, 'TARGET', np.zeros(len(application_test)))
 
-# print(application_train.dtypes)
-# print('------------------------------------------------------')
-# print(application_test.dtypes)
-
 
 def equalize_train_test(df_features):
     df_features['NAME_INCOME_TYPE'] = df_features['NAME_INCOME_TYPE'].replace(['Maternity leave'], 'Working')
@@ -141,10 +137,9 @@ def feature_encoding(df_features, categoricals):
 
 
 # Function to Scale only numerical features from a given dataset, using a given Scaling method.
-def numerical_scaler(df_features, scaling_method):
+def numerical_scaler(df_features, scaling_method, index):
     columns_drop_list = []
-    # df_features = df_features.reset_index(drop=True)
-    # print(df_features['0.0'])
+    # df_features = df_features.reset_index()
     for column in df_features:
         print(column)
         if df_features[column].dtypes in ['float', 'float64', 'int64']:
@@ -158,7 +153,7 @@ def numerical_scaler(df_features, scaling_method):
     num_attr = pd.DataFrame(scaler.fit_transform(num_attr), columns=num_attr_columns)
     num_attr = num_attr.reset_index(drop=True)
     df_features = pd.concat([df_features[columns_drop_list], num_attr], axis=1)
-
+    # df_features = df_features.set_index(index)
     return df_features
 
 
@@ -171,7 +166,7 @@ def preprocessing(df_features: pd.DataFrame, index: str):
     df_features = feature_encoding(df_features, categoricals)
     df_features[index] = df_features[index].astype('int64')
     df_features.set_index(index, inplace=True)
-    df_features = numerical_scaler(df_features, MinMaxScaler())
+    df_features = numerical_scaler(df_features, MinMaxScaler(), index)
     df_features = df_features.select_dtypes(exclude=['object'])
     return df_features
 
@@ -194,13 +189,26 @@ application_train = preprocessing(application_train, 'SK_ID_CURR')
 application_test = preprocessing(application_test, 'SK_ID_CURR')
 application_train, application_test = train_test_column_dif(application_train, application_test)
 
-application_train.to_csv('application_train_mod.csv')
-application_test.to_csv('application_test_mod.csv')
+apphead = application_train.head()
+apphead2 = application_test.head()
+
+# application_train.to_csv('application_train_mod.csv')
+# application_test.to_csv('application_test_mod.csv')
+
 
 # application_train = pd.read_csv('application_train_mod.csv')
 # application_train.set_index('Unnamed: 0', inplace=True)
+# application_test = pd.read_csv('application_test_mod.csv')
+# application_test.set_index('Unnamed: 0', inplace=True)
+
 # X_train = application_train.drop('TARGET', axis=1)
 # y_train = application_train['TARGET'].copy()
+# X_test = application_test.drop('TARGET', axis=1)
 #
 # lr = LogisticRegression(random_state=42)
 # lr.fit(X_train, y_train)
+# predictions = lr.predict_proba(X_test)[:-1]
+# predictions_df = pd.DataFrame({'SK_ID_CURR':X_test['SK_ID_CURR'], 'TARGET':predictions})
+
+# apphead = application_train.head()
+# apphead2 = application_test.head()
