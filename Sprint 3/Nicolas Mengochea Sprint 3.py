@@ -22,6 +22,12 @@ application_test = pd.read_csv('DataSets/application_test.csv')
 application_train = pd.read_csv('DataSets/application_train.csv')
 
 
+def equalize_train_test(df_features):
+    df_features['NAME_INCOME_TYPE'] = df_features['NAME_INCOME_TYPE'].replace(['Maternity leave'], 'Working')
+    df_features['CODE_GENDER'] = df_features['CODE_GENDER'].replace(['XNA'], 'F')
+    df_features['NAME_FAMILY_STATUS'] = df_features['NAME_FAMILY_STATUS'].replace(['Unknown'], 'Married')
+    return df_features
+
 def get_categoricals(df_features):
     df_categoricals = pd.DataFrame()
     df_categoricals['column_name'] = df_features.columns
@@ -131,7 +137,7 @@ def feature_encoding(df_features, categoricals):
 # Function to Scale only numerical features from a given dataset, using a given Scaling method.
 def numerical_scaler(df_features, scaling_method):
     columns_drop_list = []
-    df_features = df_features.reset_index(drop=True)
+    # df_features = df_features.reset_index(drop=True)
     for column in df_features:
         if df_features[str(column)].dtypes in ['float', 'float64', 'int64']:
             pass
@@ -148,20 +154,18 @@ def numerical_scaler(df_features, scaling_method):
     return df_features
 
 def preprocessing(df_features: pd.DataFrame, index: str):
+    df_features = equalize_train_test(df_features)
     categoricals = get_categoricals(df_features)
     df_numerical = get_numerical_bounds(df_features, categoricals)
     df_features = remove_outliers(df_numerical, df_features)
     df_features = imputing_values(df_features, object_treatment= 'Mode')
     df_features = feature_encoding(df_features, categoricals)
+    df_features[index] = df_features[index].astype('int64')
     df_features.set_index(index, inplace=True)
     df_features = numerical_scaler(df_features, MinMaxScaler())
+    df_features = df_features.select_dtypes(exclude=['object'])
     return df_features
 
 application_train = preprocessing(application_train, 'SK_ID_CURR')
 app_head = application_train.head(5)
-
-"""
-Some categorical variables are still in df.
-Look where to insert set_index(index) properly.
-Align train and test to have the same number of columns (categories missing)
-"""
+application_train.to_csv('application_train_mod.csv')
