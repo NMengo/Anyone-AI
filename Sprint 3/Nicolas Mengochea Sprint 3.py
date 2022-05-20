@@ -22,17 +22,17 @@ application_train = pd.read_csv('DataSets/application_train.csv')
 application_test.insert(1, 'TARGET', np.zeros(len(application_test)))
 
 
-def equalize_train_test(df_features):
-    df_features['NAME_INCOME_TYPE'] = df_features['NAME_INCOME_TYPE'].replace(['Maternity leave'], 'Working')
-    df_features['CODE_GENDER'] = df_features['CODE_GENDER'].replace(['XNA'], 'F')
-    df_features['NAME_FAMILY_STATUS'] = df_features['NAME_FAMILY_STATUS'].replace(['Unknown'], 'Married')
-    return df_features
+def equalize_train_test(train):
+    train['NAME_INCOME_TYPE'] = train['NAME_INCOME_TYPE'].replace(['Maternity leave'], 'Working')
+    train['CODE_GENDER'] = train['CODE_GENDER'].replace(['XNA'], 'F')
+    train['NAME_FAMILY_STATUS'] = train['NAME_FAMILY_STATUS'].replace(['Unknown'], 'Married')
+    return train
 
-def get_categoricals(df_features):
+def get_categoricals(train):
     df_categoricals = pd.DataFrame()
-    df_categoricals['column_name'] = df_features.columns
-    df_categoricals['dtype'] = np.array(df_features.dtypes)
-    df_categoricals['n_uniques'] = np.array(df_features.nunique())
+    df_categoricals['column_name'] = train.columns
+    df_categoricals['dtype'] = np.array(train.dtypes)
+    df_categoricals['n_uniques'] = np.array(train.nunique())
     type_object = df_categoricals['dtype'] == 'object'
     type_int = df_categoricals['dtype'] == ('int64')
     nunique_lt_2 = df_categoricals['n_uniques'] <= 2
@@ -49,18 +49,18 @@ def get_categoricals(df_features):
     return df_categoricals
 
 
-def get_numerical_bounds(df_features, categoricals):
+def get_numerical_bounds(train, categoricals):
     df_numerical = pd.DataFrame()
-    df_numerical['column_name'] = df_features.columns
-    df_numerical['dtype'] = np.array(df_features.dtypes)
+    df_numerical['column_name'] = train.columns
+    df_numerical['dtype'] = np.array(train.dtypes)
     df_numerical = df_numerical[df_numerical['dtype'] != 'object']
     df_numerical.reset_index(inplace=True, drop=True)
 
     for i in range(len(df_numerical)):
-        df_numerical.loc[i, 'upper bound'] = np.quantile(df_features[df_numerical.loc[i, 'column_name']], 0.75) + iqr(
-            df_features[df_numerical.loc[i, 'column_name']]) * 1.5
-        df_numerical.loc[i, 'lower bound'] = np.quantile(df_features[df_numerical.loc[i, 'column_name']], 0.25) - iqr(
-            df_features[df_numerical.loc[i, 'column_name']]) * 1.5
+        df_numerical.loc[i, 'upper bound'] = np.quantile(train[df_numerical.loc[i, 'column_name']], 0.75) + iqr(
+            train[df_numerical.loc[i, 'column_name']]) * 1.5
+        df_numerical.loc[i, 'lower bound'] = np.quantile(train[df_numerical.loc[i, 'column_name']], 0.25) - iqr(
+            train[df_numerical.loc[i, 'column_name']]) * 1.5
         df_numerical = df_numerical.fillna(0)
 
     df_numerical = pd.merge(df_numerical, categoricals, on=['column_name'], how="outer", indicator=True).query(
@@ -72,103 +72,101 @@ def get_numerical_bounds(df_features, categoricals):
     return df_numerical
 
 
-def remove_outliers(df_numerical, df_features):
-    print(f"Original DF Lenght: {len(df_features)}")
-    for column in df_features:
+def remove_outliers(df_numerical, train):
+    print(f"Original DF Lenght: {len(train)}")
+    for column in train:
         if column in list(df_numerical.index):
-            df_features = df_features[df_features[column] < df_numerical.loc[column, 'upper bound']]
-            df_features = df_features[df_features[column] > df_numerical.loc[column, 'lower bound']]
-    print(f"Post processing DF Lenght: {len(df_features)}")
-    return df_features
+            train = train[train[column] < df_numerical.loc[column, 'upper bound']]
+            train = train[train[column] > df_numerical.loc[column, 'lower bound']]
+    print(f"Post processing DF Lenght: {len(train)}")
+    return train
 
 
-def imputing_values(df_features, object_treatment=None):
-    print('Original Df:')
+def imputing_values(train, test, object_treatment=None):
     print('-----------------------------------------------------------------------')
-    print(df_features.isna().sum())
+    print('Original Df:')
+    print(train.isna().sum())
     imp = SimpleImputer(missing_values=np.nan, strategy='median')
 
-    for column in df_features:
-        if df_features[column].dtypes != 'object':
-            df_features[column] = imp.fit_transform(df_features[column].values.reshape(-1, 1))
-    print('Df with numerical attributes imputed:')
+    for column in train:
+        if train[column].dtypes != 'object':
+            train[column] = imp.fit_transform(train[column].values.reshape(-1, 1))
+            test[column] = imp.transform(test[column].values.reshape(-1, 1))
     print('-----------------------------------------------------------------------')
-    print(df_features.isna().sum())
+    print('Df with numerical attributes imputed:')
+    print(train.isna().sum())
 
     if not object_treatment:
-        print('Df with both numerical and object attributes imputed:')
         print('-----------------------------------------------------------------------')
-        print(df_features.isna().sum())
-        return df_features
+        print('Df with both numerical and object attributes imputed:')
+        print(train.isna().sum())
+        print('-----------------------------------------------------------------------')
+        print(test.isna().sum())
+        return train, test
     elif object_treatment == 'Drop':
-        df_features = df_features.dropna()
-        print('Df with both numerical and object attributes imputed:')
+        train, test = train.dropna(), test.dropna()
         print('-----------------------------------------------------------------------')
-        print(df_features.isna().sum())
-        return df_features
+        print('Df with both numerical and object attributes imputed:')
+        print(train.isna().sum())
+        print('-----------------------------------------------------------------------')
+        print(test.isna().sum())
+        return train, test
     elif object_treatment == 'Mode':
         imp2 = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
-        for column in df_features:
-            df_features[column] = imp2.fit_transform(df_features[column].values.reshape(-1, 1))
-        print('Df with both numerical and object attributes imputed:')
+        for column in train:
+            if train[column].dtypes == 'object':
+                train[column] = imp2.fit_transform(train[column].values.reshape(-1, 1))
+                test[column] = imp2.transform(test[column].values.reshape(-1, 1))
         print('-----------------------------------------------------------------------')
-        print(df_features.isna().sum())
-        return df_features
+        print('Df with both numerical and object attributes imputed:')
+        print(train.isna().sum())
+        print('-----------------------------------------------------------------------')
+        print(test.isna().sum())
+        return train, test
     else:
         raise ValueError('Wrong parameter')
 
 
-def feature_encoding(df_features, categoricals):
+def feature_encoding(train, test, categoricals):
     lb = LabelBinarizer()
-    oh = OneHotEncoder()
+    oh = OneHotEncoder(handle_unknown='ignore')
     for column_name in list(categoricals.index):
         if categoricals.loc[column_name, 'n_uniques'] == 2:
-            df_features[column_name] = lb.fit_transform(df_features[column_name])
+            train[column_name] = lb.fit_transform(train[column_name])
+            test[column_name] = lb.transform(test[column_name])
         elif categoricals.loc[column_name, 'n_uniques'] > 2:
-            enc_df = pd.DataFrame(oh.fit_transform(df_features[[column_name]]).toarray())
+            enc_df = pd.DataFrame(oh.fit_transform(train[[column_name]]).toarray())
+            enc_df_test = pd.DataFrame(oh.transform(test[[column_name]]).toarray())
             enc_df.columns = oh.get_feature_names_out([column_name])
             enc_df.columns = enc_df.columns.str.replace(column_name + '_', '')
-            df_features = df_features.reset_index(drop=True)
-            df_features = df_features.drop(column_name, axis=1)
-            df_features = pd.concat([df_features, enc_df], axis=1)
+            train, test = train.reset_index(drop=True), test.reset_index(drop=True)
+            train, test = train.drop(column_name, axis=1), test.drop(column_name, axis=1)
+            train, test = pd.concat([train, enc_df], axis=1), pd.concat([test, enc_df_test], axis=1)
         else:
             pass
-    return df_features
+    return train, test
 
 
 # Function to Scale only numerical features from a given dataset, using a given Scaling method.
-def numerical_scaler(df_features, scaling_method, index):
+def numerical_scaler(train, test, scaling_method):
     columns_drop_list = []
-    # df_features = df_features.reset_index()
-    for column in df_features:
+    for column in train:
         print(column)
-        if df_features[column].dtypes in ['float', 'float64', 'int64']:
+        if train[column].dtypes in ['float', 'float64', 'int64']:
             pass
         else:
             columns_drop_list.append(column)
 
-    num_attr = df_features.drop(columns_drop_list, axis=1)
+    num_attr = train.drop(columns_drop_list, axis=1)
+    num_attr_test = test.drop(columns_drop_list, axis=1)
     num_attr_columns = num_attr.columns
     scaler = scaling_method
     num_attr = pd.DataFrame(scaler.fit_transform(num_attr), columns=num_attr_columns)
+    num_attr_test = pd.DataFrame(scaler.transform(num_attr_test), columns=num_attr_columns)
     num_attr = num_attr.reset_index(drop=True)
-    df_features = pd.concat([df_features[columns_drop_list], num_attr], axis=1)
-    # df_features = df_features.set_index(index)
-    return df_features
-
-
-def preprocessing(df_features: pd.DataFrame, index: str):
-    df_features = equalize_train_test(df_features)
-    categoricals = get_categoricals(df_features)
-    df_numerical = get_numerical_bounds(df_features, categoricals)
-    df_features = remove_outliers(df_numerical, df_features)
-    df_features = imputing_values(df_features, object_treatment= 'Mode')
-    df_features = feature_encoding(df_features, categoricals)
-    df_features[index] = df_features[index].astype('int64')
-    df_features.set_index(index, inplace=True)
-    df_features = numerical_scaler(df_features, MinMaxScaler(), index)
-    df_features = df_features.select_dtypes(exclude=['object'])
-    return df_features
+    num_attr_test = num_attr_test.reset_index(drop=True)
+    train, test = pd.concat([train[columns_drop_list], num_attr], axis=1), pd.concat([test[columns_drop_list], num_attr_test], axis=1)
+    return train, test
 
 
 def train_test_column_dif(train:pd.DataFrame, test:pd.DataFrame):
@@ -185,9 +183,25 @@ def train_test_column_dif(train:pd.DataFrame, test:pd.DataFrame):
     return train, test
 
 
-application_train = preprocessing(application_train, 'SK_ID_CURR')
-application_test = preprocessing(application_test, 'SK_ID_CURR')
-application_train, application_test = train_test_column_dif(application_train, application_test)
+def preprocessing(train: pd.DataFrame, test, index: str):
+    train = equalize_train_test(train)
+    categoricals = get_categoricals(train)
+    df_numerical = get_numerical_bounds(train, categoricals)
+    train = remove_outliers(df_numerical, train)
+    train, test = imputing_values(train, test, object_treatment='Mode')
+    train, test = feature_encoding(train, test, categoricals)
+    # ============================================
+    train[index], test[index] = train[index].astype('int64'), test[index].astype('int64')
+    train.set_index(index, inplace=True)
+    test.set_index(index, inplace=True)
+    # ============================================
+    train, test = numerical_scaler(train, test, MinMaxScaler())
+    train, test = train.select_dtypes(exclude=['object']), test.select_dtypes(exclude=['object'])
+    train, test = train_test_column_dif(train, test)
+    return train, test
+
+
+application_train, application_test = preprocessing(application_train, application_test, 'SK_ID_CURR')
 
 apphead = application_train.head()
 apphead2 = application_test.head()
