@@ -17,9 +17,9 @@ import warnings
 warnings.filterwarnings('ignore')
 pd.options.display.max_rows = None
 
-application_test = pd.read_csv('DataSets/application_test.csv')
-application_train = pd.read_csv('DataSets/application_train.csv')
-application_test.insert(1, 'TARGET', np.zeros(len(application_test)))
+# application_test = pd.read_csv('DataSets/application_test.csv')
+# application_train = pd.read_csv('DataSets/application_train.csv')
+# application_test.insert(1, 'TARGET', np.zeros(len(application_test)))
 
 
 def equalize_train_test(train):
@@ -208,36 +208,26 @@ def preprocessing(train: pd.DataFrame, test, index: str):
 
 
 # application_train, application_test = preprocessing(application_train, application_test, 'SK_ID_CURR')
-#
-#
 # application_train.to_csv('application_train_mod.csv')
 # application_test.to_csv('application_test_mod.csv')
-#
 
-# application_train = pd.read_csv('application_train_mod.csv')
-# application_train.set_index('Unnamed: 0', inplace=True)
-# application_test = pd.read_csv('application_test_mod.csv')
-# application_test.set_index('Unnamed: 0', inplace=True)
-#
-# a = application_test[application_test['Block'].isna()].head(100)
-# b = application_test[~application_test['Block'].isna()].head(100)
-#
-# print(len(application_test['Block']), application_test['Block'].isna().sum())
 
-#
-# X_train = application_train.drop('TARGET', axis=1)
-# y_train = application_train['TARGET'].copy()
-# X_test = application_test.drop('TARGET', axis=1)
+application_train, application_test = pd.read_csv('application_train_mod.csv'), pd.read_csv('application_test_mod.csv')
+application_train, application_test = application_train.set_index('SK_ID_CURR'), application_test.set_index('SK_ID_CURR')
 
-# lr = LogisticRegression(random_state=42)
-# lr.fit(X_train, y_train)
-# predictions = lr.predict(X_test)
-# predict_proba = lr.predict_proba(X_test)[:-1]
-# predictions_df = pd.DataFrame({'SK_ID_CURR':X_test['SK_ID_CURR'], 'TARGET':predict_proba})
+X_train = application_train.drop('TARGET', axis=1)
+y_train = application_train['TARGET'].copy()
+X_test = application_test.drop('TARGET', axis=1)
 
-# apphead = application_train.head()
-# apphead2 = application_test.head()
-#
-# xtrainhead = X_train.head(100)
-# ytrainhead = y_train.head(100)
-# xtesthead = X_test.head(100)
+X_testhead = X_test.head()
+
+lr = LogisticRegression(random_state=42)
+lr.fit(X_train, y_train)
+predictions = lr.predict(X_test)
+full_proba = lr.predict_proba(X_test)
+predict_proba = lr.predict_proba(X_test)[:, 1]
+predictions_df = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba})
+predictions_df.to_csv('predictions_df.csv', index=False)
+
+apphead = application_train.head()
+apphead2 = application_test.head()
