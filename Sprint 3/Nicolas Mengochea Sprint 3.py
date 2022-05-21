@@ -22,11 +22,15 @@ application_train = pd.read_csv('DataSets/application_train.csv')
 application_test.insert(1, 'TARGET', np.zeros(len(application_test)))
 
 
-def equalize_train_test(train):
+def equalize_train_test(train, test):
     train['NAME_INCOME_TYPE'] = train['NAME_INCOME_TYPE'].replace(['Maternity leave'], 'Working')
-    train['CODE_GENDER'] = train['CODE_GENDER'].replace(['XNA'], 'F')
+    # train['CODE_GENDER'] = train['CODE_GENDER'].replace(['XNA'], 'F')
+    train = train.replace(['XNA', 'XAP'], np.nan)
+    test = test.replace(['XNA', 'XAP'], np.nan)
+    train['DAYS_EMPLOYED'].replace(365243, np.nan, inplace = True)
+    test['DAYS_EMPLOYED'].replace(365243, np.nan, inplace = True)
     train['NAME_FAMILY_STATUS'] = train['NAME_FAMILY_STATUS'].replace(['Unknown'], 'Married')
-    return train
+    return train,test
 
 def get_categoricals(train, criteria='Int and narrowed objects'):
     """
@@ -85,13 +89,10 @@ def get_numerical_bounds(train, categoricals, index, bound_mult=1.5):
     return df_numerical
 
 
-def manage_outliers(df_numerical, train, outl_treatment=None):
-    train['DAYS_EMPLOYED'].replace(365243, np.nan, inplace = True)
+def manage_outliers(df_numerical, train, outl_treatment='Filter'):
     print(f"Original DF Lenght: {len(train)}")
     for column in train:
-        if not outl_treatment:
-            break
-        elif outl_treatment == 'Filter':
+        if outl_treatment == 'Filter':
             if column in list(df_numerical.index):
                 train = train[train[column] < df_numerical.loc[column, 'upper bound']]
                 train = train[train[column] > df_numerical.loc[column, 'lower bound']]
@@ -102,51 +103,41 @@ def manage_outliers(df_numerical, train, outl_treatment=None):
                 mean_vir = float(values_inside_range.mean())
                 train[column][(train[column] > df_numerical.loc[column, 'upper bound']) &
                                        (train[column] < df_numerical.loc[column, 'lower bound'])] = mean_vir
+        else:
+            break
     print(f"Post processing DF Lenght: {len(train)}")
     return train
 
 
-def imputing_values(train, test, object_treatment=None):
-    print('-----------------------------------------------------------------------')
-    print('Original Df:')
-    print(train.isna().sum())
+def imputing_values(train, test, categoricals, object_treatment='Mode'):
     imp = SimpleImputer(missing_values=np.nan, strategy='median')
 
     for column in train:
         if train[column].dtypes != 'object':
             train[column] = imp.fit_transform(train[column].values.reshape(-1, 1))
             test[column] = imp.transform(test[column].values.reshape(-1, 1))
-    print('-----------------------------------------------------------------------')
-    print('Df with numerical attributes imputed:')
-    print(train.isna().sum())
 
-    if not object_treatment:
-        print('-----------------------------------------------------------------------')
-        print('Df with both numerical and object attributes imputed:')
-        print(train.isna().sum())
-        print('-----------------------------------------------------------------------')
-        print(test.isna().sum())
-        return train, test
-    elif object_treatment == 'Drop':
-        train, test = train.dropna(), test.dropna()
-        print('-----------------------------------------------------------------------')
-        print('Df with both numerical and object attributes imputed:')
-        print(train.isna().sum())
-        print('-----------------------------------------------------------------------')
-        print(test.isna().sum())
-        return train, test
+    if object_treatment == 'Drop rows if nans':
+        for column in train:
+            if train[column].dtypes == 'object':
+                train = train.dropna(axis=0, how='any', subset=column)
+        return train, test, categoricals
+    elif object_treatment == 'Drop columns if nans':
+        for column in train:
+            if train[column].dtypes == 'object' and train[column].isna().any():
+                train = train.drop(column, axis=1)
+                categoricals = categoricals[categoricals.index != column]
+            if test[column].dtypes == 'object' and test[column].isna().any():
+                test = test.drop(column, axis=1)
+        train, test = train.align(test, join='inner', axis=1)
+        return train, test, categoricals
     elif object_treatment == 'Mode':
         imp2 = SimpleImputer(missing_values=np.nan, strategy='most_frequent')
         for column in train:
             if train[column].dtypes == 'object':
                 train[column] = imp2.fit_transform(train[column].values.reshape(-1, 1))
                 test[column] = imp2.transform(test[column].values.reshape(-1, 1))
-        print('-----------------------------------------------------------------------')
-        print('Df with both numerical and object attributes imputed:')
-        print(train.isna().sum())
-        print('-----------------------------------------------------------------------')
-        print(test.isna().sum())
-        return train, test
+        return train, test, categoricals
     else:
         raise ValueError('Wrong parameter')
 
@@ -157,19 +148,24 @@ def feature_encoding(train, test, categoricals):
     trindex = train.index
     teindex = test.index
     for column_name in list(categoricals.index):
-        if categoricals.loc[column_name, 'n_uniques'] == 2:
-            train[column_name] = lb.fit_transform(train[column_name])
-            test[column_name] = lb.transform(test[column_name])
-        elif categoricals.loc[column_name, 'n_uniques'] > 2:
-            enc_df = pd.DataFrame(oh.fit_transform(train[[column_name]]).toarray(), index=trindex)
-            enc_df.columns = oh.get_feature_names_out([column_name])
-            enc_df.columns = enc_df.columns.str.replace(column_name + '_', '')
-            enc_df_test = pd.DataFrame(oh.transform(test[[column_name]]).toarray(), index=teindex)
-            enc_df_test.columns = oh.get_feature_names_out([column_name])
-            enc_df_test.columns = enc_df_test.columns.str.replace(column_name + '_', '')
-            train, test = train.drop(column_name, axis=1), test.drop(column_name, axis=1)
-            train, test = pd.concat([train, enc_df], axis=1), pd.concat([test, enc_df_test], axis=1)
-        else:
+        try:
+            if categoricals.loc[column_name, 'n_uniques'] <= 2:
+                train[column_name] = lb.fit_transform(train[column_name])
+                test[column_name] = lb.transform(test[column_name])
+            elif categoricals.loc[column_name, 'n_uniques'] > 2:
+                # Train Set --------------------------------------------------------------------------------------------
+                train_encoded = pd.DataFrame(oh.fit_transform(train[[column_name]]).toarray(), index=trindex)
+                train_encoded.columns = oh.get_feature_names_out([column_name])
+                train_encoded.columns = train_encoded.columns.str.replace(column_name + '_', '')
+                # Test Set ---------------------------------------------------------------------------------------------
+                test_encoded = pd.DataFrame(oh.transform(test[[column_name]]).toarray(), index=teindex)
+                test_encoded.columns = oh.get_feature_names_out([column_name])
+                test_encoded.columns = test_encoded.columns.str.replace(column_name + '_', '')
+                train, test = train.drop(column_name, axis=1), test.drop(column_name, axis=1)
+                train, test = pd.concat([train, train_encoded], axis=1), pd.concat([test, test_encoded], axis=1)
+            else:
+                pass
+        except:
             pass
     return train, test
 
@@ -186,13 +182,16 @@ def numerical_scaler(train, test, scaling_method):
         else:
             columns_drop_list.append(column)
 
-    num_attr = train.drop(columns_drop_list, axis=1)
-    num_attr_test = test.drop(columns_drop_list, axis=1)
-    num_attr_columns = num_attr.columns
+    columns_drop_list.append('TARGET') # IF MINMAXSCALER, COMMENT. #####################################################
+    train_numeric = train.drop(columns_drop_list, axis=1)
+    test_numeric = test.drop(columns_drop_list, axis=1)
+    train_numeric_columns = train_numeric.columns
+    test_numeric_columns = test_numeric.columns
     scaler = scaling_method
-    num_attr = pd.DataFrame(scaler.fit_transform(num_attr), columns=num_attr_columns, index=trindex)
-    num_attr_test = pd.DataFrame(scaler.transform(num_attr_test), columns=num_attr_columns, index=teindex)
-    train, test = pd.concat([train[columns_drop_list], num_attr], axis=1), pd.concat([test[columns_drop_list], num_attr_test], axis=1)
+    train_numeric = pd.DataFrame(scaler.fit_transform(train_numeric), columns=train_numeric_columns, index=trindex)
+    test_numeric = pd.DataFrame(scaler.transform(test_numeric), columns=test_numeric_columns, index=teindex)
+    train, test = (pd.concat([train[columns_drop_list], train_numeric], axis=1),
+                   pd.concat([test[columns_drop_list], test_numeric], axis=1))
     return train, test
 
 # Manual align between Dfs.
@@ -211,35 +210,199 @@ def train_test_column_dif(train:pd.DataFrame, test:pd.DataFrame):
 
 
 def preprocessing(train: pd.DataFrame, test, index: str):
-    train = equalize_train_test(train)
-    categoricals = get_categoricals(train, criteria='Int and narrowed objects')
-    df_numerical = get_numerical_bounds(train, categoricals, index, bound_mult=1.5)
-    train = manage_outliers(df_numerical, train, outl_treatment='Mean')
-    train, test = imputing_values(train, test, object_treatment='Mode')
+    train, test = equalize_train_test(train, test)
+    categoricals = get_categoricals(train, criteria='Objects')                                                          # 'Int and narrowed objects' / 'Objects' / 'Only narrow objects'
+    df_numerical = get_numerical_bounds(train, categoricals, index, bound_mult=1)                                       # Any
+    train = manage_outliers(df_numerical, train, outl_treatment='Filter')                                               # None(only 365243) / Filter / Mean
+    train, test, categoricals = imputing_values(train, test, categoricals, object_treatment='Mode')                     # Drop rows if nans / Drop columns if nans / Mode
     train, test = feature_encoding(train, test, categoricals)
     # ============================================
     train[index], test[index] = train[index].astype('int64'), test[index].astype('int64')
     train.set_index(index, inplace=True)
     test.set_index(index, inplace=True)
     # ============================================
-    train, test = numerical_scaler(train, test, MinMaxScaler())
+    train, test = numerical_scaler(train, test, StandardScaler())                                                       # MinMaxScaler() / StandardScaler()
     train, test = train.select_dtypes(exclude=['object']), test.select_dtypes(exclude=['object'])
     train, test = train_test_column_dif(train, test)
     return train, test
 
 application_train, application_test = preprocessing(application_train, application_test, 'SK_ID_CURR')
 
-# application_train.to_csv('application_train_mod.csv')
-# application_test.to_csv('application_test_mod.csv')
-# application_train, application_test = pd.read_csv('application_train_mod.csv'), pd.read_csv('application_test_mod.csv')
-# application_train, application_test = application_train.set_index('SK_ID_CURR'), application_test.set_index('SK_ID_CURR')
-
 X_train = application_train.drop('TARGET', axis=1)
 y_train = application_train['TARGET'].copy()
+ytrainhead = y_train.head()
 X_test = application_test.drop('TARGET', axis=1)
 
-lr = LogisticRegression(random_state=42)
+lr = LogisticRegression(C=0.1, random_state=42)
 lr.fit(X_train, y_train)
 predict_proba = lr.predict_proba(X_test)[:, 1]
 predictions_df = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba})
-# predictions_df.to_csv('predictions_df.csv', index=False)
+predictions_df.to_csv('predictions_df.csv', index=False)
+
+"""
+**N° 1 Try:
+
+Categoricals (encoding related): Int and narrowed objects
+Bounds: 1.5
+Outlier treatment: None
+Nan object treatment: Mode
+Scaler: MinMaxScaler
+
+**Result: 0.73113
+"""
+
+"""
+**N° 2 Try:
+
+Categoricals (encoding related): Objects
+Bounds: 1.5
+Outlier treatment: None
+Nan object treatment: Mode
+Scaler: StandardScaler
+
+**Result: 0.73385
+"""
+
+"""
+**N° 3 Try:
+
+Categoricals (encoding related): Objects
+Bounds: 1.5
+Outlier treatment: None
+Nan object treatment: Mode
+Scaler: MinMaxScaler
+
+**Result: 0.73038
+"""
+
+"""
+**N° 4 Try:
+
+Categoricals (encoding related): Only narrow objects
+Bounds: 1.5
+Outlier treatment: None
+Nan object treatment: Mode
+Scaler: StandardScaler
+
+**Result: 0.73197
+"""
+
+"""
+**N° 5 Try:
+
+Categoricals (encoding related): Objects
+Bounds: 1.5
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: StandardScaler
+
+**Result: 0.73434
+"""
+
+"""
+**N° 6 Try:
+
+Categoricals (encoding related): Objects
+Bounds: 2
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: StandardScaler
+
+**Result: 0.73426
+"""
+
+"""
+**N° 7 Try:
+
+Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: StandardScaler
+
+**Result: 0.73472
+"""
+
+"""
+**N° 8 Try:
+**Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
+
+Categoricals (encoding related): Objects
+Bounds: 0.5
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: StandardScaler
+
+**Result: 0.73478
+"""
+
+"""
+**N° 9 Try:
+Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Mean
+Nan object treatment: Mode
+Scaler: StandardScaler
+
+**Result: 0.73385
+"""
+
+"""
+**N° 10 Try:
+**Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
+Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Filter
+Nan object treatment: Drop rows if nans
+Scaler: StandardScaler
+
+**Result: 0.61486
+"""
+
+"""
+**N° 12 Try:
+**Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
+Categoricals (encoding related): Objects
+Bounds: 2.5
+Outlier treatment: Mean
+Nan object treatment: Drop rows if nans
+Scaler: StandardScaler
+
+**Result: 0.61212
+"""
+
+"""
+**N° 13 Try:
+**Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
+Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Filter
+Nan object treatment: Drop columns if nans
+Scaler: StandardScaler
+
+**Result: 0.72924
+"""
+
+"""
+**N° 14 Try:
+**Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
+Categoricals (encoding related): Objects
+Bounds: 2
+Outlier treatment: Mean
+Nan object treatment: Drop columns if nans
+Scaler: StandardScaler
+
+**Result: 0.72880
+"""
+
+"""
+**N° 15 Try:
+**Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
+Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: StandardScaler
+
+**Result: 0.73472
+"""
