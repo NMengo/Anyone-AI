@@ -130,16 +130,20 @@ def imputing_values(train, test, object_treatment=None):
 def feature_encoding(train, test, categoricals):
     lb = LabelBinarizer()
     oh = OneHotEncoder(handle_unknown='ignore')
+    trindex = train.index
+    teindex = test.index
     for column_name in list(categoricals.index):
         if categoricals.loc[column_name, 'n_uniques'] == 2:
             train[column_name] = lb.fit_transform(train[column_name])
             test[column_name] = lb.transform(test[column_name])
         elif categoricals.loc[column_name, 'n_uniques'] > 2:
-            enc_df = pd.DataFrame(oh.fit_transform(train[[column_name]]).toarray())
-            enc_df_test = pd.DataFrame(oh.transform(test[[column_name]]).toarray())
+            enc_df = pd.DataFrame(oh.fit_transform(train[[column_name]]).toarray(), index=trindex)
             enc_df.columns = oh.get_feature_names_out([column_name])
             enc_df.columns = enc_df.columns.str.replace(column_name + '_', '')
-            train, test = train.reset_index(drop=True), test.reset_index(drop=True)
+            enc_df_test = pd.DataFrame(oh.transform(test[[column_name]]).toarray(), index=teindex)
+            enc_df_test.columns = oh.get_feature_names_out([column_name])
+            enc_df_test.columns = enc_df_test.columns.str.replace(column_name + '_', '')
+            # train, test = train.reset_index(drop=True), test.reset_index(drop=True)
             train, test = train.drop(column_name, axis=1), test.drop(column_name, axis=1)
             train, test = pd.concat([train, enc_df], axis=1), pd.concat([test, enc_df_test], axis=1)
         else:
@@ -150,6 +154,8 @@ def feature_encoding(train, test, categoricals):
 # Function to Scale only numerical features from a given dataset, using a given Scaling method.
 def numerical_scaler(train, test, scaling_method):
     columns_drop_list = []
+    trindex = train.index
+    teindex = test.index
     for column in train:
         print(column)
         if train[column].dtypes in ['float', 'float64', 'int64']:
@@ -161,10 +167,10 @@ def numerical_scaler(train, test, scaling_method):
     num_attr_test = test.drop(columns_drop_list, axis=1)
     num_attr_columns = num_attr.columns
     scaler = scaling_method
-    num_attr = pd.DataFrame(scaler.fit_transform(num_attr), columns=num_attr_columns)
-    num_attr_test = pd.DataFrame(scaler.transform(num_attr_test), columns=num_attr_columns)
-    num_attr = num_attr.reset_index(drop=True)
-    num_attr_test = num_attr_test.reset_index(drop=True)
+    num_attr = pd.DataFrame(scaler.fit_transform(num_attr), columns=num_attr_columns, index=trindex)
+    num_attr_test = pd.DataFrame(scaler.transform(num_attr_test), columns=num_attr_columns, index=teindex)
+    # num_attr = num_attr.reset_index(drop=True)
+    # num_attr_test = num_attr_test.reset_index(drop=True)
     train, test = pd.concat([train[columns_drop_list], num_attr], axis=1), pd.concat([test[columns_drop_list], num_attr_test], axis=1)
     return train, test
 
@@ -201,28 +207,37 @@ def preprocessing(train: pd.DataFrame, test, index: str):
     return train, test
 
 
-application_train, application_test = preprocessing(application_train, application_test, 'SK_ID_CURR')
-
-apphead = application_train.head()
-apphead2 = application_test.head()
-
+# application_train, application_test = preprocessing(application_train, application_test, 'SK_ID_CURR')
+#
+#
 # application_train.to_csv('application_train_mod.csv')
 # application_test.to_csv('application_test_mod.csv')
-
+#
 
 # application_train = pd.read_csv('application_train_mod.csv')
 # application_train.set_index('Unnamed: 0', inplace=True)
 # application_test = pd.read_csv('application_test_mod.csv')
 # application_test.set_index('Unnamed: 0', inplace=True)
+#
+# a = application_test[application_test['Block'].isna()].head(100)
+# b = application_test[~application_test['Block'].isna()].head(100)
+#
+# print(len(application_test['Block']), application_test['Block'].isna().sum())
 
+#
 # X_train = application_train.drop('TARGET', axis=1)
 # y_train = application_train['TARGET'].copy()
 # X_test = application_test.drop('TARGET', axis=1)
-#
+
 # lr = LogisticRegression(random_state=42)
 # lr.fit(X_train, y_train)
-# predictions = lr.predict_proba(X_test)[:-1]
-# predictions_df = pd.DataFrame({'SK_ID_CURR':X_test['SK_ID_CURR'], 'TARGET':predictions})
+# predictions = lr.predict(X_test)
+# predict_proba = lr.predict_proba(X_test)[:-1]
+# predictions_df = pd.DataFrame({'SK_ID_CURR':X_test['SK_ID_CURR'], 'TARGET':predict_proba})
 
 # apphead = application_train.head()
 # apphead2 = application_test.head()
+#
+# xtrainhead = X_train.head(100)
+# ytrainhead = y_train.head(100)
+# xtesthead = X_test.head(100)
