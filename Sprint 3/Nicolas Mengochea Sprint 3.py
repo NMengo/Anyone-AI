@@ -17,9 +17,9 @@ import warnings
 warnings.filterwarnings('ignore')
 pd.options.display.max_rows = None
 
-# application_test = pd.read_csv('DataSets/application_test.csv')
-# application_train = pd.read_csv('DataSets/application_train.csv')
-# application_test.insert(1, 'TARGET', np.zeros(len(application_test)))
+application_test = pd.read_csv('DataSets/application_test.csv')
+application_train = pd.read_csv('DataSets/application_train.csv')
+application_test.insert(1, 'TARGET', np.zeros(len(application_test)))
 
 
 def equalize_train_test(train):
@@ -28,28 +28,41 @@ def equalize_train_test(train):
     train['NAME_FAMILY_STATUS'] = train['NAME_FAMILY_STATUS'].replace(['Unknown'], 'Married')
     return train
 
-def get_categoricals(train):
+def get_categoricals(train, criteria='Int and narrowed objects'):
+    """
+    The criteria for categoricals selection will impact in feature encoding.
+    """
     df_categoricals = pd.DataFrame()
     df_categoricals['column_name'] = train.columns
     df_categoricals['dtype'] = np.array(train.dtypes)
     df_categoricals['n_uniques'] = np.array(train.nunique())
+    # -----------------------------------------------------------------------------------
+    # Filters
     type_object = df_categoricals['dtype'] == 'object'
     type_int = df_categoricals['dtype'] == ('int64')
     nunique_lt_2 = df_categoricals['n_uniques'] <= 2
+    # -----------------------------------------------------------------------------------
+    # Object nunique bounds
     objects_nuniques = df_categoricals[type_object]['n_uniques']
-    upper_bound = (np.quantile(objects_nuniques, 0.75) - np.quantile(objects_nuniques, 0.25))*1.5 \
-                  + (np.quantile(objects_nuniques, 0.75))
-    not_outlier = df_categoricals['n_uniques'] < upper_bound
+    upper_bound_nuniques = (np.quantile(objects_nuniques, 0.75) - np.quantile(objects_nuniques, 0.25)) * 1.5 \
+                           + (np.quantile(objects_nuniques, 0.75))
+    not_outlier_nuniques = df_categoricals['n_uniques'] < upper_bound_nuniques
+    # -----------------------------------------------------------------------------------
+    # Criteria options
+    if criteria == 'Int and narrowed objects':
+        df_categoricals = df_categoricals[
+            (type_int & nunique_lt_2) |
+            (type_object & not_outlier_nuniques)]
+    elif criteria == 'Objects':
+        df_categoricals = df_categoricals[type_object]
+    elif criteria == 'Only narrow objects':
+        df_categoricals = df_categoricals[(type_object & not_outlier_nuniques)]
 
-    df_categoricals = df_categoricals[
-        (type_int & nunique_lt_2) |
-        (type_object & not_outlier)
-    ]
     df_categoricals.set_index('column_name', inplace=True)
     return df_categoricals
 
 
-def get_numerical_bounds(train, categoricals):
+def get_numerical_bounds(train, categoricals, index, bound_mult=1.5):
     df_numerical = pd.DataFrame()
     df_numerical['column_name'] = train.columns
     df_numerical['dtype'] = np.array(train.dtypes)
@@ -58,9 +71,9 @@ def get_numerical_bounds(train, categoricals):
 
     for i in range(len(df_numerical)):
         df_numerical.loc[i, 'upper bound'] = np.quantile(train[df_numerical.loc[i, 'column_name']], 0.75) + iqr(
-            train[df_numerical.loc[i, 'column_name']]) * 1.5
+            train[df_numerical.loc[i, 'column_name']]) * bound_mult
         df_numerical.loc[i, 'lower bound'] = np.quantile(train[df_numerical.loc[i, 'column_name']], 0.25) - iqr(
-            train[df_numerical.loc[i, 'column_name']]) * 1.5
+            train[df_numerical.loc[i, 'column_name']]) * bound_mult
         df_numerical = df_numerical.fillna(0)
 
     df_numerical = pd.merge(df_numerical, categoricals, on=['column_name'], how="outer", indicator=True).query(
@@ -68,16 +81,27 @@ def get_numerical_bounds(train, categoricals):
     df_numerical = df_numerical[df_numerical['upper bound'] > 10]
     df_numerical.drop(['dtype_y', 'n_uniques', '_merge'], axis=1, inplace=True)
     df_numerical.set_index('column_name', inplace=True)
-    df_numerical.drop(['SK_ID_CURR', 'HOUR_APPR_PROCESS_START'], axis=0, inplace=True)
+    df_numerical.drop([index, 'HOUR_APPR_PROCESS_START'], axis=0, inplace=True)
     return df_numerical
 
 
-def remove_outliers(df_numerical, train):
+def manage_outliers(df_numerical, train, outl_treatment=None):
+    train['DAYS_EMPLOYED'].replace(365243, np.nan, inplace = True)
     print(f"Original DF Lenght: {len(train)}")
     for column in train:
-        if column in list(df_numerical.index):
-            train = train[train[column] < df_numerical.loc[column, 'upper bound']]
-            train = train[train[column] > df_numerical.loc[column, 'lower bound']]
+        if not outl_treatment:
+            break
+        elif outl_treatment == 'Filter':
+            if column in list(df_numerical.index):
+                train = train[train[column] < df_numerical.loc[column, 'upper bound']]
+                train = train[train[column] > df_numerical.loc[column, 'lower bound']]
+        elif outl_treatment == 'Mean':
+            if column in list(df_numerical.index):
+                values_inside_range = train[column][(train[column] < df_numerical.loc[column, 'upper bound']) &
+                                            (train[column] > df_numerical.loc[column, 'lower bound'])]
+                mean_vir = float(values_inside_range.mean())
+                train[column][(train[column] > df_numerical.loc[column, 'upper bound']) &
+                                       (train[column] < df_numerical.loc[column, 'lower bound'])] = mean_vir
     print(f"Post processing DF Lenght: {len(train)}")
     return train
 
@@ -143,7 +167,6 @@ def feature_encoding(train, test, categoricals):
             enc_df_test = pd.DataFrame(oh.transform(test[[column_name]]).toarray(), index=teindex)
             enc_df_test.columns = oh.get_feature_names_out([column_name])
             enc_df_test.columns = enc_df_test.columns.str.replace(column_name + '_', '')
-            # train, test = train.reset_index(drop=True), test.reset_index(drop=True)
             train, test = train.drop(column_name, axis=1), test.drop(column_name, axis=1)
             train, test = pd.concat([train, enc_df], axis=1), pd.concat([test, enc_df_test], axis=1)
         else:
@@ -169,12 +192,10 @@ def numerical_scaler(train, test, scaling_method):
     scaler = scaling_method
     num_attr = pd.DataFrame(scaler.fit_transform(num_attr), columns=num_attr_columns, index=trindex)
     num_attr_test = pd.DataFrame(scaler.transform(num_attr_test), columns=num_attr_columns, index=teindex)
-    # num_attr = num_attr.reset_index(drop=True)
-    # num_attr_test = num_attr_test.reset_index(drop=True)
     train, test = pd.concat([train[columns_drop_list], num_attr], axis=1), pd.concat([test[columns_drop_list], num_attr_test], axis=1)
     return train, test
 
-
+# Manual align between Dfs.
 def train_test_column_dif(train:pd.DataFrame, test:pd.DataFrame):
     columns_train = list(train.columns)
     columns_test = list(test.columns)
@@ -191,9 +212,9 @@ def train_test_column_dif(train:pd.DataFrame, test:pd.DataFrame):
 
 def preprocessing(train: pd.DataFrame, test, index: str):
     train = equalize_train_test(train)
-    categoricals = get_categoricals(train)
-    df_numerical = get_numerical_bounds(train, categoricals)
-    train = remove_outliers(df_numerical, train)
+    categoricals = get_categoricals(train, criteria='Int and narrowed objects')
+    df_numerical = get_numerical_bounds(train, categoricals, index, bound_mult=1.5)
+    train = manage_outliers(df_numerical, train, outl_treatment='Mean')
     train, test = imputing_values(train, test, object_treatment='Mode')
     train, test = feature_encoding(train, test, categoricals)
     # ============================================
@@ -206,28 +227,19 @@ def preprocessing(train: pd.DataFrame, test, index: str):
     train, test = train_test_column_dif(train, test)
     return train, test
 
+application_train, application_test = preprocessing(application_train, application_test, 'SK_ID_CURR')
 
-# application_train, application_test = preprocessing(application_train, application_test, 'SK_ID_CURR')
 # application_train.to_csv('application_train_mod.csv')
 # application_test.to_csv('application_test_mod.csv')
-
-
-application_train, application_test = pd.read_csv('application_train_mod.csv'), pd.read_csv('application_test_mod.csv')
-application_train, application_test = application_train.set_index('SK_ID_CURR'), application_test.set_index('SK_ID_CURR')
+# application_train, application_test = pd.read_csv('application_train_mod.csv'), pd.read_csv('application_test_mod.csv')
+# application_train, application_test = application_train.set_index('SK_ID_CURR'), application_test.set_index('SK_ID_CURR')
 
 X_train = application_train.drop('TARGET', axis=1)
 y_train = application_train['TARGET'].copy()
 X_test = application_test.drop('TARGET', axis=1)
 
-X_testhead = X_test.head()
-
 lr = LogisticRegression(random_state=42)
 lr.fit(X_train, y_train)
-predictions = lr.predict(X_test)
-full_proba = lr.predict_proba(X_test)
 predict_proba = lr.predict_proba(X_test)[:, 1]
 predictions_df = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba})
-predictions_df.to_csv('predictions_df.csv', index=False)
-
-apphead = application_train.head()
-apphead2 = application_test.head()
+# predictions_df.to_csv('predictions_df.csv', index=False)
