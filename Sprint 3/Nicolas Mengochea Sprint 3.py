@@ -4,7 +4,7 @@ import seaborn as sns
 import numpy as np
 from sklearn.model_selection import train_test_split, StratifiedShuffleSplit, GridSearchCV, RandomizedSearchCV
 from sklearn.metrics import mean_absolute_error, precision_score, recall_score, f1_score, accuracy_score,\
-    classification_report
+    classification_report, roc_curve
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, OneHotEncoder
 from sklearn.linear_model import SGDRegressor, LogisticRegression
 from sklearn.tree import DecisionTreeRegressor
@@ -14,6 +14,8 @@ from sklearn.preprocessing import LabelBinarizer
 from sklearn.impute import SimpleImputer
 from scipy.stats import iqr
 from datetime import datetime as dt
+from lightgbm import LGBMClassifier
+import xgboost as xgb
 import warnings
 warnings.filterwarnings('ignore')
 pd.options.display.max_rows = None
@@ -244,7 +246,8 @@ def tuned_model_evaluation(X_train, y_train, X_test, model, params:dict):
     tuned_model.fit(X_train, y_train)
     tuned_proba = tuned_model.predict_proba(X_test)[:, 1]
     tuned_predictions = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':tuned_proba})
-    tuned_predictions.to_csv('tuned_predictions_rfc.csv', index=False)
+    # tuned_predictions.to_csv('tuned_predictions_rfc.csv', index=False)
+    tuned_predictions.to_csv('tuned_predictions_lr2.csv', index=False)
 
     return tuned_predictions
 
@@ -257,11 +260,11 @@ X_test = application_test.drop('TARGET', axis=1)
 
 # ======================================================================================================================
 # Logistic Regressor - Default
-lr = LogisticRegression(C=0.1, random_state=42)
-lr.fit(X_train, y_train)
-predict_proba = lr.predict_proba(X_test)[:, 1]
-predictions_df = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba})
-predictions_df.to_csv('predictions_df.csv', index=False)
+# lr = LogisticRegression(C=0.1, random_state=42)
+# lr.fit(X_train, y_train)
+# predict_proba = lr.predict_proba(X_test)[:, 1]
+# predictions_df = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba})
+# predictions_df.to_csv('predictions_df.csv', index=False)
 
 # Private Score: 0.73472
 
@@ -429,32 +432,60 @@ Scaler: StandardScaler
 **Result: 0.73472
 """
 
+# # ======================================================================================================================
+# # Random Forest Classifier - Default
+# start = dt.now()
+# rfc = RandomForestClassifier(random_state=42, n_jobs=-1)
+# rfc.fit(X_train, y_train)
+# predict_proba_rfc = rfc.predict_proba(X_test)[:, 1]
+# predictions_rfc = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba_rfc})
+# predictions_rfc.to_csv('predictions_rfc.csv', index=False)
+#
+# # Private Score: 0.68799
+#
+# # ======================================================================================================================
+# # Random Forest Classifier - Tuned
+# param_grid = {
+#  'bootstrap': [True, False],
+#  'max_depth': [10, 50, 100, None],
+#  'max_features': ['auto', 'sqrt'],
+#  'min_samples_leaf': [1, 2, 4],
+#  'min_samples_split': [2, 5, 10],
+#  'n_estimators': [100, 200]
+# }
+#
+# best_params, best_score, results  = search_best_hyperparameters(RandomizedSearchCV, X_train, y_train, rfc, param_grid,
+#                                                                 cv=3, n_iter=10, scoring='roc_auc')
+#
+# tuned_predictions_rfc = tuned_model_evaluation(X_train, y_train, X_test, RandomForestClassifier, best_params)
+# end = dt.now()
+#
+# # Private Score: 0.72011
+# # Processing time: 15min
+
 # ======================================================================================================================
-# Random Forest Classifier - Default
-start = dt.now()
-rfc = RandomForestClassifier(random_state=42, n_jobs=-1)
-rfc.fit(X_train, y_train)
-predict_proba_rfc = rfc.predict_proba(X_test)[:, 1]
-predictions_rfc = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba_rfc})
-predictions_rfc.to_csv('predictions_rfc.csv', index=False)
+# Logistic Regressor - Tuned
+# start = dt.now()
+# lr2 = LogisticRegression(random_state=42, n_jobs=-1)
+# param_grid = {
+#  'tol': [0.00001, 0.0001, 0.001, 0.01],
+#  'C': [0.001,0.01,0.1,1,10,100],
+#  'max_iter': [100, 1000, 10000, 100000],
+# }
+#
+# best_params, best_score, results  = search_best_hyperparameters(RandomizedSearchCV, X_train, y_train, lr2, param_grid,
+#                                                                 cv=3, n_iter=10, scoring='roc_auc')
+#
+# tuned_predictions_lr2 = tuned_model_evaluation(X_train, y_train, X_test, LogisticRegression, best_params)
+# end = dt.now()
 
-# Private Score: 0.68799
+# Private Score= 0.73470
 
 # ======================================================================================================================
-# Random Forest Classifier - Tuned
-param_grid = {
- 'bootstrap': [True, False],
- 'max_depth': [10, 50, 100, None],
- 'max_features': ['auto', 'sqrt'],
- 'min_samples_leaf': [1, 2, 4],
- 'min_samples_split': [2, 5, 10],
- 'n_estimators': [100, 200]
-}
+# LightGBM model
 
-best_params, best_score, results  = search_best_hyperparameters(RandomizedSearchCV, X_train, y_train, rfc, param_grid,
-                                                                cv=3, n_iter=10, scoring='roc_auc')
-
-tuned_predictions_rfc = tuned_model_evaluation(X_train, y_train, X_test, RandomForestClassifier, best_params)
-end = dt.now()
-
-# Private Score: 0.72011
+lgbm = LGBMClassifier()
+lgbm.fit(X_train, y_train)
+lgbm_proba = lgbm.predict_proba(X_test)[:, 1]
+lgbm_predictions = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':lgbm_proba})
+lgbm_predictions.to_csv('lgbm_predictions.csv', index=False)
