@@ -2,17 +2,18 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
-from sklearn.model_selection import train_test_split, StratifiedShuffleSplit, GridSearchCV
+from sklearn.model_selection import train_test_split, StratifiedShuffleSplit, GridSearchCV, RandomizedSearchCV
 from sklearn.metrics import mean_absolute_error, precision_score, recall_score, f1_score, accuracy_score,\
     classification_report
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, OneHotEncoder
 from sklearn.linear_model import SGDRegressor, LogisticRegression
 from sklearn.tree import DecisionTreeRegressor
 from pandas.plotting import scatter_matrix
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.impute import SimpleImputer
 from scipy.stats import iqr
+from datetime import datetime as dt
 import warnings
 warnings.filterwarnings('ignore')
 pd.options.display.max_rows = None
@@ -226,6 +227,27 @@ def preprocessing(train: pd.DataFrame, test, index: str):
     train, test = train_test_column_dif(train, test)
     return train, test
 
+def search_best_hyperparameters(search_method, train, train_targets, model, param_grid, cv=3, n_iter=None, scoring=None):
+    # param_grid = [{str(key): value for key, value in kwargs.items()}]
+    search = search_method(model, param_grid, cv=cv, n_iter=n_iter, scoring=scoring, return_train_score=True)
+    search.fit(train, train_targets.ravel())
+
+    best_params = search.best_params_
+    best_params.update({'random_state': 42})
+    best_score = search.best_score_
+    results = search.cv_results_
+
+    return best_params, best_score, results
+
+def tuned_model_evaluation(X_train, y_train, X_test, model, params:dict):
+    tuned_model = model(**{key:value for key, value in params.items()})
+    tuned_model.fit(X_train, y_train)
+    tuned_proba = tuned_model.predict_proba(X_test)[:, 1]
+    tuned_predictions = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':tuned_proba})
+    tuned_predictions.to_csv('tuned_predictions_rfc.csv', index=False)
+
+    return tuned_predictions
+
 application_train, application_test = preprocessing(application_train, application_test, 'SK_ID_CURR')
 
 X_train = application_train.drop('TARGET', axis=1)
@@ -233,11 +255,15 @@ y_train = application_train['TARGET'].copy()
 ytrainhead = y_train.head()
 X_test = application_test.drop('TARGET', axis=1)
 
+# ======================================================================================================================
+# Logistic Regressor - Default
 lr = LogisticRegression(C=0.1, random_state=42)
 lr.fit(X_train, y_train)
 predict_proba = lr.predict_proba(X_test)[:, 1]
 predictions_df = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba})
 predictions_df.to_csv('predictions_df.csv', index=False)
+
+# Private Score: 0.73472
 
 """
 **N° 1 Try:
@@ -349,7 +375,6 @@ Scaler: StandardScaler
 
 """
 **N° 10 Try:
-**Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
 Categoricals (encoding related): Objects
 Bounds: 1
 Outlier treatment: Filter
@@ -361,7 +386,6 @@ Scaler: StandardScaler
 
 """
 **N° 12 Try:
-**Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
 Categoricals (encoding related): Objects
 Bounds: 2.5
 Outlier treatment: Mean
@@ -373,7 +397,6 @@ Scaler: StandardScaler
 
 """
 **N° 13 Try:
-**Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
 Categoricals (encoding related): Objects
 Bounds: 1
 Outlier treatment: Filter
@@ -385,7 +408,6 @@ Scaler: StandardScaler
 
 """
 **N° 14 Try:
-**Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
 Categoricals (encoding related): Objects
 Bounds: 2
 Outlier treatment: Mean
@@ -406,3 +428,33 @@ Scaler: StandardScaler
 
 **Result: 0.73472
 """
+
+# ======================================================================================================================
+# Random Forest Classifier - Default
+start = dt.now()
+rfc = RandomForestClassifier(random_state=42, n_jobs=-1)
+rfc.fit(X_train, y_train)
+predict_proba_rfc = rfc.predict_proba(X_test)[:, 1]
+predictions_rfc = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba_rfc})
+predictions_rfc.to_csv('predictions_rfc.csv', index=False)
+
+# Private Score: 0.68799
+
+# ======================================================================================================================
+# Random Forest Classifier - Tuned
+param_grid = {
+ 'bootstrap': [True, False],
+ 'max_depth': [10, 50, 100, None],
+ 'max_features': ['auto', 'sqrt'],
+ 'min_samples_leaf': [1, 2, 4],
+ 'min_samples_split': [2, 5, 10],
+ 'n_estimators': [100, 200]
+}
+
+best_params, best_score, results  = search_best_hyperparameters(RandomizedSearchCV, X_train, y_train, rfc, param_grid,
+                                                                cv=3, n_iter=10, scoring='roc_auc')
+
+tuned_predictions_rfc = tuned_model_evaluation(X_train, y_train, X_test, RandomForestClassifier, best_params)
+end = dt.now()
+
+# Private Score: 0.72011
