@@ -1,0 +1,149 @@
+fileName,date,description,status,publicScore,privateScore
+predictions_lgbm.csv,2022-05-22 20:04:04,lgbm,complete,0.75066,0.74809
+predictions_df.csv,2022-05-22 20:00:39,,complete,0.74122,0.73472
+predictions_df.csv,2022-05-22 18:22:09,,complete,0.74122,0.73472
+tuned_predictions_lr2.csv,2022-05-22 03:24:29,Tuned Logistic Regression,complete,0.74108,0.73470
+tuned_predictions_rfc.csv,2022-05-22 01:53:37,"RandomForesClassifier
+
+
+param_grid = {
+ 'bootstrap': [True, False],
+ 'max_depth': [10, 50, 100, None],
+ 'max_features': ['auto', 'sqrt'],
+ 'min_samples_leaf': [1, 2, 4],
+ 'min_samples_split': [2, 5, 10],
+ 'n_estimators': [100, 200]
+}",complete,0.71743,0.72011
+predictions_rfc.csv,2022-05-22 00:33:19,RandomForestClassifier,complete,0.69016,0.68799
+predictions_df.csv,2022-05-21 22:07:05,"Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: StandardScaler",complete,0.74122,0.73472
+predictions_df.csv,2022-05-21 22:05:27,"Categoricals (encoding related): Objects
+Bounds: 2
+Outlier treatment: Mean
+Nan object treatment: Drop columns if nans
+Scaler: StandardScaler",complete,0.73221,0.72880
+predictions_df.csv,2022-05-21 22:02:38,"Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Filter
+Nan object treatment: Drop columns if nans
+Scaler: StandardScaler",complete,0.73395,0.72924
+predictions_df.csv,2022-05-21 21:50:21,"Categoricals (encoding related): Objects
+Bounds: 2.5
+Outlier treatment: Mean
+Nan object treatment: Drop rows if nans
+Scaler: StandardScaler",complete,0.63070,0.61212
+predictions_df.csv,2022-05-21 21:47:47,"Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Filter
+Nan object treatment: Drop rows if nans
+Scaler: StandardScaler",complete,0.63268,0.61486
+predictions_df.csv,2022-05-21 21:44:49,"Categoricals (encoding related): Objects
+Bounds: 2
+Outlier treatment: Mean
+Nan object treatment: Mode
+Scaler: StandardScaler",complete,0.73969,0.73385
+predictions_df.csv,2022-05-21 21:42:37,"Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Mean
+Nan object treatment: Mode
+Scaler: StandardScaler",complete,0.73969,0.73385
+predictions_df.csv,2022-05-21 21:39:10,"Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Mean
+Nan object treatment: Mode
+Scaler: StandardScaler",complete,0.73969,0.73385
+predictions_df.csv,2022-05-21 21:36:14,,complete,0.74114,0.73468
+predictions_df.csv,2022-05-21 21:34:31,"Categoricals (encoding related): Objects
+Bounds: 0.5
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: StandardScaler",complete,0.74092,0.73478
+predictions_df.csv,2022-05-21 21:32:49,"Categoricals (encoding related): Objects
+Bounds: 1
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: StandardScaler",complete,0.74122,0.73472
+predictions_df.csv,2022-05-21 21:31:01,"Categoricals (encoding related): Objects
+Bounds: 2
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: StandardScaler",complete,0.74011,0.73426
+predictions_df.csv,2022-05-21 21:29:13,"Categoricals (encoding related): Objects
+Bounds: 1.5
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: StandardScaler",complete,0.74045,0.73434
+predictions_df.csv,2022-05-21 21:26:29,"Categoricals (encoding related): Only narrow objects
+Bounds: 1.5
+Outlier treatment: None
+Nan object treatment: Mode
+Scaler: StandardScaler",complete,0.73795,0.73197
+predictions_df.csv,2022-05-21 21:22:54,"Categoricals (encoding related): Objects
+Bounds: 1.5
+Outlier treatment: None
+Nan object treatment: Mode
+Scaler: MinMaxScaler",complete,0.73532,0.73038
+predictions_df.csv,2022-05-21 21:20:27,"- Categoricals (encoding related): Objects
+- Bounds: 1.5 
+- Outlier treatment: None 
+- Nan object treatment: Mode 
+- Scaler: StandardScaler",complete,0.73969,0.73385
+predictions_df.csv,2022-05-21 21:16:04,"- Categoricals (encoding related): Int and narrowed objects
+- Bounds: 1.5
+- Outlier treatment: None
+- Nan object treatment: Mode
+- Scaler: MinMaxScaler",complete,0.73716,0.73113
+predictions_df.csv,2022-05-21 20:27:22,,complete,0.69467,0.67325
+predictions_df.csv,2022-05-21 19:26:55,"XNA,XPA, 365243 train/test",complete,0.69467,0.67325
+predictions_df.csv,2022-05-21 19:18:24,,complete,0.63857,0.63049
+predictions_df.csv,2022-05-21 19:15:07,C= 0.01,complete,0.61803,0.59970
+predictions_df.csv,2022-05-21 19:13:41,C=0.1,complete,0.67384,0.65850
+predictions_df.csv,2022-05-21 19:12:30,,complete,0.66672,0.65145
+predictions_df.csv,2022-05-21 19:11:31,,complete,0.65757,0.64362
+predictions_df.csv,2022-05-21 19:09:34,,complete,0.65735,0.64389
+predictions_df.csv,2022-05-21 19:08:23,"max_iter= 1000, C=0.5, random_state=42",complete,0.65735,0.64389
+predictions_df.csv,2022-05-21 19:06:17,"XPA, XNA",complete,0.65211,0.63896
+predictions_df.csv,2022-05-21 18:45:38,"Categoricals (encoding related): Objects (OK)
+Bounds: 1.5 (OK)
+Outlier treatment: Filter (OK)
+Nan object treatment: Drop rows if nans (OK)
+Scaler: StandardScaler()",complete,0.62318,0.60789
+predictions_df.csv,2022-05-21 18:30:21,"Categoricals (encoding related): Objects (OK)
+Bounds: 1.5
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: MinMaxScaler",complete,0.63945,0.63181
+predictions_df.csv,2022-05-21 18:27:43,"Categoricals (encoding related): Objects (OK)
+Bounds: 1.5 (OK)
+Outlier treatment: Filter (OK)
+Nan object treatment: Drop columns if nans 
+Scaler: MinMaxScaler",complete,0.63928,0.63112
+predictions_df.csv,2022-05-21 18:25:52,Categoricals (encoding related): Objects (OK)Bounds: 1.5 (OK)Outlier treatment: Filter (OK)Nan object treatment: Drop rows if nans Scaler: MinMaxScaler,complete,0.65189,0.63816
+predictions_df.csv,2022-05-21 18:21:45,,complete,0.65189,0.63816
+predictions_df.csv,2022-05-21 18:12:16,,complete,0.63928,0.63112
+predictions_df.csv,2022-05-21 18:02:50,,complete,0.63928,0.63112
+predictions_df.csv,2022-05-21 17:26:09,,complete,0.63122,0.62155
+predictions_df.csv,2022-05-21 17:10:33,,error,,
+predictions_df.csv,2022-05-21 17:08:38,,complete,0.63945,0.63181
+predictions_df.csv,2022-05-21 17:07:11,,complete,0.63944,0.63167
+predictions_df.csv,2022-05-21 17:06:04,,complete,0.63613,0.62874
+predictions_df.csv,2022-05-21 17:04:19,,complete,0.63959,0.63168
+predictions_df.csv,2022-05-21 17:02:19,,complete,0.63752,0.63007
+predictions_df.csv,2022-05-21 17:00:45,"Categoricals (encoding related): Objects
+Bounds: 2.5
+Outlier treatment: Filter
+Nan object treatment: Mode
+Scaler: MinMaxScaler",complete,0.63780,0.63055
+predictions_df.csv,2022-05-21 16:56:30,"Categoricals (encoding related): Objects
+Bounds: 1.5
+Outlier treatment: Mean
+Nan object treatment: Mode
+Scaler: MinMaxScaler",complete,0.63613,0.62874
+predictions_df.csv,2022-05-21 16:37:51,"Categoricals (encoding related): Objects
+Bounds: 1.5
+Outlier treatment: None
+Nan object treatment: Mode
+Scaler: MinMaxScaler",complete,0.63613,0.62874

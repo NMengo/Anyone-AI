@@ -1,21 +1,19 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
-from sklearn.model_selection import train_test_split, StratifiedShuffleSplit, GridSearchCV, RandomizedSearchCV
-from sklearn.metrics import mean_absolute_error, precision_score, recall_score, f1_score, accuracy_score,\
-    classification_report, roc_curve
+from sklearn.model_selection import RandomizedSearchCV, StratifiedKFold
+from sklearn.metrics import roc_curve, roc_auc_score
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, OneHotEncoder
-from sklearn.linear_model import SGDRegressor, LogisticRegression
-from sklearn.tree import DecisionTreeRegressor
-from pandas.plotting import scatter_matrix
-from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelBinarizer
 from sklearn.impute import SimpleImputer
+from sklearn.pipeline import Pipeline
+from sklearn.compose import ColumnTransformer
 from scipy.stats import iqr
+import re
 from datetime import datetime as dt
-from lightgbm import LGBMClassifier
-import xgboost as xgb
+import lightgbm as lgb
 import warnings
 warnings.filterwarnings('ignore')
 pd.options.display.max_rows = None
@@ -255,16 +253,15 @@ application_train, application_test = preprocessing(application_train, applicati
 
 X_train = application_train.drop('TARGET', axis=1)
 y_train = application_train['TARGET'].copy()
-ytrainhead = y_train.head()
 X_test = application_test.drop('TARGET', axis=1)
 
 # ======================================================================================================================
 # Logistic Regressor - Default
-# lr = LogisticRegression(C=0.1, random_state=42)
-# lr.fit(X_train, y_train)
-# predict_proba = lr.predict_proba(X_test)[:, 1]
-# predictions_df = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba})
-# predictions_df.to_csv('predictions_df.csv', index=False)
+lr = LogisticRegression(C=0.1, random_state=42)
+lr.fit(X_train, y_train)
+predict_proba = lr.predict_proba(X_test)[:, 1]
+predictions_df = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba})
+predictions_df.to_csv('predictions_df.csv', index=False)
 
 # Private Score: 0.73472
 
@@ -278,9 +275,8 @@ Nan object treatment: Mode
 Scaler: MinMaxScaler
 
 **Result: 0.73113
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 2 Try:
 
 Categoricals (encoding related): Objects
@@ -290,9 +286,8 @@ Nan object treatment: Mode
 Scaler: StandardScaler
 
 **Result: 0.73385
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 3 Try:
 
 Categoricals (encoding related): Objects
@@ -302,9 +297,8 @@ Nan object treatment: Mode
 Scaler: MinMaxScaler
 
 **Result: 0.73038
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 4 Try:
 
 Categoricals (encoding related): Only narrow objects
@@ -314,9 +308,8 @@ Nan object treatment: Mode
 Scaler: StandardScaler
 
 **Result: 0.73197
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 5 Try:
 
 Categoricals (encoding related): Objects
@@ -326,9 +319,8 @@ Nan object treatment: Mode
 Scaler: StandardScaler
 
 **Result: 0.73434
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 6 Try:
 
 Categoricals (encoding related): Objects
@@ -338,9 +330,8 @@ Nan object treatment: Mode
 Scaler: StandardScaler
 
 **Result: 0.73426
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 7 Try:
 
 Categoricals (encoding related): Objects
@@ -350,9 +341,8 @@ Nan object treatment: Mode
 Scaler: StandardScaler
 
 **Result: 0.73472
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 8 Try:
 **Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
 
@@ -363,9 +353,8 @@ Nan object treatment: Mode
 Scaler: StandardScaler
 
 **Result: 0.73478
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 9 Try:
 Categoricals (encoding related): Objects
 Bounds: 1
@@ -374,9 +363,8 @@ Nan object treatment: Mode
 Scaler: StandardScaler
 
 **Result: 0.73385
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 10 Try:
 Categoricals (encoding related): Objects
 Bounds: 1
@@ -385,9 +373,8 @@ Nan object treatment: Drop rows if nans
 Scaler: StandardScaler
 
 **Result: 0.61486
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 12 Try:
 Categoricals (encoding related): Objects
 Bounds: 2.5
@@ -396,9 +383,8 @@ Nan object treatment: Drop rows if nans
 Scaler: StandardScaler
 
 **Result: 0.61212
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 13 Try:
 Categoricals (encoding related): Objects
 Bounds: 1
@@ -407,9 +393,8 @@ Nan object treatment: Drop columns if nans
 Scaler: StandardScaler
 
 **Result: 0.72924
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 14 Try:
 Categoricals (encoding related): Objects
 Bounds: 2
@@ -418,9 +403,8 @@ Nan object treatment: Drop columns if nans
 Scaler: StandardScaler
 
 **Result: 0.72880
-"""
-
-"""
+=====================================================================================
+=====================================================================================
 **N° 15 Try:
 **Even though with 0.5 bounds the result is slightly better I think there's way more risk of overfitting, and it is not worth it.**
 Categoricals (encoding related): Objects
@@ -432,60 +416,133 @@ Scaler: StandardScaler
 **Result: 0.73472
 """
 
-# # ======================================================================================================================
-# # Random Forest Classifier - Default
-# start = dt.now()
-# rfc = RandomForestClassifier(random_state=42, n_jobs=-1)
-# rfc.fit(X_train, y_train)
-# predict_proba_rfc = rfc.predict_proba(X_test)[:, 1]
-# predictions_rfc = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba_rfc})
-# predictions_rfc.to_csv('predictions_rfc.csv', index=False)
-#
-# # Private Score: 0.68799
-#
-# # ======================================================================================================================
-# # Random Forest Classifier - Tuned
-# param_grid = {
-#  'bootstrap': [True, False],
-#  'max_depth': [10, 50, 100, None],
-#  'max_features': ['auto', 'sqrt'],
-#  'min_samples_leaf': [1, 2, 4],
-#  'min_samples_split': [2, 5, 10],
-#  'n_estimators': [100, 200]
-# }
-#
-# best_params, best_score, results  = search_best_hyperparameters(RandomizedSearchCV, X_train, y_train, rfc, param_grid,
-#                                                                 cv=3, n_iter=10, scoring='roc_auc')
-#
-# tuned_predictions_rfc = tuned_model_evaluation(X_train, y_train, X_test, RandomForestClassifier, best_params)
-# end = dt.now()
-#
-# # Private Score: 0.72011
-# # Processing time: 15min
+# ======================================================================================================================
+# Random Forest Classifier - Default
+start = dt.now()
+rfc = RandomForestClassifier(random_state=42, n_jobs=-1)
+rfc.fit(X_train, y_train)
+predict_proba_rfc = rfc.predict_proba(X_test)[:, 1]
+predictions_rfc = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba_rfc})
+predictions_rfc.to_csv('predictions_rfc.csv', index=False)
+
+# Private Score: 0.68799
+
+# ======================================================================================================================
+# Random Forest Classifier - Tuned
+param_grid = {
+ 'bootstrap': [True, False],
+ 'max_depth': [10, 50, 100, None],
+ 'max_features': ['auto', 'sqrt'],
+ 'min_samples_leaf': [1, 2, 4],
+ 'min_samples_split': [2, 5, 10],
+ 'n_estimators': [100, 200]
+}
+
+best_params, best_score, results  = search_best_hyperparameters(RandomizedSearchCV, X_train, y_train, rfc, param_grid,
+                                                                cv=3, n_iter=10, scoring='roc_auc')
+
+tuned_predictions_rfc = tuned_model_evaluation(X_train, y_train, X_test, RandomForestClassifier, best_params)
+end = dt.now()
+
+# Private Score: 0.72011
+# Processing time: 15min
 
 # ======================================================================================================================
 # Logistic Regressor - Tuned
-# start = dt.now()
-# lr2 = LogisticRegression(random_state=42, n_jobs=-1)
-# param_grid = {
-#  'tol': [0.00001, 0.0001, 0.001, 0.01],
-#  'C': [0.001,0.01,0.1,1,10,100],
-#  'max_iter': [100, 1000, 10000, 100000],
-# }
-#
-# best_params, best_score, results  = search_best_hyperparameters(RandomizedSearchCV, X_train, y_train, lr2, param_grid,
-#                                                                 cv=3, n_iter=10, scoring='roc_auc')
-#
-# tuned_predictions_lr2 = tuned_model_evaluation(X_train, y_train, X_test, LogisticRegression, best_params)
-# end = dt.now()
+lr2 = LogisticRegression(random_state=42, n_jobs=-1)
+param_grid = {
+ 'tol': [0.00001, 0.0001, 0.001, 0.01],
+ 'C': [0.001,0.01,0.1,1,10,100],
+ 'max_iter': [100, 1000, 10000, 100000],
+}
+
+best_paramslr2, best_scorelr2, resultslr2  = search_best_hyperparameters(RandomizedSearchCV, X_train, y_train, lr2, param_grid,
+                                                                cv=3, n_iter=10, scoring='roc_auc')
+
+tuned_predictions_lr2 = tuned_model_evaluation(X_train, y_train, X_test, LogisticRegression, best_params)
 
 # Private Score= 0.73470
 
 # ======================================================================================================================
 # LightGBM model
+def lgbm(train, test, n_folds):
+    folds = StratifiedKFold(n_splits=n_folds, shuffle=True, random_state=1001)
 
-lgbm = LGBMClassifier()
-lgbm.fit(X_train, y_train)
-lgbm_proba = lgbm.predict_proba(X_test)[:, 1]
-lgbm_predictions = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':lgbm_proba})
-lgbm_predictions.to_csv('lgbm_predictions.csv', index=False)
+    oof_preds = np.zeros(train.shape[0])
+    sub_preds = np.zeros(test.shape[0])
+
+    features = [column for column in train.columns if column not in ['TARGET', 'SK_ID_CURR']]
+    for n_fold, (itrain, ival) in enumerate(folds.split(train[features], train['TARGET'])):
+        dtrain = lgb.Dataset(data=train[features].iloc[itrain], label=train['TARGET'].iloc[itrain],
+                             free_raw_data=False, silent=True)
+        dvalid = lgb.Dataset(data=train[features].iloc[ival], label=train['TARGET'].iloc[ival],
+                             free_raw_data=False, silent=True)
+
+        param_grid = {
+            'objective': 'binary',
+            'boosting_type': 'gbdt',
+            'nthread': 4,
+            'learning_rate': 0.02,
+            'num_leaves': 20,
+            'colsample_bytree': 0.9497036,
+            'subsample': 0.8715623,
+            'subsample_freq': 1,
+            'max_depth': 8,
+            'reg_alpha': 0.041545473,
+            'reg_lambda': 0.0735294,
+            'min_split_gain': 0.0222415,
+            'min_child_weight': 60,
+            'seed': 0,
+            'verbose': -1,
+            'metric': 'auc',
+        }
+
+        clf = lgb.train(params=param_grid, train_set=dtrain, num_boost_round=10000, valid_sets=[dtrain, dvalid],
+                        early_stopping_rounds=200, verbose_eval=False)
+
+        oof_preds[ival] = clf.predict(dvalid.data)
+        sub_preds += clf.predict(test[features]) / folds.n_splits
+
+    print(f"Full AUC score {roc_auc_score(train['TARGET'], oof_preds)}")
+    clf_predictions = pd.DataFrame({'SK_ID_CURR':test.index, 'TARGET':sub_preds})
+    clf_predictions.to_csv('predictions_clf.csv', index=False)
+
+    return clf_predictions
+
+application_train = application_train.rename(columns = lambda x:re.sub('[^A-Za-z0-9_]+', '', x))
+application_test = application_test.rename(columns = lambda x:re.sub('[^A-Za-z0-9_]+', '', x))
+
+predictions_lgbm = lgbm(application_train, application_test, n_folds=3)
+
+# ======================================================================================================================
+# Pipeline example
+
+categoricals = get_categoricals(application_train, criteria='Objects')
+num_attribs = [column for column in application_train.columns if column not in list(categoricals.index)]
+cat_attribs = list(categoricals.index)
+
+num_pipeline = Pipeline([
+    ('imputer', SimpleImputer(strategy='mean')),
+    ('std_scaler', StandardScaler())
+])
+
+cat_pipeline = Pipeline([
+    ('imputer', SimpleImputer(strategy='most_frequent')),
+    ('encoder', OneHotEncoder(handle_unknown='ignore'))
+])
+
+full_pipeline = ColumnTransformer([
+    ("num", num_pipeline, num_attribs),
+    ("cat", cat_pipeline, cat_attribs)
+])
+
+prepared_train = full_pipeline.fit_transform(application_train)
+prepared_test = full_pipeline.transform(application_test)
+X_train = prepared_train.drop('TARGET', axis=1)
+y_train = prepared_train['TARGET'].copy()
+X_test = prepared_test.drop('TARGET', axis=1)
+
+lr.fit(X_train, y_train)
+predict_proba_pipe = lr.predict_proba(X_test)[:, 1]
+predictions_pipe = pd.DataFrame({'SK_ID_CURR':X_test.index, 'TARGET':predict_proba})
+predictions_pipe.to_csv('predictions_pipe.csv', index=False)
