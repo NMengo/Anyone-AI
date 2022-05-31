@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/c0038010bc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+        <title>ML API</title>
+    </head>
+    <body>
+
+        <h1>AI - Image Classificator</h1>
+
+<section>
+    <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+            {% for message in messages %}
+            
+            <div class='success'>
+                {{ message }}
+            </div>
+
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+    </p>
+    {% if filename %}
+        <divc class='img_cont'>
+            <img src="{{ url_for('app_router.display_image', filename=filename) }}">
+        </div>
+        {% if context['prediction'] %}
+                <div>
+                <label for="subject">Predicted class: {{ context['prediction'] }} </label><br>
+                <label for="subject">Score: {{ context['score'] }} </label>
+                </div>
+            <form id="form" method="POST" action="/feedback">
+                <button class='report' type="submit">Report incorrect answer</button>
+                <input name="report1" style="visibility: hidden;" value={{filename}}>
+                <input name="report2" style="visibility: hidden;" value={{context['prediction']}}>
+                <input name="report3" style="visibility: hidden;" value={{context['score']}}>
+            </form>
+        {% endif %}
+    {% endif %}
+    <form method="post" action="/" enctype="multipart/form-data">
+        <dl>
+            <label class='stylefile' for="upfile">
+                <i class="fa-solid fa-file-arrow-up"> Please, choose a file:</i>
+                <input id='upfile' type="file" name="file" autocomplete="off" required>
+            </label>
+        </dl>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</section>
+</body>
+</html>
