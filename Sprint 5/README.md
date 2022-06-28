@@ -26,7 +26,7 @@ Daily objects that are far from being ideal to predict exclusively vehicles [^1]
 Unlike feature extraction, when we perform fine-tuning we are actually building a new fully connected head and place it on top of the original architecture.  
 The new FC layer head is randomly initialized (just like any other layer in a new network) and trained along the frozen layers of the original network.   
 
-<img src='[freeze.png](https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/freeze.png)' height=300>
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/freeze.png' height=300>
 
 Below you may find the learning curves of the first attempts where 3 stages are appreciated.  
 Each with several param config esperiments.  
