@@ -35,7 +35,7 @@ Each with several param config esperiments.
 * 0.30 - 0.35
 * 0.35 - 0.4
 
-<img src='warmup_exps_acc.jpeg'>
+<img src='(https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/warmup_exps_acc.jpeg'>
 
 ---
 
@@ -84,7 +84,7 @@ Adding l2 regularization to last layer.
 ~~~
 Reached a cap around 0.45 but in most cases with high loss and on top of that, overfitting.
 ~~~
-<img src='warmup_exps_loss.jpeg'>
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/warmup_exps_loss.jpeg'>
 
 ---
 ## Changing approach
@@ -97,7 +97,7 @@ To bypass this problem, we should first train, with ResNet50 completely frozen, 
 
 In other words, training data will be forward propagated through the network but the backpropagation is stopped after the FC layers.
 
-<img src='unfreeze.png' height=300>
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/unfreeze.png' height=300>
 
 ---
 ## Warm Up
@@ -165,7 +165,7 @@ As training only the head was far from being enough, and as per the characterist
    
 **Decided then to conserve only the first stage of ResNet50 so as to make the best of the already trained basic features (iow until layer 18).**
 
-<img src='resnet.png' height=100 width=1000>
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/resnet.png' height=100 width=1000>
 <br></br>
 
 <ins>Things taken into account before proceeding:
@@ -178,13 +178,13 @@ As training only the head was far from being enough, and as per the characterist
 
 Several attempts to find any kind of sweet spot.
 For clarity matters, most of experiments have been left out.
-<img src='finetun_exps.jpeg'>
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/finetun_exps.jpeg'>
 Some of the following types of "loss outliers" were caused by any type of kernel regularizer (l1, l2, l1_l2).
 Reason why, final model doesn't have any of them at all.
-<img src='finetun_exps_loss.jpeg'>
+<img src=https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/finetun_exps_loss.jpeg'>
 
 **Just for curiosity sake, a training was run from scratch without warmup with the same architecture used until that point.**
-<img src='res_without_warmup.jpeg'>
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/res_without_warmup.jpeg'>
 As a result, an example of loss shooting through the roof without warm up in the left side, and the right side of course with warm up.
 The guess is that it would probably be accomplishable without it but with the right parameters and architecture. i.e:
 * Even lower learning rate.
@@ -248,8 +248,8 @@ def scheduler(epoch, lr):
     else:
         return 0.00001
 ```
-<img src='momentum1.png' >
-<img src='momentum2.png' >
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/momentum1.png' >
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/momentum2.png' >
 
 *These images are shown for ilustrative purposes. Not the actual step size of this model.*
 
@@ -267,17 +267,17 @@ Validation Loss: 1.29
 <ins>More graphically, this is what it was prioritized.<ins>
 
 
-<img src='generalization_gap.jpeg' >
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/generalization_gap.jpeg' >
 <br><br>
 
 **It can be appreciated the "starting point" from Warm up stage, which is the orange curve.**
-<img src='final_acc.jpeg' >
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/final_acc.jpeg' >
 
-<img src='final_loss.jpeg' >
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/final_loss.jpeg' >
 
 Model summary:
 
-<img src='cnn_model_sum2.jpeg'  height=400>
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/cnn_model_sum2.jpeg'  height=400>
 
 ---
 ## Final Results
@@ -286,7 +286,7 @@ Model summary:
 As expected, the model generalized pretty well, leading to an accuracy in Test Set of 0.68.
 ~~~
 
-<img src='scores.png' >
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/scores.png' >
 <br><br>
 
 <ins>**In conclusion:**
