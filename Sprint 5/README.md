@@ -35,7 +35,7 @@ Each with several param config esperiments.
 * 0.30 - 0.35
 * 0.35 - 0.4
 
-<img src='(https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/warmup_exps_acc.jpeg'>
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/warmup_exps_acc.jpeg'>
 
 ---
 
