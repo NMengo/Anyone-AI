@@ -181,7 +181,7 @@ For clarity matters, most of experiments have been left out.
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/finetun_exps.jpeg'>
 Some of the following types of "loss outliers" were caused by any type of kernel regularizer (l1, l2, l1_l2).
 Reason why, final model doesn't have any of them at all.
-<img src=https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/finetun_exps_loss.jpeg'>
+<img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/finetun_exps_loss.jpeg'>
 
 **Just for curiosity sake, a training was run from scratch without warmup with the same architecture used until that point.**
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/Sprint%205/Results%20Report/res_without_warmup.jpeg'>
