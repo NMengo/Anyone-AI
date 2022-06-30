@@ -67,7 +67,7 @@ x = layers.BatchNormalization()(x)
 
 outputs = layers.Dense(classes, activation='softmax')(x) 
 ```
-**This last meassures lead to the decition of decreasing dropout rate.**
+**These last measures lead to the decision of decreasing dropout rate.**
 ~~~
 Anyways, model was stuck around 0.35 acc.
 ~~~
@@ -257,7 +257,7 @@ def scheduler(epoch, lr):
 ## Final Model
 
 A quite tough roof was found around 0.75 validation acc, with a decently low loss.
-As this project needed to be delivered on time, the decition was to stop swinging from one side to the other, making big changes in params and architecture, in the search of a better accuracy and, on the contrary, focusing on obtaining a solid model in order not to have any surprises at the moment of evaluating it in the test set.
+As this project needed to be delivered on time, the decision was to stop swinging from one side to the other, making big changes in params and architecture, in the search of a better accuracy and, on the contrary, focusing on obtaining a solid model in order not to have any surprises at the moment of evaluating it in the test set.
 
 ~~~
 Validation Accuracy: 0.71
