@@ -23,13 +23,13 @@ Daily objects that are far from being ideal to predict exclusively vehicles [^1]
 
 # <ins>Approach:<ins>
 
-Unlike feature extraction, when we perform fine-tuning we are actually building a new fully connected head and place it on top of the original architecture.  
-The new FC layer head is randomly initialized (just like any other layer in a new network) and trained along the frozen layers of the original network.   
+Unlike feature extraction, when we perform fine-tuning we are actually building a new fully-connected head and placing it on top of the original architecture.  
+The new FC layer head is randomly initialized (just like any other layer in a new network) and trained along with the frozen layers of the original network.   
 
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/freeze.png' height=300>
 
 Below you may find the learning curves of the first attempts where 3 stages are appreciated.  
-Each with several param config esperiments.  
+Each with several param config experiments.  
 <ins>Validation acc:<ins>
 * 0.20 - 0.25
 * 0.30 - 0.35
@@ -41,7 +41,7 @@ Each with several param config esperiments.
 
 <ins>**First attempt:**
 
-Training one dense layer, with as much neurons as output classes, with softmax activation.  
+Training one dense layer, with as many neurons as output classes, with softmax activation.  
 
 Adam Optimization
 ~~~
@@ -67,7 +67,7 @@ x = layers.BatchNormalization()(x)
 
 outputs = layers.Dense(classes, activation='softmax')(x) 
 ```
-**This last meassures lead to the decition of decreasing dropout rate.**
+**These last measures lead to the decision of decreasing dropout rate.**
 ~~~
 Anyways, model was stuck around 0.35 acc.
 ~~~
@@ -92,18 +92,18 @@ At this point, it was clear that model would always underfit with the architectu
 
 
 **What needed to be taken into account** before proceeding is the fact that the ResNet50 CONV layers have already learned rich, discriminative filters while our FC layers are brand new and totally random.  
-If we allow the gradient to backpropagate from these random values all the way through the network, there is a risk on destroying the already learnt features.  
-To bypass this problem, we should first train, with ResNet50 completely frozen, letting our FCL to "Warm up".
+If we allow the gradient to backpropagate from these random values all the way through the network, there is a risk on destroying the already learned features.  
+To bypass this problem, we should first train, with ResNet50 completely frozen, letting our FCL "Warm-up".
 
 In other words, training data will be forward propagated through the network but the backpropagation is stopped after the FC layers.
 
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/unfreeze.png' height=300>
 
 ---
-## Warm Up
+## Warm-Up
 
-In hindsight, all previous experimentation wasn't in vane.  
-From there it was selected the curve with steepest slope, lower loss and least overfitting to run a short warm up of 8 epochs, in order to prepare the network to be unfreezed and retrained, with a clean starting point.
+In hindsight, all previous experimentation wasn't in vain.  
+From there it was selected the curve with the steepest slope, lower loss, and least overfitting to run a short warm-up of 8 epochs, to prepare the network to be unfrozen and retrained, with a clean starting point.
 
 Once selected, the script would load those weights, recompile and retrain.  
 **But from which point?**
@@ -157,43 +157,43 @@ print('=================================================')
 cnn_model.save_weights('models/TLRN50_Fmodel_weights10.h5')
 ```
 ---
-## Model surgery and fine tuning
+## Model surgery and fine-tuning
 
 As training only the head was far from being enough, and as per the characteristics of this particular problem. i.e:
 1. Small Dataset.
-2. Different Dataset from original (img types).  
+2. Different Dataset from original (image types).  
    
-**Decided then to conserve only the first stage of ResNet50 so as to make the best of the already trained basic features (iow until layer 18).**
+**Decided then to conserve only the first stage of ResNet50 to make the best of the already trained basic features (iow until layer 18).**
 
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/resnet.png' height=100 width=1000>
 <br></br>
 
 <ins>Things taken into account before proceeding:
 
-- [ ] Learning rate needs to be way lower, than warm up, for network stability.
-- [ ] Despite unfreezing layers, model should maintain (training=False). Otherwise, we would be updating values of BatchNormalization layers inside ResNet50, which should remain Non-trainable at all times.
+- [ ] Learning rate needs to be way lower, than warm-up, for network stability.
+- [ ] Despite unfreezing layers, the model should maintain (training=False). Otherwise, we would be updating values of BatchNormalization layers inside ResNet50, which should remain Non-trainable at all times.
 
 ---
 ### Experiments
 
 Several attempts to find any kind of sweet spot.
-For clarity matters, most of experiments have been left out.
+For clarity matters, most experiments have been left out.
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/finetun_exps.jpeg'>
 Some of the following types of "loss outliers" were caused by any type of kernel regularizer (l1, l2, l1_l2).
-Reason why, final model doesn't have any of them at all.
+Reason why final model doesn't have any of them at all.
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/finetun_exps_loss.jpeg'>
 
-**Just for curiosity sake, a training was run from scratch without warmup with the same architecture used until that point.**
+**Just for curiosity's sake, a training was run from scratch without warm-up with the same architecture used until that point.**
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/res_without_warmup.jpeg'>
-As a result, an example of loss shooting through the roof without warm up in the left side, and the right side of course with warm up.
+As a result, an example of loss shooting through the roof without a warm-up in the left side, and the right side of course with a warm-up.
 The guess is that it would probably be accomplishable without it but with the right parameters and architecture. i.e:
 * Even lower learning rate.
-* Training the whole model and not starting from anypoint in the middle.
+* Training the whole model and not starting from any point in the middle.
 
 ---
 ## More Hardcore Data Augmentation
 
-On top of previous tuning, a decent improvement was made when the background in the images was removed using **Detectron2** to box the main and biggest vehicle in each image.
+On top of the previous tuning, a decent improvement was made when the background in the images was removed using **Detectron2** to box the main and biggest vehicle in each image.
 
 ```python
 setup_logger()
@@ -235,7 +235,7 @@ for dir_path, img_name in walkdir(data_folder):
 ---
 ## Game changers
 
-Turning from Adam optimizer to SGD + momentum was a success, since most of the improvement was made by a manual supervised step decay of the Learning Rate (with Ctrl + c training) and tuning the momentum with close attention.
+Turning from Adam optimizer to SGD + momentum was a success since most of the improvement was made by a manually supervised step decay of the Learning Rate (with Ctrl + c training) and tuning the momentum with close attention.
 
 ```python
 def scheduler(epoch, lr):
@@ -251,26 +251,26 @@ def scheduler(epoch, lr):
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/momentum1.png' >
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/momentum2.png' >
 
-*These images are shown for ilustrative purposes. Not the actual step size of this model.*
+*These images are shown for illustrative purposes. Not the actual step size of this model.*
 
 ---
 ## Final Model
 
 A quite tough roof was found around 0.75 validation acc, with a decently low loss.
-As this project needed to be delivered on time, the decition was to stop swinging from one side to the other, making big changes in params and architecture, in the search of a better accuracy and, on the contrary, focusing on obtaining a solid model in order not to have any surprises at the moment of evaluating it in the test set.
+As this project needed to be delivered on time, the decision was to stop swinging from one side to the other, making big changes in params and architecture, in the search of better accuracy and, on the contrary, focusing on obtaining a solid model in order not to have any surprises at the moment of evaluating it in the test set.
 
 ~~~
 Validation Accuracy: 0.71
 Validation Loss: 1.29
 ~~~
 
-<ins>More graphically, this is what it was prioritized.<ins>
+<ins>More graphically, this is what was prioritized.<ins>
 
 
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/generalization_gap.jpeg' >
 <br><br>
 
-**It can be appreciated the "starting point" from Warm up stage, which is the orange curve.**
+**It can be appreciated the "starting point" from Warm-up stage, which is the orange curve.**
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/final_acc.jpeg' >
 
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/final_loss.jpeg' >
@@ -283,15 +283,15 @@ Model summary:
 ## Final Results
 
 ~~~
-As expected, the model generalized pretty well, leading to an accuracy in Test Set of 0.68.
+As expected, the model generalized pretty well, leading to an accuracy in the Test Set of 0.68.
 ~~~
 
 <img src='https://github.com/NMengo/Anyone-AI/blob/main/5.CNN_CARS/Results%20Report/scores.png' >
 <br><br>
 
 <ins>**In conclusion:**
-- [ ] Not that high accuracy but solid model that generalizes well with low loss.
-- [ ] Model trained with relative low computational effort and few epochs. 21 in total, between Warm up and Fine Tuning.
+- [ ] Not that high accuracy but a solid model that generalizes well with low loss.
+- [ ] Model trained with relatively low computational effort and few epochs. 21 in total, between Warm-up and Fine Tuning.
 - [ ] High probability of improving it by finding the correct continuous automated Learning Rate Schedule along a larger amount of epochs.
 
-[^1]: This was done on purpose, in order to lead to a lot of experimentation to try to bypass these difficulties, and by this, getting a better grasp of model architectures and fine tuning intuition.
+[^1]: This was done on purpose, to lead to a lot of experimentation to try to bypass these difficulties, and by this, getting a better grasp of model architectures and fine-tuning intuition.
